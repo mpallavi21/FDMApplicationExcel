@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{2D3CDE7E-9FC1-4C48-BDAE-BF67BEED2A88}"/>
+			<Prp name="unit 1" type="S" value="{262FDD91-BB06-41B1-A0CC-9BBB2C31C5BC}"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="line no" type="I" value="473"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="select_ComboBoxItem"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="date" type="D" value="45966.5262569329"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45966.2970931366"/>
+					<Prp name="object top" type="I" value="340"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object right" type="I" value="695"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;SelectResource&quot;).WinFormsObject(&quot;m_apnSelectResource&quot;).WinFormsObject(&quot;gbSvrResxType&quot;).WinFormsObject(&quot;cbResxType&quot;)"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="line #" type="I" value="486"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object left" type="I" value="489"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object bottom" type="I" value="366"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="486"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="5"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="The combo box item 'Safety Builder Export File' was selected."/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;SelectResource&quot;).WinFormsObject(&quot;m_apnSelectResource&quot;).WinFormsObject(&quot;gbSvrResxType&quot;).WinFormsObject(&quot;cbResxType&quot;)"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="date" type="D" value="45966.5262628356"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="child data"/>
+		<Node name="message 4">
+			<Prp name="line no" type="I" value="77"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="✅ cbResxType ComboBox located successfully."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="date" type="D" value="45966.5262568171"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="line no" type="I" value="194"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm found."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="date" type="D" value="45966.5262560069"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="line no" type="I" value="186"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="obj_ServerManagerMainForm"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="date" type="D" value="45966.5262540162"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="line no" type="I" value="55"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="obj_cbResxTypeComboBox"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45966.5262539005"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="line no" type="I" value="487"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="5"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="✅ Selected item 'Safety Builder Export File' from combo box."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="date" type="D" value="45966.5262640741"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="line no" type="I" value="93"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="message" type="S" value="selectResource"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="date" type="D" value="45966.5262537847"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Prp name="status" type="I" value="0"/>
+	</Node>
+</Nodes>

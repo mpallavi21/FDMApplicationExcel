@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 15">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="226"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="360"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="504"/>
+					<Prp name="click point x" type="I" value="432"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.DomainTextBox"/>
+					<Prp name="line #" type="I" value="62"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="205"/>
+					<Prp name="datetime" type="D" value="45966.4517164352"/>
+					<Prp name="click point y" type="I" value="215"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808841667"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (72, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.CLogin.DomainTextBox&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;m_cbDomain&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Waiting for main application window..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6810371528"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="89"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="160"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.UserNameTextBox.TextBoxArea"/>
+					<Prp name="line #" type="I" value="7"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="142"/>
+					<Prp name="datetime" type="D" value="45966.4517090162"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808759954"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.UserNameTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxUserName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="message" type="S" value="Launching FDM Client..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6806902315"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="30"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Login failure dialog not present."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6810371528"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="85"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 22">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Excel process terminated to release file lock."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6825610648"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="212"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 5">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="482"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.FdmServerNameField.ComboBoxTextBoxArea"/>
+					<Prp name="line #" type="I" value="46"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="174"/>
+					<Prp name="datetime" type="D" value="45966.4516815394"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.68084875"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="46"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.FdmServerNameField.ComboBoxTextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;uxFdmServerName&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Domain selected via keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808846296"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Server set to: LocalHost"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.68085125"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="48"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Setting server..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808133218"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="launchFDMClient - Launches the FDM Client using specified credentials"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6806902315"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="29"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 12">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.PasswordTextBox.TextBoxArea"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="174"/>
+					<Prp name="datetime" type="D" value="45966.4517125231"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808803009"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.PasswordTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 9">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="375"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="428"/>
+					<Prp name="click point x" type="I" value="401"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.LoginButton"/>
+					<Prp name="line #" type="I" value="185"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="273"/>
+					<Prp name="datetime" type="D" value="45966.4516852778"/>
+					<Prp name="click point y" type="I" value="284"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808531713"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="185"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (26, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.CLogin.LoginButton&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;btnOK&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Running TestedApps.HCMClient..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6807530093"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="39"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="482"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.FdmServerNameField.ComboBoxTextBoxArea"/>
+					<Prp name="line #" type="I" value="47"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="174"/>
+					<Prp name="datetime" type="D" value="45966.4516830093"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The text 'LocalHost' was entered in the text editor."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808505556"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="47"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.FdmServerNameField.ComboBoxTextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;uxFdmServerName&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="message" type="S" value="FDM Client launched and main window detected."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6819821528"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="92"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 13">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.PasswordTextBox.TextBoxArea"/>
+					<Prp name="line #" type="I" value="13"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="174"/>
+					<Prp name="datetime" type="D" value="45966.4517146296"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The text 'Fdm_1234' was entered in the text editor."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.680881875"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.PasswordTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicking login button..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808847454"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="183"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 18">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="375"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="428"/>
+					<Prp name="click point x" type="I" value="401"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.LoginButton"/>
+					<Prp name="line #" type="I" value="185"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="273"/>
+					<Prp name="datetime" type="D" value="45966.4517186111"/>
+					<Prp name="click point y" type="I" value="284"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808864468"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="185"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (26, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.CLogin.LoginButton&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;btnOK&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object bottom" type="I" value="160"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.CLogin.UserNameTextBox.TextBoxArea"/>
+					<Prp name="line #" type="I" value="8"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object top" type="I" value="142"/>
+					<Prp name="datetime" type="D" value="45966.4517101389"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+				</Node>
+			</Node>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="message" type="S" value="The text 'FDMAdministrator' was entered in the text editor."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808776852"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.CLogin.UserNameTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxUserName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Selecting domain..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808825694"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{95D72D50-A04C-4100-B0D5-FB07641E333E}"/>
+			<Prp name="unit 1" type="S" value="{C344B245-3507-4D36-99F0-78E011A7BBBA}"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicking login button..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6808513657"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="183"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\ClientMachine\Bin\HCMClient.exe&quot; started."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45966.6807548611"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="line no" type="I" value="40"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 1116."/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Prp name="status" type="I" value="0"/>
+	</Node>
+</Nodes>

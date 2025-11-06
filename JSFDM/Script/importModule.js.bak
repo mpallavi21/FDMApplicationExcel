@@ -1,0 +1,113 @@
+﻿//USEUNIT ControlInfo
+//USEUNIT serverKeywords
+
+function obj_SelectResource() {
+  Log.AppendFolder("obj_SelectResource");
+  try {
+    let mainForm = loginModule.obj_ServerManagerMainForm(); 
+    let selectResourceForm = mainForm.FindChild("Name", `WinFormsObject("SelectResource")`, 100);
+
+    if (selectResourceForm.Exists) {
+      Log.Message("SelectResource form located successfully.");
+      return selectResourceForm;
+    } else {
+      Log.Error("SelectResource form not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating SelectResource form: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function clickOnImportTab() {
+  Log.AppendFolder("clickOnImportTab");
+
+  try {
+    var controls = ControlInfo.ControlRepository.clickOnImportTab;
+    var ServerManagerMainForm = serverKeywords.obj_ServerManagerMainForm();
+
+    if (!ServerManagerMainForm) {
+      Log.Error("ServerManagerMainForm not found");
+      return;
+    }
+
+    var btnImport = ServerManagerMainForm.FindChild("Name", controls.btnImport.Name, 100);
+
+    if (!btnImport) {
+      Log.Error("btnImport control not found");
+      return;
+    }
+
+    btnImport.Click();
+    Log.Message("Import tab clicked successfully");
+
+  } catch (e) {
+    Log.Error("Error in clickOnImportTab", e.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_cbResxTypeComboBox() {
+  Log.AppendFolder("obj_cbResxTypeComboBox");
+
+  try {
+    const controls = ControlInfo.ControlRepository.obj_cbResxTypeComboBox;
+    const mainForm = serverKeywords.obj_ServerManagerMainForm();
+
+    if (!mainForm || !mainForm.Exists) {
+      Log.Error("Main form not available. Cannot locate SelectResource form.");
+      return null;
+    }
+
+    const selectResourceForm = mainForm.FindChild("Name", controls.selectResourceForm.Name, 100);
+    if (!selectResourceForm || !selectResourceForm.Exists) {
+      Log.Error("SelectResource form not found.");
+      return null;
+    }
+
+    const apnSelectResource = selectResourceForm.FindChild("Name", controls.apnSelectResource.Name, 100);
+    const gbSvrResxType = apnSelectResource.FindChild("Name", controls.gbSvrResxType.Name, 100);
+    const cbResxType = gbSvrResxType.FindChild("Name", controls.cbResxType.Name, 100);
+
+    if (cbResxType && cbResxType.Exists) {
+      Log.Message("✅ cbResxType ComboBox located successfully.");
+      return cbResxType;
+    } else {
+      Log.Error("❌ cbResxType ComboBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("❌ Exception while locating cbResxType ComboBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function selectImportResource() {
+  Log.AppendFolder("selectImportResource");
+
+  try {
+    var ResxType = obj_cbResxTypeComboBox();
+
+    if (!ResxType) {
+      Log.Error("Resource type combo box not found");
+      return;
+    }
+
+    var resourceLabel = "Safety Builder Export File";
+    serverKeywords.select_ComboBoxItem(ResxType, resourceLabel);
+    Log.Message("Resource type selected: " + resourceLabel);
+
+  } catch (e) {
+    Log.Error("Error in selectImportResource", e.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}

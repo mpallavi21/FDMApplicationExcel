@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="15.0" key="{8E3775E5-FFA2-499B-A8E7-64A8EBAFD9A2}">
+	<children>
+		<child name="JSFDM" key="{85EF6F46-E73D-4528-8398-62509A0179B9}" path="JSFDM.mds" />
+	</children>
+	<testItems key="{4BFEFDAA-AE6F-410C-B5EA-7DD232D61ACB}">
+		<children>
+			<testItem key="{85EF6F46-E73D-4528-8398-62509A0179B9}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{EB582B47-35CB-4458-BE29-D4292026FDAE}" />
+	<analysis key="{815415F2-7737-4444-BCA8-F764B2C4E582}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+</Root>

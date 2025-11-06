@@ -1,0 +1,328 @@
+﻿//USEUNIT serverKeywords
+//USEUNIT dashboardModule
+//USEUNIT networkModule
+//USEUNIT licenseModule
+function LaunchServerManagmentTool(userName, Password, DomainName) {
+  Log.AppendFolder("LaunchServerManagmentTool");
+
+  let status = "Pass";
+
+  try {
+    // Launch the application
+    launchApplication();
+
+    // Enter credentials
+    enterCredentials(userName, Password);
+
+    // Set domain
+    setDomainValue(DomainName);
+
+    // Click Login
+    let loginButton = obj_btnLogin();
+    loginButton.Click();
+
+    // Wait for dashboard
+    waitForServerManagerMainForm(60000);
+
+  } catch (e) {
+    Log.Error("LaunchServerManagmentTool failed: " + e.message);
+    status = "Fail";
+  }
+
+  // Write result once based on status
+  WriteResult("LAUNCHSERVERMANAGEMENTTOOL "+status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+function TerminateServerTool() { 
+  Log.AppendFolder("TerminateServerTool");
+
+  let status = "Pass";
+
+  try {
+    TerminateServerMgmtTool(); // Your termination logic
+  } catch (e) {
+    Log.Error("TerminateServerTool failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("TerminateServerTool " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function validateInvalidPasswordScenario(userName, Password) {
+  Log.AppendFolder("validateInvalidPasswordScenario");
+
+  let status = "Pass";
+
+  try {
+    launchApplication();
+    enterCredentials(userName, Password);
+
+    let loginButton = obj_btnLogin();
+    loginButton.Click();
+
+    captureInvalidLoginPopupCaption();
+    TerminateServerMgmtTool();
+
+  } catch (e) {
+    Log.Error("validateInvalidPasswordScenario failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("validateInvalidPasswordScenario " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function validateBlankLoginFields(userName, Password) {  
+  Log.AppendFolder("validateBlankLoginFields");
+
+  let status = "Pass";
+
+  try {
+    launchApplication();
+    enterCredentials(userName, Password);
+
+    let loginButton = obj_btnLogin();
+    loginButton.Click();
+
+    captureInvalidLoginPopupCaption();
+    TerminateServerMgmtTool();
+
+  } catch (e) {
+    Log.Error("validateBlankLoginFields failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("validateBlankLoginFields " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+function verifyCancelButtonBehavior(userName, Password, DomainName) {
+  Log.AppendFolder("verifyCancelButtonBehavior");
+
+  let status = "Pass";
+
+  try {
+    launchApplication();
+    enterCredentials(userName, Password);
+    setDomainValue(DomainName);
+
+    let cnlButton = obj_btnCancel();
+    cnlButton.Click();
+
+  } catch (e) {
+    Log.Error("verifyCancelButtonBehavior failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("verifyCancelButtonBehavior " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function verifyCopyrightAndBranding(expectedText) { 
+  Log.AppendFolder("verifyCopyrightAndBranding");
+
+  let status = "Pass";
+
+  try {
+    launchApplication();
+    validateCopyrightLabel(expectedText);
+    TerminateServerMgmtTool();
+  } catch (e) {
+    Log.Error("verifyCopyrightAndBranding failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("verifyCopyrightAndBranding " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function stopStartServerViaDashboardUI(userName, Password, toggleStop, toggleStart) { 
+  Log.AppendFolder("stopStartServerViaDashboardUI");
+
+  let status = "Pass";
+
+  try {
+    launchApplication();
+    enterCredentials(userName, Password);
+
+    let loginButton = obj_btnLogin();
+    loginButton.Click();
+
+    waitForServerManagerMainForm(60000);
+
+    dashboardModule.toggleServerStartStop(toggleStop);
+    dashboardModule.toggleServerStartStop(toggleStart);
+
+  } catch (e) {
+    Log.Error("stopStartServerViaDashboardUI failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("stopStartServerViaDashboardUI " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function addNetwork(config) {
+  Log.AppendFolder("addNetwork");
+
+  let status = "Pass";
+
+  try {
+    networkModule.obj_btnAddNew().Click();
+
+    let networkName = networkModule.obj_NetworkNameTextBox();
+    networkName.SetFocus();
+    networkName.SetText(config.NetworkName);
+
+    let selectNetwork = networkModule.obj_NetworkTypeComboBox();
+    selectNetwork.SetFocus();
+    serverKeywords.select_ComboBoxItem(selectNetwork, config.NetworkType);
+
+    networkModule.obj_ServerNameTextBox(config.RCIName);
+
+    if (config.NetworkType === "RS-485 Hart Multiplexer") {
+      let selectComport = networkModule.obj_ComPortComboBox();
+      serverKeywords.select_ComboBoxItem(selectComport, config.ComportType);
+
+      let EnableMux = networkModule.obj_EnableMuxMonitorCheckbox();
+      EnableMux.SetFocus();
+      EnableMux.Set_Checked(config.EnableMux);
+
+      let selectBaudRate = networkModule.obj_BaudRateComboBox();
+      serverKeywords.select_ComboBoxItem(selectBaudRate, config.BaudRateType);
+    }
+
+    if (config.NetworkType === "Honeywell Experion PKS") {
+      if (config.Redundency === "Redundent") {
+        let checkRedundency = networkModule.obj_RedundantRadioButton();
+        checkRedundency.SetFocus();
+        checkRedundency.Set_Checked(true);
+      } else if (config.Redundency === "NonRedundent") {
+        let checkRedundency = networkModule.obj_NonRedundantRadioButton();
+        checkRedundency.SetFocus();
+        checkRedundency.Set_Checked(true);
+
+        let setSecondaryServer = networkModule.obj_SecondaryServerTextBox();
+        setSecondaryServer.SetFocus();
+        setSecondaryServer.SetText(config.SecondaryServerName);
+      }
+
+      let checkSafetyManager = networkModule.obj_EnableSafetyManagerCheckbox();
+      checkSafetyManager.SetFocus();
+      checkSafetyManager.Set_Checked(config.SafetyBoolean);
+
+      let checkOneWireless = networkModule.obj_OneWirelessManagerCheckbox();
+      checkOneWireless.SetFocus();
+      checkOneWireless.Set_Checked(config.OneWirelessBoolean);
+    }
+
+    obj_OKButton().Click();
+    serverKeywords.submitAuditTrailReason("Added Network");
+    serverKeywords.handleCustomMessageBoxOfOk();
+
+  } catch (e) {
+    Log.Error("addNetwork failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("addNetwork " + status, status, "Pass");
+  Log.PopLogFolder();
+}
+
+
+//addNetwork({
+//  NetworkName: "MUXNet01",
+//  RCIName: "RCI-MUX-01",
+//  NetworkType: "RS-485 Hart Multiplexer",
+//  EnableMux: true,
+//  ComportType: "COM3",
+//  BaudRateType: "9600"
+//});
+//
+//
+//addNetwork({
+//  NetworkName: "HoneywellNet01",
+//  RCIName: "RCI-Server-01",
+//  NetworkType: "Honeywell Experion PKS",
+//  Redundency: "NonRedundent",
+//  SecondaryServerName: "Secondary-01",
+//  SafetyBoolean: true,
+//  OneWirelessBoolean: false
+//});
+
+function deleteNetwork(NetworkName) {
+  Log.AppendFolder("deleteNetwork");
+
+  let status = "Pass";
+
+  try {
+    networkModule.clickNetworkRow(NetworkName);
+
+    let deleteButton = networkModule.obj_btnDelete();
+    deleteButton.SetFocus();
+    deleteButton.Click();
+
+    serverKeywords.handleCustomMessageBoxOfYes();
+    serverKeywords.submitAuditTrailReason("Delete Network");
+
+  } catch (e) {
+    Log.Error("deleteNetwork failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("deleteNetwork " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+function deleteAllNetworks() {  
+  Log.AppendFolder("deleteAllNetworks");
+
+  let status = "Pass";
+
+  try {
+    networkModule.deleteAllListViewItemsInNetworkList();
+  } catch (e) {
+    Log.Error("deleteAllNetworks failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("deleteAllNetworks " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function updateServerLicense(licensePath, action) {
+  Log.AppendFolder("updateServerLicense");
+
+  let status = "Pass";
+
+  try {
+    licenseModule.clickOnLicenseTab()
+    licenseModule.updateLicense(Project.Path + "License\\" + licensePath);
+    dashboardModule.toggleServerStartStop(action);
+  } catch (e) {
+    Log.Error("updateServerLicense failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("updateServerLicense " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+

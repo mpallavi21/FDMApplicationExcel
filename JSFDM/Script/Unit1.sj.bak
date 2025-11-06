@@ -1,0 +1,186 @@
+﻿//USEUNIT STDLib
+var szTestCaseName, szKeywordName, path, xlTemplatePath, szPreviousTestCaseName, szPreviousKeywordName, SheetTC, szPreviousSheetName;
+var functionStartTime, name;
+var functionEndTime;
+var number, paramNum;
+var tcStartRow, tcShtRow, inputrow, actualResult;
+var Outputfile, screenShotFile;
+var param, logsrow;
+var inputExcelApp, inputExcelBook;
+var resultMessage, executablePath, sheetName, SheetLog, formatStr, resultFlag, url, language, languageExecutionTag, username, password, languageCount,  controlsInfoSheet;
+var startUpPage, masterSheet;
+var sheetIn, masterSheetRow;
+var screenName, testDescription, tcStatus;
+var startTime, endTime, execDuration, reportDateTime;
+var InputxlApp,InputxlBook,g_FrameworkPath;
+var MsExcel,ExcelOpen; 
+
+function main() 
+{  
+     startTime = new Date();
+     resultMessage = "-";       
+    // call CheckRecordingRules(1,"Input 1: Door 1 Egress")
+    // Initialise starting row of input and result sheets
+    
+    let outputRow = 3;
+    let outputRowResultSheet = 2;
+    // if (g_szSheetName.trim() === "" || g_szSheetName.trim() === "<Select>") return;
+    // Get the driver UI path from registry
+     executablePath = "C:\\Users\\UDCUSER\\Desktop\\JSFDM";
+    // Append results to the path obtained from registry for the result file
+     Outputfile = executablePath + "\\Results\\";
+    // const screenshotFile = executablePath + "\\Screenshots\\";
+    // Append Framework and sheetname to the path obtained from registry for the framework sheet file
+     g_FrameworkPath = executablePath + "\\Framework.xlsx";
+    // Initialise high level and low level result sheet names
+    let sheetResult = "Result";
+     SheetLog = "LL_Results";  
+     startUpPage = "Startup_Page";
+     MasterSheet_Row = 2;
+     MasterSheet = "Master";
+     logsrow = 1;
+  //  readExcelCell(g_FrameworkPath, MasterSheet,1,1)
+    //ExcelExample(g_FrameworkPath,MasterSheet)
+   MsExcel =  openExcelFile(g_FrameworkPath)   // Check for Excel file Opening    
+   InputxlApp=MsExcel
+    let szScreenName = ReadExcelData(InputxlApp, MasterSheet, MasterSheet_Row, 1);
+    
+    while (szScreenName.toUpperCase() !== "") 
+    {               
+        if (ReadExcelData(MsExcel, MasterSheet, MasterSheet_Row, 2) == 1) 
+        {
+             outrow_Resultsheet = 2;
+             SheetTC = szScreenName;
+             SheetIn = szScreenName + "_input";
+             TCShtRow = 2;
+             inputrow = 1;
+
+            // Call ConfigureNewAlarmSystem(InputxlApp,"Experion/TPS - Honeywell","Fieldbus","Fieldbus","dfdf","df","gghg")
+             szTestCaseName = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 1);
+            let nColorIndex;
+            // nColorIndex = InputxlApp.Sheets(SheetTC).cells(nRow, nCol).Interior.ColorIndex
+            let szTestCaseExpectedOp = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 1);
+            // Loop till "<END_SHEET>" tag Reached
+            while (szTestCaseName.toUpperCase() !== "") {
+                if (szTestCaseName.toUpperCase() !== "") {
+                    // Get execution condition of testcase
+                    let szTagName = "<" + szTestCaseName + ">";
+                    let szTCExecTag = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 2);              
+                    let szTestDescription = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 3);
+                    let szTCStatus = "Pass";
+                    // Check for Execute condition of TestCases = 1
+                    if (szTCExecTag == 1) {    
+                      
+                        // Call SetValueToExcel(InputxlApp,SheetResult,outrow_Resultsheet,1,szTestCaseName)  
+                        let StepNo = 0;
+                        let TCStartRow = outputRow;       
+                        let nCount = InputxlApp.Sheets.Item(SheetIn).UsedRange.Rows.Count;        
+                        for ( i = 1; i <= nCount; i++) {
+                            if (InputxlApp.Sheets.Item(SheetIn).Cells.Item(1).Item(i) == szTagName) {
+                                inputrow = i;
+                                TCStartRow = inputrow;
+                                break;
+                            }
+                        }
+                        
+                        inputrow += 1;
+                        // Read keyword name In testcase
+                         szKeywordName = ReadExcelData(InputxlApp, SheetIn, inputrow, 1);
+                        
+                        // Check for the End of TestCases
+                        while (szKeywordName !== "<ENDCASE>") {
+                            let szParameter = "";
+                            // Read keyword name
+                            szKeywordName = szKeywordName.trim(ReadExcelData(InputxlApp, SheetIn, inputrow, 1));
+    
+                            // Check for blank line
+                            if (szKeywordName.toUpperCase() !== "") {
+                                let nparamnum = trim(ReadExcelData(InputxlApp, SheetIn, inputrow, 2));
+                                if (nparamnum !== "") {
+                                    let j = inputrow;
+                                    // Collect Parameters from the Input framework sheet
+                                    let Parameters = new Array(nparamnum - 1);
+                                    for ( Number = 0; Number < parseInt(nparamnum); Number++) {  
+                                        j += 1;                              
+                                        Parameters[Number] = ReadExcelData(InputxlApp, SheetIn, j, 3);
+                                    }
+                                    let szDesc = "";
+                                                 
+                                    switch (szKeywordName.toUpperCase()) {
+                                        case "LAUNCHAPPLICATION":       
+                                        BuiltIn.ShowMessage("LAUNCHAPPLICATION")
+                                            WriteLowLevelResult("LAUNCHAPPLICATION Failed","Fail")                             
+                                           // szRes = launchApplication(InputxlApp, Parameters[0]);     
+                                            break;
+                                        case "SELECTOWNER":
+                                            WriteLowLevelResult("SELECTOWNER Failed","Fail")
+                                            //szRes = SelectOwner(InputxlApp, Parameters[0]);
+                                            break;
+                                        case "VERIFYASSETS":
+                                            WriteResult("VERIFYASSETS Pass","Pass","Pass")
+                                            //szRes = VerifyAssets(InputxlApp, Parameters[0], Parameters[1]);
+                                            break;
+                                        case "VIRTUALIZATIONDISCOVERY":
+                                            WriteResult("VIRTUALIZATIONDISCOVERY Pass","Pass")
+                                            //szRes = VerifyAssets(InputxlApp, Parameters[0], Parameters[1]);
+                                            break;
+                                            //
+                                        default:
+                                            Delay(2000);
+                                            break;
+                                    } // End of keyword Selection   
+
+                                    let szStatus = ""; 
+                                } // Blank line
+                            }
+                            // Increment TCShtRow and read the next keyword
+                            inputrow += 1;
+                                                                                                                                                        szKeywordName = ReadExcelData(InputxlApp, SheetIn, inputrow, 1);     
+                            
+                            // To Write the Test Case Result
+                            if (szKeywordName === "<ENDCASE>") {                  
+                                szKeywordName = ReadExcelData(InputxlApp, SheetIn, inputrow, 1);
+                                
+                              //  HighLevelResultsheet(InputxlApp, SheetIn, szTestCaseName, szTCStatus); // write to result sheet
+                               // GenrateHTMLFile(InputxlApp);   
+                               // ExcelToHtmlTable(InputxlApp, "C:\\Temp\\log.html");
+                            }
+                        }                                   
+                    } // Execute Condition
+                } // condition for <                                            
+                TCShtRow += 1;  // To Increase the row number to read test case name.   
+                szTestCaseName = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 1);
+                szTCExecTag = ReadExcelData(InputxlApp, SheetTC, TCShtRow, 2);                
+            } // Loop till <TC/> tag Reached
+            // Check if the End of the Input Sheet Reached
+            // if (szTestCaseName.toUpperCase() === "") {
+            //     WriteResultToExcel(InputxlApp, SheetLog, outputrow, szTestCaseName);
+            // }       
+        }
+        MasterSheet_Row += 1;
+        szScreenName = ReadExcelData(InputxlApp, MasterSheet, MasterSheet_Row, 1);     
+    }
+
+
+
+// Excel Parsing Part
+let timestamp = Get_date_time();
+let szName = Outputfile + String(timestamp) + ".xlsx";
+
+//InputxlApp.DisplayAlerts = false;
+InputxlApp.SaveAs(szName); // As Openexcelfile
+
+// Closing all open Framework applications
+let Ret = InputxlApp.Close();
+
+var i;
+// Displaying Execution End
+BuiltIn.ShowMessage("TEST EXECUTION COMPLETE")
+
+
+// Display Result sheet
+openExcelFile(szName);
+//DeleteExcelSheet(InputxlApp, "ControlsInfo");      
+//InputxlApp.SaveAs(szName); // As Openexcelfile 
+
+}

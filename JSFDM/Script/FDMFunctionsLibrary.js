@@ -1,0 +1,38 @@
+﻿//USEUNIT ClientLoginModule
+//USEUNIT STDLib
+
+function launchFDMClientApplication(ServerName, Username, Password) {
+  Log.AppendFolder("launchFDMClientApplication");
+
+  let status = "Pass";
+
+  try {
+    launchFDMClient(ServerName, Username, Password);
+  } catch (e) {
+    Log.Error("launchFDMClientApplication failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("launchFDMClientApplication " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+
+
+function terminateFDMClientApplication() {
+  Log.AppendFolder("terminateFDMClientApplication");
+
+  let status = "Pass";
+
+  try {
+    terminateFMDClient();
+  } catch (e) {
+    Log.Error("terminateFDMClientApplication failed: " + e.message);
+    status = "Fail";
+  }
+
+  WriteResult("terminateFDMClientApplication " + status, status, "Pass");
+
+  Log.PopLogFolder();
+}
+

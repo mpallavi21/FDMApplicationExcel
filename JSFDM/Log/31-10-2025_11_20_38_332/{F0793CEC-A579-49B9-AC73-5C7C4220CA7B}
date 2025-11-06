@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 6">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopStartServerViaDashboardUI"/>
+			<Prp name="line no" type="I" value="76"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="line no" type="I" value="372"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Entered reason: 'start'"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732715625"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="line no" type="I" value="30"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="getServerControlLabel"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732621296"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server Control group box found and visible."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732648264"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="toggleServerStartStop"/>
+			<Prp name="line no" type="I" value="119"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 36">
+			<Prp name="line no" type="I" value="66"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Start/Stop button clicked successfully."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732650463"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="124"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server Control group box found and visible."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732637037"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 32">
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ServerControlGroupBox"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732640509"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="handleCustomMessageBoxOfYes"/>
+			<Prp name="line no" type="I" value="468"/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="line no" type="I" value="468"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="message" type="S" value="❌ Exception while handling CustomMessageBox: Cannot read property 'Name' of undefined"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="21"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="date" type="D" value="45961.4731751968"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="line no" type="I" value="56"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickStartStopButton"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732639352"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server Control group box found and visible."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731509144"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="line no" type="I" value="39"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Server Control lable found or visible"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731498727"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="line no" type="I" value="437"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="handleCustomMessageBoxOfYes"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732739468"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="line no" type="I" value="66"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Start/Stop button clicked successfully."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="8"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731510301"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="line no" type="I" value="197"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm found."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="10"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731506829"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 17">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="120"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="45961.2439950463"/>
+					<Prp name="line #" type="I" value="371"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="60"/>
+					<Prp name="object left" type="I" value="19"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;ReasonTextBox&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="435"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="371"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The text 'stop' was entered in the text editor."/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;ReasonTextBox&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="16"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731623611"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="line no" type="I" value="349"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="submitAuditTrailReason"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731583333"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="line no" type="I" value="30"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="getServerControlLabel"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731472106"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="obj_ServerManagerMainForm"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732640509"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 37">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="621"/>
+					<Prp name="click point x" type="I" value="65"/>
+					<Prp name="datetime" type="D" value="45961.2440988426"/>
+					<Prp name="line #" type="I" value="116"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="548"/>
+					<Prp name="object left" type="I" value="29"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;m_gbGroupBox1&quot;).WinFormsObject(&quot;m_btnStartStop&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="584"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="102"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="116"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="remarks" type="S" value="A click at point (36, 36) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;m_gbGroupBox1&quot;).WinFormsObject(&quot;m_btnStartStop&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732669792"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="line no" type="I" value="205"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Excel process terminated to release file lock."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4739852662"/>
+			<Prp name="unit id" type="I" value="3"/>
+		</Node>
+		<Node name="message 14">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="621"/>
+					<Prp name="click point x" type="I" value="65"/>
+					<Prp name="datetime" type="D" value="45961.2439858681"/>
+					<Prp name="line #" type="I" value="100"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="548"/>
+					<Prp name="object left" type="I" value="29"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;m_gbGroupBox1&quot;).WinFormsObject(&quot;m_btnStartStop&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="584"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="102"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="100"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="remarks" type="S" value="A click at point (36, 36) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;ServerManagerMainForm&quot;).WinFormsObject(&quot;m_gbGroupBox1&quot;).WinFormsObject(&quot;m_btnStartStop&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731559375"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="line no" type="I" value="56"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickStartStopButton"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731499884"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="line no" type="I" value="86"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="toggleServerStartStop - Server Control"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732620139"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="line no" type="I" value="372"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Entered reason: 'stop'"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="16"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731630556"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="line no" type="I" value="349"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="submitAuditTrailReason"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732679051"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="line no" type="I" value="381"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ OK button clicked to submit reason."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732739468"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="line no" type="I" value="39"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Server Control lable found or visible"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="25"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732638194"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="line no" type="I" value="117"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Clicked to START the server..."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732677894"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="line no" type="I" value="197"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm found."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732647106"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopStartServerViaDashboardUI"/>
+			<Prp name="line no" type="I" value="75"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="toggleServerStartStop"/>
+			<Prp name="line no" type="I" value="103"/>
+		</Node>
+		<Node name="message 40">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="120"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="datetime" type="D" value="45961.2441034606"/>
+					<Prp name="line #" type="I" value="371"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="60"/>
+					<Prp name="object left" type="I" value="19"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;ReasonTextBox&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="435"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="371"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The text 'start' was entered in the text editor."/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;ReasonTextBox&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732708681"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ServerControlGroupBox"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="25"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732621296"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="line no" type="I" value="122"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server successfully started."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4735096991"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value=" Clicked to STOP the server..."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731582176"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ServerControlGroupBox"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="8"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731499884"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="line no" type="I" value="197"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm found."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="27"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.473263588"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 19">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="158"/>
+					<Prp name="click point x" type="I" value="199"/>
+					<Prp name="datetime" type="D" value="45961.2439968519"/>
+					<Prp name="line #" type="I" value="380"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="134"/>
+					<Prp name="object left" type="I" value="159"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;OKButton&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="146"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="239"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="380"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="remarks" type="S" value="A click at point (40, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;OKButton&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="16"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731660301"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="line no" type="I" value="197"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm found."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="4"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731496412"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="obj_ServerManagerMainForm"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732622454"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="line no" type="I" value="69"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="stopStartServerViaDashboardUI"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731470949"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="obj_ServerManagerMainForm"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731501042"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="line no" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ServerControlGroupBox"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731473264"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="obj_ServerManagerMainForm"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="3"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731474421"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="line no" type="I" value="381"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ OK button clicked to submit reason."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="16"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731673843"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server Control group box found and visible."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="3"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731497569"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="line no" type="I" value="86"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="toggleServerStartStop - Server Control"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731472106"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="line no" type="I" value="437"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="handleCustomMessageBoxOfYes"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4731700694"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}"/>
+			<Prp name="unit 3" type="S" value="{C344B245-3507-4D36-99F0-78E011A7BBBA}"/>
+			<Prp name="unit 1" type="S" value="{A1CAD186-3698-427E-95CB-A54B1C398329}"/>
+			<Prp name="unit 2" type="S" value="{262FDD91-BB06-41B1-A0CC-9BBB2C31C5BC}"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="line no" type="I" value="106"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Server successfully stopped."/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732620139"/>
+			<Prp name="unit id" type="I" value="1"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="line no" type="I" value="468"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="message" type="S" value="❌ Exception while handling CustomMessageBox: Cannot read property 'Name' of undefined"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="44"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="date" type="D" value="45961.4732784491"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="124"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="handleCustomMessageBoxOfYes"/>
+			<Prp name="line no" type="I" value="468"/>
+		</Node>
+		<Node name="message 42">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object bottom" type="I" value="158"/>
+					<Prp name="click point x" type="I" value="199"/>
+					<Prp name="datetime" type="D" value="45961.2441053588"/>
+					<Prp name="line #" type="I" value="380"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object top" type="I" value="134"/>
+					<Prp name="object left" type="I" value="159"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;OKButton&quot;)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="click point y" type="I" value="146"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="239"/>
+					<Prp name="kind" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="line no" type="I" value="380"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="remarks" type="S" value="A click at point (40, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;AuditTrailReasonBox&quot;).WinFormsObject(&quot;OKButton&quot;)"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45961.4732730208"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

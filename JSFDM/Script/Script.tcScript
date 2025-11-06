@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<folder name="SMTool">
+			<child name="dashboardModule" key="{A1CAD186-3698-427E-95CB-A54B1C398329}" path="dashboardModule.js" />
+			<child name="importModule" key="{2D3CDE7E-9FC1-4C48-BDAE-BF67BEED2A88}" path="importModule.js" />
+			<child name="licenseModule" key="{57C75914-CFCE-429D-B15D-58047CCD0708}" path="licenseModule.js" />
+			<child name="networkModule" key="{7D4904AC-D0BD-4D94-ABE1-4E0C2179CEC2}" path="networkModule.js" />
+			<child name="serverKeywords" key="{262FDD91-BB06-41B1-A0CC-9BBB2C31C5BC}" path="serverKeywords.js" />
+			<child name="SMToolControlInfo" key="{50A07EB5-8E0E-4412-9983-6DEBC831E5A2}" path="SMToolControlInfo.js" />
+		</folder>
+		<folder name="FDM">
+			<child name="ClientLoginModule" key="{95D72D50-A04C-4100-B0D5-FB07641E333E}" path="ClientLoginModule.js" />
+			<child name="FDMControlInfo" key="{3D004170-58D0-40ED-A99E-16856B986285}" path="FDMControlInfo.js" />
+		</folder>
+		<child name="SMToolFunctionsLibrary" key="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}" path="SMToolFunctionsLibrary.js" />
+		<child name="FDMFunctionsLibrary" key="{11AB687C-AAE7-4852-ACD3-595884B135C8}" path="FDMFunctionsLibrary.js" />
+		<child name="STDLib" key="{9B84D561-8E49-4AC4-9688-84D1BA80BCEE}" path="STDLib.sj" />
+		<child name="Main" key="{C344B245-3507-4D36-99F0-78E011A7BBBA}" path="Main.sj" />
+	</children>
+</Root>

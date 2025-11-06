@@ -1,0 +1,115 @@
+﻿//USEUNIT serverKeywords
+//USEUNIT ControlInfo
+//USEUNIT dashboardModule
+function obj_LicenseForm() {
+  Log.AppendFolder("obj_LicenseForm");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm(); 
+    controls = ControlInfo.ControlRepository.obj_LicenseForm
+    
+    let licenseForm = mainForm.FindChild("Name", controls.licenseForm.Name, 100);
+
+    if (licenseForm.Exists) {
+      Log.Message("LicenseForm located successfully.");
+      return licenseForm;
+    } else {
+      Log.Error("LicenseForm not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating LicenseForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function clickOnLicenseTab() {
+  Log.AppendFolder("clickOnLicenseTab");
+
+  try {
+    var controls = ControlInfo.ControlRepository.clickOnLicenseTab;
+    var ServerManagerMainForm = serverKeywords.obj_ServerManagerMainForm();
+
+    if (!ServerManagerMainForm) {
+      Log.Error("ServerManagerMainForm not found");
+      return;
+    }
+
+    var btnLicensing = ServerManagerMainForm.FindChild("Name", controls.btnLicening.Name, 100);
+
+    if (!btnLicensing) {
+      Log.Error("btnLicensing control not found");
+      return;
+    }
+
+    btnLicensing.Click();
+    Log.Message("License tab clicked successfully");
+
+  } catch (e) {
+    Log.Error("Error in clickOnLicenseTab", e.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+          
+
+ //licensePath
+function updateLicense(licensePath) {
+  Log.AppendFolder("updateLicense");
+
+  try {
+    let licenseForm = obj_LicenseForm()
+    controls = ControlInfo.ControlRepository.updateLicense
+    
+    let panLicensingInfo = licenseForm.FindChild("Name", controls.panLicensingInfo.Name, 100, true);
+    let gpUpgradeLicense = panLicensingInfo.FindChild("Name", controls.gpUpgradeLicense.Name, 100, true);
+    let browseBtn = gpUpgradeLicense.FindChild("Name", controls.browseBtn.Name, 100, true);
+
+    if (!browseBtn.Exists || !browseBtn.Enabled) throw new Error("Browse button not available.");
+    browseBtn.ClickButton();
+     
+    // Message box check
+    let dialog = Aliases.ServerMgmtTool.FindChild("Name", controls.dialog.Name, 100, true);
+    if (dialog.Exists) {
+      let panel4 = dialog.FindChild("Name", controls.panel4.Name, 100, true);
+      let msgText = panel4.FindChild("Name", controls.msgText.Name, 100, true);
+
+      if (msgText.Exists && aqString.ToLower(msgText.WndCaption).includes("stop")) {
+        let panel5 = panel4.FindChild("Name",controls.panel5.Name , 100, true);
+        let okBtn = panel5.FindChild("Name",controls.okBtn.Name , 100, true);
+        if (okBtn.Exists && okBtn.Enabled) okBtn.ClickButton();
+
+        dashboardModule.toggleServerStartStop("stop");
+
+        if (!browseBtn.Exists || !browseBtn.Enabled) throw new Error("Browse button not available after stop.");
+        browseBtn.Click();
+      }
+    }
+
+    // License File Dialog
+    let fileDialog = Aliases.ServerMgmtTool.Window(controls.fileDialog.WndClass, controls.fileDialog.WndCaption, controls.fileDialog.Index);
+     let comboEx = fileDialog.FindChild("WndClass", "ComboBoxEx32", 100, true);
+    let comboBox = comboEx.FindChild("WndClass", controls.comboBox.WndClass, 100, true);
+    let editBox = comboBox.FindChild("WndClass", controls.editBox.WndClass, 100, true);
+    if (!editBox.Exists) throw new Error("Edit box not found.");
+    editBox.SetText(licensePath);
+
+    let openBtn = fileDialog.FindChild("WndCaption", "&Open", 100, true);
+    if (!openBtn.Exists || !openBtn.Enabled) throw new Error("Open button not found.");
+    openBtn.Click();
+
+    serverKeywords.submitAuditTrailReason("adding license");
+    serverKeywords.handleCustomMessageBoxOfOk()
+    serverKeywords.handleCustomMessageBoxOfOk()
+    serverKeywords.handleCustomMessageBoxOfOk()
+    
+    Log.Checkpoint("✅ License upgrade completed.");
+  } catch (error) {
+    Log.Error("❌ updateLicense error: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}

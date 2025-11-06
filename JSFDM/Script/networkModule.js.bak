@@ -1,0 +1,769 @@
+﻿//USEUNIT serverKeywords
+//USEUNIT ControlInfo
+
+function obj_DisplayForm() {
+  Log.AppendFolder("obj_DisplayForm");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm();
+    var controls =  ControlInfo.ControlRepository.obj_DisplayForm
+        
+    let displayForm = mainForm.FindChild("Name",controls.displayForm["Name"] , 100);
+
+    if (displayForm.Exists) {
+      Log.Message("DisplayForm located successfully.");
+      return displayForm;
+    } else {
+      Log.Error("DisplayForm not found");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating DisplayForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_btnView() {
+  Log.AppendFolder("obj_btnView");
+  try {
+    let displayForm = obj_DisplayForm();
+    if (!displayForm || !displayForm.Exists) {
+      Log.Warning("DisplayForm is not available. Cannot locate btnView.");
+      return null;
+    }    
+    
+
+    
+    controls = ControlInfo.ControlRepository.obj_btnView
+    let btnView = displayForm.FindChild("Name", controls.btnView.Name, 100);
+    if (btnView.Exists) {
+      Log.Message("View button located successfully.");
+      return btnView;
+    } else {
+      Log.Error("View button not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating View button: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_btnAddNew() {
+  Log.AppendFolder("obj_btnAddNew");
+  try {
+    let displayForm = obj_DisplayForm();
+    if (!displayForm || !displayForm.Exists) {
+      Log.Warning("DisplayForm is not available. Cannot locate btnAddNew.");
+      return null;
+    }
+    controls = ControlInfo.ControlRepository.obj_btnAddNew
+                
+    let btnAddNew = displayForm.FindChild("Name", controls.btnAddNew.Name, 100);
+    if (btnAddNew.Exists) {
+      Log.Message("New button located successfully.");
+      return btnAddNew;
+    } else {
+      Log.Error("New button not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating New button: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_btnEdit() {
+  Log.AppendFolder("obj_btnEdit");
+  try {
+    let displayForm = obj_DisplayForm();
+    if (!displayForm || !displayForm.Exists) {
+      Log.Warning("DisplayForm is not available. Cannot locate btnEdit.");
+      return null;
+    }
+     controls = ControlInfo.ControlRepository.obj_btnEdit
+                    
+    let btnEdit = displayForm.FindChild("Name", controls.btnEdit.Name, 100);
+    if (btnEdit.Exists) {
+      Log.Message("Edit button located successfully.");
+      return btnEdit;
+    } else {
+      Log.Error("Edit button not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating Edit button: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_btnDelete() {
+  Log.AppendFolder("obj_btnDelete");
+  try {
+    let displayForm = obj_DisplayForm();
+    if (!displayForm || !displayForm.Exists) {
+      Log.Warning("DisplayForm is not available. Cannot locate btnDelete.");
+      return null;
+    }
+    controls = ControlInfo.ControlRepository.obj_btnDelete
+           
+    let btnDelete = displayForm.FindChild("Name", controls.btnDelete.Name, 100);
+    if (btnDelete.Exists) {
+      Log.Message("Delete button located successfully.");
+      return btnDelete;
+    } else {
+      Log.Error("Delete button not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating Delete button: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_btnExitDisp() {
+  Log.AppendFolder("obj_btnExitDisp");
+  try {
+    let displayForm = obj_DisplayForm();
+    if (!displayForm || !displayForm.Exists) {
+      Log.Warning("DisplayForm is not available. Cannot locate btnExitDisp.");
+      return null;
+    }
+    controls = ControlInfo.ControlRepository.obj_btnExitDisp
+    
+    let btnExitDisp = displayForm.FindChild("Name",controls.btnExitDisp.Name , 100);
+    if (btnExitDisp.Exists) {
+      Log.Message("Exit Display button located successfully.");
+      return btnExitDisp;
+    } else {
+      Log.Error("Exit Display button not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating Exit Display button: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_LicenseForm() {
+  Log.AppendFolder("obj_LicenseForm");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm();
+    controls = ControlInfo.ControlRepository.obj_LicenseForm
+    
+    let licenseForm = mainForm.FindChild("Name",controls.licenseForm.Name , 100);
+
+    if (licenseForm.Exists) {
+      Log.Message("LicenseForm located successfully.");
+      return licenseForm;
+    } else {
+      Log.Error("LicenseForm not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating LicenseForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_SelectResource() {
+  Log.AppendFolder("obj_SelectResource");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm();
+    controls = ControlInfo.ControlRepository.obj_SelectResource
+    
+    let selectResourceForm = mainForm.FindChild("Name",controls.selectResourceForm.Name , 100);
+
+    if (selectResourceForm.Exists) {
+      Log.Message("SelectResource form located successfully.");
+      return selectResourceForm;
+    } else {
+      Log.Error("SelectResource form not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating SelectResource form: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_CertificateForm() {
+  Log.AppendFolder("obj_CertificateForm");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm(); 
+    let certificateForm = mainForm.FindChild("Name", `WinFormsObject("CertificateForm")`, 100);
+
+    if (certificateForm.Exists) {
+      Log.Message("CertificateForm located successfully.");
+      return certificateForm;
+    } else {
+      Log.Error("CertificateForm not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating CertificateForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_addEditFrom() {
+  Log.AppendFolder("obj_addEditFrom");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm(); 
+    let addEditForm = mainForm.FindChild("Name", `WinFormsObject("AddEditForm")`, 100);
+
+    if (addEditForm.Exists) {
+      Log.Message("AddEditForm located successfully.");
+      return addEditForm;
+    } else {
+      Log.Error("AddEditForm not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating AddEditForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_NetworkNameTextBox() {
+  Log.AppendFolder("obj_NetworkNameTextBox");
+  try {
+    let addEditForm = obj_addEditFrom()
+    let networkNameTextBox  = addEditForm.FindChild("Name",`WinFormsObject("m_txtNetworkName")`,100);
+
+    if (networkNameTextBox.Exists) {
+      Log.Message("NetworkNameTextBox located successfully.");
+      return networkNameTextBox;
+    } else {
+      Log.Error("NetworkNameTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating NetworkNameTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_ServerNameTextBox() {
+  Log.AppendFolder("obj_ServerNameTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    let serverNameTextBox = addEditForm.FindChild("Name", `WinFormsObject("m_txtServerName")`, 100);
+
+    if (serverNameTextBox.Exists) {
+      Log.Message("ServerNameTextBox located successfully.");
+      return serverNameTextBox;
+    } else {
+      Log.Error("ServerNameTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating ServerNameTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_NetworkTypeComboBox() {
+  Log.AppendFolder("obj_NetworkTypeComboBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    let networkTypeComboBox = addEditForm.FindChild("Name", `WinFormsObject("m_combNetworkType")`, 100);
+
+    if (networkTypeComboBox.Exists) {
+      Log.Message("NetworkTypeComboBox located successfully.");
+      return networkTypeComboBox;
+    } else {
+      Log.Error("NetworkTypeComboBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating NetworkTypeComboBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_ComPortComboBox() {
+  Log.AppendFolder("obj_ComPortComboBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    controls = ControlInfo.ControlRepository.obj_ComPortComboBox
+    
+    let comPortComboBox = addEditForm.FindChild("Name",controls.comPortComboBox.Name , 100);
+
+    if (comPortComboBox.Exists) {
+      Log.Message("ComPortComboBox located successfully.");
+      return comPortComboBox;
+    } else {
+      Log.Error("ComPortComboBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating ComPortComboBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_BaudRateComboBox() {
+  Log.AppendFolder("obj_BaudRateComboBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+     controls = ControlInfo.ControlRepository.obj_BaudRateComboBox
+      
+    let baudRateComboBox = addEditForm.FindChild("Name", controls.baudRateComboBox.Name, 100);
+
+    if (baudRateComboBox.Exists) {
+      Log.Message("BaudRateComboBox located successfully.");
+      return baudRateComboBox;
+    } else {
+      Log.Error("BaudRateComboBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating BaudRateComboBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_RetryCountTextBox() {
+  Log.AppendFolder("obj_RetryCountTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_RetryCountTextBox;
+    
+    let retryCountTextBox = addEditForm.FindChild("Name",controls.retryCountTextBox.Name , 100);
+
+    if (retryCountTextBox.Exists) {
+      Log.Message("RetryCountTextBox located successfully.");
+      return retryCountTextBox;
+    } else {
+      Log.Error("RetryCountTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating RetryCountTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_StartAddrTextBox() {
+  Log.AppendFolder("obj_StartAddrTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_StartAddrTextBox;
+    
+    let startAddrTextBox = addEditForm.FindChild("Name",controls.startAddrTextBox.Name , 100);
+
+    if (startAddrTextBox.Exists) {
+      Log.Message("StartAddrTextBox located successfully.");
+      return startAddrTextBox;
+    } else {
+      Log.Error("StartAddrTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating StartAddrTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_MuxEndAddrTextBox() {
+  Log.AppendFolder("obj_MuxEndAddrTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_MuxEndAddrTextBox;
+    
+    let muxEndAddrTextBox = addEditForm.FindChild("Name",controls.muxEndAddrTextBox.Name , 100);
+
+    if (muxEndAddrTextBox.Exists) {
+      Log.Message("MuxEndAddrTextBox located successfully.");
+      return muxEndAddrTextBox;
+    } else {
+      Log.Error("MuxEndAddrTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating MuxEndAddrTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_OKButton() {
+  Log.AppendFolder("obj_OKButton");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_OKButton
+    let okButton = addEditForm.FindChild("Name",controls.okButton.Name , 100);
+
+    if (okButton.Exists) {
+      Log.Message("OKButton located successfully.");
+      return okButton;
+    } else {
+      Log.Error("OKButton not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating OKButton: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_CancelButton() {
+  Log.AppendFolder("obj_CancelButton");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_CancelButton
+     
+    let cancelButton = addEditForm.FindChild("Name", controls.cancelButton.Name, 100);
+
+    if (cancelButton.Exists) {
+      Log.Message("CancelButton located successfully.");
+      return cancelButton;
+    } else {
+      Log.Error("CancelButton not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating CancelButton: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_EnableMuxMonitorCheckbox() {
+  Log.AppendFolder("obj_EnableMuxMonitorCheckbox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_EnableMuxMonitorCheckbox
+    
+    let enableMuxCheckbox = addEditForm.FindChild("Name",controls.enableMuxCheckbox["Name"] , 100);
+
+    if (enableMuxCheckbox.Exists) {
+      Log.Message("EnableMuxMonitorCheckbox located successfully.");
+      return enableMuxCheckbox;
+    } else {
+      Log.Error("EnableMuxMonitorCheckbox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating EnableMuxMonitorCheckbox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_ExperionServerTextBox() {
+  Log.AppendFolder("obj_ExperionServerTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_ExperionServerTextBox
+    
+    let serverTextBox = addEditForm.FindChild("Name",controls.serverTextBox.Name , 100);
+
+    if (serverTextBox.Exists) {
+      Log.Message("Experion Server TextBox located successfully.");
+      return serverTextBox;
+    } else {
+      Log.Error("Experion Server TextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating Experion Server TextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_NonRedundantRadioButton() {
+  Log.AppendFolder("obj_NonRedundantRadioButton");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_NonRedundantRadioButton
+    
+    let nonRedundantRadioButton = addEditForm.FindChild("Name",controls.nonRedundantRadioButton.Name , 100);
+
+    if (nonRedundantRadioButton.Exists) {
+      Log.Message("NonRedundantRadioButton located successfully.");
+      return nonRedundantRadioButton;
+    } else {
+      Log.Error("NonRedundantRadioButton not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating NonRedundantRadioButton: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_RedundantRadioButton() {
+  Log.AppendFolder("obj_RedundantRadioButton");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_RedundantRadioButton
+    
+    let redundantRadioButton = addEditForm.FindChild("Name",controls.redundantRadioButton.Name , 100);
+
+    if (redundantRadioButton.Exists) {
+      Log.Message("RedundantRadioButton located successfully.");
+      return redundantRadioButton;
+    } else {
+      Log.Error("RedundantRadioButton not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating RedundantRadioButton: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function obj_EnableSafetyManagerCheckbox() {
+  Log.AppendFolder("obj_EnableSafetyManagerCheckbox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_EnableSafetyManagerCheckbox
+    
+    let safetyManagerCheckbox = addEditForm.FindChild("Name", controls.safetyManagerCheckbox.Name, 100);
+
+    if (safetyManagerCheckbox.Exists) {
+      Log.Message("EnableSafetyManagerCheckbox located successfully.");
+      return safetyManagerCheckbox;
+    } else {
+      Log.Error("EnableSafetyManagerCheckbox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating EnableSafetyManagerCheckbox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_OneWirelessManagerCheckbox() {
+  Log.AppendFolder("obj_OneWirelessManagerCheckbox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_OneWirelessManagerCheckbox
+    
+    let oneWirelessCheckbox = addEditForm.FindChild("Name", controls.oneWirelessCheckbox.Name, 100);
+
+    if (oneWirelessCheckbox.Exists) {
+      Log.Message("OneWirelessManagerCheckbox located successfully.");
+      return oneWirelessCheckbox;
+    } else {
+      Log.Error("OneWirelessManagerCheckbox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating OneWirelessManagerCheckbox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function obj_SecondaryServerTextBox() {
+  Log.AppendFolder("obj_SecondaryServerTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    var controls = ControlInfo.ControlRepository.obj_SecondaryServerTextBox
+    
+    let secondaryServerTextBox = addEditForm.FindChild("Name", controls.secondaryServerTextBox.Name, 100);
+
+    if (secondaryServerTextBox.Exists) {
+      Log.Message("SecondaryServerTextBox located successfully.");
+      return secondaryServerTextBox;
+    } else {
+      Log.Error("SecondaryServerTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating SecondaryServerTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+
+function obj_ViewDetailsForm() {
+  Log.AppendFolder("obj_ViewDetailsForm");
+  try {
+    let mainForm = serverKeywords.obj_ServerManagerMainForm(); 
+    var controls = ControlInfo.ControlRepository.obj_ViewDetailsForm
+    
+    let viewDetailsForm = mainForm.FindChild("Name",controls.viewDetailsForm.Name , 100);
+    if (viewDetailsForm.Exists) {
+      Log.Message("ViewDetailsForm located successfully.");
+      return viewDetailsForm;
+    } else {
+      Log.Error("ViewDetailsForm not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating ViewDetailsForm: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+function addNetwork(networkName,networkType,serverName){
+  let netWorkTxt = obj_NetworkNameTextBox();
+  networkTxt.SetText(networkName);
+  objNetworkType = obj_NetworkTypeComboBox();
+  commonPageActions.select_ComboBoxItem(objNetworkType,networkType);
+  let objServerNameTxtField = obj_ServerNameTextBox();
+  objServerNameTxtField.setText(serverName);
+  let objComportComboBox = obj_ComPortComboBox();
+  commonPageActions.select_ComboBoxItem(objComportComboBox,comPortType)
+  let objBudRate = obj_BaudRateComboBox()
+  commonPageActions.select_ComboBoxItem(objBudRate,budRateType)
+  obj_EnableMuxMonitorCheckbox()
+}
+
+function clickNetworkRow(rowLabel) {
+  Log.AppendFolder("clickNetworkRow");
+
+  let displayForm = obj_DisplayForm()
+      listView = displayForm.FindChild("Name",'WinFormsObject("m_listView")',100);
+
+  if (!listView.Exists || !listView.VisibleOnScreen) {
+    Log.Error("ListView not found or not visible.");
+    return;
+  }
+
+  let itemCount = listView.wItemCount;
+  for (let i = 0; i < itemCount; i++) {
+    let itemText = listView.wItem(i); // Use () instead of []
+    if (itemText !== undefined && itemText !== null) {
+      if (itemText.toLowerCase().includes(rowLabel.toLowerCase())) {
+        Log.Message("Found row '" + rowLabel + "' at index " + i + ": " + itemText);
+        listView.ClickItem(i);
+        Log.PopLogFolder();
+        return;
+      }
+    } else {
+      Log.Warning("Item at index " + i + " is undefined or null.");
+    }
+  }
+
+  Log.Warning("Row '" + rowLabel + "' not found in ListView.");
+  Log.PopLogFolder();
+}
+
+
+function deleteAllListViewItemsInNetworkList() {
+  Log.AppendFolder("deleteAllListViewItemsInNetworkList");
+
+  let displayForm = obj_DisplayForm()
+      listView = displayForm.FindChild("Name",'WinFormsObject("m_listView")',100);
+
+  if (!listView.Exists || !listView.VisibleOnScreen) {
+    Log.Error("ListView not found or not visible.");
+    return;
+  }
+
+  let itemCount = listView.wItemCount;
+
+  for (let i = itemCount - 1; i >= 0; i--) {
+    try {
+      listView.ClickItem(i); // Select the item
+      Delay(500); // Optional: wait for selection
+
+      // Trigger delete (adjust based on your app's logic)
+      deleteButton = obj_btnDelete()
+      deleteButton.SetFocus()
+      deleteButton.Click()
+      commonPageActions.handleCustomMessageBoxOfYes()
+      commonPageActions.submitAuditTrailReason("Delete Network")
+      Delay(500); // Optional: wait for UI refresh
+    } catch (e) {
+      Log.Error("Error deleting item at index " + i + ": " + e.message);
+    }
+  }
+
+  Log.PopLogFolder();
+}
