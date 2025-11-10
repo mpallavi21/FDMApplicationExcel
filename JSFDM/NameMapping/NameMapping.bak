@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root Signature="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" NameMappingVersion="7" SaveImages="0">
+	<Storages Current="0">
+		<Child Name="Default Configuration" />
+	</Storages>
+	<Nodes Name="NameMapping" Key="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Children>
+			<Child Name="Sys" Key="{ACD92E2B-CD6E-477B-98F2-43252D66988A}">
+				<TypeInfo Item0="{2F0BCA4F-7212-48E0-8CE5-769F4CF23105}" />
+				<Properties>
+					<Property Name="Name">
+						<Value Value="Sys" />
+					</Property>
+				</Properties>
+				<Children>
+					<Child Name="ServerMgmtTool" Key="{0FAAE088-5D9C-46B1-BED7-8B61C8C885BF}">
+						<TypeInfo Item0="{121BD25E-E7C6-4D96-B6B8-BD13D5403E1F}" />
+						<Properties>
+							<Property Name="ProcessName">
+								<Value Value="ServerMgmtTool" />
+							</Property>
+						</Properties>
+					</Child>
+					<Child Name="HCMClient" Key="{393982A8-8E98-4B84-B5EF-21CA0C8D403D}">
+						<TypeInfo Item0="{121BD25E-E7C6-4D96-B6B8-BD13D5403E1F}" />
+						<Properties>
+							<Property Name="ProcessName">
+								<Value Value="HCMClient" />
+							</Property>
+						</Properties>
+						<Children>
+							<Child Name="CLogin" Key="{F699D3C2-38CB-4DF5-869C-C71C95687822}">
+								<Image FileName="1835509618" Left="0" Top="0" Right="522" Bottom="341" />
+								<TypeInfo Item0="{056CF62E-CEB3-4C73-A1C7-219C67B752B7}" />
+								<Properties>
+									<Property Name="WinFormsControlName">
+										<Value Value="CLogin" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="FdmServerNameField" Key="{CB3435C1-6CDE-415B-A745-061D82B71EC3}">
+										<Image FileName="1835509618" Left="360" Top="173" Right="504" Bottom="193" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="uxFdmServerName" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="ComboBoxTextBoxArea" Key="{1D2AF722-CC2F-43F8-9AB4-747C5DE2FCDB}">
+												<Image FileName="1835509618" Left="361" Top="174" Right="486" Bottom="192" />
+												<TypeInfo Item0="{1E5922BE-507E-41D2-88A9-F04F75DC8308}" />
+												<Properties>
+													<Property Name="ClrFullClassName">
+														<Value Value="Xceed.Editors.ComboBoxTextBoxArea" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="UserNameTextBox" Key="{F759E18A-A8D2-4714-A413-03DAA2890CCE}">
+										<Image FileName="1823719299" Left="360" Top="141" Right="504" Bottom="161" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="txtbxUserName" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="TextBoxArea" Key="{F4B40C88-FD2D-4C5B-B89F-78240F9E0EB2}">
+												<Image FileName="1823719299" Left="361" Top="142" Right="503" Bottom="160" />
+												<TypeInfo Item0="{1E5922BE-507E-41D2-88A9-F04F75DC8308}" />
+												<Properties>
+													<Property Name="ClrFullClassName">
+														<Value Value="Xceed.Editors.TextBoxArea" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="PasswordTextBox" Key="{E7EF1E95-966B-467E-B55D-B655C32B5966}">
+										<Image FileName="1823719299" Left="360" Top="173" Right="504" Bottom="193" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="txtbxPassword" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="TextBoxArea" Key="{080568BA-79AE-44EA-B14C-7A607D2A8FF7}">
+												<Image FileName="1823719299" Left="361" Top="174" Right="503" Bottom="192" />
+												<TypeInfo Item0="{1E5922BE-507E-41D2-88A9-F04F75DC8308}" />
+												<Properties>
+													<Property Name="ClrFullClassName">
+														<Value Value="Xceed.Editors.TextBoxArea" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="LoginButton" Key="{040DD35C-0B7C-4362-B67F-E2D2D1012BC8}">
+										<Image FileName="1823719299" Left="375" Top="273" Right="428" Bottom="296" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="btnOK" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="DomainTextBox" Key="{FB7311B9-27AC-4AD3-9B0F-E1A22A7BF6DA}">
+										<Image FileName="1823719299" Left="360" Top="205" Right="504" Bottom="226" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="m_cbDomain" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="ComboBoxTextBoxArea" Key="{25550ECF-BE76-43FB-B08E-693789507A3C}">
+												<Image FileName="1823719299" Left="361" Top="206" Right="486" Bottom="225" />
+												<TypeInfo Item0="{1E5922BE-507E-41D2-88A9-F04F75DC8308}" />
+												<Properties>
+													<Property Name="ClrFullClassName">
+														<Value Value="Xceed.Editors.ComboBoxTextBoxArea" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="buttonCancel" Key="{3623BD65-8740-4B8B-A0F0-5F9F86E9EC12}">
+										<Image FileName="799400760" Left="438" Top="273" Right="491" Bottom="296" />
+										<TypeInfo Item0="{9643C221-83CD-49E7-BC52-0F3D84970CEC}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="buttonCancel" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="dlgFDMConfiguration" Key="{C71D6FBA-8B2F-4CEA-B2E5-15A328050A7F}">
+								<Image FileName="337856546" Left="0" Top="0" Right="378" Bottom="216" />
+								<TypeInfo Item0="{DCA67639-352B-477C-866F-293E6F7FEA4B}" />
+								<Properties>
+									<Property Name="WndClass">
+										<Value Value="#32770" />
+									</Property>
+									<Property Name="WndCaption">
+										<Value Value="Login" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="btnOK" Key="{A49EC356-C778-42E6-A3B8-2A082AF6A88C}">
+										<Image FileName="-1201049841" Left="247" Top="159" Right="347" Bottom="192" />
+										<TypeInfo Item0="{6AE30CE1-4298-4D84-9BB9-4123AB513EBF}" />
+										<Properties>
+											<Property Name="WndClass">
+												<Value Value="Button" />
+											</Property>
+											<Property Name="WndCaption">
+												<Value Value="OK" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="ClientMainWindow" Key="{9AD1EC7C-C33A-4E3E-8179-A623FC7798DE}">
+								<Image FileName="1935783159" Left="0" Top="0" Right="1938" Bottom="1048" />
+								<TypeInfo Item0="{056CF62E-CEB3-4C73-A1C7-219C67B752B7}" />
+								<Properties>
+									<Property Name="WinFormsControlName">
+										<Value Value="frmHCMClientMain" />
+									</Property>
+								</Properties>
+							</Child>
+						</Children>
+					</Child>
+				</Children>
+			</Child>
+		</Children>
+	</Nodes>
+	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
+		<Child Name="ServerMgmtTool" Owner="{0FAAE088-5D9C-46B1-BED7-8B61C8C885BF}" />
+		<Child Name="HCMClient" Owner="{393982A8-8E98-4B84-B5EF-21CA0C8D403D}">
+			<Child Name="CLogin" Owner="{F699D3C2-38CB-4DF5-869C-C71C95687822}">
+				<Child Name="FdmServerNameField" Owner="{CB3435C1-6CDE-415B-A745-061D82B71EC3}">
+					<Child Name="ComboBoxTextBoxArea" Owner="{1D2AF722-CC2F-43F8-9AB4-747C5DE2FCDB}" />
+				</Child>
+				<Child Name="UserNameTextBox" Owner="{F759E18A-A8D2-4714-A413-03DAA2890CCE}">
+					<Child Name="TextBoxArea" Owner="{F4B40C88-FD2D-4C5B-B89F-78240F9E0EB2}" />
+				</Child>
+				<Child Name="PasswordTextBox" Owner="{E7EF1E95-966B-467E-B55D-B655C32B5966}">
+					<Child Name="TextBoxArea" Owner="{080568BA-79AE-44EA-B14C-7A607D2A8FF7}" />
+				</Child>
+				<Child Name="LoginButton" Owner="{040DD35C-0B7C-4362-B67F-E2D2D1012BC8}" />
+				<Child Name="DomainTextBox" Owner="{FB7311B9-27AC-4AD3-9B0F-E1A22A7BF6DA}">
+					<Child Name="ComboBoxTextBoxArea" Owner="{25550ECF-BE76-43FB-B08E-693789507A3C}" />
+				</Child>
+				<Child Name="buttonCancel" Owner="{3623BD65-8740-4B8B-A0F0-5F9F86E9EC12}" />
+			</Child>
+			<Child Name="dlgFDMConfiguration" Owner="{C71D6FBA-8B2F-4CEA-B2E5-15A328050A7F}">
+				<Child Name="btnOK" Owner="{A49EC356-C778-42E6-A3B8-2A082AF6A88C}" />
+			</Child>
+			<Child Name="ClientMainWindow" Owner="{9AD1EC7C-C33A-4E3E-8179-A623FC7798DE}" />
+		</Child>
+	</LogicalNodes>
+</Root>

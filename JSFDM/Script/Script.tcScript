@@ -12,6 +12,10 @@
 		<folder name="FDM">
 			<child name="ClientLoginModule" key="{95D72D50-A04C-4100-B0D5-FB07641E333E}" path="ClientLoginModule.js" />
 			<child name="FDMControlInfo" key="{3D004170-58D0-40ED-A99E-16856B986285}" path="FDMControlInfo.js" />
+			<child name="FDMCommonPage" key="{9C28C7CC-253E-4E03-AB66-607396B72E02}" path="FDMCommonPage.js" />
+			<child name="NetworkTreeViewPage" key="{39FEF46B-834F-4155-8770-ED42F0C32A06}" path="NetworkTreeViewPage.js" />
+			<child name="DeviceStateViewPage" key="{22BCC430-49EE-4418-B542-D494A0C632E5}" path="DeviceStateViewPage.js" />
+			<child name="DrFDMPages" key="{7F8AF2AE-FB12-4A81-AB64-FEBFE50EC9B6}" path="DrFDMPages.js" />
 		</folder>
 		<child name="SMToolFunctionsLibrary" key="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}" path="SMToolFunctionsLibrary.js" />
 		<child name="FDMFunctionsLibrary" key="{11AB687C-AAE7-4852-ACD3-595884B135C8}" path="FDMFunctionsLibrary.js" />

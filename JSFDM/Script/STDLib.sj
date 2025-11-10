@@ -1,12 +1,14 @@
 ﻿//USEUNIT Main
 //USEUNIT SMToolFunctionsLibrary
 
-function openExcelFile(filename) {
+function openExcelFile(filename,cboolean = false) { 
   var excelApp = Sys.OleObject("Excel.Application");
-    excelApp.Visible = false; // Show Excel window
-    var workbook = excelApp.Workbooks.Open(filename, false, false, null, null, null, true)  
+    excelApp.Visible = cboolean; // Show Excel window
+    var workbook = excelApp.Workbooks.Open(filename, false)  
   return workbook;
 }
+
+
 
 function Get_date_time() {
   // Getting the Current Time

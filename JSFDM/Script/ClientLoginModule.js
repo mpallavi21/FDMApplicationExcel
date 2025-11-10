@@ -1,6 +1,6 @@
 ﻿
 let HCMClient = Aliases.HCMClient
-let ClientLogin = HCMClient.CLogin //WinFormsObject("CLogin")
+let ClientLogin = HCMClient.ClientLogin //WinFormsObject("CLogin")
 let UserNameTextBox = ClientLogin.UserNameTextBox
 let PasswordTextBox = ClientLogin.PasswordTextBox
 
@@ -43,7 +43,7 @@ function launchFDMClient(ServerName,Username,Password ) {
   // Select server from dropdown
   Log.Message("Setting server...");
   let server = ClientLogin.FdmServerNameField
-  let ServerDDbox = server.ComboBoxTextBoxArea
+  let ServerDDbox = server.TextFieldArea
   ServerDDbox.SetFocus()
   ServerDDbox.SetText(ServerName);
   Log.Message("Server set to: " + ServerName);
@@ -185,7 +185,7 @@ function clickOnLoginBtn(){
       // Click 'Login' to proceed to credentials
       let HCMClient = Aliases.HCMClient;
       Log.Message("Clicking login button...");
-      let LoginBtn = HCMClient.CLogin.LoginButton
+      let LoginBtn = HCMClient.ClientLogin.LoginBtn
       LoginBtn.Click();
 }
 

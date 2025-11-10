@@ -1,0 +1,3269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 35">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="160"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 8756."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\DiagnosticTool\Dr.FDCM.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="34"/>
+			<Prp name="date" type="D" value="45968.6498886806"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 24">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="bringFDMServicesFormToFront"/>
+			<Prp name="line no" type="I" value="195"/>
+		</Node>
+		<Node name="message 71">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.421350625"/>
+					<Prp name="line #" type="I" value="47"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="486"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.FdmServerNameField.TextFieldArea"/>
+					<Prp name="object top" type="I" value="174"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.FdmServerNameField.TextFieldArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;uxFdmServerName&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="47"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'LocalHost' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505178009"/>
+			<Prp name="id" type="I" value="71"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 113">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="11"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Application launched successfully"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="111"/>
+			<Prp name="date" type="D" value="45968.6532731366"/>
+			<Prp name="id" type="I" value="113"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="157"/>
+		</Node>
+		<Node name="message 111">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchApplication"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.6531360995"/>
+			<Prp name="id" type="I" value="111"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 64">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchFDMClientApplication"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6503400694"/>
+			<Prp name="id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 108">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="139"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="HCMClient process found. Terminating..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="107"/>
+			<Prp name="date" type="D" value="45968.6529725463"/>
+			<Prp name="id" type="I" value="108"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 131">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="226"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ ServerManagerMainForm is available."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="130"/>
+			<Prp name="date" type="D" value="45968.6535633333"/>
+			<Prp name="id" type="I" value="131"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="420"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Service control checkbox set."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.649399537"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 95">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="121"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickOkayIfEnabled - Check and Click OK Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6522237616"/>
+			<Prp name="id" type="I" value="95"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="417"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Collect logs checkbox set."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.649397419"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 42">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="51"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setServiceControlCheckbox - Ensure Checkbox Checked"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499186921"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 75">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213732523"/>
+					<Prp name="line #" type="I" value="7"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="160"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.UserNameTextBox.TextBoxArea"/>
+					<Prp name="object top" type="I" value="142"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.UserNameTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxUserName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="7"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505402315"/>
+			<Prp name="id" type="I" value="75"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 18">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="startServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1240"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="startServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1240"/>
+		</Node>
+		<Node name="message 87">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1289"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="collectLogsFromDrFDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6521573958"/>
+			<Prp name="id" type="I" value="87"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Launching DR FDM application..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="date" type="D" value="45968.6493457407"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 96">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="132"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button is enabled. Clicking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="95"/>
+			<Prp name="date" type="D" value="45968.6522238773"/>
+			<Prp name="id" type="I" value="96"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="date" type="D" value="45968.6493915162"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="450"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Service control checkbox set."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499207407"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 78">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213776042"/>
+					<Prp name="line #" type="I" value="13"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.PasswordTextBox.TextBoxArea"/>
+					<Prp name="object top" type="I" value="174"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.PasswordTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'Fdm_1234' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505447917"/>
+			<Prp name="id" type="I" value="78"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 37">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="stopServices"/>
+			<Prp name="line no" type="I" value="458"/>
+		</Node>
+		<Node name="item 30">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1272"/>
+		</Node>
+		<Node name="message 115">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="obj_loginFormPage"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="114"/>
+			<Prp name="date" type="D" value="45968.6532732639"/>
+			<Prp name="id" type="I" value="115"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 63">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1277"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="date" type="D" value="45968.6501740741"/>
+			<Prp name="id" type="I" value="63"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 51">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Aliases.Dr_FDCM"/>
+			<Prp name="stack beginning" type="I" value="20"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="192"/>
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="message" type="S" value="Unable to find the object WinFormsObject(&quot;FDMservicesForm&quot;). See Details for additional information."/>
+			<Prp name="stack end" type="I" value="23"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="50"/>
+			<Prp name="date" type="D" value="45968.6500410995"/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 126">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="obj_loginFormPage"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="125"/>
+			<Prp name="date" type="D" value="45968.6532807176"/>
+			<Prp name="id" type="I" value="126"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 123">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4241131829"/>
+					<Prp name="line #" type="I" value="114"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="497"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="653"/>
+					<Prp name="image file name" type="S" value="visImage16.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="306"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_cbDomain&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;)"/>
+					<Prp name="object top" type="I" value="283"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_cbDomain&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="114"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'DESKTOP-AJ7O5O5(this computer)' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="120"/>
+			<Prp name="date" type="D" value="45968.6532801389"/>
+			<Prp name="id" type="I" value="123"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 91">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 1304."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\DiagnosticTool\Dr.FDCM.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="89"/>
+			<Prp name="date" type="D" value="45968.6521940741"/>
+			<Prp name="id" type="I" value="91"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 34">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1272"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="397"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="28"/>
+			<Prp name="date" type="D" value="45968.64967875"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="389"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ensureDRFDMClosed - Terminate DR FDM if running"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="date" type="D" value="45968.6496784144"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 102">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="389"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ensureDRFDMClosed - Terminate DR FDM if running"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.652923125"/>
+			<Prp name="id" type="I" value="102"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 134">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="9"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchDRFDM - Terminate &amp; Launch DR FDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6536740162"/>
+			<Prp name="id" type="I" value="134"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 12">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4202312153"/>
+					<Prp name="line #" type="I" value="63"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="300"/>
+					<Prp name="click point y" type="I" value="267"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="372"/>
+					<Prp name="object right" type="I" value="446"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="281"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;Servicecontrolrb&quot;)"/>
+					<Prp name="object top" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (58, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;Servicecontrolrb&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="10"/>
+			<Prp name="date" type="D" value="45968.6493989699"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 127">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Login form found successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="126"/>
+			<Prp name="date" type="D" value="45968.6532809491"/>
+			<Prp name="id" type="I" value="127"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 124">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="115"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Domain value typed: DESKTOP-AJ7O5O5(this computer)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="120"/>
+			<Prp name="date" type="D" value="45968.6532807176"/>
+			<Prp name="id" type="I" value="124"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 21">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="stopServices"/>
+			<Prp name="line no" type="I" value="455"/>
+		</Node>
+		<Node name="item 17">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="startServices"/>
+			<Prp name="line no" type="I" value="428"/>
+		</Node>
+		<Node name="message 65">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="29"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchFDMClient - Launches the FDM Client using specified credentials"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="date" type="D" value="45968.6503400694"/>
+			<Prp name="id" type="I" value="65"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 88">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="321"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="checkCollectAndProceedToFinalForm - Collect Logs Flow"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="87"/>
+			<Prp name="date" type="D" value="45968.6521577431"/>
+			<Prp name="id" type="I" value="88"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 56">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;WinFormsObject&quot; method or property of the &quot;WinFormsObject(&quot;FDMservicesForm&quot;)&quot; object that does not exist."/>
+			<Prp name="stack beginning" type="I" value="32"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="258"/>
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="message" type="S" value="The object &quot;WinFormsObject(&quot;FDMservicesForm&quot;)&quot; does not exist."/>
+			<Prp name="stack end" type="I" value="35"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="54"/>
+			<Prp name="date" type="D" value="45968.6501722222"/>
+			<Prp name="id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 104">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="397"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="102"/>
+			<Prp name="date" type="D" value="45968.6529235185"/>
+			<Prp name="id" type="I" value="104"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 16">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4202332176"/>
+					<Prp name="line #" type="I" value="133"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="118"/>
+					<Prp name="click point y" type="I" value="344"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="193"/>
+					<Prp name="object right" type="I" value="268"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="364"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;okay&quot;)"/>
+					<Prp name="object top" type="I" value="325"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (60, 15) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;okay&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="133"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="14"/>
+			<Prp name="date" type="D" value="45968.6494008796"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="51"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setServiceControlCheckbox - Ensure Checkbox Checked"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.649397419"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 97">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4230574421"/>
+					<Prp name="line #" type="I" value="133"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="118"/>
+					<Prp name="click point y" type="I" value="344"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="193"/>
+					<Prp name="object right" type="I" value="268"/>
+					<Prp name="image file name" type="S" value="visImage13.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="364"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;okay&quot;)"/>
+					<Prp name="object top" type="I" value="325"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (60, 15) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;okay&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="133"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="95"/>
+			<Prp name="date" type="D" value="45968.6522255671"/>
+			<Prp name="id" type="I" value="97"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 80">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213792824"/>
+					<Prp name="line #" type="I" value="62"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="360"/>
+					<Prp name="click point y" type="I" value="215"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="432"/>
+					<Prp name="object right" type="I" value="504"/>
+					<Prp name="image file name" type="S" value="visImage11.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="226"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.DomainTextBox"/>
+					<Prp name="object top" type="I" value="205"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (72, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientLogin.DomainTextBox&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;m_cbDomain&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505470718"/>
+			<Prp name="id" type="I" value="80"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 44">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4207524884"/>
+					<Prp name="line #" type="I" value="63"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="300"/>
+					<Prp name="click point y" type="I" value="267"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="372"/>
+					<Prp name="object right" type="I" value="446"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="281"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;Servicecontrolrb&quot;)"/>
+					<Prp name="object top" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (58, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;Servicecontrolrb&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="42"/>
+			<Prp name="date" type="D" value="45968.6499202778"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 22">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1272"/>
+		</Node>
+		<Node name="item 27">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="160"/>
+		</Node>
+		<Node name="item 15">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="157"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="stack beginning" type="I" value="16"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="225"/>
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="message" type="S" value="Start button not found in FDMservicesForm."/>
+			<Prp name="stack end" type="I" value="19"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="date" type="D" value="45968.6496782986"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 89">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="9"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchDRFDM - Terminate &amp; Launch DR FDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6521577431"/>
+			<Prp name="id" type="I" value="89"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Aliases.Dr_FDCM"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="222"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="message" type="S" value="Unable to find the object WinFormsObject(&quot;FDMservicesForm&quot;). See Details for additional information."/>
+			<Prp name="stack end" type="I" value="11"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="date" type="D" value="45968.6496675579"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 31">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="160"/>
+		</Node>
+		<Node name="message 74">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213522917"/>
+					<Prp name="line #" type="I" value="188"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="375"/>
+					<Prp name="click point y" type="I" value="284"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="401"/>
+					<Prp name="object right" type="I" value="428"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.LoginBtn"/>
+					<Prp name="object top" type="I" value="273"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (26, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientLogin.LoginBtn&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;btnOK&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="188"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505201736"/>
+			<Prp name="id" type="I" value="74"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 28">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStopButton"/>
+			<Prp name="line no" type="I" value="258"/>
+		</Node>
+		<Node name="message 66">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="30"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Launching FDM Client..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6503401852"/>
+			<Prp name="id" type="I" value="66"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="395"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM application is running. Terminating process..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="28"/>
+			<Prp name="date" type="D" value="45968.6496785301"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 141">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="132"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button is enabled. Clicking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="140"/>
+			<Prp name="date" type="D" value="45968.6537405903"/>
+			<Prp name="id" type="I" value="141"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="423"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button clicked."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6494031481"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 136">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 12068."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\DiagnosticTool\Dr.FDCM.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="134"/>
+			<Prp name="date" type="D" value="45968.6537106366"/>
+			<Prp name="id" type="I" value="136"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 132">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1289"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="collectLogsFromDrFDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6536740162"/>
+			<Prp name="id" type="I" value="132"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="121"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickOkayIfEnabled - Check and Click OK Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.649399537"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="34"/>
+			<Prp name="date" type="D" value="45968.6499171875"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 146">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="359"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="LogOutputLocation caption: C:\ProgramData\Honeywell\FDM\DrFDM_DESKTOP-AJ7O5O5_2025_11_07_15_41_23"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6541200579"/>
+			<Prp name="id" type="I" value="146"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="startServices"/>
+			<Prp name="line no" type="I" value="425"/>
+		</Node>
+		<Node name="message 101">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="359"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="LogOutputLocation caption: C:\ProgramData\Honeywell\FDM\DrFDM_DESKTOP-AJ7O5O5_2025_11_07_15_39_12"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.652923125"/>
+			<Prp name="id" type="I" value="101"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 58">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="459"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="stop button clicked."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6501734722"/>
+			<Prp name="id" type="I" value="58"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 98">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="342"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="FinalForm detected. Activating it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6529196181"/>
+			<Prp name="id" type="I" value="98"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="stack beginning" type="I" value="24"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="195"/>
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="message" type="S" value="FDMservicesForm not found."/>
+			<Prp name="stack end" type="I" value="27"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="50"/>
+			<Prp name="date" type="D" value="45968.6500419097"/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 79">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Selecting domain..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505456018"/>
+			<Prp name="id" type="I" value="79"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="132"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button is enabled. Clicking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="46"/>
+			<Prp name="date" type="D" value="45968.6499208565"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 77">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213757986"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.PasswordTextBox.TextBoxArea"/>
+					<Prp name="object top" type="I" value="174"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.PasswordTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505435764"/>
+			<Prp name="id" type="I" value="77"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 121">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="obj_loginFormPage"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="120"/>
+			<Prp name="date" type="D" value="45968.6532790394"/>
+			<Prp name="id" type="I" value="121"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 92">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="89"/>
+			<Prp name="date" type="D" value="45968.6522223727"/>
+			<Prp name="id" type="I" value="92"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 39">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="160"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="447"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Collect logs checkbox set."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499186921"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 33">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="stopServices"/>
+			<Prp name="line no" type="I" value="458"/>
+		</Node>
+		<Node name="message 68">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 14248."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="40"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\ClientMachine\Bin\HCMClient.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6504004398"/>
+			<Prp name="id" type="I" value="68"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 144">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="353"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Logout form appeared at: 15:41:55.India Daylight Timezz"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6541198264"/>
+			<Prp name="id" type="I" value="144"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 145">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="356"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Time taken between OK click and logout form appearing: 00:00:22.India Daylight Timezz seconds"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6541199421"/>
+			<Prp name="id" type="I" value="145"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 109">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="141"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="HCMClient process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="107"/>
+			<Prp name="date" type="D" value="45968.6529744676"/>
+			<Prp name="id" type="I" value="109"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 90">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Launching DR FDM application..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="89"/>
+			<Prp name="date" type="D" value="45968.6521931481"/>
+			<Prp name="id" type="I" value="90"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 84">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="85"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Login failure dialog not present."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6506916667"/>
+			<Prp name="id" type="I" value="84"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 128">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="139"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Login button found and ready for interaction."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="125"/>
+			<Prp name="date" type="D" value="45968.6532809491"/>
+			<Prp name="id" type="I" value="128"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is unchecked. Checking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="10"/>
+			<Prp name="date" type="D" value="45968.6493976505"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 93">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="87"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setCollectLogsCheckbox - Set Collect Logs State"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6522223727"/>
+			<Prp name="id" type="I" value="93"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 32">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1266"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="stopDRFDM - Full DR FDM Cycle"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6498514815"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 8">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStartButton"/>
+			<Prp name="line no" type="I" value="222"/>
+		</Node>
+		<Node name="message 140">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="121"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickOkayIfEnabled - Check and Click OK Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6537404745"/>
+			<Prp name="id" type="I" value="140"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 105">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1295"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Log collection from DR FDM completed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="87"/>
+			<Prp name="date" type="D" value="45968.6529235185"/>
+			<Prp name="id" type="I" value="105"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="219"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickStartButton - Interact with Start Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6495436343"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 137">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="134"/>
+			<Prp name="date" type="D" value="45968.6537390856"/>
+			<Prp name="id" type="I" value="137"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 148">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="395"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM application is running. Terminating process..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="147"/>
+			<Prp name="date" type="D" value="45968.6541200579"/>
+			<Prp name="id" type="I" value="148"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 86">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="92"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="FDM Client launched and main window detected."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6520384491"/>
+			<Prp name="id" type="I" value="86"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 1" type="S" value="{7F8AF2AE-FB12-4A81-AB64-FEBFE50EC9B6}"/>
+			<Prp name="unit 4" type="S" value="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}"/>
+			<Prp name="unit 2" type="S" value="{C344B245-3507-4D36-99F0-78E011A7BBBA}"/>
+			<Prp name="unit 3" type="S" value="{95D72D50-A04C-4100-B0D5-FB07641E333E}"/>
+			<Prp name="unit 5" type="S" value="{262FDD91-BB06-41B1-A0CC-9BBB2C31C5BC}"/>
+			<Prp name="unit 0" type="S" value="{11AB687C-AAE7-4852-ACD3-595884B135C8}"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1234"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="startDRFDM - Full DR FDM Cycle"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6493078935"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="414"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6493916319"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 69">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="43"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Setting server..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6504744329"/>
+			<Prp name="id" type="I" value="69"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 112">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 13576."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="10"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\ServerManager\ServerMgmtTool.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="111"/>
+			<Prp name="date" type="D" value="45968.6532435648"/>
+			<Prp name="id" type="I" value="112"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="bringFDMServicesFormToFront"/>
+			<Prp name="line no" type="I" value="195"/>
+		</Node>
+		<Node name="message 152">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="300"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ServerMgmtTool process found. Terminating..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="151"/>
+			<Prp name="date" type="D" value="45968.6541703935"/>
+			<Prp name="id" type="I" value="152"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 106">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="terminateFDMClientApplication"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6529724306"/>
+			<Prp name="id" type="I" value="106"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="stack beginning" type="I" value="4"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="195"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="message" type="S" value="FDMservicesForm not found."/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="date" type="D" value="45968.6495436343"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 83">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213814005"/>
+					<Prp name="line #" type="I" value="188"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="375"/>
+					<Prp name="click point y" type="I" value="284"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="401"/>
+					<Prp name="object right" type="I" value="428"/>
+					<Prp name="image file name" type="S" value="visImage12.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="296"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.LoginBtn"/>
+					<Prp name="object top" type="I" value="273"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (26, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientLogin.LoginBtn&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;btnOK&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="188"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505492245"/>
+			<Prp name="id" type="I" value="83"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is unchecked. Checking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="42"/>
+			<Prp name="date" type="D" value="45968.6499188079"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 12">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStartButton"/>
+			<Prp name="line no" type="I" value="222"/>
+		</Node>
+		<Node name="message 107">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="131"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="terminateFMD - Terminate HCMClient via Sys.Process"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="106"/>
+			<Prp name="date" type="D" value="45968.6529724306"/>
+			<Prp name="id" type="I" value="107"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="426"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Service form activated."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6495436343"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is already checked. No action needed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="39"/>
+			<Prp name="date" type="D" value="45968.6499185764"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 73">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="186"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Clicking login button..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505186111"/>
+			<Prp name="id" type="I" value="73"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="9"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchDRFDM - Terminate &amp; Launch DR FDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6498514815"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 117">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4241093634"/>
+					<Prp name="line #" type="I" value="77"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="497"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="675"/>
+					<Prp name="image file name" type="S" value="visImage14.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="225"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_txtLoginName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;)"/>
+					<Prp name="object top" type="I" value="202"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_txtLoginName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="77"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'Admin' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="114"/>
+			<Prp name="date" type="D" value="45968.6532767708"/>
+			<Prp name="id" type="I" value="117"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 29">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="stopServices"/>
+			<Prp name="line no" type="I" value="458"/>
+		</Node>
+		<Node name="message 72">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="48"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Server set to: LocalHost"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505186111"/>
+			<Prp name="id" type="I" value="72"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 19">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="157"/>
+		</Node>
+		<Node name="item 11">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="157"/>
+		</Node>
+		<Node name="message 114">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="50"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="enterCredentials"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.6532731366"/>
+			<Prp name="id" type="I" value="114"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 61">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="395"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM application is running. Terminating process..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="60"/>
+			<Prp name="date" type="D" value="45968.6501737037"/>
+			<Prp name="id" type="I" value="61"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 99">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="353"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Logout form appeared at: 15:40:12.India Daylight Timezz"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6529227778"/>
+			<Prp name="id" type="I" value="99"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 54">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="255"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickStopButton - Interact with Stop Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6500420255"/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 81">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Domain selected via keyboard input."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505476505"/>
+			<Prp name="id" type="I" value="81"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 38">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1272"/>
+		</Node>
+		<Node name="message 70">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4213497917"/>
+					<Prp name="line #" type="I" value="46"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="486"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.FdmServerNameField.TextFieldArea"/>
+					<Prp name="object top" type="I" value="174"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.FdmServerNameField.TextFieldArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;uxFdmServerName&quot;).WinFormsObject(&quot;ComboBoxTextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="46"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window got focus."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.650516713"/>
+			<Prp name="id" type="I" value="70"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 118">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4241111458"/>
+					<Prp name="line #" type="I" value="78"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="497"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="675"/>
+					<Prp name="image file name" type="S" value="visImage15.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="266"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_txtPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;)"/>
+					<Prp name="object top" type="I" value="243"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_txtPassword&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="78"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'Password1' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="114"/>
+			<Prp name="date" type="D" value="45968.6532785764"/>
+			<Prp name="id" type="I" value="118"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 116">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Login form found successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="115"/>
+			<Prp name="date" type="D" value="45968.6532735995"/>
+			<Prp name="id" type="I" value="116"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 20">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="bringFDMServicesFormToFront"/>
+			<Prp name="line no" type="I" value="192"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 142">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4245741551"/>
+					<Prp name="line #" type="I" value="133"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="118"/>
+					<Prp name="click point y" type="I" value="344"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="193"/>
+					<Prp name="object right" type="I" value="268"/>
+					<Prp name="image file name" type="S" value="visImage18.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="364"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;okay&quot;)"/>
+					<Prp name="object top" type="I" value="325"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (60, 15) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;okay&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="133"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="140"/>
+			<Prp name="date" type="D" value="45968.6537417708"/>
+			<Prp name="id" type="I" value="142"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 153">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="302"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ServerMgmtTool process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="151"/>
+			<Prp name="date" type="D" value="45968.6541707407"/>
+			<Prp name="id" type="I" value="153"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="bringFDMServicesFormToFront - Check &amp; Activate Form"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6494031481"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 103">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="395"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM application is running. Terminating process..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="102"/>
+			<Prp name="date" type="D" value="45968.652923125"/>
+			<Prp name="id" type="I" value="103"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 135">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Launching DR FDM application..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="134"/>
+			<Prp name="date" type="D" value="45968.6537097106"/>
+			<Prp name="id" type="I" value="135"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 100">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="356"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Time taken between OK click and logout form appearing: 00:00:50.India Daylight Timezz seconds"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="88"/>
+			<Prp name="date" type="D" value="45968.6529230093"/>
+			<Prp name="id" type="I" value="100"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 129">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4241145139"/>
+					<Prp name="line #" type="I" value="21"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="500"/>
+					<Prp name="click point y" type="I" value="343"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="535"/>
+					<Prp name="object right" type="I" value="571"/>
+					<Prp name="image file name" type="S" value="visImage17.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="358"/>
+					<Prp name="object name" type="S" value="Aliases.ServerMgmtTool.WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_btnLogin&quot;)"/>
+					<Prp name="object top" type="I" value="329"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (28, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;ServerMgmtTool&quot;).WinFormsObject(&quot;LoginForm&quot;).WinFormsObject(&quot;m_btnLogin&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.6532820718"/>
+			<Prp name="id" type="I" value="129"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="453"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button clicked."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499227662"/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 67">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="39"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Running TestedApps.HCMClient..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6503993981"/>
+			<Prp name="id" type="I" value="67"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="157"/>
+		</Node>
+		<Node name="message 110">
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="5"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="LaunchServerManagmentTool"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6531360995"/>
+			<Prp name="id" type="I" value="110"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1241"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Services started and workflow triggered."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="date" type="D" value="45968.6496784144"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 154">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="228"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Excel process terminated to release file lock."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6542422917"/>
+			<Prp name="id" type="I" value="154"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;WinFormsObject&quot; method or property of the &quot;WinFormsObject(&quot;FDMservicesForm&quot;)&quot; object that does not exist."/>
+			<Prp name="stack beginning" type="I" value="12"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="222"/>
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="message" type="S" value="The object &quot;WinFormsObject(&quot;FDMservicesForm&quot;)&quot; does not exist."/>
+			<Prp name="stack end" type="I" value="15"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="22"/>
+			<Prp name="date" type="D" value="45968.6496728704"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 149">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="397"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="147"/>
+			<Prp name="date" type="D" value="45968.6541204745"/>
+			<Prp name="id" type="I" value="149"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="121"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="clickOkayIfEnabled - Check and Click OK Button"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499207407"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="87"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setCollectLogsCheckbox - Set Collect Logs State"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499171875"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 119">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="80"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Entered username and password successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="114"/>
+			<Prp name="date" type="D" value="45968.6532790394"/>
+			<Prp name="id" type="I" value="119"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="21"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Launching DR FDM application..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="34"/>
+			<Prp name="date" type="D" value="45968.6498878009"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="440"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="stopServices - DR FDM Full stopup"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="date" type="D" value="45968.6498514815"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 13">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="startServices"/>
+			<Prp name="line no" type="I" value="428"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="startServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1240"/>
+		</Node>
+		<Node name="message 143">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="342"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="FinalForm detected. Activating it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6541192477"/>
+			<Prp name="id" type="I" value="143"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 59">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1273"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Services stopped and workflow triggered."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="date" type="D" value="45968.650173588"/>
+			<Prp name="id" type="I" value="59"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 138">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="87"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setCollectLogsCheckbox - Set Collect Logs State"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6537392014"/>
+			<Prp name="id" type="I" value="138"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 151">
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="38"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="TerminateServerTool"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="date" type="D" value="45968.6541701968"/>
+			<Prp name="id" type="I" value="151"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 55">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="stack beginning" type="I" value="28"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="258"/>
+			<Prp name="picture" type="S" value="Picture7.png"/>
+			<Prp name="message" type="S" value="Unable to find the object WinFormsObject(&quot;FDMservicesForm&quot;). See Details for additional information."/>
+			<Prp name="stack end" type="I" value="31"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="54"/>
+			<Prp name="date" type="D" value="45968.6501665741"/>
+			<Prp name="id" type="I" value="55"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is already checked. No action needed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="7"/>
+			<Prp name="date" type="D" value="45968.649397419"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="444"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM launched."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499171875"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 120">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="91"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setDomainValue"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.6532790394"/>
+			<Prp name="id" type="I" value="120"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 32">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStopButton"/>
+			<Prp name="line no" type="I" value="258"/>
+		</Node>
+		<Node name="item 10">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="startServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1240"/>
+		</Node>
+		<Node name="item 16">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStartButton"/>
+			<Prp name="line no" type="I" value="225"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="bringFDMServicesFormToFront"/>
+			<Prp name="line no" type="I" value="192"/>
+		</Node>
+		<Node name="message 62">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="397"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM process terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="60"/>
+			<Prp name="date" type="D" value="45968.6501740741"/>
+			<Prp name="id" type="I" value="62"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 139">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is already checked. No action needed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="138"/>
+			<Prp name="date" type="D" value="45968.6537404745"/>
+			<Prp name="id" type="I" value="139"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 85">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="89"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Waiting for main application window..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6506916667"/>
+			<Prp name="id" type="I" value="85"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="The process ID is 9044."/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="22"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The application &quot;C:\Program Files (x86)\Honeywell\FDM\DiagnosticTool\Dr.FDCM.exe&quot; started."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="2"/>
+			<Prp name="date" type="D" value="45968.6493603009"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="410"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="startServices - DR FDM Full Startup"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="date" type="D" value="45968.6493078935"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="189"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="bringFDMServicesFormToFront - Check &amp; Activate Form"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6499227662"/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 36">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="clickStopButton"/>
+			<Prp name="line no" type="I" value="261"/>
+		</Node>
+		<Node name="item 14">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="startServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1240"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="startServices"/>
+			<Prp name="line no" type="I" value="425"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="429"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Start button clicked."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6496782986"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="132"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="OK button is enabled. Clicking it..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="14"/>
+			<Prp name="date" type="D" value="45968.6493996528"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Aliases.Dr_FDCM"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="192"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="message" type="S" value="Unable to find the object WinFormsObject(&quot;FDMservicesForm&quot;). See Details for additional information."/>
+			<Prp name="stack end" type="I" value="3"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="date" type="D" value="45968.6495378588"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 150">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1295"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Log collection from DR FDM completed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="132"/>
+			<Prp name="date" type="D" value="45968.6541204745"/>
+			<Prp name="id" type="I" value="150"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="87"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="setCollectLogsCheckbox - Set Collect Logs State"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6493916319"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 122">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="34"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="✅ Login form found successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="121"/>
+			<Prp name="date" type="D" value="45968.6532792708"/>
+			<Prp name="id" type="I" value="122"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1245"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="DR FDM terminated successfully."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="date" type="D" value="45968.64967875"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 60">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="389"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ensureDRFDMClosed - Terminate DR FDM if running"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="32"/>
+			<Prp name="date" type="D" value="45968.650173588"/>
+			<Prp name="id" type="I" value="60"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 57">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="stack beginning" type="I" value="36"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="261"/>
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="message" type="S" value="Stop button not found in FDMservicesForm."/>
+			<Prp name="stack end" type="I" value="39"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="54"/>
+			<Prp name="date" type="D" value="45968.6501734722"/>
+			<Prp name="id" type="I" value="57"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 53">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="456"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Service form activated."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="33"/>
+			<Prp name="date" type="D" value="45968.6500420255"/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 82">
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="186"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Clicking login button..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505476505"/>
+			<Prp name="id" type="I" value="82"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 76">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.421374375"/>
+					<Prp name="line #" type="I" value="8"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="361"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="object right" type="I" value="503"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="160"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientLogin.UserNameTextBox.TextBoxArea"/>
+					<Prp name="object top" type="I" value="142"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientLogin.UserNameTextBox.TextBoxArea&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;CLogin&quot;).WinFormsObject(&quot;txtbxUserName&quot;).WinFormsObject(&quot;TextBoxArea&quot;, &quot;&quot;))"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="8"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The text 'FDMAdministrator' was entered in the text editor."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="date" type="D" value="45968.6505414236"/>
+			<Prp name="id" type="I" value="76"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 26">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="stacktext" type="S" value="stopServicesDRFDM"/>
+			<Prp name="line no" type="I" value="1272"/>
+		</Node>
+		<Node name="item 23">
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="line no" type="I" value="160"/>
+		</Node>
+		<Node name="item 25">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="stopServices"/>
+			<Prp name="line no" type="I" value="455"/>
+		</Node>
+		<Node name="item 9">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="stacktext" type="S" value="startServices"/>
+			<Prp name="line no" type="I" value="428"/>
+		</Node>
+		<Node name="message 147">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="389"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="ensureDRFDMClosed - Terminate DR FDM if running"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="133"/>
+			<Prp name="date" type="D" value="45968.6541200579"/>
+			<Prp name="id" type="I" value="147"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="9"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="launchDRFDM - Terminate &amp; Launch DR FDM"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="date" type="D" value="45968.6493080093"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 133">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="321"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="checkCollectAndProceedToFinalForm - Collect Logs Flow"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="132"/>
+			<Prp name="date" type="D" value="45968.6536740162"/>
+			<Prp name="id" type="I" value="133"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 94">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="101"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="Checkbox is already checked. No action needed."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="93"/>
+			<Prp name="date" type="D" value="45968.6522237616"/>
+			<Prp name="id" type="I" value="94"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 130">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="212"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="waitForServerManagerMainForm"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.653398044"/>
+			<Prp name="id" type="I" value="130"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 125">
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="125"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="obj_btnLogin"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="110"/>
+			<Prp name="date" type="D" value="45968.6532807176"/>
+			<Prp name="id" type="I" value="125"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 48">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="datetime" type="D" value="45968.4207544213"/>
+					<Prp name="line #" type="I" value="133"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="object left" type="I" value="118"/>
+					<Prp name="click point y" type="I" value="344"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="click point x" type="I" value="193"/>
+					<Prp name="object right" type="I" value="268"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="364"/>
+					<Prp name="object name" type="S" value="Aliases.Dr_FDCM.Form1.WinFormsObject(&quot;okay&quot;)"/>
+					<Prp name="object top" type="I" value="325"/>
+				</Node>
+			</Node>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (60, 15) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;Dr.FDCM&quot;).WinFormsObject(&quot;Form1&quot;).WinFormsObject(&quot;okay&quot;)"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="133"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="owner id" type="I" value="46"/>
+			<Prp name="date" type="D" value="45968.6499220718"/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

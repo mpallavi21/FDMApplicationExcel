@@ -148,8 +148,17 @@ function main()
                                         case "LAUNCHFDMCLIENTAPPLICATION":
                                               launchFDMClientApplication(Parameters[0],Parameters[1],Parameters[2])
                                             break;
-                                        case "TERMINATEFMDCLIENTAPPLICATION" :
+                                        case "TERMINATEFDMCLIENTAPPLICATION":
                                               terminateFDMClientApplication()
+                                            break;
+                                        case "BUILDNETWORK":
+                                              BuildNetwork(Parameters[0],Parameters[1])
+                                            break;
+                                        case "STARTSERVICESDRFDM":
+                                              startServicesDRFDM()
+                                            break;
+                                        case "STOPSERVICESDRFDM":
+                                              stopServicesDRFDM()
                                             break;
                                         default:
                                             Delay(2000);
@@ -199,14 +208,15 @@ let Ret = InputxlApp.Close();
 
 var i;
 // Displaying Execution End
+killExcelIfRunning()
 BuiltIn.ShowMessage("TEST EXECUTION COMPLETE")
 
 // Display Result sheet
-openExcelFile(szName);
+openExcelFile(szName,true);
 //DeleteExcelSheet(InputxlApp, "ControlsInfo");      
 //InputxlApp.SaveAs(szName); // As Openexcelfile 
 
-killExcelIfRunning()
+
 }
 
 function killExcelIfRunning() {

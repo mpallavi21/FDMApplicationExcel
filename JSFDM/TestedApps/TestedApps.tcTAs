@@ -28,5 +28,17 @@
 			<testData />
 			<data />
 		</child>
+		<child key="{1EF5F588-6791-4B20-B1F1-5012CCA1F465}">
+			<config nodeName="Dr_FDCM" autorunOnRecording="False" enabled="True" count="1" useFeaturedRuntimeObject="True" userChangeName="False">
+				<runModeParams activeRunMode="Simple">
+					<param name="RunAs" parameters="" workFolder="" userName="" password="" domain="" />
+					<param name="Profile" parameters="" workFolder="" useProject="False" projectFileName="" overrideProfiler="False" profilerName="" profileRunMode="Silent" AQtimeVersion="0" forceRunMode="False" />
+					<param name="Debug" parameters="" workFolder="" />
+					<param name="Simple" fileName="Dr.FDCM.exe" filePath="C:\Program Files (x86)\Honeywell\FDM\DiagnosticTool\" parameters="" workFolder="" />
+				</runModeParams>
+			</config>
+			<testData />
+			<data />
+		</child>
 	</children>
 </Root>
