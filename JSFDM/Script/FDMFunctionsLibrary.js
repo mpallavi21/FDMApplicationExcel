@@ -4,8 +4,8 @@
 //USEUNIT ClientLoginModule
 //USEUNIT FDMCommonPage
 //USEUNIT DeviceStateViewPage
-
-
+//USEUNIT SettingsPage
+//USEUNIT GenericMethods
 
 function launchFDMClientApplication(ServerName, Username, Password) {
   Log.AppendFolder("launchFDMClientApplication");
@@ -293,51 +293,44 @@ function FDMGR4904() {
 // Modified On:   21-Jul-2025
 // =====================================================================
 
-function AuditTrailFF() {
+function ViewAuditTrailForDevice(targetItem, ActionType) {
   Log.AppendFolder("ViewAuditTrailForDevice - Audit Trail Flow");
 
+  let status = "Pass";
+
   try {
-    BuildNetwork()
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
-      .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-      .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-    if (!treeView.Exists) {
-      Log.Error("TreeView not found.");
-      return;
-    }
-
-    let targetItem = Project.Variables.Device;
-
-    treeView.ClickItem(targetItem);
-    Log.Message("Clicked item: " + targetItem);
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     treeView.ClickItemR(targetItem);
     Log.Message("Right-clicked item for context menu.");
-    Delay(1000)
-  
-    treeView.StripPopupMenu.Click("View Audit Trail")
+    Delay(1000);
+
+    treeView.StripPopupMenu.Click("View Audit Trail");
 
     // Apply filters in Audit Trail view
-    let groupBox = Aliases.HCMClient.ClientMainWindow.MdiClient.AuditTrailView.panelBase
-      .panelForDerivedForms.panel4.panel2.groupBox1;
-    
-    Delay(1000)
+    let groupBox = Aliases.HCMClient.ClientMainWindow.MdiClient.AuditTrailView.panelBase.panelForDerivedForms.panel4.panel2.groupBox1;
+
     if (groupBox.Exists) {
-      groupBox.ViewButton.Click(25, 13);
+      let listBox = groupBox.ActionTypeListBox;
+      listBox.ClickItem(ActionType);
+      OCR.Recognize(groupBox.ViewButton).BlockByText("View").Click();
+      Delay(1000);
       Log.Message("Applied filters and clicked View in Audit Trail.");
     } else {
-      Log.Error("Audit Trail group box not found.");
+      throw new Error("Audit Trail group box not found.");
     }
-    
-    CloseWindow()
+
+    closeWindowPage()
 
   } catch (e) {
     Log.Error("Exception in ViewAuditTrailForDevice: " + e.message);
-  } finally {
-    Log.PopLogFolder();
+    status = "Fail";
   }
+
+  WriteResult("ViewAuditTrailForDevice " + status, status, "Pass");
+  Log.PopLogFolder();
 }
+
 
 // =====================================================================
 // Author:        Bharath
@@ -348,11 +341,13 @@ function AuditTrailFF() {
 // Modified On:   22-Aug-2025
 // =====================================================================
 
-function auditTrail15687() {
-  Log.AppendFolder("auditTrail15687");
+function auditTrailViaMenuTab() {
+  Log.AppendFolder("auditTrailViaMenuTab");
+
+  let status = "Pass";
 
   try {
-    // === Step 1: Open FDM toolbar settings and navigate to Audit Trail tab ===
+    // Step 1: Open FDM toolbar settings and navigate to Audit Trail tab
     openFDMToolBarSettings();
 
     let HCMClient = Aliases.HCMClient;
@@ -360,52 +355,49 @@ function auditTrail15687() {
     let tabControl = settingsForm.tabControl1;
 
     tabControl.ClickTab("Audit Trail");
-
     let groupBox = tabControl.tabPageAuditTrail.gbAuditTrailActions;
 
-    // === Step 2: Toggle 'All' checkbox to refresh audit trail view ===
+    // Step 2: Toggle 'All' checkbox to refresh audit trail view
     groupBox.checkBoxAll.wState = cbChecked;
     groupBox.checkBoxAll.wState = cbUnchecked;
 
-    // === Step 3: Interact with audit trail grid to activate selection ===
+    // Step 3: Interact with audit trail grid to activate selection
     let fpSpread = groupBox.fpAuditTrail;
     fpSpread.Click(237, 33);
     fpSpread.Click(237, 33);  // Double-click to ensure selection
 
-    // === Step 4: Confirm settings ===
+    // Step 4: Confirm settings
     OCR.Recognize(settingsForm.buttonOK).BlockByText("OK").Click();
 
-    // === Step 5: Open Audit Trail viewer from main menu ===
+    // Step 5: Open Audit Trail viewer from main menu
     let frmHCMClientMain = HCMClient.ClientMainWindow;
     let smartMenuBar = frmHCMClientMain.mainMenu;
 
     OCR.Recognize(smartMenuBar).BlockByText("View").Click();
-
     let subSmartControl = HCMClient.DropDownForm.SubSmartControl;
     OCR.Recognize(subSmartControl).BlockByText("Audit Trail").Click();
 
-    // === Step 6: Trigger audit trail view for selected device ===
-    frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
-      .tabPageOnlineView.panelOnlineView.panelTabControlOnlineView
-      .tabControlOnlineView.tabConnected.Keys("[Right][Enter]");
+    // Step 6: Trigger audit trail view for selected device
+    frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView
+      .panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.Keys("[Right][Enter]");
 
-    // === Step 7: Filter audit trail by action type ===
+    // Step 7: Filter audit trail by action type
     let panel = frmHCMClientMain.MdiClient.AuditTrailView.panelBase.panelForDerivedForms.panel4.panel2;
     groupBox = panel.groupBox1;
 
     groupBox.ActionTypeListBox.ClickItem("---All---");
-
     OCR.Recognize(groupBox.ViewButton).BlockByText("View").Click();
 
-    // === Step 8: Final cleanup ===
-    CloseWindow();
+    // Step 8: Final cleanup
+    closeWindowPage();
 
   } catch (error) {
-    Log.Error("Error in auditTrail15687: " + error.message);
-
-  } finally {
-    Log.PopLogFolder();
+    Log.Error("Error in auditTrailViaMenuTab: " + error.message);
+    status = "Fail";
   }
+
+  WriteResult("auditTrailViaMenuTab " + status, status, "Pass");
+  Log.PopLogFolder();
 }
 
  
@@ -1304,6 +1296,302 @@ function collectLogsFromDrFDM() {
 }
 
 
+
+function clickNetworkTab() {
+  Log.AppendFolder("clickNetworkTab");
+
+  let status = "Pass";
+
+  try {
+    clickOnNetworkViewTab()
+
+  } catch (error) {
+    Log.Error("Error in clickNetworkTab: " + error.message);
+    status = "Fail";
+  }
+
+  WriteResult("clickNetworkTab " + status, status, "Pass");
+  Log.PopLogFolder();
+}
+
+function ClickOnlineView() {
+  Log.AppendFolder("ClickOnlineView");
+
+  let status = "Pass";
+
+  try {
+    ClickOnlineViewTab()
+
+  } catch (error) {
+    Log.Error("Error in ClickOnlineView " + error.message);
+    status = "Fail";
+  }
+
+  WriteResult("ClickOnlineView " + status, status, "Pass");
+  Log.PopLogFolder();
+}
+
+//USEUNIT LibraryPages
+
+// =====================================================================
+// Author:        Bharath
+// Function:      FDMGR4779()
+// Description:   Test case to validate add DD User interfacee
+// Created On:    23-June-2025
+// Modified On:   
+// =====================================================================
+function FDMGR4779() {
+  try {
+    Log.AppendFolder("FDMGR4779 - Test case to validate add DD User interface")
+    // Launch the FDM Client with credentials
+    //launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+
+    // Navigate and perform DD Package addition
+    openManageDDPackagesSection();
+    clickAddDDPackageButton();
+    selectDDFileTypeFromDropdown("*.fm8");
+    uploadDDPackageFile(Project.Path + "Stores\\Files", "0906");
+    clickAddToLibraryButton();
+
+    // Close relevant popups and exit
+    clickAdd_DDPackagePopUpCloseButton();
+    clickManage_DDPackagePopUpCloseButton();
+
+    // Terminate the client gracefully
+  //  TestedApps.HCMClient.Terminate();
+
+    Log.Message("Test 'addDDPackageAndExit' completed successfully.");
+  } catch (error) {
+    Log.Error("Test 'addDDPackageAndExit' failed: " + error.message);
+    // Optional: Consider taking a screenshot here
+  } finally{
+    Log.PopLogFolder()
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      FDMGR4798
+// Description:   Testcase to validate generic DD/package functionality
+// Created On:    23-June-2025
+// Modified On:   
+// =====================================================================
+function FDMGR4798() {
+  try {
+    Log.AppendFolder("FDMGR4798 - Testcase to validate generic DD/package functionality")
+   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+    openManageDDPackagesSection();
+    selectProtocol("HART")
+    selectManufacturer("Rosemount (26)");
+    selectDeviceType("3051 (2606)");
+    findDDAndClickDeleteRow("3051 (2606)","9","6")
+    clickManage_DDPackagePopUpCloseButton();
+    //TestedApps.HCMClient.Terminate();
+    Log.Message("Test 'deleteSpecificDDPackageAndExit' executed successfully.");
+  } catch (error) {
+    Log.Error("Test 'deleteSpecificDDPackageAndExit' failed: " + error.message);
+  } finally{
+    Log.PopLogFolder()
+  }
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      FDMGR4723()
+// Description:   Test case to validate add FDIX file User interfacee
+// Created On:    23-June-2025
+// Modified On:   
+// =====================================================================
+function FDMGR4723() {
+  try {
+    Log.AppendFolder("FDMGR4723 - Test case to validate add FDIX file User interfacee")
+    // Launch the FDM Client with credentials
+  //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+
+    // Navigate and perform DD Package addition
+    openManageDDPackagesSection();
+    clickAddDDPackageButton();
+    selectDDFileTypeFromDropdown("*.fdix");
+    uploadDDPackageFile(Project.Path + "Stores\\Files", "abb.tzidc.02.02.00.hart");
+    clickAddToLibraryButton();
+
+    // Close relevant popups and exit
+    clickAdd_DDPackagePopUpCloseButton();
+    clickManage_DDPackagePopUpCloseButton();
+
+    // Terminate the client gracefully
+   // TestedApps.HCMClient.Terminate();
+
+    Log.Message("Test 'addFDIXPackageAndExit' completed successfully.");
+  } catch (error) {
+    Log.Error("Test 'addFDIXPackageAndExit' failed: " + error.message);
+    // Optional: Consider taking a screenshot here
+  } finally{
+    Log.PopLogFolder()
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      FDMGR4790
+// Description:   Testcase to validate generic FDI/package functionality
+// Created On:    23-June-2025
+// Modified On:   
+// =====================================================================
+function FDMGR4790() {
+  try {
+    Log.AppendFolder("FDMGR4790 - Testcase to validate generic FDI/package functionality")
+  //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+    openManageDDPackagesSection();
+    selectProtocol("HART")
+    selectManufacturer("ABB - Hartmann & Braun (16)");
+    selectDeviceType("TZIDC (1641)");
+    findDDAndClickDeleteRow("TZIDC (1641)","2","1")
+    clickManage_DDPackagePopUpCloseButton();
+   // TestedApps.HCMClient.Terminate();
+    Log.Message("Test 'deleteSpecificFDIPackageAndExit' executed successfully.");
+  } catch (error) {
+    Log.Error("Test 'deleteSpecificFDIPackageAndExit' failed: " + error.message);
+  } finally{
+    Log.PopLogFolder()
+  }
+}
+
+
+
+
+function AddDD(filePath, fileType) {
+  Log.AppendFolder("AddDD - Validate DD Package Addition UI");
+
+  let status = "Pass";
+
+  try {
+    // Navigate and perform DD Package addition
+    openManageDDPackagesSection();
+    clickAddDDPackageButton();
+    selectDDFileTypeFromDropdown(fileType);
+    uploadDDPackageFile(Project.Path, filePath);
+    clickAddToLibraryButton();
+
+    // Close relevant popups and exit
+    clickAdd_DDPackagePopUpCloseButton();
+    clickManage_DDPackagePopUpCloseButton();
+
+    Log.Message("DD package added and exited successfully.");
+    
+  } catch (error) {
+    Log.Error("AddDD failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("AddDD " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DeleteDD
+// Description:   Deletes a DD package for the device  under HART protocol
+//                by navigating the DD management section, selecting filters, deleting the entry,
+//                and terminating the client application.
+
+// =====================================================================
+
+function DeleteDD(Protocol, Manufacturer, DeviceType, targetdeviceRevision, targetDDpackageVersion) {
+  Log.AppendFolder("DeleteDD - Device Description Package Deletion");
+
+  let status = "Pass";
+
+  try {
+    // Navigate to DD package section
+    openManageDDPackagesSection();
+    Log.Message("Opened Manage DD Packages section.");
+
+    // Select filters for deletion
+    selectProtocol(Protocol);
+    Log.Message("Protocol selected: " + Protocol);
+
+    selectManufacturer(Manufacturer);
+    Log.Message("Manufacturer selected: " + Manufacturer);
+
+    selectDeviceType(DeviceType);
+    Log.Message("Device type selected: " + DeviceType);
+
+    // Delete the target DD package using revision numbers
+    findDDAndClickDeleteRow(DeviceType, targetdeviceRevision, targetDDpackageVersion);
+    Log.Message("Requested DD deletion for " + DeviceType + ", Rev " + targetdeviceRevision + "." + targetDDpackageVersion);
+
+    // Close DD Package popup
+    clickManage_DDPackagePopUpCloseButton();
+    Log.Message("Closed DD Package popup.");
+
+  } catch (error) {
+    Log.Error("Exception in DeleteDD: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeleteDD " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      UpdateDTMLibrary
+// Description:   Navigates through the Library menu, updates DTM Library,
+//                handles confirmation dialogs, and exits gracefully.
+// Created On:    31-Jul-2025
+// Modified On:   31-Jul-2025
+// =====================================================================
+
+function UpdateDTMLibrary() {
+  let HCMClient = Aliases.HCMClient;
+  Log.AppendFolder("navigateAndUpdateDTMLibrary");
+
+  try {
+    // Step 1: Click on 'Library' menu
+    OCR.Recognize(HCMClient.ClientMainWindow.mainMenu).BlockByText("Library").Click();
+    Log.Message("Clicked 'Library' menu");
+
+    // Step 2: Select 'Manage DTM Library'
+    OCR.Recognize(HCMClient.DropDownForm.SubSmartControl).BlockByText("Manage DTM Library").Click();
+    Log.Message("Selected 'Manage DTM Library'");
+
+    let manageDtmLibrary = HCMClient.ManageDtmLibrary;
+
+    // Step 3: Click 'Update' button
+    manageDtmLibrary.btnUpdate.Click();
+    Log.Message("Clicked 'Update' button");
+
+    // Step 4 & 5: Confirm dialog twice
+    clickOnConfirmFDMButton();
+    clickOnConfirmFDMButton();
+
+    // Step 6: Cancel the dialog
+    manageDtmLibrary.CancelBtn.Click();
+    Log.Message("Clicked 'Cancel' button");
+    
+    manageDtmLibrary.CancelBtn.WaitProperty("Enabled",true,25000)
+    manageDtmLibrary.CancelBtn.Click();
+    
+    // Step 7: Final confirm dialog
+    clickOnConfirmFDMButton();
+
+    Log.Checkpoint("DTM Library update workflow completed successfully.");
+
+  } catch (error) {
+    Log.Error("Error in navigateAndUpdateDTMLibrary: " + error.message);
+
+  } finally {
+    Log.PopLogFolder();
+  }
+ 
+
+}
 
 
 

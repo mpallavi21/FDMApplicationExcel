@@ -163,6 +163,24 @@ function main()
                                         case "COLLECTLOGSFROMDRFDM":
                                               collectLogsFromDrFDM()
                                             break;
+                                        case "VIEWAUDITTRAILFORDEVICE":
+                                              ViewAuditTrailForDevice(Parameters[0],Parameters[1])
+                                            break;
+                                        case "AUDITTRAILVIAMENUTAB":
+                                              auditTrailViaMenuTab()
+                                            break;
+                                        case "CLICKONNETWORKVIEWTAB":
+                                              clickOnNetworkViewTab()
+                                            break;
+                                        case "CLICKONLINEVIEW":
+                                              ClickOnlineView();
+                                            break;
+                                        case "ADDDD":
+                                              AddDD(Parameters[0],Parameters[1]);
+                                            break;
+                                        case "DELETEDD":
+                                              DeleteDD(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4]);
+                                            break;
                                         default:
                                             Delay(2000);
                                             break;

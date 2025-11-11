@@ -16,6 +16,9 @@
 			<child name="NetworkTreeViewPage" key="{39FEF46B-834F-4155-8770-ED42F0C32A06}" path="NetworkTreeViewPage.js" />
 			<child name="DeviceStateViewPage" key="{22BCC430-49EE-4418-B542-D494A0C632E5}" path="DeviceStateViewPage.js" />
 			<child name="DrFDMPages" key="{7F8AF2AE-FB12-4A81-AB64-FEBFE50EC9B6}" path="DrFDMPages.js" />
+			<child name="SettingsPage" key="{3C3585C7-D4EB-4A90-8088-778E0645B5BD}" path="SettingsPage.js" />
+			<child name="LibraryPages" key="{D22618B6-6D80-4D0E-BFB5-9D1F3A61E5BE}" path="LibraryPages.js" />
+			<child name="GenericMethods" key="{7ABB7D6B-0740-41AE-BF94-65BD6413C6B4}" path="GenericMethods.js" />
 		</folder>
 		<child name="SMToolFunctionsLibrary" key="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}" path="SMToolFunctionsLibrary.js" />
 		<child name="FDMFunctionsLibrary" key="{11AB687C-AAE7-4852-ACD3-595884B135C8}" path="FDMFunctionsLibrary.js" />

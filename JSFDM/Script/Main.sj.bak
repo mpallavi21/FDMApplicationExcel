@@ -160,6 +160,24 @@ function main()
                                         case "STOPSERVICESDRFDM":
                                               stopServicesDRFDM()
                                             break;
+                                        case "COLLECTLOGSFROMDRFDM":
+                                              collectLogsFromDrFDM()
+                                            break;
+                                        case "VIEWAUDITTRAILFORDEVICE":
+                                              ViewAuditTrailForDevice(Parameters[0],Parameters[1])
+                                            break;
+                                        case "AUDITTRAILVIAMENUTAB":
+                                              auditTrailViaMenuTab()
+                                            break;
+                                        case "CLICKONNETWORKVIEWTAB":
+                                              clickOnNetworkViewTab()
+                                            break;
+                                        case "CLICKONLINEVIEW":
+                                              ClickOnlineView();
+                                            break;
+                                        case "ADDDD":
+                                              AddDD(Parameters[0],Parameters[1]);
+                                            break;
                                         default:
                                             Delay(2000);
                                             break;

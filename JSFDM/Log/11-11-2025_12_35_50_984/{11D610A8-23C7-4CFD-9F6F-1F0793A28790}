@@ -1,0 +1,1892 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 48">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="115"/>
+					<Prp name="object left" type="I" value="495"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="60"/>
+					<Prp name="datetime" type="D" value="45972.2971616204"/>
+					<Prp name="click point x" type="I" value="720"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="156"/>
+					<Prp name="click point y" type="I" value="135"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxManufacturer"/>
+					<Prp name="image file name" type="S" value="visImage17.png"/>
+					<Prp name="object right" type="I" value="945"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (225, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxManufacturer&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 2).WPFObject(&quot;ContentControl&quot;, &quot;&quot;, 1).WPFObject(&quot;RemovePackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;panelAdvSearch&quot;).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBox&quot;, &quot;&quot;, 2))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="60"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263302431"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="owner id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 54">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1516"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264178588"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Manufacturer selected: Rosemount (26)"/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 79">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="246"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5267371528"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ Excel process terminated to release file lock."/>
+			<Prp name="id" type="I" value="79"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 56">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="58"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264205556"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectComboBoxItemByName :- comboBox = [object COMObject]  itemName = 3051 (2606)"/>
+			<Prp name="id" type="I" value="56"/>
+			<Prp name="owner id" type="I" value="55"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 1" type="S" value="{D22618B6-6D80-4D0E-BFB5-9D1F3A61E5BE}"/>
+			<Prp name="unit 3" type="S" value="{C344B245-3507-4D36-99F0-78E011A7BBBA}"/>
+			<Prp name="unit 0" type="S" value="{11AB687C-AAE7-4852-ACD3-595884B135C8}"/>
+			<Prp name="unit 2" type="S" value="{7ABB7D6B-0740-41AE-BF94-65BD6413C6B4}"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="132"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.52541625"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickAddToLibraryButton - Clicks the 'Add To Library' button on the Add DD Package File popup."/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 68">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="258"/>
+					<Prp name="object left" type="I" value="342"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="435"/>
+					<Prp name="datetime" type="D" value="45972.297322338"/>
+					<Prp name="click point x" type="I" value="405"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="299"/>
+					<Prp name="click point y" type="I" value="278"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ConfirmationWindow.ButtonOk"/>
+					<Prp name="image file name" type="S" value="visImage22.png"/>
+					<Prp name="object right" type="I" value="468"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ConfirmationWindow.ButtonOk&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: ConfirmationWindow1&quot;).WPFObject(&quot;ConfirmationWindow1&quot;).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;StackPanel&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="435"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264915162"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="68"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="24"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262850579"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="'ManagePackagesWindow' is visible."/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 27">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="26"/>
+					<Prp name="object left" type="I" value="1393"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="237"/>
+					<Prp name="datetime" type="D" value="45972.2967074884"/>
+					<Prp name="click point x" type="I" value="1403"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="47"/>
+					<Prp name="click point y" type="I" value="36"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ButtonManageDdPackage.Rectangle"/>
+					<Prp name="image file name" type="S" value="visImage12.png"/>
+					<Prp name="object right" type="I" value="1414"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (10, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ButtonManageDdPackage.Rectangle&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;&quot;, 2).WPFObject(&quot;Rectangle&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="237"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258763194"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5252998148"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="openManageDDPackagesSection - Navigates through the HCM Client UI to access the &#xA; 'Manage DD/Packages' section via the 'Library' menu."/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 69">
+			<Prp name="remarks" type="S" value="&lt;h3&gt;Result&lt;/h3&gt;&lt;span&gt;The property checkpoint &lt;img style = &quot;width: 14px; height: 14px; vertical-align: text-bottom; margin: 2px;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4wIUBiMun01WOAAAAlZJREFUWMPdly1s20AUx/+ODCptij0FGERrKhsEbF2mTQqoWsk8JIXugAOTkRiabTAwJWvZErAGriTcUqKCkq1KBwJcpZ0KDKr5Kk0qsOShWf64+CNzFWnH7Du/3//ee773jnFdF+scBax5sGkXEscWT6yBObENTImBe4cE5ossh11Oxh4v40BoSRzLX6WxyySFgDi2qJuaObKGmXamCCp6Uj9RSKyA8d2p25m3IrtNO4osh6PqAI1Sk8ksQDc19/j2MJc4t8td9KQ+kzoJ84QDwPHtIXRTc1N5YHx36r77sf8oGf/lxddIOAICiGOL2+db5qoxT5MTs/oikJiFkOsfDQ4A9w6BbmomNQeIY4tZf7W4neqVD3j5pBaZG1lDEMcWIwJOrIGZF3z8yoBe+YhxzaCK8LM8ARPbyA2+/fQ1AIBjeYxrBoosF1jnZ3kCpmS5ANoukuBxw88q+BOEZnTy5humb7/jU/VzZjhxbDQu5Iht/3NsNfQbPRBaVBFJ8MvfF1TbNw8LN1bA841KxGhYxKpwANjc2GJiBfx8uEZn3oq8/yviX+DUk3DzjHdpeaAIKo6qg7Q9Qyp4keVws2MHPbDLydTFI2tI9cSq8DDLE7DHy0s/SBKR1e1+lhcC4thi5eyZmdTlhMORFQ4A1zu/vILkeYBj+StFUGM/DHtiFbgiqPBXw5XKsSKoeF/W0Jm3MsFp5XjtDUnkHGiUmky73M0d3i53qc0p9SDqSf1cRcQ1pWtvy2OLUaPUZGb1hZT0dyxL1Fl9IcXBU92M1n41++9vx38AoNJrUz8FYVwAAAAASUVORK5CYII=&quot;&gt;&lt;b&gt;passed&lt;/b&gt;: Aliases.HCMClient.dlgDeleteDDFile.Enabled&lt;b&gt; equals &lt;/b&gt;true.&lt;/span&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;div class=&quot;table-border full-width&quot;&gt;&lt;table class=&quot;table-borderless table-vertical&quot;&gt;&lt;tr&gt;&lt;th style=&quot;width: 16em;&quot;&gt;Object&lt;/th&gt;&lt;td&gt;&lt;a href='lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.{CBEA2FAE-8AE3-47DA-9CDF-642694521F14}'&gt;Aliases.HCMClient.dlgDeleteDDFile&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;td&gt;Enabled&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Condition&lt;/th&gt;&lt;td&gt;equals&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Actual value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Expected value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="line no" type="I" value="438"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265016551"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The property checkpoint passed: Enabled equals true."/>
+			<Prp name="id" type="I" value="69"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 22">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="258"/>
+					<Prp name="object left" type="I" value="479"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="169"/>
+					<Prp name="datetime" type="D" value="45972.296464838"/>
+					<Prp name="click point x" type="I" value="542"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="299"/>
+					<Prp name="click point y" type="I" value="278"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.InformationWindowPopUp.InformationWindow.ButtonOk"/>
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="object right" type="I" value="605"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.InformationWindowPopUp.InformationWindow.ButtonOk&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: InformationWindow&quot;, &quot;&quot;).WPFObject(&quot;InformationWindow&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="169"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5256329167"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="168"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5256302894"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Successfully added DD Package: Message - DD added successfully!&#xA;&#xA;We recommend creating a new NAMUR NE107 Diagnostic Model for the newly added DD."/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="98"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253862384"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="uploadDDPackageFile - Opens the 'Add DD Package File' dialog, navigates to a specified folder,&#xA; and uploads the desired type file."/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="29"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262850579"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Navigation completed successfully."/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="153"/>
+					<Prp name="object left" type="I" value="26"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="78"/>
+					<Prp name="datetime" type="D" value="45972.2962153704"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.FileTypeDropDown"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="object right" type="I" value="599"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.FileTypeDropDown&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Add_DDPackage&quot;, &quot;&quot;).WPFObject(&quot;Add_DDPackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;cmb_FileType&quot;))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="78"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253843056"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The combo box item 'HART DD(.fm8)| *.fm8' was selected."/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 78">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1527"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265495718"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Closed DD Package popup."/>
+			<Prp name="id" type="I" value="78"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 65">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="421"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264643982"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Match found at row 5. Deleting..."/>
+			<Prp name="id" type="I" value="65"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="57"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253597222"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked 'Add DD Package' button successfully."/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="owner id" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 55">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="386"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264179282"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectDeviceType - Selects a given device type from the combobox in the &#xA; Manage Packages window using a reusable method."/>
+			<Prp name="id" type="I" value="55"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="68"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263071759"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Found 6 ComboBox items."/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 32">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="36"/>
+					<Prp name="object left" type="I" value="140"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="17"/>
+					<Prp name="datetime" type="D" value="45972.2970875926"/>
+					<Prp name="click point x" type="I" value="162"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="48"/>
+					<Prp name="click point y" type="I" value="42"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.mainMenu"/>
+					<Prp name="image file name" type="S" value="visImage13.png"/>
+					<Prp name="object right" type="I" value="184"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Library"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262587616"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 39">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="115"/>
+					<Prp name="object left" type="I" value="34"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="60"/>
+					<Prp name="datetime" type="D" value="45972.2971310185"/>
+					<Prp name="click point x" type="I" value="259"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="156"/>
+					<Prp name="click point y" type="I" value="135"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxProtocol"/>
+					<Prp name="image file name" type="S" value="visImage15.png"/>
+					<Prp name="object right" type="I" value="484"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (225, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxProtocol&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 2).WPFObject(&quot;ContentControl&quot;, &quot;&quot;, 1).WPFObject(&quot;RemovePackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;panelAdvSearch&quot;).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBox&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="60"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262994907"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="68"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263737153"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Found 233 ComboBox items."/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="owner id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="329"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263247917"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="'HART' protocol selected successfully from the combo box."/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="owner id" type="I" value="37"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="114"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5254161343"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="File 'Files\0906.fm8' uploaded successfully from: C:\Users\Admin\Desktop\JSFDM\JSFDM\"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263348611"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ComboBox clicked to expand."/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="owner id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 42">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="120"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="80"/>
+					<Prp name="datetime" type="D" value="45972.2971427431"/>
+					<Prp name="click point x" type="I" value="224"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="161"/>
+					<Prp name="click point y" type="I" value="140"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.HwndSource_PopupRoot.PopupRoot.WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 4)"/>
+					<Prp name="image file name" type="S" value="visImage16.png"/>
+					<Prp name="object right" type="I" value="448"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (224, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: PopupRoot&quot;, &quot;&quot;).WPFObject(&quot;PopupRoot&quot;, &quot;&quot;, 1).WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 4)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="80"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263120255"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="0"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="19"/>
+					<Prp name="datetime" type="D" value="45972.2961778819"/>
+					<Prp name="click point x" type="I" value="68"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="122"/>
+					<Prp name="click point y" type="I" value="55"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.DropDownForm.SubSmartControl"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object right" type="I" value="195"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (68, 55) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.DropDownForm.SubSmartControl&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;DropDownForm&quot;).WinFormsObject(&quot;SubSmartControl&quot;, &quot;&quot;))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253455903"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1465"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5252996991"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="AddDD - Validate DD Package Addition UI"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 13">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="310"/>
+					<Prp name="object left" type="I" value="565"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="102"/>
+					<Prp name="datetime" type="D" value="45972.296221493"/>
+					<Prp name="click point x" type="I" value="582"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="344"/>
+					<Prp name="click point y" type="I" value="327"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.btn_BrowseFile.Rectangle"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="object right" type="I" value="599"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (17, 17) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.btn_BrowseFile.Rectangle&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Add_DDPackage&quot;, &quot;&quot;).WPFObject(&quot;Add_DDPackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;btn_BrowseFile&quot;).WPFObject(&quot;Rectangle&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="102"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253893866"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 24">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="17"/>
+					<Prp name="object left" type="I" value="578"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="213"/>
+					<Prp name="datetime" type="D" value="45972.2967034143"/>
+					<Prp name="click point x" type="I" value="588"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="49"/>
+					<Prp name="click point y" type="I" value="33"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.CloseButton"/>
+					<Prp name="image file name" type="S" value="visImage11.png"/>
+					<Prp name="object right" type="I" value="599"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (10, 16) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.CloseButton&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Add_DDPackage&quot;, &quot;&quot;).WPFObject(&quot;Add_DDPackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="213"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258710301"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 70">
+			<Prp name="remarks" type="S" value="&lt;h3&gt;Result&lt;/h3&gt;&lt;span&gt;The property checkpoint &lt;img style = &quot;width: 14px; height: 14px; vertical-align: text-bottom; margin: 2px;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4wIUBiMun01WOAAAAlZJREFUWMPdly1s20AUx/+ODCptij0FGERrKhsEbF2mTQqoWsk8JIXugAOTkRiabTAwJWvZErAGriTcUqKCkq1KBwJcpZ0KDKr5Kk0qsOShWf64+CNzFWnH7Du/3//ee773jnFdF+scBax5sGkXEscWT6yBObENTImBe4cE5ossh11Oxh4v40BoSRzLX6WxyySFgDi2qJuaObKGmXamCCp6Uj9RSKyA8d2p25m3IrtNO4osh6PqAI1Sk8ksQDc19/j2MJc4t8td9KQ+kzoJ84QDwPHtIXRTc1N5YHx36r77sf8oGf/lxddIOAICiGOL2+db5qoxT5MTs/oikJiFkOsfDQ4A9w6BbmomNQeIY4tZf7W4neqVD3j5pBaZG1lDEMcWIwJOrIGZF3z8yoBe+YhxzaCK8LM8ARPbyA2+/fQ1AIBjeYxrBoosF1jnZ3kCpmS5ANoukuBxw88q+BOEZnTy5humb7/jU/VzZjhxbDQu5Iht/3NsNfQbPRBaVBFJ8MvfF1TbNw8LN1bA841KxGhYxKpwANjc2GJiBfx8uEZn3oq8/yviX+DUk3DzjHdpeaAIKo6qg7Q9Qyp4keVws2MHPbDLydTFI2tI9cSq8DDLE7DHy0s/SBKR1e1+lhcC4thi5eyZmdTlhMORFQ4A1zu/vILkeYBj+StFUGM/DHtiFbgiqPBXw5XKsSKoeF/W0Jm3MsFp5XjtDUnkHGiUmky73M0d3i53qc0p9SDqSf1cRcQ1pWtvy2OLUaPUZGb1hZT0dyxL1Fl9IcXBU92M1n41++9vx38AoNJrUz8FYVwAAAAASUVORK5CYII=&quot;&gt;&lt;b&gt;passed&lt;/b&gt;: Aliases.HCMClient.dlgDeleteDDFile.btnYes.WndCaption&lt;b&gt; contains the substring (case-sensitive) &lt;/b&gt;&quot;&amp;Yes&quot;.&lt;/span&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;div class=&quot;table-border full-width&quot;&gt;&lt;table class=&quot;table-borderless table-vertical&quot;&gt;&lt;tr&gt;&lt;th style=&quot;width: 16em;&quot;&gt;Object&lt;/th&gt;&lt;td&gt;&lt;a href='lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.{53D47BE5-7AEB-4921-B68A-A741A78F5862}'&gt;Aliases.HCMClient.dlgDeleteDDFile.btnYes&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;td&gt;WndCaption&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Condition&lt;/th&gt;&lt;td&gt;contains the substring (case-sensitive)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Actual value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;&quot;&amp;Yes&quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Expected value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;&quot;&amp;Yes&quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="line no" type="I" value="440"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265095486"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The property checkpoint passed: WndCaption contains the substring (case-sensitive) &quot;&amp;Yes&quot;."/>
+			<Prp name="id" type="I" value="70"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 74">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1523"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265313194"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Requested DD deletion for 3051 (2606), Rev 9.6"/>
+			<Prp name="id" type="I" value="74"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="137"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5255070602"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked 'Add To Library' button successfully."/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="24"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253538079"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="'ManagePackagesWindow' is visible."/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 77">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="238"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265489699"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked 'Close' button successfully."/>
+			<Prp name="id" type="I" value="77"/>
+			<Prp name="owner id" type="I" value="75"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 60">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="120"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="80"/>
+					<Prp name="datetime" type="D" value="45972.2972845602"/>
+					<Prp name="click point x" type="I" value="213"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="161"/>
+					<Prp name="click point y" type="I" value="140"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.HwndSource_PopupRoot.PopupRoot.WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 4)"/>
+					<Prp name="image file name" type="S" value="visImage20.png"/>
+					<Prp name="object right" type="I" value="427"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (213, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: PopupRoot&quot;, &quot;&quot;).WPFObject(&quot;PopupRoot&quot;, &quot;&quot;, 1).WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 4)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="80"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264526157"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="60"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 71">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="159"/>
+					<Prp name="object left" type="I" value="309"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="441"/>
+					<Prp name="datetime" type="D" value="45972.2973437732"/>
+					<Prp name="click point x" type="I" value="359"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="192"/>
+					<Prp name="click point y" type="I" value="175"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgDeleteDDFile.btnYes"/>
+					<Prp name="image file name" type="S" value="visImage23.png"/>
+					<Prp name="object right" type="I" value="409"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgDeleteDDFile.btnYes&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Delete DD File&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;Yes&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="441"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265112153"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="71"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 15">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="45"/>
+					<Prp name="object left" type="I" value="144"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="109"/>
+					<Prp name="datetime" type="D" value="45972.2962391088"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="71"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.comboBox"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="object right" type="I" value="589"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.comboBox&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1).Window(&quot;WorkerW&quot;, &quot;&quot;, 1).Window(&quot;ReBarWindow32&quot;, &quot;&quot;, 1).Window(&quot;Address Band Root&quot;, &quot;&quot;, 1).Window(&quot;msctls_progress32&quot;, &quot;&quot;, 1).Window(&quot;ComboBoxEx32&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="109"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5254073148"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The text 'C:\Users\Admin\Desktop\JSFDM\JSFDM\' was entered in the combo box editor."/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 67">
+			<Prp name="remarks" type="S" value="&lt;h3&gt;Result&lt;/h3&gt;&lt;span&gt;The property checkpoint &lt;img style = &quot;width: 14px; height: 14px; vertical-align: text-bottom; margin: 2px;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH4wIUBiMun01WOAAAAlZJREFUWMPdly1s20AUx/+ODCptij0FGERrKhsEbF2mTQqoWsk8JIXugAOTkRiabTAwJWvZErAGriTcUqKCkq1KBwJcpZ0KDKr5Kk0qsOShWf64+CNzFWnH7Du/3//ee773jnFdF+scBax5sGkXEscWT6yBObENTImBe4cE5ossh11Oxh4v40BoSRzLX6WxyySFgDi2qJuaObKGmXamCCp6Uj9RSKyA8d2p25m3IrtNO4osh6PqAI1Sk8ksQDc19/j2MJc4t8td9KQ+kzoJ84QDwPHtIXRTc1N5YHx36r77sf8oGf/lxddIOAICiGOL2+db5qoxT5MTs/oikJiFkOsfDQ4A9w6BbmomNQeIY4tZf7W4neqVD3j5pBaZG1lDEMcWIwJOrIGZF3z8yoBe+YhxzaCK8LM8ARPbyA2+/fQ1AIBjeYxrBoosF1jnZ3kCpmS5ANoukuBxw88q+BOEZnTy5humb7/jU/VzZjhxbDQu5Iht/3NsNfQbPRBaVBFJ8MvfF1TbNw8LN1bA841KxGhYxKpwANjc2GJiBfx8uEZn3oq8/yviX+DUk3DzjHdpeaAIKo6qg7Q9Qyp4keVws2MHPbDLydTFI2tI9cSq8DDLE7DHy0s/SBKR1e1+lhcC4thi5eyZmdTlhMORFQ4A1zu/vILkeYBj+StFUGM/DHtiFbgiqPBXw5XKsSKoeF/W0Jm3MsFp5XjtDUnkHGiUmky73M0d3i53qc0p9SDqSf1cRcQ1pWtvy2OLUaPUZGb1hZT0dyxL1Fl9IcXBU92M1n41++9vx38AoNJrUz8FYVwAAAAASUVORK5CYII=&quot;&gt;&lt;b&gt;passed&lt;/b&gt;: Aliases.HCMClient.Confir....TextblockDeletePackage.WPFControlText&lt;b&gt; contains the substring (case-sensitive) &lt;/b&gt;&quot;Delete&quot;.&lt;/span&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;div class=&quot;table-border full-width&quot;&gt;&lt;table class=&quot;table-borderless table-vertical&quot;&gt;&lt;tr&gt;&lt;th style=&quot;width: 16em;&quot;&gt;Object&lt;/th&gt;&lt;td&gt;&lt;a href='lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.{DA263176-F487-4474-B9B1-CAD0E9B47CCB}'&gt;Aliases.HCMClient.ConfirmationWindow.TextblockDeletePackage&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;td&gt;WPFControlText&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Condition&lt;/th&gt;&lt;td&gt;contains the substring (case-sensitive)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Actual value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;&quot;Delete DD&quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;Expected value&lt;/th&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre-wrap; &quot;&gt;&quot;Delete&quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="line no" type="I" value="434"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.526486875"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The property checkpoint passed: WPFControlText contains the substring (case-sensitive) &quot;Delete&quot;."/>
+			<Prp name="id" type="I" value="67"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 2">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="36"/>
+					<Prp name="object left" type="I" value="140"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="17"/>
+					<Prp name="datetime" type="D" value="45972.2961505671"/>
+					<Prp name="click point x" type="I" value="162"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="48"/>
+					<Prp name="click point y" type="I" value="42"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.mainMenu"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="object right" type="I" value="184"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Library"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253228009"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 33">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="0"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="19"/>
+					<Prp name="datetime" type="D" value="45972.2971093519"/>
+					<Prp name="click point x" type="I" value="68"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="122"/>
+					<Prp name="click point y" type="I" value="55"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.DropDownForm.SubSmartControl"/>
+					<Prp name="image file name" type="S" value="visImage14.png"/>
+					<Prp name="object right" type="I" value="195"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (68, 55) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.DropDownForm.SubSmartControl&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;DropDownForm&quot;).WinFormsObject(&quot;SubSmartControl&quot;, &quot;&quot;))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262771875"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="owner id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 63">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1519"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264556597"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Device type selected: 3051 (2606)"/>
+			<Prp name="id" type="I" value="63"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="58"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262967593"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectComboBoxItemByName :- comboBox = [object COMObject]  itemName = HART"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="owner id" type="I" value="37"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="209"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258690278"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickAdd_DDPackagePopUpCloseButton - Clicks the 'Close' button on the Add DD Package File popup."/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 64">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="406"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264556597"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="findDDAndClickDeleteRow"/>
+			<Prp name="id" type="I" value="64"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 61">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="81"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264554167"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The item '3051 (2606)' was successfully selected."/>
+			<Prp name="id" type="I" value="61"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1481"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258779051"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="DD package added and exited successfully."/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 76">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="26"/>
+					<Prp name="object left" type="I" value="1393"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="237"/>
+					<Prp name="datetime" type="D" value="45972.2973775116"/>
+					<Prp name="click point x" type="I" value="1403"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="47"/>
+					<Prp name="click point y" type="I" value="36"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ButtonManageDdPackage.Rectangle"/>
+					<Prp name="image file name" type="S" value="visImage25.png"/>
+					<Prp name="object right" type="I" value="1414"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (10, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ButtonManageDdPackage.Rectangle&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;&quot;, 2).WPFObject(&quot;Rectangle&quot;, &quot;&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="237"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265470718"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="76"/>
+			<Prp name="owner id" type="I" value="75"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="323"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262851736"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectProtocol - Selects a given protocol from the Protocol combobox in the &#xA; Manage Packages window using a reusable method."/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 72">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="258"/>
+					<Prp name="object left" type="I" value="479"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="444"/>
+					<Prp name="datetime" type="D" value="45972.2973627431"/>
+					<Prp name="click point x" type="I" value="542"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="299"/>
+					<Prp name="click point y" type="I" value="278"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.InformationWindowPopUp.InformationWindow.ButtonOk"/>
+					<Prp name="image file name" type="S" value="visImage24.png"/>
+					<Prp name="object right" type="I" value="605"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (63, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.InformationWindowPopUp.InformationWindow.ButtonOk&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: InformationWindow&quot;, &quot;&quot;).WPFObject(&quot;InformationWindow&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="444"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265304167"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="72"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 75">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5265313773"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickManage_DDPackagePopUpCloseButton - Clicks the 'Close' button on the Add DD Package File popup."/>
+			<Prp name="id" type="I" value="75"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1513"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263249074"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Protocol selected: HART"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 62">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="392"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.526455544"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="'3051 (2606)' selected successfully from the Device Type combobox."/>
+			<Prp name="id" type="I" value="62"/>
+			<Prp name="owner id" type="I" value="55"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 14">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="45"/>
+					<Prp name="object left" type="I" value="144"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="108"/>
+					<Prp name="datetime" type="D" value="45972.296236088"/>
+					<Prp name="click point x" type="I" value="165"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="73"/>
+					<Prp name="click point y" type="I" value="58"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.BreadcrumbParent.toolbar"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="object right" type="I" value="565"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (21, 13) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.BreadcrumbParent.toolbar&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1).Window(&quot;WorkerW&quot;, &quot;&quot;, 1).Window(&quot;ReBarWindow32&quot;, &quot;&quot;, 1).Window(&quot;Address Band Root&quot;, &quot;&quot;, 1).Window(&quot;msctls_progress32&quot;, &quot;&quot;, 1).Window(&quot;Breadcrumb Parent&quot;, &quot;&quot;, 1).Window(&quot;ToolbarWindow32&quot;, &quot;Address: C:\\Users\\Admin\\Desktop\\JSFDM\\JSFDM\\Files&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="108"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5254042014"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Toolbar button 'All locations' was clicked."/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="81"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263246759"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The item 'HART' was successfully selected."/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 66">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="498"/>
+					<Prp name="object left" type="I" value="1225"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="456"/>
+					<Prp name="datetime" type="D" value="45972.2973076736"/>
+					<Prp name="click point x" type="I" value="1288"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="539"/>
+					<Prp name="click point y" type="I" value="518"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.dataGrid.WPFObject(&quot;DataGridRow&quot;, &quot;&quot;, 6).WPFObject(&quot;DataGridCell&quot;, &quot;&quot;, 7).WPFObject(&quot;ContentPresenter&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;DELETE&quot;, 1)"/>
+					<Prp name="image file name" type="S" value="visImage21.png"/>
+					<Prp name="object right" type="I" value="1351"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (63, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 2).WPFObject(&quot;ContentControl&quot;, &quot;&quot;, 1).WPFObject(&quot;RemovePackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Border&quot;, &quot;&quot;, 1).WPFObject(&quot;dataGrid&quot;).WPFObject(&quot;DataGridRow&quot;, &quot;&quot;, 6).WPFObject(&quot;DataGridCell&quot;, &quot;&quot;, 7).WPFObject(&quot;ContentPresenter&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot;DELETE&quot;, 1)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="456"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.526476007"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="66"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 59">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="68"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264388194"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Found 69 ComboBox items."/>
+			<Prp name="id" type="I" value="59"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 7">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="16"/>
+					<Prp name="object left" type="I" value="1002"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="56"/>
+					<Prp name="datetime" type="D" value="45972.2961896412"/>
+					<Prp name="click point x" type="I" value="1070"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="57"/>
+					<Prp name="click point y" type="I" value="36"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ButtonAddDdPackage"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="object right" type="I" value="1138"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ButtonAddDdPackage&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Button&quot;, &quot; Add DD/PACKAGE &quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="56"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253589583"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="owner id" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 16">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="0"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="112"/>
+					<Prp name="datetime" type="D" value="45972.2962421065"/>
+					<Prp name="click point x" type="I" value="691"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="600"/>
+					<Prp name="click point y" type="I" value="559"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="object right" type="I" value="900"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="The file 'C:\Users\Admin\Desktop\JSFDM\JSFDM\Files\0906.fm8' was opened as a 'HART DD(.fm8) ( *.fm8)' file.&#xA;&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.dlgOpen&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="112"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5254154398"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The file '0906.fm8' was selected in the Open dialog."/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 57">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="115"/>
+					<Prp name="object left" type="I" value="956"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="60"/>
+					<Prp name="datetime" type="D" value="45972.2972546991"/>
+					<Prp name="click point x" type="I" value="1181"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="156"/>
+					<Prp name="click point y" type="I" value="135"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxDeviceType"/>
+					<Prp name="image file name" type="S" value="visImage19.png"/>
+					<Prp name="object right" type="I" value="1406"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (225, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ManagePackagesWindow.ManagePackageMainWindow.ManagePackages.ComboboxDeviceType&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Shell&quot;, &quot;Manage Packages&quot;).WPFObject(&quot;Shell&quot;, &quot;Manage Packages&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ModuleContentRegionDeletePackage&quot;).WPFObject(&quot;ManagePackages&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 2).WPFObject(&quot;ContentControl&quot;, &quot;&quot;, 1).WPFObject(&quot;RemovePackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;panelAdvSearch&quot;).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBox&quot;, &quot;&quot;, 3))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="60"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264231944"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="57"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="29"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253538079"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Navigation completed successfully."/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1502"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262398495"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="DeleteDD - Device Description Package Deletion"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1509"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262851736"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Opened Manage DD Packages section."/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 28">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="238"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258778472"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked 'Close' button successfully."/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="owner id" type="I" value="26"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 58">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264251273"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ComboBox clicked to expand."/>
+			<Prp name="id" type="I" value="58"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="58"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263274769"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectComboBoxItemByName :- comboBox = [object COMObject]  itemName = Rosemount (26)"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="owner id" type="I" value="46"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="76"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.525359838"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectDDFileTypeFromDropdown - Selects a specified file type from the 'FileType' dropdown &#xA; in the 'Add DD Package File' popup."/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 19">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="369"/>
+					<Prp name="object left" type="I" value="312"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="136"/>
+					<Prp name="datetime" type="D" value="45972.2962514005"/>
+					<Prp name="click point x" type="I" value="455"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="410"/>
+					<Prp name="click point y" type="I" value="389"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.ButtonAddToLibrary"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="object right" type="I" value="599"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.Add_DDPackageFilePopUp.Add_DDPackage.ButtonAddToLibrary&#xA;(Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: Add_DDPackage&quot;, &quot;&quot;).WPFObject(&quot;Add_DDPackage&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 1).WPFObject(&quot;Grid&quot;, &quot;&quot;, 2).WPFObject(&quot;Button&quot;, &quot;ADD TO LIBRARY&quot;, 2))"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="136"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5255062963"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258718171"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickManage_DDPackagePopUpCloseButton - Clicks the 'Close' button on the Add DD Package File popup."/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263001389"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="ComboBox clicked to expand."/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="owner id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5262399653"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="openManageDDPackagesSection - Navigates through the HCM Client UI to access the &#xA; 'Manage DD/Packages' section via the 'Library' menu."/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 73">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="446"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.52653125"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="DD Package '3051 (2606)' deleted successfully."/>
+			<Prp name="id" type="I" value="73"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="214"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5258717477"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked 'Close' button successfully."/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="owner id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="54"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5253539236"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="clickAddDDPackageButton - Clicks the 'Add DD Package' button in the Manage Packages window."/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 53">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="361"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264177431"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="'Rosemount (26)' selected successfully from the Manufacturer combobox."/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="owner id" type="I" value="46"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="81"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264176273"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The item 'Rosemount (26)' was successfully selected."/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="owner id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 51">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="object top" type="I" value="280"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="line #" type="I" value="80"/>
+					<Prp name="datetime" type="D" value="45972.2972436227"/>
+					<Prp name="click point x" type="I" value="213"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object bottom" type="I" value="321"/>
+					<Prp name="click point y" type="I" value="300"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.HwndSource_PopupRoot.PopupRoot.WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 18)"/>
+					<Prp name="image file name" type="S" value="visImage18.png"/>
+					<Prp name="object right" type="I" value="427"/>
+				</Node>
+			</Node>
+			<Prp name="remarks" type="S" value="A click at point (213, 20) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;HCMClient&quot;).WPFObject(&quot;HwndSource: PopupRoot&quot;, &quot;&quot;).WPFObject(&quot;PopupRoot&quot;, &quot;&quot;, 1).WPFObject(&quot;Decorator&quot;, &quot;&quot;, 1).WPFObject(&quot;NonLogicalAdornerDecorator&quot;, &quot;&quot;, 1).WPFObject(&quot;ComboBoxItem&quot;, &quot;&quot;, 18)"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="line no" type="I" value="80"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5264114931"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="owner id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="355"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.5263249769"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="selectManufacturer - Selects a given manufacturer from the combobox in the &#xA;  Manage Packages window using a reusable method."/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="line no" type="I" value="79"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="date" type="D" value="45972.525385"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Selected file type: *.fm8"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Prp name="status" type="I" value="0"/>
+	</Node>
+</Nodes>
