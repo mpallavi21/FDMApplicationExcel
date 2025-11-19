@@ -6,6 +6,7 @@
 //USEUNIT DeviceStateViewPage
 //USEUNIT SettingsPage
 //USEUNIT GenericMethods
+//USEUNIT EntryPointPage
 
 function launchFDMClientApplication(ServerName, Username, Password) {
   Log.AppendFolder("launchFDMClientApplication");
@@ -198,37 +199,30 @@ function FDMGR5957() {
   }
 }
 
+function QuickViewOfDevice(Device) {
+  Log.AppendFolder("QuickViewOfDevice - Verify Quick View Launch and Log Device Info");
 
+  let status = "Pass";
 
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR5899
-// Description:   Verifies that Quick View launches for a specific FDM device
-//                and logs its diagnostic information.
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR5899() {
   try {
-    Log.AppendFolder("FDMGR5899 - Verify Quick View Launch and Log Device Info");
-
-    const devicePath = Project.Variables.Device;
-
     // Step 1: Verify Quick View launches for the device
-    verifyQuickViewLaunch(devicePath);
+    verifyQuickViewLaunch(Device);
 
     // Step 2: Log diagnostic/device information
     logFDMDeviceInformation();
+    
+    closeWindowPage()
 
-    Log.Checkpoint("✅ FDMGR5899 passed: Quick View verified and device info logged.");
+    Log.Checkpoint("✅ QuickViewOfDevice passed: Quick View verified and device info logged.");
   } catch (error) {
-    Log.Error("❌ FDMGR5899 failed during Quick View verification or logging:", error);
+    Log.Error("❌ QuickViewOfDevice failed during Quick View verification or logging: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("QuickViewOfDevice " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 
 // =====================================================================
@@ -1493,7 +1487,7 @@ function AddDD(filePath, fileType) {
 // =====================================================================
 // Author:        Bharath
 // Function:      DeleteDD
-// Description:   Deletes a DD package for the device "3051 (2606)" under HART protocol
+// Description:   Deletes a DD package for the device  under HART protocol
 //                by navigating the DD management section, selecting filters, deleting the entry,
 //                and terminating the client application.
 
@@ -1592,6 +1586,332 @@ function UpdateDTMLibrary() {
  
 
 }
+
+//USEUNIT AttachDetachPages
+
+// =====================================================================
+// Author:        Bharath
+// Function:      AttachDetachApp
+// Description:   Automates attaching an application package and then detaching it
+// =====================================================================
+
+function AttachDetachApp() {
+  try {
+    Log.AppendFolder("AttachDetachApp - Attach and Detach Application Package");
+
+    // Step 1: Click on the "Attach Application" button
+    clickOnAttachApplication();
+
+    // Step 2: Upload the application package file
+    const packagePath = "C:\\Program Files (x86)\\Honeywell\\FDM\\ClientMachine\\Bin";
+    const packageName = "HCMClient";
+    uploadAppAttachPackageFile(packagePath, packageName);
+
+    // Step 3: Detach the application
+    DetachApplication();
+
+    Log.Checkpoint("✅ AttachDetachApp passed: Application attached and detached successfully.");
+  } catch (error) {
+    Log.Error("❌ AttachDetachApp failed during attach/detach process:", error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      AttachDetachSystemDocument
+// Description:   Automates the process of attaching and detaching a system-level
+//                document via menu navigation, file upload, and confirmation steps.
+// Created On:    21-Jul-2025
+// Modified On:   21-Jul-2025
+// =====================================================================
+
+function AttachDetachSystemDocument15805() {
+  Log.AppendFolder("AttachDetachSystemDocument - System-Level Document Flow");
+
+  try {
+    // Step 1: Navigate via menu and select system document
+    clickOnSystemAttachDocument()
+    Log.Message("Navigated to system document attachment workflow.");
+
+    // Step 2: Upload document
+    uploadPackageFile(Project.Path + "Stores\\Files", "0906.fm8");
+    Log.Message("Uploaded system document: 0906.fm8");
+
+    // Step 3: Confirm attachment
+    clickOnConfirmFDMButton();
+    Log.Message("Confirmed attachment in FDM dialog.");
+    
+    // Step 4: Detach system document
+    DetachSystemDocument();
+    Log.Message("Initiated detachment of system document.");
+
+  } catch (error) {
+    Log.Error("Exception occurred in AttachDetachSystemDocument: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      AttachDetachDeviceDocumentation15782
+// Description:   Attaches a document to a device via context menu flow,
+//                confirms the action, then initiates detachment and confirms.
+// Created On:    21-Jul-2025
+// Modified On:   21-Jul-2025
+// =====================================================================
+
+function AttachDetachDeviceDocumentation15782() {
+  Log.AppendFolder("AttachDetachDeviceDocumentation - Document Attach/Detach Flow");
+
+  try {
+    // Step 1: Attach document
+    clickOnDeviceAttachDocument();
+
+    // Step 2: Upload package file
+    uploadPackageFile(Project.Path + "Stores\\Files", "0906.sym");
+    Log.Message("Uploaded document: 0906.sym");
+
+    // Step 3: Confirm attachment
+    clickOnConfirmFDMButton();
+    Log.Message("Confirmed attachment in FDM dialog.");
+
+    // Step 4: Detach document
+    clickOnDeviceDetachDocument();
+
+    // Step 5: Handle resource dialog for detachment.
+    Delay(1000)
+    DetachDocumentFromResourceDlg();
+
+    // Step 6: Confirm detachment
+    clickOnConfirmFDMButton();
+    Log.Message("Confirmed detachment in FDM dialog.");
+
+  } catch (e) {
+    Log.Error("Exception occurred during attach/detach process: " + e.message);
+  } finally {
+    Log.PopLogFolder();
+  } 
+}
+
+
+
+function FDMGR4876(){
+  Log.AppendFolder("FDMGR4876 - Save History")
+  try{
+  ClickOnlineViewTab()
+  clickOnNetworkViewTab()
+  input = Project.Variables.Device
+  clickOnbuildNetwork(input.split("|").slice(0, -2).join("|"));
+  clickOnbuildNetwork(input.split("|").slice(0, -1).join("|"));
+  clickOnDevice(Project.Variables.Device);
+  clickSaveHistoryHyperlink()
+  input = Project.Variables.Device
+  let parts = input.split("|");
+  let lastValue = parts[parts.length - 1];
+  fillSaveHistoryPopup(lastValue + aqDateTime.Now()/1000)
+  handleFdmConfigurationPopup()
+  handleSaveHistoryCompletion()
+  CloseWindow()
+  clickOnConfirmFDMButton()
+  }
+  
+  catch(error){
+    Log.Error("FDMGR4876 :- " + error.message )
+  }
+  finally{
+    Log.PopLogFolder()
+  }
+  
+}
+
+function ActivateDevice(Device) {
+  Log.AppendFolder("ActivateDevice");
+
+  let status = "Pass";
+
+  try {
+    clickOnDevice(Device);
+    Log.Message("Clicked on device: " + Device);
+  } catch (error) {
+    Log.Error("Error in EnterIntoDevice: " + error.message);
+    status = "Fail";
+  }
+
+  WriteResult("ActivateDevice " + status, status, "Pass");
+  Log.PopLogFolder();
+}
+
+function SaveHistory() {
+  Log.AppendFolder("SaveHistory");
+
+  let status = "Pass";
+
+  try {
+    clickSaveHistoryHyperlink();
+    saveName = "SaveHistory" + aqDateTime.Now() / 1000
+    fillSaveHistoryPopup("SaveHistory" + aqDateTime.Now() / 1000);
+    handleFdmConfigurationPopup();
+    handleSaveHistoryCompletion();
+    CloseWindow();
+    clickOnConfirmFDMButton();
+    Log.Message("SaveHistory flow completed successfully.");
+  } catch (error) {
+    Log.Error("SaveHistory failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("Save history Id:-"+saveName+" SaveHistory " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DeviceParam
+// Description:   Validates existence and text of various WPF hyperlinks 
+//                under a selected device context.
+// Created On:    23-Jul-2025
+// Modified On:   23-Jul-2025
+// =====================================================================
+
+function DeviceParam() {
+  Log.AppendFolder("DeviceParam - Validate Device Hyperlink Controls");
+
+  try {
+    // 🖱️ Click on the specified device
+    clickOnDevice(Project.Variables.Device);
+    Log.Message("Clicked on device: " + Project.Variables.Device);
+    Delay(1000)
+    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator;
+    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceStatus, "WPFControlText", cmpEqual, "FDM Device Status");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkMethodList, "WPFControlText", cmpEqual, "Method List");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkSaveHistoryRecord, "WPFControlText", cmpEqual, "Save History Record");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkSaveAsOfflineTemplate, "WPFControlText", cmpEqual, "Save as Offline Template");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkExport, "WPFControlText", cmpEqual, "Export");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkPrint, "WPFControlText", cmpEqual, "Print");
+    aqObject.CheckProperty(adornerDecorator.HyperlinkNotifications, "WPFControlText", cmpEqual, "Notifications");
+    CloseWindow()
+    clickOnConfirmFDMButton()
+
+  } catch (error) {
+    Log.Error("Exception in DeviceParam: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+  
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DeviceStateView
+// Description:   Clicks on specified device, waits for load, and retrieves its state info.
+// Created On:    31-Jul-2025
+// Modified On:   31-Jul-2025
+// =====================================================================
+
+function DeviceStateView() {
+  Log.AppendFolder("test - Device Selection and State Capture");
+
+  try {
+    // Step 1: Select device from variable
+    clickOnDevice(Project.Variables.Device);
+    Log.Message("Clicked on device: " + Project.Variables.Device);
+
+    // Step 2: Delay to allow device to load
+    Delay(1000, "Waiting for device UI to load");
+
+    // Step 3: Collect and log device state information
+    DeviceStateInformation();
+    Log.Message("Device state information retrieved.");
+    
+    CloseWindow()
+    clickOnConfirmFDMButton()
+  } catch (error) {
+    Log.Error("Error in test function: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+
+function Print15728(){
+  Log.AppendFolder("Print15728 - Print")
+  try{
+  BuildNetwork()
+  clickOnDevice(Project.Variables.Device);
+  let HCMClient = Aliases.HCMClient;
+  HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator.HyperlinkPrint.Click(13, 10);
+  waitForStatusBarText("Loading online device data for print is performed successfully...")
+  let printPreview = HCMClient.PrintPreview;
+  aqObject.CheckProperty(printPreview, "Enabled", cmpEqual, true);
+  let panel = printPreview.ButtonsPanel;
+  OCR.Recognize(panel.PrintButton).BlockByText("Print").Click();
+  HCMClient.dlgFDMConfiguration.Close();
+  OCR.Recognize(panel.CloseButton).BlockByText("Close").Click();
+  closeWindowPage()
+  clickOnConfirmFDMButton()
+  }
+  
+  catch(error){
+    Log.Error("Print15728 :- " + error.message )
+  }
+  finally{
+    Log.PopLogFolder()
+  }
+  
+
+ 
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      SettingDeviceProperties15794
+// Description:   Opens FDM device properties and configures usage, calibration status, and health.
+// Created On:    21-Aug-2025
+// Modified On:   21-Aug-2025
+// =====================================================================
+
+function SettingDeviceProperties15794() {
+  Log.AppendFolder("SettingDeviceProperties15794");
+
+  try {
+    // === Step 1: Build network and select target device ===
+    BuildNetwork();
+    clickOnDevice(Project.Variables.Device);
+
+    // === Step 2: Open device properties via OCR hyperlink ===
+    OCR.Recognize(
+      Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage
+        .HwndSource_AdornerDecorator.AdornerDecorator.HyperlinkFdmDeviceProperties
+    ).BlockByText("Device").Click();
+
+    // === Step 3: Configure device properties ===
+    ReadAndConfigureDeviceProperties({
+      DeviceUsage: "Spare",
+      Calibrationstatus: "Calibrated",
+      DeviceHealth: "Good"
+    });
+    
+    CloseWindow()
+    clickOnConfirmFDMButton()
+    Log.Message("Device properties configured successfully.");
+
+  } catch (error) {
+    Log.Error("Error in SettingDeviceProperties15794: " + error.message);
+
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
 
 
 

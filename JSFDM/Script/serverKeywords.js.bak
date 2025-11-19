@@ -1,5 +1,5 @@
-﻿//USEUNIT STDLib
-//USEUNIT ControlInfo
+﻿//USEUNIT SMToolControlInfo
+//USEUNIT STDLib
 
 
 
@@ -22,7 +22,7 @@ function obj_loginFormPage() {
   Log.AppendFolder("obj_loginFormPage");
 
   try {
-    const controls = ControlInfo.ControlRepository["obj_loginFormPage"];
+    const controls = SMToolControlInfo.ControlRepository["obj_loginFormPage"];
 
     let loginForm = Aliases.ServerMgmtTool.WaitWinFormsObject(
       controls.loginForm["Name"],
@@ -57,7 +57,7 @@ function enterCredentials(username, password) {
       return;
     }
 
-    var controls = ControlInfo.ControlRepository.enterCredentials;
+    var controls = SMToolControlInfo.ControlRepository.enterCredentials;
      
     let loginNameField = loginForm.FindChild("Name", controls.loginNameField["Name"],100)
                           .FindChild("ClrFullClassName", controls.loginNameField["Class"], 100);
@@ -98,7 +98,7 @@ function setDomainValue(domainValue) {
       return;
     }
 
-    var controls = ControlInfo.ControlRepository.setDomainValue;
+    var controls = SMToolControlInfo.ControlRepository.setDomainValue;
 
     let cbDomain = FindChildName(loginForm, controls.cbDomain["Name"]);
     if (!cbDomain || !cbDomain.Exists) {
@@ -132,7 +132,7 @@ function obj_btnLogin() {
       return null;
     }
     
-    var controls = ControlInfo.ControlRepository.obj_btnLogin;
+    var controls = SMToolControlInfo.ControlRepository.obj_btnLogin;
 
     let loginButton = FindChildName(loginForm, controls.btnLogin["Name"]);
 
@@ -161,7 +161,7 @@ function obj_btnLogin() {
       Log.Error("❌ Login form not available. Cannot locate Cancel button.");
       return null;
     }
-    var controls = ControlInfo.ControlRepository.obj_btnCancel;
+    var controls = SMToolControlInfo.ControlRepository.obj_btnCancel;
     
     let cb_cancelButton = loginForm.FindChild("Name", controls.cancelButton["Name"], 100);
     
@@ -188,7 +188,7 @@ function obj_ServerManagerMainForm() {
 
   try {
     
-    var controls = ControlInfo.ControlRepository.obj_ServerManagerMainForm;
+    var controls = SMToolControlInfo.ControlRepository.obj_ServerManagerMainForm;
 
     var form = Aliases.ServerMgmtTool.FindChild("Name", controls.serverManagerMainForm["Name"],100);
     if (form && form.Exists) {
@@ -213,7 +213,7 @@ function waitForServerManagerMainForm(timeoutMs) {
   Log.AppendFolder("waitForServerManagerMainForm");
 
   try {
-    var controls = ControlInfo.ControlRepository.waitForServerManagerMainForm; 
+    var controls = SMToolControlInfo.ControlRepository.waitForServerManagerMainForm; 
 
     var appProcess = Aliases.ServerMgmtTool;
     var mainForm = appProcess.WaitWinFormsObject(
@@ -247,7 +247,7 @@ function captureInvalidLoginPopupCaption() {
     var timeout = 10000;
     var process = Aliases.ServerMgmtTool;
 
-    var controls = ControlInfo.ControlRepository.captureInvalidLoginPopupCaption; 
+    var controls = SMToolControlInfo.ControlRepository.captureInvalidLoginPopupCaption; 
 
     var popupWindow = process.WaitWindow(
       controls.popupWindow["WndClass"],
@@ -319,7 +319,7 @@ function validateCopyrightLabel(expectedText) {
       return;
     }
 
-    var controls = ControlInfo.ControlRepository.validateCopyrightLabel; 
+    var controls = SMToolControlInfo.ControlRepository.validateCopyrightLabel; 
 
     let labelObj = FindChildName(loginForm, controls.copyrightLabel["Name"]);
 
@@ -347,7 +347,7 @@ function submitAuditTrailReason(reasonText) {
   Log.AppendFolder("submitAuditTrailReason");
 
   try {
-    var controls = ControlInfo.ControlRepository.submitAuditTrailReason;   
+    var controls = SMToolControlInfo.ControlRepository.submitAuditTrailReason;   
              
     var auditBox = Aliases.ServerMgmtTool.WaitWinFormsObject(
       controls.auditBox["Name"],
@@ -397,32 +397,34 @@ function handleCustomMessageBoxOfOk() {
   Log.AppendFolder("handleCustomMessageBoxOfOk");
 
   try {
-    var controls = ControlInfo.ControlRepository.handleCustomMessageBoxOfOk;   
+    var controls = SMToolControlInfo.ControlRepository.handleCustomMessageBoxOfOk;   
 
-    var messageBox = Aliases.ServerMgmtTool.FindChild("Name",controls.messageBox["Name"],100)
+    var messageBox = Aliases.ServerMgmtTool.CustomMessageBox
     if (!messageBox || !messageBox.Exists) {
       Log.Error("❌ CustomMessageBox not found.");
       return;
     }
+      if(messageBox.Exists){
+        var messageText = FindChildName(messageBox, controls.messageText["Name"]);
+      var okButton = FindChildName(messageBox, controls.okButton["Name"]);
 
-    var messageText = FindChildName(messageBox, controls.messageText["Name"]);
-    var okButton = FindChildName(messageBox, controls.okButton["Name"]);
+      // Print message caption
+      if (messageText && messageText.Exists) {
+        var caption = messageText.WndCaption;
+        Log.Message("📢 Message Box Text: '" + caption + "'");
+      } else {
+        Log.Error("❌ Message text box not found or not visible.");
+      }
 
-    // Print message caption
-    if (messageText && messageText.Exists) {
-      var caption = messageText.WndCaption;
-      Log.Message("📢 Message Box Text: '" + caption + "'");
-    } else {
-      Log.Error("❌ Message text box not found or not visible.");
+      // Click OK button if enabled
+      if (okButton && okButton.Exists && okButton.Enabled) {
+        okButton.Click();
+        Log.Checkpoint("✅ 'OK' button clicked.");
+      } else {
+        Log.Error("❌ 'OK' button not clickable.");
+      }
     }
-
-    // Click OK button if enabled
-    if (okButton && okButton.Exists && okButton.Enabled) {
-      okButton.Click();
-      Log.Checkpoint("✅ 'OK' button clicked.");
-    } else {
-      Log.Error("❌ 'OK' button not clickable.");
-    }
+    
 
   } catch (e) {
     Log.Error("❌ Exception while handling CustomMessageBox: " + e.message);
@@ -435,7 +437,7 @@ function handleCustomMessageBoxOfYes() {
   Log.AppendFolder("handleCustomMessageBoxOfYes");
 
   try {
-    var controls = ControlInfo.ControlRepository.handleCustomMessageBoxOfYes;   
+    var controls = SMToolControlInfo.ControlRepository.handleCustomMessageBoxOfYes;   
 
     var messageBox = Aliases.ServerMgmtTool.FindChild("Name",controls.messageBox["Name"],100);
     if (!messageBox || !messageBox.Exists) {
@@ -468,8 +470,6 @@ function handleCustomMessageBoxOfYes() {
     Log.PopLogFolder();
   }
 }
-
-
 function select_ComboBoxItem(comboBoxObj, itemText) {
   Log.AppendFolder("select_ComboBoxItem");
 
@@ -495,6 +495,53 @@ function select_ComboBoxItem(comboBoxObj, itemText) {
     Log.PopLogFolder();
   }
 }
+
+
+function select_ComboBoxItem1(comboBoxObj, itemText) {
+  Log.AppendFolder("select_ComboBoxItem");
+
+  try {
+    if (!comboBoxObj || !comboBoxObj.Exists) {
+      Log.Error("❌ Combo box object not found or not available.");
+      return false;
+    }
+
+    if (!comboBoxObj.Enabled) {
+      Log.Error("⚠️ Combo box is disabled. Cannot select item.");
+      return false;
+    }
+
+    comboBoxObj.SetFocus();
+    comboBoxObj.Click(); // Expand dropdown
+    Delay(500);
+
+    let itemCount = comboBoxObj.wItemCount;
+    for (let i = 0; i < itemCount; i++) {
+      comboBoxObj.Keys("[Home]"); // Reset to top
+      for (let j = 0; j < i; j++) {
+        comboBoxObj.Keys("[Down]");
+        Delay(100);
+      }
+
+      let currentItem = comboBoxObj.wItem(i);
+      if (currentItem && currentItem.toLowerCase() === itemText.toLowerCase()) {
+        comboBoxObj.Keys("[Enter]");
+        Log.Checkpoint("✅ Selected item '" + itemText + "' using keyboard navigation.");
+        return true;
+      }
+    }
+
+    Log.Warning("⚠️ Item '" + itemText + "' not found in combo box.");
+    return false;
+
+  } catch (e) {
+    Log.Error("❌ Exception while selecting item from combo box: " + e.message);
+    return false;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
 
 
 function SearchCombo(szobject, szitem) {

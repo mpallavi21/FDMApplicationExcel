@@ -399,30 +399,29 @@ function handleCustomMessageBoxOfOk() {
   try {
     var controls = SMToolControlInfo.ControlRepository.handleCustomMessageBoxOfOk;   
 
-    var messageBox = Aliases.ServerMgmtTool.FindChild("Name",controls.messageBox["Name"],100)
-    if (!messageBox || !messageBox.Exists) {
-      Log.Error("❌ CustomMessageBox not found.");
-      return;
-    }
+    var messageBox = Aliases.ServerMgmtTool.CustomMessageBox
+    
+      if(messageBox.Exists){
+        var messageText = FindChildName(messageBox, controls.messageText["Name"]);
+      var okButton = FindChildName(messageBox, controls.okButton["Name"]);
 
-    var messageText = FindChildName(messageBox, controls.messageText["Name"]);
-    var okButton = FindChildName(messageBox, controls.okButton["Name"]);
+      // Print message caption
+      if (messageText && messageText.Exists) {
+        var caption = messageText.WndCaption;
+        Log.Message("📢 Message Box Text: '" + caption + "'");
+      } else {
+        Log.Error("❌ Message text box not found or not visible.");
+      }
 
-    // Print message caption
-    if (messageText && messageText.Exists) {
-      var caption = messageText.WndCaption;
-      Log.Message("📢 Message Box Text: '" + caption + "'");
-    } else {
-      Log.Error("❌ Message text box not found or not visible.");
+      // Click OK button if enabled
+      if (okButton && okButton.Exists && okButton.Enabled) {
+        okButton.Click();
+        Log.Checkpoint("✅ 'OK' button clicked.");
+      } else {
+        Log.Error("❌ 'OK' button not clickable.");
+      }
     }
-
-    // Click OK button if enabled
-    if (okButton && okButton.Exists && okButton.Enabled) {
-      okButton.Click();
-      Log.Checkpoint("✅ 'OK' button clicked.");
-    } else {
-      Log.Error("❌ 'OK' button not clickable.");
-    }
+    
 
   } catch (e) {
     Log.Error("❌ Exception while handling CustomMessageBox: " + e.message);
@@ -468,8 +467,6 @@ function handleCustomMessageBoxOfYes() {
     Log.PopLogFolder();
   }
 }
-
-
 function select_ComboBoxItem(comboBoxObj, itemText) {
   Log.AppendFolder("select_ComboBoxItem");
 
@@ -495,6 +492,53 @@ function select_ComboBoxItem(comboBoxObj, itemText) {
     Log.PopLogFolder();
   }
 }
+
+
+function select_ComboBoxItem1(comboBoxObj, itemText) {
+  Log.AppendFolder("select_ComboBoxItem");
+
+  try {
+    if (!comboBoxObj || !comboBoxObj.Exists) {
+      Log.Error("❌ Combo box object not found or not available.");
+      return false;
+    }
+
+    if (!comboBoxObj.Enabled) {
+      Log.Error("⚠️ Combo box is disabled. Cannot select item.");
+      return false;
+    }
+
+    comboBoxObj.SetFocus();
+    comboBoxObj.Click(); // Expand dropdown
+    Delay(500);
+
+    let itemCount = comboBoxObj.wItemCount;
+    for (let i = 0; i < itemCount; i++) {
+      comboBoxObj.Keys("[Home]"); // Reset to top
+      for (let j = 0; j < i; j++) {
+        comboBoxObj.Keys("[Down]");
+        Delay(100);
+      }
+
+      let currentItem = comboBoxObj.wItem(i);
+      if (currentItem && currentItem.toLowerCase() === itemText.toLowerCase()) {
+        comboBoxObj.Keys("[Enter]");
+        Log.Checkpoint("✅ Selected item '" + itemText + "' using keyboard navigation.");
+        return true;
+      }
+    }
+
+    Log.Warning("⚠️ Item '" + itemText + "' not found in combo box.");
+    return false;
+
+  } catch (e) {
+    Log.Error("❌ Exception while selecting item from combo box: " + e.message);
+    return false;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
 
 
 function SearchCombo(szobject, szitem) {

@@ -1,11 +1,11 @@
 ﻿//USEUNIT serverKeywords
-//USEUNIT ControlInfo
+//USEUNIT SMToolControlInfo
 
 function obj_DisplayForm() {
   Log.AppendFolder("obj_DisplayForm");
   try {
     let mainForm = serverKeywords.obj_ServerManagerMainForm();
-    var controls =  ControlInfo.ControlRepository.obj_DisplayForm
+    var controls =  SMToolControlInfo.ControlRepository.obj_DisplayForm
         
     let displayForm = mainForm.FindChild("Name",controls.displayForm["Name"] , 100);
 
@@ -36,7 +36,7 @@ function obj_btnView() {
     
 
     
-    controls = ControlInfo.ControlRepository.obj_btnView
+    controls = SMToolControlInfo.ControlRepository.obj_btnView
     let btnView = displayForm.FindChild("Name", controls.btnView.Name, 100);
     if (btnView.Exists) {
       Log.Message("View button located successfully.");
@@ -62,7 +62,7 @@ function obj_btnAddNew() {
       Log.Warning("DisplayForm is not available. Cannot locate btnAddNew.");
       return null;
     }
-    controls = ControlInfo.ControlRepository.obj_btnAddNew
+    controls = SMToolControlInfo.ControlRepository.obj_btnAddNew
                 
     let btnAddNew = displayForm.FindChild("Name", controls.btnAddNew.Name, 100);
     if (btnAddNew.Exists) {
@@ -89,7 +89,7 @@ function obj_btnEdit() {
       Log.Warning("DisplayForm is not available. Cannot locate btnEdit.");
       return null;
     }
-     controls = ControlInfo.ControlRepository.obj_btnEdit
+     controls = SMToolControlInfo.ControlRepository.obj_btnEdit
                     
     let btnEdit = displayForm.FindChild("Name", controls.btnEdit.Name, 100);
     if (btnEdit.Exists) {
@@ -116,7 +116,7 @@ function obj_btnDelete() {
       Log.Warning("DisplayForm is not available. Cannot locate btnDelete.");
       return null;
     }
-    controls = ControlInfo.ControlRepository.obj_btnDelete
+    controls = SMToolControlInfo.ControlRepository.obj_btnDelete
            
     let btnDelete = displayForm.FindChild("Name", controls.btnDelete.Name, 100);
     if (btnDelete.Exists) {
@@ -143,7 +143,7 @@ function obj_btnExitDisp() {
       Log.Warning("DisplayForm is not available. Cannot locate btnExitDisp.");
       return null;
     }
-    controls = ControlInfo.ControlRepository.obj_btnExitDisp
+    controls = SMToolControlInfo.ControlRepository.obj_btnExitDisp
     
     let btnExitDisp = displayForm.FindChild("Name",controls.btnExitDisp.Name , 100);
     if (btnExitDisp.Exists) {
@@ -166,7 +166,7 @@ function obj_LicenseForm() {
   Log.AppendFolder("obj_LicenseForm");
   try {
     let mainForm = serverKeywords.obj_ServerManagerMainForm();
-    controls = ControlInfo.ControlRepository.obj_LicenseForm
+    controls = SMToolControlInfo.ControlRepository.obj_LicenseForm
     
     let licenseForm = mainForm.FindChild("Name",controls.licenseForm.Name , 100);
 
@@ -191,7 +191,7 @@ function obj_SelectResource() {
   Log.AppendFolder("obj_SelectResource");
   try {
     let mainForm = serverKeywords.obj_ServerManagerMainForm();
-    controls = ControlInfo.ControlRepository.obj_SelectResource
+    controls = SMToolControlInfo.ControlRepository.obj_SelectResource
     
     let selectResourceForm = mainForm.FindChild("Name",controls.selectResourceForm.Name , 100);
 
@@ -279,7 +279,7 @@ function obj_NetworkNameTextBox() {
   }
 }
 
-function obj_ServerNameTextBox() {
+function obj_ServerNameHartTextBox() {
   Log.AppendFolder("obj_ServerNameTextBox");
   try {
     let addEditForm = obj_addEditFrom();
@@ -300,6 +300,28 @@ function obj_ServerNameTextBox() {
     Log.PopLogFolder();
   }
 }
+function obj_ServerNameExperionTextBox() {
+  Log.AppendFolder("obj_ServerNameTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    let serverNameTextBox = addEditForm.FindChild("Name", `WinFormsObject("m_txtboxServer")`, 100);
+    if (serverNameTextBox.Exists) {
+      Log.Message("ServerNameTextBox located successfully.");
+      return serverNameTextBox;
+    } else {
+      Log.Error("ServerNameTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating ServerNameTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
 
 function obj_NetworkTypeComboBox() {
   Log.AppendFolder("obj_NetworkTypeComboBox");
@@ -327,7 +349,7 @@ function obj_ComPortComboBox() {
   Log.AppendFolder("obj_ComPortComboBox");
   try {
     let addEditForm = obj_addEditFrom();
-    controls = ControlInfo.ControlRepository.obj_ComPortComboBox
+    controls = SMToolControlInfo.ControlRepository.obj_ComPortComboBox
     
     let comPortComboBox = addEditForm.FindChild("Name",controls.comPortComboBox.Name , 100);
 
@@ -351,7 +373,7 @@ function obj_BaudRateComboBox() {
   Log.AppendFolder("obj_BaudRateComboBox");
   try {
     let addEditForm = obj_addEditFrom();
-     controls = ControlInfo.ControlRepository.obj_BaudRateComboBox
+     controls = SMToolControlInfo.ControlRepository.obj_BaudRateComboBox
       
     let baudRateComboBox = addEditForm.FindChild("Name", controls.baudRateComboBox.Name, 100);
 
@@ -376,7 +398,7 @@ function obj_RetryCountTextBox() {
   Log.AppendFolder("obj_RetryCountTextBox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_RetryCountTextBox;
+    var controls = SMToolControlInfo.ControlRepository.obj_RetryCountTextBox;
     
     let retryCountTextBox = addEditForm.FindChild("Name",controls.retryCountTextBox.Name , 100);
 
@@ -400,7 +422,7 @@ function obj_StartAddrTextBox() {
   Log.AppendFolder("obj_StartAddrTextBox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_StartAddrTextBox;
+    var controls = SMToolControlInfo.ControlRepository.obj_StartAddrTextBox;
     
     let startAddrTextBox = addEditForm.FindChild("Name",controls.startAddrTextBox.Name , 100);
 
@@ -425,7 +447,7 @@ function obj_MuxEndAddrTextBox() {
   Log.AppendFolder("obj_MuxEndAddrTextBox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_MuxEndAddrTextBox;
+    var controls = SMToolControlInfo.ControlRepository.obj_MuxEndAddrTextBox;
     
     let muxEndAddrTextBox = addEditForm.FindChild("Name",controls.muxEndAddrTextBox.Name , 100);
 
@@ -450,7 +472,7 @@ function obj_OKButton() {
   Log.AppendFolder("obj_OKButton");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_OKButton
+    var controls = SMToolControlInfo.ControlRepository.obj_OKButton
     let okButton = addEditForm.FindChild("Name",controls.okButton.Name , 100);
 
     if (okButton.Exists) {
@@ -473,7 +495,7 @@ function obj_CancelButton() {
   Log.AppendFolder("obj_CancelButton");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_CancelButton
+    var controls = SMToolControlInfo.ControlRepository.obj_CancelButton
      
     let cancelButton = addEditForm.FindChild("Name", controls.cancelButton.Name, 100);
 
@@ -498,7 +520,7 @@ function obj_EnableMuxMonitorCheckbox() {
   Log.AppendFolder("obj_EnableMuxMonitorCheckbox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_EnableMuxMonitorCheckbox
+    var controls = SMToolControlInfo.ControlRepository.obj_EnableMuxMonitorCheckbox
     
     let enableMuxCheckbox = addEditForm.FindChild("Name",controls.enableMuxCheckbox["Name"] , 100);
 
@@ -522,7 +544,7 @@ function obj_ExperionServerTextBox() {
   Log.AppendFolder("obj_ExperionServerTextBox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_ExperionServerTextBox
+    var controls = SMToolControlInfo.ControlRepository.obj_ExperionServerTextBox
     
     let serverTextBox = addEditForm.FindChild("Name",controls.serverTextBox.Name , 100);
 
@@ -546,7 +568,7 @@ function obj_NonRedundantRadioButton() {
   Log.AppendFolder("obj_NonRedundantRadioButton");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_NonRedundantRadioButton
+    var controls = SMToolControlInfo.ControlRepository.obj_NonRedundantRadioButton
     
     let nonRedundantRadioButton = addEditForm.FindChild("Name",controls.nonRedundantRadioButton.Name , 100);
 
@@ -571,7 +593,7 @@ function obj_RedundantRadioButton() {
   Log.AppendFolder("obj_RedundantRadioButton");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_RedundantRadioButton
+    var controls = SMToolControlInfo.ControlRepository.obj_RedundantRadioButton
     
     let redundantRadioButton = addEditForm.FindChild("Name",controls.redundantRadioButton.Name , 100);
 
@@ -596,7 +618,7 @@ function obj_EnableSafetyManagerCheckbox() {
   Log.AppendFolder("obj_EnableSafetyManagerCheckbox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_EnableSafetyManagerCheckbox
+    var controls = SMToolControlInfo.ControlRepository.obj_EnableSafetyManagerCheckbox
     
     let safetyManagerCheckbox = addEditForm.FindChild("Name", controls.safetyManagerCheckbox.Name, 100);
 
@@ -620,7 +642,7 @@ function obj_OneWirelessManagerCheckbox() {
   Log.AppendFolder("obj_OneWirelessManagerCheckbox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_OneWirelessManagerCheckbox
+    var controls = SMToolControlInfo.ControlRepository.obj_OneWirelessManagerCheckbox
     
     let oneWirelessCheckbox = addEditForm.FindChild("Name", controls.oneWirelessCheckbox.Name, 100);
 
@@ -644,7 +666,7 @@ function obj_SecondaryServerTextBox() {
   Log.AppendFolder("obj_SecondaryServerTextBox");
   try {
     let addEditForm = obj_addEditFrom();
-    var controls = ControlInfo.ControlRepository.obj_SecondaryServerTextBox
+    var controls = SMToolControlInfo.ControlRepository.obj_SecondaryServerTextBox
     
     let secondaryServerTextBox = addEditForm.FindChild("Name", controls.secondaryServerTextBox.Name, 100);
 
@@ -670,7 +692,7 @@ function obj_ViewDetailsForm() {
   Log.AppendFolder("obj_ViewDetailsForm");
   try {
     let mainForm = serverKeywords.obj_ServerManagerMainForm(); 
-    var controls = ControlInfo.ControlRepository.obj_ViewDetailsForm
+    var controls = SMToolControlInfo.ControlRepository.obj_ViewDetailsForm
     
     let viewDetailsForm = mainForm.FindChild("Name",controls.viewDetailsForm.Name , 100);
     if (viewDetailsForm.Exists) {
@@ -704,6 +726,39 @@ function addNetwork(networkName,networkType,serverName){
   obj_EnableMuxMonitorCheckbox()
 }
 
+
+function IsNetworkRowPresent(rowLabel) {
+  Log.AppendFolder("clickNetworkRow");
+
+  let displayForm = obj_DisplayForm(),
+      listView = displayForm.FindChild("Name", 'WinFormsObject("m_listView")', 100);
+
+  if (!listView.Exists || !listView.VisibleOnScreen) {
+    Log.Error("ListView not found or not visible.");
+    Log.PopLogFolder();
+    return false;
+  }
+
+  let itemCount = listView.wItemCount;
+  for (let i = 0; i < itemCount; i++) {
+    let itemText = listView.wItem(i); // Use () instead of []
+    if (itemText !== undefined && itemText !== null) {
+      if (itemText.toLowerCase().includes(rowLabel.toLowerCase())) {
+        Log.Message("Found row '" + rowLabel + "' at index " + i + ": " + itemText);
+        Log.PopLogFolder();
+        return true;
+      }
+    } else {
+      Log.Error("Item at index " + i + " is undefined or null.");
+    }
+  }
+
+  Log.Error("Row '" + rowLabel + "' not found in ListView.");
+  Log.PopLogFolder();
+  return false;
+}
+
+
 function clickNetworkRow(rowLabel) {
   Log.AppendFolder("clickNetworkRow");
 
@@ -729,7 +784,7 @@ function clickNetworkRow(rowLabel) {
       Log.Warning("Item at index " + i + " is undefined or null.");
     }
   }
-
+  
   Log.Warning("Row '" + rowLabel + "' not found in ListView.");
   Log.PopLogFolder();
 }

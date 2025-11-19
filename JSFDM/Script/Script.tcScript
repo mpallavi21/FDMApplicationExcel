@@ -19,6 +19,8 @@
 			<child name="SettingsPage" key="{3C3585C7-D4EB-4A90-8088-778E0645B5BD}" path="SettingsPage.js" />
 			<child name="LibraryPages" key="{D22618B6-6D80-4D0E-BFB5-9D1F3A61E5BE}" path="LibraryPages.js" />
 			<child name="GenericMethods" key="{7ABB7D6B-0740-41AE-BF94-65BD6413C6B4}" path="GenericMethods.js" />
+			<child name="AttachDetachPages" key="{21B972D0-CAA7-4CD7-BA66-05F559DFB26D}" path="AttachDetachPages.js" />
+			<child name="EntryPointPage" key="{1F411290-DCD5-41BC-9E90-06E2A079BF44}" path="EntryPointPage.js" />
 		</folder>
 		<child name="SMToolFunctionsLibrary" key="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}" path="SMToolFunctionsLibrary.js" />
 		<child name="FDMFunctionsLibrary" key="{11AB687C-AAE7-4852-ACD3-595884B135C8}" path="FDMFunctionsLibrary.js" />

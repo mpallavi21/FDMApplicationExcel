@@ -181,6 +181,15 @@ function main()
                                         case "DELETEDD":
                                               DeleteDD(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4]);
                                             break;
+                                        case "ACTIVATEDEVICE":
+                                              ActivateDevice(Parameters[0]);
+                                            break;
+                                        case "SAVEHISTORY":
+                                              SaveHistory()
+                                            break;
+                                        case "QUICKVIEWOFDEVICE":
+                                              QuickViewOfDevice(Parameters[0])
+                                            break;
                                         default:
                                             Delay(2000);
                                             break;
@@ -247,4 +256,3 @@ function killExcelIfRunning() {
     Log.Message("✅ Excel process terminated to release file lock.");
   }
 }
-

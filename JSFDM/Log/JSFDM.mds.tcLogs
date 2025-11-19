@@ -23,11 +23,11 @@
 		<Node name="logs">
 			<Node name="log idx=0000">
 				<Prp name="caption" type="S" value=""/>
-				<Prp name="datetime" type="D" value="45972.5248956481"/>
+				<Prp name="datetime" type="D" value="45979.5058230208"/>
 				<Prp name="description" type="S" value=""/>
-				<Prp name="key" type="S" value="{969FEB5B-E389-48F5-9034-F8CCC8C79648}"/>
-				<Prp name="nameofroot" type="S" value="Script Test Log [Main\main]"/>
-				<Prp name="relpath" type="S" value="11-11-2025_12_35_50_984\Description.tcLog"/>
+				<Prp name="key" type="S" value="{71AA11CE-8AA3-4142-85C3-C770F3B945C4}"/>
+				<Prp name="nameofroot" type="S" value="Script Test Log [FDMFunctionsLibrary\AttachDetachApp]"/>
+				<Prp name="relpath" type="S" value="18-11-2025_12_08_23_109\Description.tcLog"/>
 				<Prp name="status" type="I" value="0"/>
 			</Node>
 		</Node>

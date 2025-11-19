@@ -1,6 +1,35 @@
 ﻿//USEUNIT serverKeywords
 //USEUNIT SMToolControlInfo
 
+function clickOnNetworkTab() {
+  Log.AppendFolder("clickOnNetworkTab");
+
+  try {
+    var controls = SMToolControlInfo.ControlRepository.clickOnNetworkTab;
+    var ServerManagerMainForm = serverKeywords.obj_ServerManagerMainForm();
+
+    if (!ServerManagerMainForm) {
+      Log.Error("ServerManagerMainForm not found");
+      return;
+    }
+
+    var btnNetwork = ServerManagerMainForm.FindChild("Name", controls.btnNetwork.Name, 100);
+
+    if (!btnNetwork) {
+      Log.Error("btnNetwork control not found");
+      return;
+    }
+
+    btnNetwork.Click();
+    Log.Message("Network tab clicked successfully");
+
+  } catch (e) {
+    Log.Error("Error in clickOnNetworkTab", e.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
 function obj_DisplayForm() {
   Log.AppendFolder("obj_DisplayForm");
   try {
@@ -279,7 +308,7 @@ function obj_NetworkNameTextBox() {
   }
 }
 
-function obj_ServerNameTextBox() {
+function obj_ServerNameHartTextBox() {
   Log.AppendFolder("obj_ServerNameTextBox");
   try {
     let addEditForm = obj_addEditFrom();
@@ -300,6 +329,28 @@ function obj_ServerNameTextBox() {
     Log.PopLogFolder();
   }
 }
+function obj_ServerNameExperionTextBox() {
+  Log.AppendFolder("obj_ServerNameTextBox");
+  try {
+    let addEditForm = obj_addEditFrom();
+    let serverNameTextBox = addEditForm.FindChild("Name", `WinFormsObject("m_txtboxServer")`, 100);
+    if (serverNameTextBox.Exists) {
+      Log.Message("ServerNameTextBox located successfully.");
+      return serverNameTextBox;
+    } else {
+      Log.Error("ServerNameTextBox not found.");
+      return null;
+    }
+
+  } catch (e) {
+    Log.Error("Error locating ServerNameTextBox: " + e.message);
+    return null;
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
 
 function obj_NetworkTypeComboBox() {
   Log.AppendFolder("obj_NetworkTypeComboBox");
@@ -704,6 +755,39 @@ function addNetwork(networkName,networkType,serverName){
   obj_EnableMuxMonitorCheckbox()
 }
 
+
+function IsNetworkRowPresent(rowLabel) {
+  Log.AppendFolder("clickNetworkRow");
+
+  let displayForm = obj_DisplayForm(),
+      listView = displayForm.FindChild("Name", 'WinFormsObject("m_listView")', 100);
+
+  if (!listView.Exists || !listView.VisibleOnScreen) {
+    Log.Error("ListView not found or not visible.");
+    Log.PopLogFolder();
+    return false;
+  }
+
+  let itemCount = listView.wItemCount;
+  for (let i = 0; i < itemCount; i++) {
+    let itemText = listView.wItem(i); // Use () instead of []
+    if (itemText !== undefined && itemText !== null) {
+      if (itemText.toLowerCase().includes(rowLabel.toLowerCase())) {
+        Log.Message("Found row '" + rowLabel + "' at index " + i + ": " + itemText);
+        Log.PopLogFolder();
+        return true;
+      }
+    } else {
+      Log.Error("Item at index " + i + " is undefined or null.");
+    }
+  }
+
+  Log.Error("Row '" + rowLabel + "' not found in ListView.");
+  Log.PopLogFolder();
+  return false;
+}
+
+
 function clickNetworkRow(rowLabel) {
   Log.AppendFolder("clickNetworkRow");
 
@@ -729,7 +813,7 @@ function clickNetworkRow(rowLabel) {
       Log.Warning("Item at index " + i + " is undefined or null.");
     }
   }
-
+  
   Log.Warning("Row '" + rowLabel + "' not found in ListView.");
   Log.PopLogFolder();
 }

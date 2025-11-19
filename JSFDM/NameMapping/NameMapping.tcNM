@@ -20,6 +20,17 @@
 								<Value Value="ServerMgmtTool" />
 							</Property>
 						</Properties>
+						<Children>
+							<Child Name="CustomMessageBox" Key="{839ABC94-EA3A-4244-A310-C84B058A66EF}">
+								<Image FileName="-1235783953" Left="0" Top="0" Right="473" Bottom="235" />
+								<TypeInfo Item0="{F2712FEB-86BE-4801-8460-15E37DA26FE8}" />
+								<Properties>
+									<Property Name="WinFormsControlName">
+										<Value Value="CustomMessageBox" />
+									</Property>
+								</Properties>
+							</Child>
+						</Children>
 					</Child>
 					<Child Name="HCMClient" Key="{393982A8-8E98-4B84-B5EF-21CA0C8D403D}">
 						<TypeInfo Item0="{121BD25E-E7C6-4D96-B6B8-BD13D5403E1F}" />
@@ -2891,6 +2902,15 @@
 											</Child>
 										</Children>
 									</Child>
+									<Child Name="statusBar" Key="{2FFC7F9C-E6AF-4C89-91E5-A8F5CDA6034A}">
+										<Image FileName="-277246183" Left="9" Top="1016" Right="1929" Bottom="1039" />
+										<TypeInfo Item0="{BDCA78D0-A1CB-4ED1-ADA2-51893086D680}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="statusBar" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="Add_DDPackageFilePopUp" Key="{A7FAA0C1-42C9-4E0F-BB32-61AC9315C824}">
@@ -4878,7 +4898,9 @@
 		</Children>
 	</Nodes>
 	<LogicalNodes Name="Aliases" Owner="{BE401E45-B2D6-4FBA-931A-C2117D5C51AD}">
-		<Child Name="ServerMgmtTool" Owner="{0FAAE088-5D9C-46B1-BED7-8B61C8C885BF}" />
+		<Child Name="ServerMgmtTool" Owner="{0FAAE088-5D9C-46B1-BED7-8B61C8C885BF}">
+			<Child Name="CustomMessageBox" Owner="{839ABC94-EA3A-4244-A310-C84B058A66EF}" />
+		</Child>
 		<Child Name="HCMClient" Owner="{393982A8-8E98-4B84-B5EF-21CA0C8D403D}">
 			<Child Name="ClientMainWindow" Owner="{BC094021-9FF8-49B5-805B-E43AA7559414}">
 				<Child Name="mainMenu" Owner="{D6B6F75D-C49F-4809-BB66-D0A695B855D8}" />
@@ -4962,11 +4984,11 @@
 									<Child Name="HwndSource_AdornerDecorator" Owner="{7E9587C0-6A1D-4F8D-A02E-EFA4397B5ACC}">
 										<Child Name="AdornerDecorator" Owner="{54B68C71-CAE1-457F-9BBB-042743ABB0BF}">
 											<Child Name="Grid" Owner="{D65049DA-8A4A-4B48-9496-7B3B661A080D}">
-												<Child Name="Border" Owner="{FD95FC90-A933-44BE-AF00-D65146A16D4B}">
+												<Child Name="DeviceInformation" Owner="{FD95FC90-A933-44BE-AF00-D65146A16D4B}">
 													<Child Name="StackPanel" Owner="{3571C1BC-8D45-4FE7-B46D-71E5E267C6AD}" />
 												</Child>
 												<Child Name="TextblockDeviceStatus" Owner="{651627D0-49D9-4628-BEBB-7E74D38944B6}" />
-												<Child Name="Border2" Owner="{48D22628-F52E-4ADD-BB14-0720BDFC7C89}">
+												<Child Name="DeviceStatus" Owner="{48D22628-F52E-4ADD-BB14-0720BDFC7C89}">
 													<Child Name="StackPanel" Owner="{CBAF175B-F09F-44D6-9E76-B5F186FB31A0}" />
 												</Child>
 												<Child Name="ComboboxManufacturer" Owner="{3B390AF3-31F1-4F92-A82E-5F9DAF3472E2}" />
@@ -5364,6 +5386,7 @@
 						</Child>
 					</Child>
 				</Child>
+				<Child Name="statusBar" Owner="{2FFC7F9C-E6AF-4C89-91E5-A8F5CDA6034A}" />
 			</Child>
 			<Child Name="Add_DDPackageFilePopUp" Owner="{A7FAA0C1-42C9-4E0F-BB32-61AC9315C824}">
 				<Child Name="Add_DDPackage" Owner="{ABF8641C-0ADE-4339-8695-1707EC594282}">

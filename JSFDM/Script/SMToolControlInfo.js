@@ -303,6 +303,11 @@
                 Name: `WinFormsObject("m_btnLicening")`
               }
           },
+    clickOnNetworkTab:{
+              btnNetwork:{
+                Name: `WinFormsObject("m_btnNetworkConfig")`
+              }
+          },
     clickOnImportTab:{
               btnImport:{
                 Name: `WinFormsObject("m_btnImportResx")`

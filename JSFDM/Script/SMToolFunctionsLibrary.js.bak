@@ -181,20 +181,24 @@ function addNetwork(config) {
 
   let status = "Pass";
 
-  try {
+  try { 
+    networkModule.clickOnNetworkTab()
     networkModule.obj_btnAddNew().Click();
 
     let networkName = networkModule.obj_NetworkNameTextBox();
     networkName.SetFocus();
     networkName.SetText(config.NetworkName);
-
+    
     let selectNetwork = networkModule.obj_NetworkTypeComboBox();
-    selectNetwork.SetFocus();
-    serverKeywords.select_ComboBoxItem(selectNetwork, config.NetworkType);
+    serverKeywords.select_ComboBoxItem1(selectNetwork, config.NetworkType);
 
-    networkModule.obj_ServerNameTextBox(config.RCIName);
+    
 
-    if (config.NetworkType === "RS-485 Hart Multiplexer") {
+    if (config.NetworkType === "RS-485 Hart Multiplexer") {  
+      ServerName = networkModule.obj_ServerNameHartTextBox(); 
+      ServerName.SetFocus();
+      ServerName.SetText(config.RCIName);
+    
       let selectComport = networkModule.obj_ComPortComboBox();
       serverKeywords.select_ComboBoxItem(selectComport, config.ComportType);
 
@@ -207,31 +211,48 @@ function addNetwork(config) {
     }
 
     if (config.NetworkType === "Honeywell Experion PKS") {
-      if (config.Redundency === "Redundent") {
+      if (config.Redundency === "Redundant") { 
+        ServerName1 = networkModule.obj_ServerNameExperionTextBox() 
+        ServerName1.SetFocus();
+        ServerName1.SetText(config.RCIName);  
+      
+        obj_ServerNameExperionTextBox
         let checkRedundency = networkModule.obj_RedundantRadioButton();
         checkRedundency.SetFocus();
         checkRedundency.Set_Checked(true);
-      } else if (config.Redundency === "NonRedundent") {
-        let checkRedundency = networkModule.obj_NonRedundantRadioButton();
-        checkRedundency.SetFocus();
-        checkRedundency.Set_Checked(true);
-
+        
         let setSecondaryServer = networkModule.obj_SecondaryServerTextBox();
         setSecondaryServer.SetFocus();
         setSecondaryServer.SetText(config.SecondaryServerName);
+        
+      } else if (config.Redundency === "NonRedundant") {
+        ServerName1 = networkModule.obj_ServerNameExperionTextBox() 
+        ServerName1.SetFocus();
+        ServerName1.SetText(config.RCIName);   
+      
+        let checkRedundency = networkModule.obj_NonRedundantRadioButton();
+        checkRedundency.SetFocus();
+        checkRedundency.Set_Checked(true)
+        
       }
 
       let checkSafetyManager = networkModule.obj_EnableSafetyManagerCheckbox();
       checkSafetyManager.SetFocus();
-      checkSafetyManager.Set_Checked(config.SafetyBoolean);
+      if(config.SafetyBoolean){
+        checkSafetyManager.Set_Checked(config.SafetyBoolean); 
+      }
 
       let checkOneWireless = networkModule.obj_OneWirelessManagerCheckbox();
       checkOneWireless.SetFocus();
-      checkOneWireless.Set_Checked(config.OneWirelessBoolean);
+      if(config.OneWirelessBoolean){
+        checkOneWireless.Set_Checked(config.OneWirelessBoolean);
+      }
+      
     }
 
     obj_OKButton().Click();
     serverKeywords.submitAuditTrailReason("Added Network");
+    serverKeywords.handleCustomMessageBoxOfOk();
     serverKeywords.handleCustomMessageBoxOfOk();
 
   } catch (e) {
@@ -270,24 +291,35 @@ function deleteNetwork(NetworkName) {
   let status = "Pass";
 
   try {
-    networkModule.clickNetworkRow(NetworkName);
+    networkModule.clickOnNetworkTab()
+    let isPresent = networkModule.IsNetworkRowPresent(NetworkName);
+    if (isPresent === true) {
+      networkModule.clickNetworkRow(NetworkName);
 
-    let deleteButton = networkModule.obj_btnDelete();
-    deleteButton.SetFocus();
-    deleteButton.Click();
+      let deleteButton = networkModule.obj_btnDelete();
+      if (deleteButton.Exists && deleteButton.VisibleOnScreen) {
+        deleteButton.SetFocus();
+        deleteButton.Click();
 
-    serverKeywords.handleCustomMessageBoxOfYes();
-    serverKeywords.submitAuditTrailReason("Delete Network");
-
+        serverKeywords.handleCustomMessageBoxOfYes();
+        serverKeywords.submitAuditTrailReason("Delete Network");
+      } else {
+        Log.Error("Delete button not found or not visible.");
+        status = "Fail";
+      }
+    } else {
+      Log.Error("Network row '" + NetworkName + "' not found.");
+      status = "Fail";
+    }
   } catch (e) {
     Log.Error("deleteNetwork failed: " + e.message);
     status = "Fail";
   }
 
   WriteResult("deleteNetwork " + status, status, "Pass");
-
   Log.PopLogFolder();
 }
+
 
 function deleteAllNetworks() {  
   Log.AppendFolder("deleteAllNetworks");

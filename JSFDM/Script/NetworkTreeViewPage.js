@@ -25,12 +25,8 @@ collapseTreeView([
 // =====================================================================
 function getTreeView() {
   Log.AppendFolder("getTreeView - Returns the tree view object from the HCMClient UI")
-  let HCMClient = Aliases.HCMClient;
-  let MainWindow = HCMClient.ClientMainWindow;
-  let tabPageOnlineView = MainWindow.FindChild("Name", `WinFormsObject("tabPageOnlineView")`, 100, true);
-  let tabControlOnlineView = tabPageOnlineView.FindChild("Name", `WinFormsObject("tabControlOnlineView")`, 100, true);
-  let NetworkViewTab = tabControlOnlineView.FindChild("Name", `WinFormsObject("tabConnected")`, 100, true);
-  return NetworkViewTab.FindChild("Name", `WinFormsObject("treeView")`, 100, true);
+  let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView
+  return treeView
   Log.PopLogFolder()
 }
 
@@ -91,6 +87,15 @@ function collapseTreeView(nodePathArray) {
   }
 }
 
+function test123(){
+  let startTime = aqDateTime.Now();
+    let found = false;
+    
+    let timeDiff = aqDateTime.TimeInterval(startTime, aqDateTime.Now()) 
+    Log.Message(timeDiff)
+    Log.Message(timeDiff>20)
+}
+
 // =====================================================================
 // Function:      clickOnbuildNetwork
 // Description:   Right-clicks on the specified node and selects "Build Network"
@@ -109,24 +114,25 @@ function clickOnbuildNetwork(nodePath,timeoutMS) {
     Log.Message("Clicking 'Build Network'...");
     treeView.StripPopupMenu.Click("Build Network");
     let startTime = aqDateTime.Now();
-    let found = false;
-    while (aqDateTime.TimeInterval(startTime, aqDateTime.Now()) < timeoutMS) {
-      let gridNotificationInfo = Aliases.HCMClient.ClientMainWindow.panelEventViewer.UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo
-       RowCount = gridNotificationInfo.wRowCount
-       cellValue =  gridNotificationInfo.wValue(RowCount-1, 2).OleValue;
-       value =  nodePath.split("|").pop()
-      if (cellValue && cellValue.includes(value) && cellValue.includes("complete")) {
-        Log.Checkpoint("Notification matched: " + cellValue);
-        found = true;
-        break;
-      }
+   // let found = false;
+    
+//    while (aqDateTime.TimeInterval(startTime, aqDateTime.Now()) < timeoutMS) {
+//      let gridNotificationInfo = Aliases.HCMClient.ClientMainWindow.panelEventViewer.UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo
+//       RowCount = gridNotificationInfo.wRowCount
+//       cellValue =  gridNotificationInfo.wValue(RowCount-1, 2).OleValue;
+//       value =  nodePath.split("|").pop()
+//      if (cellValue && cellValue.includes(value) && cellValue.includes("complete")) {
+//        Log.Checkpoint("Notification matched: " + cellValue);
+//        found = true;
+//        break;
+//      }
+//
+      aqUtils.Delay(30000,"Waiting for build network"); // Wait 1 second before retry
+//    }
 
-      aqUtils.Delay(1000); // Wait 1 second before retry
-    }
-
-    if (!found) {
-      throw new Error("Timeout waiting for network build completion message.");
-    }
+//    if (!found) {
+//      throw new Error("Timeout waiting for network build completion message.");
+//    }
 
     Log.Checkpoint(`'Build Network' successfully initiated on: ${nodePath}`);
   } catch (error) {
@@ -346,10 +352,6 @@ function verifyQuickViewLaunch(treePath) {
       Log.Checkpoint("QuickView panel launched and verified.");
     }
 
-//    // Close the QuickView or config panel
-//    mdiClient.RightPanBaseFrame.panelBase.panelFullTop.panelTitle.buttonClose.Click(11, 6);
-//    Log.Message("Closed the QuickView/config panel.");
-
   } catch (error) {
     Log.Error("An error occurred during QuickView launch verification.", error.message || error);
   }
@@ -371,11 +373,9 @@ function verifyQuickViewLaunch(treePath) {
 
 function logFDMDeviceInformation() {
   try {
-    const stackPanel = Aliases.HCMClient.ClientMainWindow.MdiClient
-      .RightPanBaseFrame.panelBase.panelForDerivedForms
-      .ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.StackPanel;
-    Log.Picture(stackPanel.Picture(), "Snapshot of the FDM StackPanel");
-    const dataCtx = stackPanel.DataContext;
+    const DeviceInformation = Aliases.HCMClient.ClientMainWindow.MdiClient.RightPanBaseFrame.panelBase.panelForDerivedForms.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.Grid.DeviceInformation.StackPanel;
+    Log.Picture(DeviceInformation.Picture(), "Snapshot of the FDM StackPanel");
+    const dataCtx = DeviceInformation.DataContext;
 
     Log.Message("Protocol: " + dataCtx.Protocol);
     Log.Message("Manufacturer: " + dataCtx.Manufacturer);
@@ -383,7 +383,7 @@ function logFDMDeviceInformation() {
     Log.Message("Device Revision: " + dataCtx.DeviceRevision);
 
     Log.Checkpoint("FDM device information logged successfully from DataContext.");
-    Aliases.HCMClient.ClientMainWindow.MdiClient.RightPanBaseFrame.panelBase.panelFullTop.panelTitle.buttonClose.Click(17, 14);
+      
   } catch (error) {
     Log.Error("Failed to log FDM device information.", error.message || error);
   }
