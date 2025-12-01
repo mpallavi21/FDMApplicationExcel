@@ -571,29 +571,27 @@ function ReadAndConfigureDeviceProperties({DeviceUsage,Calibrationstatus,DeviceH
   Log.AppendFolder("ReadAndConfigureDeviceProperties");
 
   try {
-    let scrollViewer = Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage
-                        .FDM_Device_Properties.ElementHost.HwndSource_AdornerDecorator
-                        .AdornerDecorator.ScrollViewer;
+    let scrollViewer = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.FDM_Device_Properties.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer
 
     // 🧾 Read TextBox values
-    let textBox1 = scrollViewer.WPFObject("TextBox", "", 1);
-    let textBox2 = scrollViewer.WPFObject("TextBox", "", 2);
-    let textBox4 = scrollViewer.WPFObject("TextBox", "", 4);
+    let textBox1 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 1)',50).FindChild("Name",'WPFObject("TextBox", "", 1)',50);
+    let textBox2 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 2)',50).FindChild("Name",'WPFObject("TextBox", "", 1)',50);
+    let textBox4 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 4)',50).FindChild("Name",'WPFObject("TextBox", "", 1)',50);
 
     Log.Message("Manufacture Value: " + textBox1.Text.OleValue);
     Log.Message("Model Value: " + textBox2.Text.OleValue);
     Log.Message("DD Revison Value: " + textBox4.Text.OleValue);
 
     // 📅 Set current date in Calibration due Date
-    let textBox8 = scrollViewer.WPFObject("TextBox", "", 8);
+    let textBox8 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 10)',50).FindChild("Name",'WPFObject("TextBox", "", 1)',50);
     let currentDate = aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%m/%d/%Y %I:%M:%S %p");
     textBox8.SetText(currentDate);
     Log.Message("Calibration due Date set to current date: " + currentDate);
 
     // 🎛 Select ComboBox items
-    let comboBox1 = scrollViewer.WPFObject("ComboBox", "", 1); // Device Usage
-    let comboBox2 = scrollViewer.WPFObject("ComboBox", "", 2); // Calibration Status
-    let comboBox3 = scrollViewer.WPFObject("ComboBox", "", 3); // Device Health
+    let comboBox1 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 8)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Device Usage
+    let comboBox2 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 9)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Calibration Status
+    let comboBox3 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 11)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Device Health
     
     if (DeviceUsage) selectComboBoxItemByName(comboBox1, DeviceUsage);
     if (Calibrationstatus) selectComboBoxItemByName(comboBox2, Calibrationstatus);

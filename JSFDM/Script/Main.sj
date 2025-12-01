@@ -190,6 +190,40 @@ function main()
                                         case "QUICKVIEWOFDEVICE":
                                               QuickViewOfDevice(Parameters[0])
                                             break;
+                                        case "ATTACHAPP":
+                                              AttachApp(Parameters[0],Parameters[1])
+                                            break;
+                                        case "DETACHAPP":
+                                              DetachApp()
+                                            break;
+                                        case "ATTACHDEVICEDOCUMENTATION":
+                                              AttachDeviceDocumentation(Parameters[0],Parameters[1],Parameters[2])
+                                            break;
+                                        case "DETACHDEVICEDOCUMENTATION":
+                                              DetachDeviceDocumentation(Parameters[0])
+                                            break;
+                                        case "DEVICEPARAM":
+                                              DeviceParam(Parameters[0])
+                                            break;
+                                        case "UPDATEDTMLIBRARY":
+                                              UpdateDTMLibrary()
+                                            break;
+                                        case "READANDWRITEDEVICEPROPERTIES":
+                                              ReadAndWriteDeviceProperties(Parameters[0],Parameters[1],Parameters[2],Parameters[3])
+                                            break;
+                                        case "PRINTTHEDEVICE":
+                                              PrintTheDevice(Parameters[0])
+                                            break;
+                                        case "LOGUSERACTION":
+                                              LogUserAction(Parameters[0])
+                                            break;
+                                        case "DEVICEEXPLICITLOCK":
+                                              Device_Explicit_Lock(Parameters[0]);
+                                            break;
+                                        case "DEVICEEXPLICITUNLOCK":
+                                              Device_Explicit_UnLock(Parameters[0]);
+                                            break;
+                                              
                                         default:
                                             Delay(2000);
                                             break;

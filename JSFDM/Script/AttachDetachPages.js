@@ -149,7 +149,7 @@ function DetachApplication() {
       Log.Error("Main menu not found.");
       return;
     }
-
+          
     // === Step 2: Click 'Applications' from the dropdown ===
     if (Aliases.HCMClient.DropDownForm.SubSmartControl.Exists) {
 
@@ -236,31 +236,27 @@ function DetachApplication() {
   
 }
 
-function clickOnDeviceAttachDocument() {
+function clickOnDeviceAttachDocument(Device) {
   Log.AppendFolder("clickOnAttachDocument - Initiating Document Attachment");
 
   try {
     Delay(1000)
     Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.Click()
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
-      .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-      .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     if (!treeView.Exists) {
       Log.Error("TreeView not found.");
       return;
     }
     
-    let targetItem = Project.Variables.Device;
+    let targetItem = Device
     treeView.Refresh()
     treeView.ClickItem(targetItem);
     Log.Message("Clicked item: " + targetItem);
-
     treeView.ClickItemR(targetItem);
     Log.Message("Right-clicked item for context menu.");
     Delay(1000)
-  
-    treeView.StripPopupMenu.Click("Device Documentation")
+    treeView.StripPopupMenu.Click("Device Documentation");
     treeView.StripPopupMenu.Click("Device Documentation|Attach Document");
     Log.Message("Selected 'Attach Document' from menu.");
     
@@ -272,20 +268,18 @@ function clickOnDeviceAttachDocument() {
 }
 
 
-function clickOnDeviceDetachDocument() {
+function clickOnDeviceDetachDocument(Device) {
   Log.AppendFolder("clickOnDeviceDetachDocument - Initiating Document Detachment");
 
   try {
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
-      .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-      .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     if (!treeView.Exists) {
       Log.Error("TreeView not found.");
       return;
     }
 
-    let targetItem = Project.Variables.Device;
+    let targetItem = Device;
 
     treeView.ClickItem(targetItem);
     Log.Message("Clicked item: " + targetItem);

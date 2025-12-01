@@ -14,6 +14,11 @@
 				<environments activeCloud="SWT" />
 				<children />
 			</testItem>
+			<testItem name="Device_Explicit_Lock" key="{0A6B77EE-A788-4E48-8859-E1C1F219A23B}" group="False" parallel="False" enabled="True" load="False" testMoniker="{11AB687C-AAE7-4852-ACD3-595884B135C8}Device_Explicit_Lock" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
+				<testParameters />
+				<environments activeCloud="SWT" />
+				<children />
+			</testItem>
 		</children>
 	</testItems>
 	<variables key="{2DC873B7-2CBF-41CE-A885-D2CD18100BF2}">
@@ -29,7 +34,7 @@
 		</data>
 	</variables>
 	<settings key="{0017509E-D76D-4ADD-84E9-FD22E6377A22}">
-		<settingsVersion value="15.78" />
+		<settingsVersion value="15.79" />
 		<setting name="AgOpenApp_ExtendedSilverlightObjectTree" type="1" value="False" />
 		<setting name="ApplicationHangingProcessFilterMode" type="6" rowIndex="4" colIndex="0">
 			<columns>

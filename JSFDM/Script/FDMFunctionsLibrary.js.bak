@@ -432,13 +432,58 @@ function BuildNetwork(NetworkName,timeOut) {
 // =====================================================================
 // Author:        Bharath
 // Function:      Device_Explicit_Lock
-// Description:   Locks a device, attempts configuration, handles warning, unlocks, and retries configuration.
-// Created On:    04-Aug-2025
-// Modified On:   
+// Description:   Locks a device, attempts configuration, handles warning, unlocks, and retries configuration. 
 // =====================================================================
 
-function Device_Explicit_Lock() {
-  Log.AppendFolder("Device_Explicit_Lock");
+function Device_Explicit_Lock(DeviceName) {
+  Log.AppendFolder("Device_Explicit_Lock - Explicit Device Lock Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Online View
+    ClickOnlineViewTab();
+
+    // Step 2: Open Network View
+    clickOnNetworkViewTab();
+
+    // Step 3: Access the tree view
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
+                     .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
+                     .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+
+    if (!treeView.Exists) {
+      Log.Error("❌ TreeView not found.");
+      status = "Fail";
+      return;
+    }
+
+    // Step 4: Lock the device
+    treeView.ClickItem(DeviceName);
+    Log.Message("🔒 Clicking item: " + DeviceName);
+
+    treeView.ClickItemR(DeviceName);
+    Delay(1000);
+    treeView.StripPopupMenu.Click("Lock");
+
+    // Step 5: Configure device with DTM (Online)
+    treeView.ClickItemR(DeviceName);
+    treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
+    clickOnConfirmFDMButton();
+
+    Log.Checkpoint("✅ Device_Explicit_Lock passed: Device locked and configured successfully.");
+  } catch (error) {
+    Log.Error("❌ Device_Explicit_Lock failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("Device_Explicit_Lock " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+function Device_Explicit_UnLock(DeviceName) {
+  Log.AppendFolder("Device_Explicit_UnLock");
 
   try {
     
@@ -446,64 +491,29 @@ function Device_Explicit_Lock() {
     ClickOnlineViewTab()
     
     // Step 1: Open Network View
-    clickOnNetworkViewTab();
+    clickOnNetworkViewTab()
+    
+    
+    //  Unlock and retry configuration
+    let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
+    treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
-    // Step 2: Access the tree view
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
-                     .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                     .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-    if (!treeView.Exists) {
-      Log.Error("❌ TreeView not found.");
-      return;
-    }
-
-    // Step 3: Lock the device
-    let targetItem = Project.Variables.Device;
-    treeView.ClickItem(targetItem);
-    Log.Message("🔒 Clicking item: " + targetItem);
-
-    treeView.ClickItemR(targetItem);
-    Delay(1000);
-    treeView.StripPopupMenu.Click("Lock");
-
-    // Step 4: Attempt configuration (locked state)
-    let lockedItemPath = Project.Variables.Device;
-    treeView.ClickItemR(lockedItemPath);
-    treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
-
-    // Step 5: Handle warning dialog
-    Delay(2000)
-    let HCMClient = Aliases.HCMClient;
-    HCMClient.dlgFDMConfiguration.btnOK.ClickButton();
-
-    // Step 6: Unlock and retry configuration
-    let frmHCMClientMain = HCMClient.ClientMainWindow;
-    treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
-                .tabPageOnlineView.panelOnlineView.panelTabControlOnlineView
-                .tabControlOnlineView.tabConnected.treeView;
-
-    treeView.ClickItemR(lockedItemPath);
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Unlock");
-    treeView.ClickItemR(lockedItemPath);
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
-
-    // Step 7: Confirm successful configuration
-    let hostPanel = frmHCMClientMain.MdiClient.DtmForm.panelBase;
-    aqObject.CheckProperty(hostPanel.panelForDerivedForms.DTMTabView.panelConfiguration.tabControl1,
-      "Enabled", cmpEqual, true);
-    hostPanel.panelFullTop.panelTitle.buttonClose.Click(11, 9);
-
-    // Step 8: Accept confirmation dialog
-    HCMClient.dlgFDMConfiguration.btnYes.ClickButton();
-
+    let manualDtmSelector = Aliases.HCMClient.ManualDtmSelector;
+    if(manualDtmSelector.panel1.btnCancel.Exists){
+      manualDtmSelector.panel1.btnCancel.Click()
+    }
     Log.Checkpoint("✅ Device successfully unlocked and configured with DTM.");
 
-  } catch (error) {
-    Log.Error("❌ Error in Device_Explicit_Lock: " + error.message);
+  } catch (error) { 
+    Log.Error("❌ Error in Device_Explicit_UnLock: " + error.message);
   } finally {
     Log.PopLogFolder();
   }
+    
 }
 
 // =====================================================================
@@ -517,7 +527,7 @@ function ELCON_History_readall15876() {
 
   try {
     // 🔐 Launch FDM client
- //   launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+    // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
     Log.Message("FDM Client launched.");
 
     // 🌐 Navigate to Online and Network View tabs
@@ -721,15 +731,14 @@ function LoadHARTDevice15796() {
 
 // =====================================================================
 // Author:        Bharath
-// Function:      LogUserAction15798
+// Function:      LogUserAction
 // Description:   Automates the process of logging a user action in the Audit Trail,
 //                dynamically generates a unique description using the device name and timestamp,
 //                and verifies the entry in the Audit Trail grid.
-// Created On:    12-Aug-2025
-// Modified On:   12-Aug-2025
+
 // =====================================================================
-function LogUserAction15798() {
-  Log.AppendFolder("LogUserAction15798");
+function LogUserAction(DeviceName) {
+  Log.AppendFolder("LogUserAction");
 
   try {
     ClickOnlineViewTab();
@@ -742,7 +751,7 @@ function LogUserAction15798() {
                     .tabConnected.treeView;
 
     // 🌲 Right-click and log user action
-    treeView.ClickItemR(Project.Variables.Device);
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Log User Action");
     
     let AuditDescription = "User able to enter the text in description field " + Math.floor(aqDateTime.Now() / 1000);
@@ -759,7 +768,7 @@ function LogUserAction15798() {
     OCR.Recognize(auditTrailUserAction.OKButton).BlockByText("OK").Click();
 
     // 🔍 View Audit Trail and verify entry
-    treeView.ClickItemR(Project.Variables.Device);
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("View Audit Trail");
 
     let isLogged = FindValueInDescriptionColumn(AuditDescription);
@@ -949,12 +958,7 @@ function OfflineConfig_HARTDDdevice_EPKSNW15785() {
   Log.AppendFolder("OfflineConfig_HARTDDdevice_EPKSNW15785");
 
   try {
-    const filePath = Project.Path + "Stores\\Files\\TestData.json";
-    const testCaseId = "OfflineConfig_HARTDDdevice_EPKSNW15785";
-
-    const testData = getTestCaseData(filePath, testCaseId);
-    if (testData) {
-      
+    
       ClickOnlineViewTab();
       clickOnNetworkViewTab();
 
@@ -965,8 +969,8 @@ function OfflineConfig_HARTDDdevice_EPKSNW15785() {
                       .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
       // 📂 Initiate template creation from history
-      treeView.ClickItemR(testData.Device);
-      treeView.StripPopupMenu.Click(testData.HistoryTemplate);
+      treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1");
+      treeView.StripPopupMenu.Click();
 
       let historyFileList = HCMClient.HistoryFileList;
       let listView = historyFileList.listView1;
@@ -1006,9 +1010,7 @@ function OfflineConfig_HARTDDdevice_EPKSNW15785() {
       dlgSuccess.btnYes.ClickButton();
 
       Log.Message("Offline configuration created and overwrite handled for: " + saveFileName);
-    } else {
-      Log.Warning("No test data found for TestCase ID: " + testCaseId);
-    }
+    
   } catch (error) {
     Log.Error("Error in OfflineConfig_HARTDDdevice_EPKSNW15785: " + error.message);
   } finally {
@@ -1093,11 +1095,9 @@ function OnlineMuxdevices15797() {
   Log.AppendFolder("OnlineMuxdevices15797");
 
   try {
-    BuildNetwork()
+    
     let HCMClient = Aliases.HCMClient;
-    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain
-                    .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                    .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     // === Step 1: Attempt to rename device to '644Temperature' ===
     treeView.ClickItemR(Project.Variables.Device);
@@ -1146,20 +1146,18 @@ function OnlineMuxdevices15797() {
 // Modified On:   20-Aug-2025
 // =====================================================================
 
-function OptionsFunction15817() {
-  Log.AppendFolder("OptionsFunction15817");
+function OptionsFunction() {
+  Log.AppendFolder("OptionsFunction");
 
   try {
     // === Step 1: Build network before accessing device options ===
-    //BuildNetwork();
+    
 
     let HCMClient = Aliases.HCMClient;
-    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain
-                    .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                    .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     // === Step 2: Open device options dialog ===
-    treeView.ClickItemR(Project.Variables.Device);
+    treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1");
     treeView.StripPopupMenu.Click("Options");
 
     let deviceOptionsDlg = HCMClient.DeviceOptionsDlg;
@@ -1182,25 +1180,19 @@ function OptionsFunction15817() {
 
     // === Step 6: Configure device with DTM (Online) ===
     let frmHCMClientMain = HCMClient.ClientMainWindow;
-    treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
-               .tabPageOnlineView.panelOnlineView.panelTabControlOnlineView
-               .tabControlOnlineView.tabConnected.treeView;
+    treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
     treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF|644Temperature");
     treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
 
-    aqObject.CheckProperty(
-      frmHCMClientMain.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView
-        .panelConfiguration.tabControl1.TabPage.panelDtmStartup,
-      "Enabled", cmpEqual, true
-    );
+    aqObject.CheckProperty(frmHCMClientMain.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelConfiguration.tabControl1.TabPage.panelDtmStartup,"Enabled", cmpEqual, true);
 
     // === Step 7: Final cleanup ===
     CloseWindow();
     clickOnConfirmFDMButton();
 
   } catch (error) {
-    Log.Error("Error in OptionsFunction15817: " + error.message);
+    Log.Error("Error in OptionsFunction: " + error.message);
 
   } finally {
     Log.PopLogFolder();
@@ -1544,7 +1536,9 @@ function DeleteDD(Protocol, Manufacturer, DeviceType, targetdeviceRevision, targ
 
 function UpdateDTMLibrary() {
   let HCMClient = Aliases.HCMClient;
-  Log.AppendFolder("navigateAndUpdateDTMLibrary");
+  Log.AppendFolder("UpdateDTMLibrary");
+
+  let status = "Pass";
 
   try {
     // Step 1: Click on 'Library' menu
@@ -1552,7 +1546,20 @@ function UpdateDTMLibrary() {
     Log.Message("Clicked 'Library' menu");
 
     // Step 2: Select 'Manage DTM Library'
-    OCR.Recognize(HCMClient.DropDownForm.SubSmartControl).BlockByText("Manage DTM Library").Click();
+    let DropDownForm = HCMClient.DropDownForm
+    if (DropDownForm.WaitProperty("VisibleOnScreen", true, 15000)) {
+      let ctrl = DropDownForm.SubSmartControl;
+      if (ctrl.WaitProperty("VisibleOnScreen", true, 15000)) {
+        let block = OCR.Recognize(ctrl).BlockByText("Manage DTM Library");
+        if (block != null) {
+          block.Click();
+          Log.Message("Clicked 'Manage DTM Library' via OCR.");
+        } else {
+          Log.Warning("OCR could not find 'Manage DTM Library'.");
+        }
+      }
+    }
+
     Log.Message("Selected 'Manage DTM Library'");
 
     let manageDtmLibrary = HCMClient.ManageDtmLibrary;
@@ -1565,59 +1572,76 @@ function UpdateDTMLibrary() {
     clickOnConfirmFDMButton();
     clickOnConfirmFDMButton();
 
-    // Step 6: Cancel the dialog
+    // Step 6: Wait for update process
+    let lblWait = Aliases.HCMClient.ManageDtmLibrary.lblWait;
+    lblWait.WaitProperty("Text", "*Please wait*", 25000);
+
+    // Step 7: Cancel the dialog
+    manageDtmLibrary.CancelBtn.WaitProperty("Enabled", true, 25000);
     manageDtmLibrary.CancelBtn.Click();
-    Log.Message("Clicked 'Cancel' button");
-    
-    manageDtmLibrary.CancelBtn.WaitProperty("Enabled",true,25000)
-    manageDtmLibrary.CancelBtn.Click();
-    
-    // Step 7: Final confirm dialog
+
+    // Step 8: Final confirm dialog
     clickOnConfirmFDMButton();
 
-    Log.Checkpoint("DTM Library update workflow completed successfully.");
-
+    Log.Checkpoint("✅ UpdateDTMLibrary passed: DTM Library update workflow completed successfully.");
   } catch (error) {
-    Log.Error("Error in navigateAndUpdateDTMLibrary: " + error.message);
-
+    Log.Error("❌ UpdateDTMLibrary failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("UpdateDTMLibrary " + status, status, "Pass");
     Log.PopLogFolder();
   }
- 
-
 }
+
 
 //USEUNIT AttachDetachPages
 
 // =====================================================================
 // Author:        Bharath
-// Function:      AttachDetachApp
-// Description:   Automates attaching an application package and then detaching it
+// Function:      AttachApp
+// Description:   Automates attaching an application package
 // =====================================================================
 
-function AttachDetachApp() {
-  try {
-    Log.AppendFolder("AttachDetachApp - Attach and Detach Application Package");
+function AttachApp(packagePath, packageName) {
+  Log.AppendFolder("AttachApp - Attach Application Package");
 
+  let status = "Pass";
+
+  try {
     // Step 1: Click on the "Attach Application" button
     clickOnAttachApplication();
 
-    // Step 2: Upload the application package file
-    const packagePath = "C:\\Program Files (x86)\\Honeywell\\FDM\\ClientMachine\\Bin";
-    const packageName = "HCMClient";
+    // Step 2: Upload the application package file using provided parameters
     uploadAppAttachPackageFile(packagePath, packageName);
 
-    // Step 3: Detach the application
-    DetachApplication();
-
-    Log.Checkpoint("✅ AttachDetachApp passed: Application attached and detached successfully.");
+    Log.Checkpoint("✅ AttachApp passed: Application attached successfully.");
   } catch (error) {
-    Log.Error("❌ AttachDetachApp failed during attach/detach process:", error.message);
+    Log.Error("❌ AttachApp failed during attach process: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("AttachApp " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
 
+function DetachApp(packagePath, packageName) {
+  Log.AppendFolder("DetachApp - Detach Application Package");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Click on the "Detach Application" button
+    DetachApplication();
+
+    Log.Checkpoint("✅ DetachApp passed: Application detached successfully.");
+  } catch (error) {
+    Log.Error("❌ DetachApp failed during detach process: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DetachApp " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
 
 // =====================================================================
 // Author:        Bharath
@@ -1658,46 +1682,66 @@ function AttachDetachSystemDocument15805() {
 
 // =====================================================================
 // Author:        Bharath
-// Function:      AttachDetachDeviceDocumentation15782
+// Function:      AttachDetachDeviceDocumentation
 // Description:   Attaches a document to a device via context menu flow,
 //                confirms the action, then initiates detachment and confirms.
-// Created On:    21-Jul-2025
-// Modified On:   21-Jul-2025
+
 // =====================================================================
 
-function AttachDetachDeviceDocumentation15782() {
-  Log.AppendFolder("AttachDetachDeviceDocumentation - Document Attach/Detach Flow");
+function AttachDeviceDocumentation(DeviceName, packagePath, packageName) {
+  Log.AppendFolder("AttachDeviceDocumentation - Document Attach Flow");
+
+  let status = "Pass";
 
   try {
-    // Step 1: Attach document
-    clickOnDeviceAttachDocument();
+    // Step 1: Attach document for the device
+    clickOnDeviceAttachDocument(DeviceName);
 
-    // Step 2: Upload package file
-    uploadPackageFile(Project.Path + "Stores\\Files", "0906.sym");
-    Log.Message("Uploaded document: 0906.sym");
+    // Step 2: Resolve path (prefer project-relative if available)
+    let projectPath = Project.Path + packagePath;
+    let finalPath = aqFileSystem.Exists(projectPath) ? projectPath : packagePath;
 
-    // Step 3: Confirm attachment
+    // Step 3: Upload package file
+    uploadPackageFile(finalPath, packageName);
+    Log.Message("Uploaded document: " + packageName);
+
+    // Step 4: Confirm attachment
     clickOnConfirmFDMButton();
     Log.Message("Confirmed attachment in FDM dialog.");
 
-    // Step 4: Detach document
-    clickOnDeviceDetachDocument();
-
-    // Step 5: Handle resource dialog for detachment.
-    Delay(1000)
-    DetachDocumentFromResourceDlg();
-
-    // Step 6: Confirm detachment
-    clickOnConfirmFDMButton();
-    Log.Message("Confirmed detachment in FDM dialog.");
-
-  } catch (e) {
-    Log.Error("Exception occurred during attach/detach process: " + e.message);
+  } catch (error) {
+    Log.Error("AttachDeviceDocumentation failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("AttachDeviceDocumentation " + status, status, "Pass");
     Log.PopLogFolder();
-  } 
+  }
 }
 
+function DetachDeviceDocumentation(DeviceName) {
+  Log.AppendFolder("DetachDeviceDocumentation - Document Detach Flow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Detach document for the device
+    clickOnDeviceDetachDocument(DeviceName);
+
+    // Step 2: Handle resource dialog for detachment
+    Delay(1000);
+    DetachDocumentFromResourceDlg();
+
+    // Step 3: Confirm detachment
+    clickOnConfirmFDMButton();
+    Log.Message("Confirmed detachment in FDM dialog.");
+  } catch (error) {
+    Log.Error("DetachDeviceDocumentation failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DetachDeviceDocumentation " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
 
 
 function FDMGR4876(){
@@ -1775,37 +1819,45 @@ function SaveHistory() {
 // Function:      DeviceParam
 // Description:   Validates existence and text of various WPF hyperlinks 
 //                under a selected device context.
-// Created On:    23-Jul-2025
-// Modified On:   23-Jul-2025
 // =====================================================================
 
-function DeviceParam() {
+function DeviceParam(DeviceName) {
   Log.AppendFolder("DeviceParam - Validate Device Hyperlink Controls");
 
-  try {
-    // 🖱️ Click on the specified device
-    clickOnDevice(Project.Variables.Device);
-    Log.Message("Clicked on device: " + Project.Variables.Device);
-    Delay(1000)
-    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator;
-    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceStatus, "WPFControlText", cmpEqual, "FDM Device Status");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkMethodList, "WPFControlText", cmpEqual, "Method List");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkSaveHistoryRecord, "WPFControlText", cmpEqual, "Save History Record");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkSaveAsOfflineTemplate, "WPFControlText", cmpEqual, "Save as Offline Template");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkExport, "WPFControlText", cmpEqual, "Export");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkPrint, "WPFControlText", cmpEqual, "Print");
-    aqObject.CheckProperty(adornerDecorator.HyperlinkNotifications, "WPFControlText", cmpEqual, "Notifications");
-    CloseWindow()
-    clickOnConfirmFDMButton()
+  let status = "Pass";
 
+  try {
+    // Step 1: Click on the specified device
+    clickOnDevice(DeviceName);
+    Delay(1000);
+
+    // Step 2: Validate hyperlink controls on the device screen
+    let scrollViewer = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
+
+    aqObject.CheckProperty(scrollViewer.HyperlinkAdvancedConfiguration, "WPFControlText", cmpEqual, "Advanced Configuration");
+    aqObject.CheckProperty(scrollViewer.HyperlinkFdmDeviceStatus, "WPFControlText", cmpEqual, "FDM Device Status");
+    aqObject.CheckProperty(scrollViewer.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
+    aqObject.CheckProperty(scrollViewer.HyperlinkMethodList, "WPFControlText", cmpEqual, "Method List");
+    aqObject.CheckProperty(scrollViewer.HyperlinkSaveHistoryRecord, "WPFControlText", cmpEqual, "Save History Record");
+    aqObject.CheckProperty(scrollViewer.HyperlinkSaveAsOfflineTemplate, "WPFControlText", cmpEqual, "Save as Offline Template");
+    aqObject.CheckProperty(scrollViewer.HyperlinkExport, "WPFControlText", cmpEqual, "Export");
+    aqObject.CheckProperty(scrollViewer.HyperlinkPrint, "WPFControlText", cmpEqual, "Print");
+    aqObject.CheckProperty(scrollViewer.HyperlinkNotifications, "WPFControlText", cmpEqual, "Notifications");
+
+    // Step 3: Close window and confirm
+    CloseWindow();
+    clickOnConfirmFDMButton();
+
+    Log.Checkpoint("✅ DeviceParam passed: All hyperlink controls validated.");
   } catch (error) {
-    Log.Error("Exception in DeviceParam: " + error.message);
+    Log.Error("❌ DeviceParam failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("DeviceParam " + status, status, "Pass");
     Log.PopLogFolder();
   }
-  
 }
+
 
 // =====================================================================
 // Author:        Bharath
@@ -1841,63 +1893,72 @@ function DeviceStateView() {
 
 
 
-function Print15728(){
-  Log.AppendFolder("Print15728 - Print")
-  try{
-  BuildNetwork()
-  clickOnDevice(Project.Variables.Device);
-  let HCMClient = Aliases.HCMClient;
-  HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator.HyperlinkPrint.Click(13, 10);
-  waitForStatusBarText("Loading online device data for print is performed successfully...")
-  let printPreview = HCMClient.PrintPreview;
-  aqObject.CheckProperty(printPreview, "Enabled", cmpEqual, true);
-  let panel = printPreview.ButtonsPanel;
-  OCR.Recognize(panel.PrintButton).BlockByText("Print").Click();
-  HCMClient.dlgFDMConfiguration.Close();
-  OCR.Recognize(panel.CloseButton).BlockByText("Close").Click();
-  closeWindowPage()
-  clickOnConfirmFDMButton()
-  }
-  
-  catch(error){
-    Log.Error("Print15728 :- " + error.message )
-  }
-  finally{
-    Log.PopLogFolder()
-  }
-  
+function PrintTheDevice(DeviceName) {
+  Log.AppendFolder("PrintTheDevice - Print Workflow");
 
- 
+  let status = "Pass";
+
+  try {
+    // Step 1: Click on the specified device
+    clickOnDevice(DeviceName);
+
+    // Step 2: Trigger Print hyperlink
+    Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkPrint.Click(13, 10);
+
+    // Step 3: Wait for status bar confirmation
+    waitForStatusBarText("Loading online device data for print is performed successfully...");
+
+    // Step 4: Validate Print Preview is enabled
+    let HCMClient = Aliases.HCMClient;
+    let printPreview = HCMClient.PrintPreview;
+    aqObject.CheckProperty(printPreview, "Enabled", cmpEqual, true);
+
+    // Step 5: Perform print action
+    let panel = printPreview.ButtonsPanel;
+    OCR.Recognize(panel.PrintButton).BlockByText("Print").Click();
+
+    // Step 6: Handle dialogs and close preview
+    HCMClient.dlgFDMConfiguration.Close();
+    OCR.Recognize(panel.CloseButton).BlockByText("Close").Click();
+
+    // Step 7: Final cleanup
+    closeWindowPage();
+    clickOnConfirmFDMButton();
+
+    Log.Checkpoint("✅ PrintTheDevice passed: Device print workflow completed successfully.");
+  } catch (error) {
+    Log.Error("❌ PrintTheDevice failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("PrintTheDevice " + status, status, "Pass");
+    Log.PopLogFolder(); 
+  }
 }
+
 
 
 // =====================================================================
 // Author:        Bharath
-// Function:      SettingDeviceProperties15794
+// Function:      ReadAndWriteDeviceProperties
 // Description:   Opens FDM device properties and configures usage, calibration status, and health.
-// Created On:    21-Aug-2025
-// Modified On:   21-Aug-2025
+
 // =====================================================================
 
-function SettingDeviceProperties15794() {
-  Log.AppendFolder("SettingDeviceProperties15794");
+function ReadAndWriteDeviceProperties(DeviceName,ChangeDeviceUsage,ChangeCalibrationstatus,ChangeDeviceHealth) {
+  Log.AppendFolder("SettingDeviceProperties");
 
   try {
     // === Step 1: Build network and select target device ===
-    BuildNetwork();
-    clickOnDevice(Project.Variables.Device);
+    clickOnDevice(DeviceName);
 
     // === Step 2: Open device properties via OCR hyperlink ===
-    OCR.Recognize(
-      Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage
-        .HwndSource_AdornerDecorator.AdornerDecorator.HyperlinkFdmDeviceProperties
-    ).BlockByText("Device").Click();
+    Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkFdmDeviceProperties.Click();
 
     // === Step 3: Configure device properties ===
     ReadAndConfigureDeviceProperties({
-      DeviceUsage: "Spare",
-      Calibrationstatus: "Calibrated",
-      DeviceHealth: "Good"
+      DeviceUsage: ChangeDeviceUsage,
+      Calibrationstatus: ChangeCalibrationstatus,
+      DeviceHealth: ChangeDeviceHealth
     });
     
     CloseWindow()
@@ -1905,7 +1966,7 @@ function SettingDeviceProperties15794() {
     Log.Message("Device properties configured successfully.");
 
   } catch (error) {
-    Log.Error("Error in SettingDeviceProperties15794: " + error.message);
+    Log.Error("Error in SettingDeviceProperties" + error.message);
 
   } finally {
     Log.PopLogFolder();

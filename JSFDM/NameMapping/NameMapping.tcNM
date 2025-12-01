@@ -419,6 +419,28 @@
 																																									</Child>
 																																								</Children>
 																																							</Child>
+																																							<Child Name="Grid2" Key="{C9375F0E-F633-466C-A281-51A93E15C1E0}" ExtendedFind="True">
+																																								<Image FileName="1903203886" Left="921" Top="543" Right="1322" Bottom="604" />
+																																								<Properties>
+																																									<Property Name="ClrFullClassName">
+																																										<Value Value="System.Windows.Controls.Grid" />
+																																									</Property>
+																																									<Property Name="WPFControlOrdinalNo">
+																																										<Value Value="8" Type="0" />
+																																									</Property>
+																																								</Properties>
+																																								<Children>
+																																									<Child Name="ComboBox" Key="{EAF2AF7B-7436-4DE0-95E5-667B93062885}" ExtendedFind="True">
+																																										<Image FileName="1903203886" Left="939" Top="575" Right="1322" Bottom="601" />
+																																										<TypeInfo Item0="{4AF762B2-1982-453E-8836-07A1D0E6B83D}" />
+																																										<Properties>
+																																											<Property Name="ClrFullClassName">
+																																												<Value Value="System.Windows.Controls.ComboBox" />
+																																											</Property>
+																																										</Properties>
+																																									</Child>
+																																								</Children>
+																																							</Child>
 																																						</Children>
 																																					</Child>
 																																				</Children>
@@ -3364,13 +3386,6 @@
 											</Property>
 										</Properties>
 									</Child>
-									<Child Name="Static" Key="{A74BE5E6-9EAB-4F9A-BF7C-1E391734F20E}">
-										<Properties>
-											<Property Name="WndClass">
-												<Value Value="Static" />
-											</Property>
-										</Properties>
-									</Child>
 									<Child Name="btnCancel" Key="{23E5F2B7-8981-44A2-AF2B-875D9BC69581}">
 										<Properties>
 											<Property Name="WndClass">
@@ -3378,6 +3393,18 @@
 											</Property>
 											<Property Name="WndCaption">
 												<Value Value="Cancel" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="Static" Key="{8BDB6A69-BD1A-455C-AA09-E3B20546CB70}">
+										<Image FileName="659286435" Left="70" Top="54" Right="378" Bottom="121" />
+										<TypeInfo Item0="{91BAF88B-A750-4638-80C9-ECCDA213007E}" />
+										<Properties>
+											<Property Name="WndClass">
+												<Value Value="Static" />
+											</Property>
+											<Property Name="WndCaption">
+												<Value Value="*" />
 											</Property>
 										</Properties>
 									</Child>
@@ -4224,6 +4251,15 @@
 											</Property>
 										</Properties>
 									</Child>
+									<Child Name="lblWait" Key="{DAF93676-2850-4016-9AA4-3F501C3078DD}">
+										<Image FileName="1499584910" Left="332" Top="287" Right="700" Bottom="348" />
+										<TypeInfo Item0="{162140E9-B64B-4019-9A2D-BEC7F3880A4C}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="lblWait" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="ManagePackagesWindow" Key="{06FF76CA-5966-43D0-8763-B08FDCF632EB}">
@@ -4463,6 +4499,57 @@
 														<Value Value="btnCancel" />
 													</Property>
 												</Properties>
+											</Child>
+											<Child Name="btnOk" Key="{8DD985E0-5CCB-40D2-886D-CA4DEF0FF484}">
+												<Image FileName="2099607067" Left="489" Top="453" Right="564" Bottom="476" />
+												<TypeInfo Item0="{BDCA78D0-A1CB-4ED1-ADA2-51893086D680}" />
+												<Properties>
+													<Property Name="WinFormsControlName">
+														<Value Value="btnOk" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="ManualDtmSelectorPanel" Key="{31C3E5F2-3CF4-4319-B466-76AF9805EFE5}">
+										<Image FileName="112117978" Left="8" Top="31" Right="672" Bottom="478" />
+										<TypeInfo Item0="{BDCA78D0-A1CB-4ED1-ADA2-51893086D680}" />
+										<Properties>
+											<Property Name="WinFormsControlName">
+												<Value Value="ManualDtmSelectorPanel" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="groupBox3" Key="{362C554A-DDB0-42AF-892C-4F95DFF8215C}">
+												<Image FileName="112117978" Left="32" Top="39" Right="648" Bottom="87" />
+												<TypeInfo Item0="{BDCA78D0-A1CB-4ED1-ADA2-51893086D680}" />
+												<Properties>
+													<Property Name="WinFormsControlName">
+														<Value Value="groupBox3" />
+													</Property>
+												</Properties>
+												<Children>
+													<Child Name="cboFilter" Key="{09FFECE8-51AF-4635-9E40-1BA04811A875}">
+														<Image FileName="112117978" Left="480" Top="55" Right="608" Bottom="75" />
+														<TypeInfo Item0="{BDCA78D0-A1CB-4ED1-ADA2-51893086D680}" />
+														<Properties>
+															<Property Name="WinFormsControlName">
+																<Value Value="cboFilter" />
+															</Property>
+														</Properties>
+														<Children>
+															<Child Name="ComboBoxTextBoxArea" Key="{A9E9EBC8-ED41-4E85-BFE8-1F782C62F2CA}">
+																<Image FileName="112117978" Left="481" Top="56" Right="590" Bottom="74" />
+																<TypeInfo Item0="{A53CA4A5-FC3E-46AD-9132-646DC8098A58}" />
+																<Properties>
+																	<Property Name="ClrFullClassName">
+																		<Value Value="Xceed.Editors.ComboBoxTextBoxArea" />
+																	</Property>
+																</Properties>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
 											</Child>
 										</Children>
 									</Child>
@@ -4949,6 +5036,7 @@
 																			<Child Name="Grid" Owner="{A5560DB2-31DA-40DE-B1CC-A509B6B01B5C}">
 																				<Child Name="TextBox" Owner="{9E3DDE3E-5198-4173-AA3F-D6F01EB8A613}" />
 																			</Child>
+																			<Child Name="ComboBox" Owner="{EAF2AF7B-7436-4DE0-95E5-667B93062885}" />
 																		</Child>
 																	</Child>
 																</Child>
@@ -5461,8 +5549,8 @@
 			<Child Name="dlgFDMConfiguration" Owner="{A47D0D63-7339-499E-BCD2-408BD50EE38C}">
 				<Child Name="btnOK" Owner="{2794D7DE-2FF2-4657-ACAE-B5E07D712AB6}" />
 				<Child Name="btnYes" Owner="{6E21A362-A827-4568-AF92-76173D61F4F0}" />
-				<Child Name="Static" Owner="{A74BE5E6-9EAB-4F9A-BF7C-1E391734F20E}" />
 				<Child Name="btnCancel" Owner="{23E5F2B7-8981-44A2-AF2B-875D9BC69581}" />
+				<Child Name="Static" Owner="{8BDB6A69-BD1A-455C-AA09-E3B20546CB70}" />
 			</Child>
 			<Child Name="dlgOpen" Owner="{661C18F1-B4FF-48C7-B2CD-50F505E3039F}">
 				<Child Name="WorkerW" Owner="{5DD5ED3E-B4E5-446E-BE62-31B55A0F1F87}">
@@ -5609,6 +5697,7 @@
 			<Child Name="ManageDtmLibrary" Owner="{45A14C6B-573F-4F5B-BDDB-8C0A8F30E968}">
 				<Child Name="btnUpdate" Owner="{0EA0C3A4-DC84-42AD-BF34-BD12BABE204A}" />
 				<Child Name="CancelBtn" Owner="{18C73D7A-5BB4-43E8-A2C1-EE4A8E6D1887}" />
+				<Child Name="lblWait" Owner="{DAF93676-2850-4016-9AA4-3F501C3078DD}" />
 			</Child>
 			<Child Name="ManagePackagesWindow" Owner="{06FF76CA-5966-43D0-8763-B08FDCF632EB}">
 				<Child Name="ManagePackageMainWindow" Owner="{5E0AD982-071D-44F8-A518-33F1BDBE99F5}">
@@ -5647,6 +5736,14 @@
 			<Child Name="ManualDtmSelector" Owner="{78831A2E-2862-46D9-9A54-B0B85D64EAB4}">
 				<Child Name="panel1" Owner="{36EC595B-5381-4EC2-98AE-0B00E330CA97}">
 					<Child Name="btnCancel" Owner="{6E371D65-D4CF-47A5-90EB-5F4130FA445D}" />
+					<Child Name="btnOk" Owner="{8DD985E0-5CCB-40D2-886D-CA4DEF0FF484}" />
+				</Child>
+				<Child Name="ManualDtmSelectorPanel" Owner="{31C3E5F2-3CF4-4319-B466-76AF9805EFE5}">
+					<Child Name="groupBox3" Owner="{362C554A-DDB0-42AF-892C-4F95DFF8215C}">
+						<Child Name="cboFilter" Owner="{09FFECE8-51AF-4635-9E40-1BA04811A875}">
+							<Child Name="ComboBoxTextBoxArea" Owner="{A9E9EBC8-ED41-4E85-BFE8-1F782C62F2CA}" />
+						</Child>
+					</Child>
 				</Child>
 			</Child>
 			<Child Name="PkgValidationStatusViewPopUp" Owner="{C92CD1C0-0092-4638-9592-0679033F7589}">

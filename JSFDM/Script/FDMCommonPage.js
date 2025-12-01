@@ -38,27 +38,37 @@ function closeWindowPage() {
 // =====================================================================
 function clickOnConfirmFDMButton() {
   try {
-    Log.AppendFolder("Click on confirm FDM Button")
-    let yesButton = Aliases.HCMClient.dlgFDMConfiguration.btnYes;
+    Log.AppendFolder("Click on confirm FDM Button");
+
+    // Capture dialog caption for traceability
     let WndCaption = Aliases.HCMClient.dlgFDMConfiguration.Static.WndCaption;
-    Log.Message("Confirmation dialog caption: " + WndCaption);
-      
-    if (yesButton.Exists && yesButton.Enabled) {
-      yesButton.SetFocus()
-      yesButton.Click();
-      Log.Message("'Yes' button clicked successfully on FDM Diagnostic Model dialog.");
+    if(WndCaption.Exists) {
+      Log.Message("Confirmation dialog caption: " + WndCaption);
     }
     
+    // Handle 'Yes' button
+    let yesButton = Aliases.HCMClient.dlgFDMConfiguration.btnYes;
+    if (yesButton.Exists) {
+      if (yesButton.WaitProperty("Enabled", true, 5000)) {
+        yesButton.ClickButton(); // safer than Click()
+        Log.Message(WndCaption)
+        Log.Message("'Yes' button clicked successfully.");
+      } 
+    } 
+
+    // Handle 'OK' button (may appear after Yes)
     let okButton = Aliases.HCMClient.dlgFDMConfiguration.btnOK;
-    if (okButton.Exists && okButton.Enabled) {
-      okButton.SetFocus()
-      okButton.Click();
-      Log.Message("'OK' button clicked successfully on FDM Diagnostic Model dialog.");
-    }
+    if (okButton.Exists) {
+      if (okButton.WaitProperty("Enabled", true, 5000)) {
+        okButton.ClickButton();
+        Log.Message("'OK' button clicked successfully.");
+      }
+    } 
+
   } catch (error) {
-    Log.Error("Failed to click 'Yes || ok' button: " + error.message);
-  } finally{
-    Log.PopLogFolder()
+    Log.Error("Failed to click confirmation buttons: " + error.message);
+  } finally {
+    Log.PopLogFolder();
   }
 }
 
@@ -83,4 +93,6 @@ function CloseWindow() {
     Log.PopLogFolder();
   }
 }
+
+
 

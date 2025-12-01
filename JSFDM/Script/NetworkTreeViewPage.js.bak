@@ -88,9 +88,8 @@ function collapseTreeView(nodePathArray) {
 }
 
 function test123(){
-  let startTime = aqDateTime.Now();
+    let startTime = aqDateTime.Now();
     let found = false;
-    
     let timeDiff = aqDateTime.TimeInterval(startTime, aqDateTime.Now()) 
     Log.Message(timeDiff)
     Log.Message(timeDiff>20)
@@ -100,47 +99,59 @@ function test123(){
 // Function:      clickOnbuildNetwork
 // Description:   Right-clicks on the specified node and selects "Build Network"
 // =====================================================================
-function clickOnbuildNetwork(nodePath,timeoutMS) {
-  Log.AppendFolder("clickOnbuildNetwork - Right-clicks on the specified node and selects 'Build Network'")
-  let treeView = getTreeView();
+function clickOnbuildNetwork(nodePath, timeoutMS) {
+  Log.AppendFolder("clickOnbuildNetwork - Right-clicks on the specified node and selects 'Build Network'");
 
-  try { 
-    Log.Message(`Right-clicking on node: ${nodePath}`);
+  let treeView = getTreeView();
+  let pollIntervalMS = 1000;
+  let nodeLabel = nodePath.split("|").pop();
+
+  try {
+    Log.Message(`📍 Right-clicking on node: ${nodePath}`);
     treeView.ClickItemR(nodePath);
 
-    Log.Message("Waiting for context menu...");
+    Log.Message("🕵️ Waiting for context menu...");
     treeView.WaitProperty("Exists", true, 3000);
 
-    Log.Message("Clicking 'Build Network'...");
+    Log.Message("🛠️ Clicking 'Build Network'...");
     treeView.StripPopupMenu.Click("Build Network");
-    let startTime = aqDateTime.Now();
-    let found = false;
-    
-//    while (aqDateTime.TimeInterval(startTime, aqDateTime.Now()) < timeoutMS) {
-//      let gridNotificationInfo = Aliases.HCMClient.ClientMainWindow.panelEventViewer.UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo
-//       RowCount = gridNotificationInfo.wRowCount
-//       cellValue =  gridNotificationInfo.wValue(RowCount-1, 2).OleValue;
-//       value =  nodePath.split("|").pop()
-//      if (cellValue && cellValue.includes(value) && cellValue.includes("complete")) {
-//        Log.Checkpoint("Notification matched: " + cellValue);
-//        found = true;
-//        break;
-//      }
-//
-      aqUtils.Delay(30000,"Waiting for build network"); // Wait 1 second before retry
-//    }
 
-    if (!found) {
-      throw new Error("Timeout waiting for network build completion message.");
+    let startTime = new Date().getTime();
+    let found = false;
+
+    while (new Date().getTime() - startTime > timeoutMS) {
+      let grid = Aliases.HCMClient.ClientMainWindow.panelEventViewer.UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo;
+
+      if (grid.Exists && grid.wRowCount > 0) {
+        let lastRow = grid.wRowCount - 1;
+        let cellValue = grid.wValue(lastRow, 2).OleValue;
+        aqUtils.Delay(500,"Network build is in progress...")
+        if (cellValue && aqString.Contains(cellValue, nodeLabel) && aqString.Contains(cellValue.toLowerCase(), "complete")) {
+          Log.Checkpoint("✅ Notification matched: " + cellValue);         
+          found = true;
+          break;
+        } else {
+          Log.Message("⏳ Polling... Last notification: " + cellValue);
+        }
+      } else {
+        Log.Warning("⚠️ Notification grid not ready or empty.");
+      }
+
+      Delay(pollIntervalMS, "Waiting for build network to complete...");
     }
 
-    Log.Checkpoint(`'Build Network' successfully initiated on: ${nodePath}`);
+    if (!found) {
+      throw new Error("⏰ Timeout: No matching 'Build Network complete' notification found for node '" + nodeLabel + "'.");
+    }
+
+    Log.Checkpoint(`🎯 'Build Network' successfully initiated on: ${nodePath}`);
   } catch (error) {
-    Log.Error(`Error occurred in clickOnbuildNetwork for node '${nodePath}':`, error.message);
-  } finally{
-    Log.PopLogFolder()
+    Log.Error(`❌ Error in clickOnbuildNetwork for node '${nodePath}': ${error.message}`);
+  } finally {
+    Log.PopLogFolder();
   }
 }
+
 
 
 /* Example of how to pass a node path array to the  verifyFDMDeviceStatus function
@@ -298,18 +309,16 @@ function clickOnDevice(devicePath) {
     Log.Message(`Double-clicking FDM device node: ${devicePath}`);
     treeView.DblClickItem(devicePath);
 
-    // Step 2: Handle any potential modal dialog interruption
-    let dlgFDM = Aliases.HCMClient.dlgFDMConfiguration;
-    if (dlgFDM.Exists && dlgFDM.VisibleOnScreen) {
-      let okBtn = dlgFDM.FindChild("WndCaption", "OK", 50, true);
-      if (okBtn && okBtn.Enabled) {
-        Log.Message("Handling dialog: Clicking OK");
-        okBtn.Click();
-      }
-    }
-
+    // Handle 'OK' button (may appear after Yes)
+    let okButton = Aliases.HCMClient.dlgFDMConfiguration.btnOK;
+    if (okButton.Exists) {
+      if (okButton.WaitProperty("Enabled", true, 5000)) {
+        okButton.ClickButton();
+        Log.Message("'OK' button clicked successfully.");
+      } 
+    } 
   } catch (error) {
-    Log.Error(`clickOnDevice failed for node '${devicePath}':`, error);
+    Log.Error(`clickOnDevice failed for node '${devicePath}':`, erro.message);
   } finally {
     Log.PopLogFolder()
   }
@@ -327,7 +336,7 @@ function clickOnDevice(devicePath) {
 
 function verifyQuickViewLaunch(treePath) {
   try {
-   // const treePath = "|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF|644";
+   // const treePath = "|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF|644Temp";
     const treeView = Aliases.HCMClient.ClientMainWindow
       .panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView
       .panelOnlineView.panelTabControlOnlineView.tabControlOnlineView
@@ -340,7 +349,7 @@ function verifyQuickViewLaunch(treePath) {
 
     const dlgConfig = Aliases.HCMClient.dlgFDMConfiguration;
     const mdiClient = Aliases.HCMClient.ClientMainWindow.MdiClient;
-
+    
     if (dlgConfig.Exists) {
       Log.Message("FDM Configuration dialog is already open.");
       aqObject.CheckProperty(dlgConfig.Static, "Enabled", cmpEqual, true);
@@ -588,3 +597,4 @@ function FindValueInDescriptionColumn(targetValue) {
     Log.PopLogFolder();
   }
 }
+
