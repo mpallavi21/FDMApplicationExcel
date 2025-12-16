@@ -589,9 +589,9 @@ function ReadAndConfigureDeviceProperties({DeviceUsage,Calibrationstatus,DeviceH
     Log.Message("Calibration due Date set to current date: " + currentDate);
 
     // 🎛 Select ComboBox items
-    let comboBox1 = scrollViewer.WPFObject("ComboBox", "", 1); // Device Usage
-    let comboBox2 = scrollViewer.WPFObject("ComboBox", "", 2); // Calibration Status
-    let comboBox3 = scrollViewer.WPFObject("ComboBox", "", 3); // Device Health
+    let comboBox1 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 8)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Device Usage
+    let comboBox2 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 9)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Calibration Status
+    let comboBox3 = scrollViewer.FindChild("Name",'WPFObject("Grid", "", 11)',50).FindChild("Name",'WPFObject("ComboBox", "", 1)',50); // Device Health
     
     if (DeviceUsage) selectComboBoxItemByName(comboBox1, DeviceUsage);
     if (Calibrationstatus) selectComboBoxItemByName(comboBox2, Calibrationstatus);

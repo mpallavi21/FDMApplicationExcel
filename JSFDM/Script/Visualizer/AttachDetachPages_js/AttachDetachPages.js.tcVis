@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root signature="{42D2222C-ACA2-405F-8E67-05D5C42EB839}" version="2">
-	<data key="{21B972D0-CAA7-4CD7-BA66-05F559DFB26D}" />
+	<data key="{21B972D0-CAA7-4CD7-BA66-05F559DFB26D}">
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="10" kind="0" dateTime="45999.2401388889" objectName="Aliases.HCMClient.ClientMainWindow.mainMenu" objectLeft="92" objectTop="36" objectRight="128" objectBottom="48" clickPointX="101" clickPointY="37" imageFileName="tcvi164433946872322.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="11" kind="0" dateTime="45999.2401736111" objectName="Aliases.HCMClient.DropDownForm.SubSmartControl" objectLeft="77" objectTop="212" objectRight="149" objectBottom="224" clickPointX="83" clickPointY="215" imageFileName="tcvi164434253172323.png" storageFileName="" needUpdate="False" rectColor="255" />
+	</data>
 </Root>

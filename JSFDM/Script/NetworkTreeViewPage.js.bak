@@ -117,32 +117,37 @@ function clickOnbuildNetwork(nodePath, timeoutMS) {
     treeView.StripPopupMenu.Click("Build Network");
 
     let startTime = new Date().getTime();
-    let found = false;
+let found = false;
 
-    while (new Date().getTime() - startTime > timeoutMS) {
-      let grid = Aliases.HCMClient.ClientMainWindow.panelEventViewer.UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo;
+while (new Date().getTime() - startTime < timeoutMS) {
+  let grid = Aliases.HCMClient.ClientMainWindow.panelEventViewer
+                .UsrNotificationPanel.tabControlUNM.tabInfo.gridNotificationInfo;
 
-      if (grid.Exists && grid.wRowCount > 0) {
-        let lastRow = grid.wRowCount - 1;
-        let cellValue = grid.wValue(lastRow, 2).OleValue;
-        aqUtils.Delay(500,"Network build is in progress...")
-        if (cellValue && aqString.Contains(cellValue, nodeLabel) && aqString.Contains(cellValue.toLowerCase(), "complete")) {
-          Log.Checkpoint("✅ Notification matched: " + cellValue);         
-          found = true;
-          break;
-        } else {
-          Log.Message("⏳ Polling... Last notification: " + cellValue);
-        }
-      } else {
-        Log.Warning("⚠️ Notification grid not ready or empty.");
-      }
+  if (grid.Exists && grid.wRowCount > 0) {
+    let lastRow = grid.wRowCount - 1;
+    let cellValue = grid.wValue(lastRow, 2).OleValue;
 
-      Delay(pollIntervalMS, "Waiting for build network to complete...");
+    aqUtils.Delay(500, "Network build is in progress...");
+
+    if (cellValue && aqString.Contains(cellValue, nodeLabel) &&
+        aqString.Contains(cellValue.toLowerCase(), "complete")) {
+      Log.Checkpoint("✅ Notification matched: " + cellValue);
+      found = true;
+      break;
+    } else {
+      Log.Message("⏳ Polling... Last notification: " + cellValue);
     }
+  } else {
+    Log.Warning("⚠️ Notification grid not ready or empty.");
+  }
 
-    if (!found) {
-      throw new Error("⏰ Timeout: No matching 'Build Network complete' notification found for node '" + nodeLabel + "'.");
-    }
+  Delay(pollIntervalMS, "Waiting for build network to complete...");
+}
+
+if (!found) {
+  throw new Error("⏰ Timeout: No matching 'Build Network complete' notification found for node '" + nodeLabel + "'.");
+}
+
 
     Log.Checkpoint(`🎯 'Build Network' successfully initiated on: ${nodePath}`);
   } catch (error) {

@@ -272,7 +272,7 @@ function clickOnNetworkViewTab() {
   let tabControlOnlineView = tabPageOnlineView.FindChild("Name", `WinFormsObject("tabControlOnlineView")`, 100, true)
   try {
     Log.Message("Locating and clicking 'Network' tab via OCR...");
-    OCR.Recognize(tabControlOnlineView).BlockByText("Network").Click();
+    OCR.Recognize(tabControlOnlineView).BlockByText("*Network*").Click();
     Log.Checkpoint("'Network' tab clicked successfully.");
   } catch (error) {
     Log.Error("Failed to click 'Network' tab using OCR:", error);

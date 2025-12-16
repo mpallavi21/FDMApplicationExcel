@@ -217,6 +217,53 @@ function main()
                                         case "LOGUSERACTION":
                                               LogUserAction(Parameters[0])
                                             break;
+                                        case "DEVICEEXPLICITLOCK":
+                                              Device_Explicit_Lock(Parameters[0]);
+                                            break;
+                                        case "DEVICEEXPLICITUNLOCK":
+                                              Device_Explicit_UnLock(Parameters[0]);
+                                            break;
+                                        case "GETDEVICESTATEVIEW":
+                                              GetDeviceStateView(Parameters[0])
+                                            break;
+                                        case "ATTACHSYSTEMDOCUMENT":
+                                              AttachSystemDocument(Parameters[0])
+                                            break;
+                                        case "DETACHSYSTEMDOCUMENT":
+                                              DetachSystemDocument() 
+                                            break;
+                                        case "CHECKFDMDEVICEPROPERTYOPTION":
+                                              CheckFDMDevicePropertyOption(Parameters[0])
+                                            break;
+                                        case "VALIDATEDEVICEHISTORYRECORDS":
+                                              ValidateDeviceHistoryRecords(Parameters[0])
+                                            break;
+                                        case "OPTIONSFUNCTION":
+                                              OptionsFunction(Parameters[0])
+                                            break;
+                                        case "DEVICEICONSCREATEDISPLAYFILTER":
+                                              DeviceIconsCreateDisplayFilter()
+                                            break;
+                                        case "DEVICEICONSCREATEDTMOFFLINECONFIG":
+                                              DeviceICONSCreateDTMOfflineConfig()
+                                            break;
+                                        case "DEVICEICONSDDOFFLINEVIEW":
+                                              DeviceIconsDDOfflineView()
+                                            break;
+                                        case "DEVICEICONSLIBRARYVIEW":
+                                              DeviceIconsLibraryView()
+                                            break;
+                                        case "OFFLINEDDCREATECONFIGURATION":
+                                              OfflineDDCreateConfiguration(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4],Parameters[5],Parameters[6])
+                                            break;
+                                        case "LAUNCHPAVDASHBOARD":
+                                              LaunchPAVDashboard()
+                                            break; 
+                                        case "LAUNCHALERTMONITORING":
+                                              LaunchAlertMonitoring()
+                                            break;
+                                        case ""
+                                                
                                         default:
                                             Delay(2000);
                                             break;

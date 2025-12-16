@@ -7,6 +7,9 @@
 //USEUNIT SettingsPage
 //USEUNIT GenericMethods
 //USEUNIT EntryPointPage
+//USEUNIT offlineViewPage
+//USEUNIT DashboardPages
+
 
 function launchFDMClientApplication(ServerName, Username, Password) {
   Log.AppendFolder("launchFDMClientApplication");
@@ -45,104 +48,10 @@ function terminateFDMClientApplication() {
 
 
 
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR3890
-// Description:   Executes the Build Network operation on the Mux node
-//                as part of test cases FDMGR3890 and FDMGR3891
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR3890() {
-  try {
-    Log.AppendFolder(" FDMGR3890 - Executes the Build Network operation on the Mux node as part of test cases FDMGR3890")
-   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    clickOnNetworkViewTab()
-    clickOnbuildNetwork("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX");
-    clickOnbuildNetwork("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF");
-    Log.Checkpoint("FDMGR3890 executed successfully.");
-  } catch (error) {
-    Log.Error("Error occurred in FDMGR3890:", error);
-  } finally {
-    Log.PopLogFolder()
-  }
-}
 
 
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR3891
-// Description:   Executes the Build Network operation on the Mux node
-//                as part of test case FDMGR3891
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
 
-function FDMGR3891() {
-  try {
-    Log.AppendFolder(" FDMGR3891 - Executes the Build Network operation on the Mux node as part of test cases FDMGR3891")
-   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    clickOnNetworkViewTab()
-    clickOnbuildNetwork("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX");
-    clickOnbuildNetwork("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF");
-    Log.Checkpoint("FDMGR3891 executed successfully.");
-  } catch (error) {
-    Log.Error("Error occurred in FDMGR3891:", error);
-  } finally {
-    Log.PopLogFolder()
-  }
-}
 
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR6060
-// Description:   Verifies the FDM device R3051Rev10H7 under Mux shows
-//                the expected OCR status text "*Good*"
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR6060() {
-  try {
-    Log.AppendFolder("FDMGR6060 - Verifies the FDM device under Mux shows")
-      //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    verifyFDMDeviceStatus(Project.Variables.Device);
-    CloseWindow()
-    clickOnConfirmFDMButton()
-    // TestedApps.HCMClient.Terminate();
-    Log.Checkpoint("FDMGR6060 passed: Device status verified.");
-  } catch (error) {
-    Log.Error("FDMGR6060 failed during device status verification:", error);
-  } finally{
-    Log.PopLogFolder()
-  }
-}
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR6061
-// Description:   Verifies the FDM device R3051Rev10H7 under Mux shows
-//                the expected OCR status text "*Good*"
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR6061() {
-  try {
-    Log.AppendFolder("FDMGR6061 - Verifies the FDM device under Mux shows")
-      //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    verifyFDMDeviceStatus(Project.Variables.Device);
-    CloseWindow()
-    clickOnConfirmFDMButton()
-    // TestedApps.HCMClient.Terminate();
-    Log.Checkpoint("FDMGR6061 passed: Device status verified.");
-  } catch (error) {
-    Log.Error("FDMGR6061 failed during device status verification:", error);
-  } finally{
-    Log.PopLogFolder()
-  }
-}
 
 
 // =====================================================================
@@ -153,51 +62,41 @@ function FDMGR6061() {
 // Modified On:   None
 // =====================================================================
 
-function FDMGR5956() {
+function CheckFDMDevicePropertyOption(DeviceName) {        
+  Log.AppendFolder("CheckFDMDevicePropertyOption - Validate FDM Device Property Option in Entry Point Screen");
+
+  let status = "Pass";
+
   try {
-    Log.AppendFolder("FDMGR5956 - validate FDM device property option in entry point screen")
-      //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    clickOnDevice(`${Project.Variables.Device}`);
-    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator;
-    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
-    CloseWindow()
-    clickOnConfirmFDMButton()
-    // TestedApps.HCMClient.Terminate();
-    Log.Checkpoint("FDMGR5956 passed: Device status verified.");
-    
+    // Step 1: Click on the specified device
+    clickOnDevice(DeviceName);
+
+    // Step 2: Access the adorner decorator and validate property option
+    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase
+      .panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen
+      .TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
+
+    aqObject.CheckProperty(
+      adornerDecorator.HyperlinkFdmDeviceProperties,
+      "WPFControlText",
+      cmpEqual,
+      "FDM Device properties"
+    );
+
+    // Step 3: Close window and confirm
+    CloseWindow();
+    clickOnConfirmFDMButton();
+
+    Log.Checkpoint("✅ CheckFDMDevicePropertyOption passed: Device property option verified successfully.");
   } catch (error) {
-    Log.Error("FDMGR5956 failed during device status verification:", error);
-  } finally{
-    Log.PopLogFolder()
+    Log.Error("❌ CheckFDMDevicePropertyOption failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("CheckFDMDevicePropertyOption " + status, status, "Pass");
+    Log.PopLogFolder();
   }
 }
 
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR5957
-// Description:   validate FDM device property option in entry point screen
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR5957() {
-  try {
-    Log.AppendFolder("FDMGR5957 - validate FDM device property option in entry point screen")
-      //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    clickOnDevice(`${Project.Variables.Device}`);
-    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator;
-    aqObject.CheckProperty(adornerDecorator.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
-    CloseWindow()
-    clickOnConfirmFDMButton()
-    // TestedApps.HCMClient.Terminate();
-    Log.Checkpoint("FDMGR5957 passed: Device status verified.");
-    
-  } catch (error) {
-    Log.Error("FDMGR5957 failed during device status verification:", error);
-  } finally{
-    Log.PopLogFolder()
-  }
-}
 
 function QuickViewOfDevice(Device) {
   Log.AppendFolder("QuickViewOfDevice - Verify Quick View Launch and Log Device Info");
@@ -224,57 +123,31 @@ function QuickViewOfDevice(Device) {
 }
 
 
-
 // =====================================================================
 // Author:        Bharath
-// Function:      FDMGR5900
-// Description:   Verifies that Quick View launches for a specific FDM device
-//                and checks the device status using FDMDeviceStatus()
-// Created On:    2025-06-20
-// Modified On:   None
-// =====================================================================
-
-function FDMGR5900() {
-  try {
-    Log.AppendFolder("FDMGR5900 - Verify Quick View and Device Status");
-    
-    // Step 1: Launch and verify Quick View
-    verifyQuickViewLaunch(Project.Variables.Device);
-
-    // Step 2: Check the device status
-    FDMDeviceStatus();
-
-    Log.Checkpoint("✅ FDMGR5900 passed: Quick View launched and device status verified.");
-  } catch (error) {
-    Log.Error("❌ FDMGR5900 failed during Quick View or device status check:", error);
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR4904
+// Function:      ValidateDeviceHistoryRecords
 // Description:   Verify all created history for the device in "View history"
-// Created On:    2025-06-20
-// Modified On:   None
 // =====================================================================
 
-function FDMGR4904() {
+function ValidateDeviceHistoryRecords(DeviceName) {   
+  Log.AppendFolder("ValidateDeviceHistoryRecords - Verify Device History Records");
+
+  let status = "Pass";
+
   try {
-    Log.AppendFolder(`FDMGR5900 - Verify all created history for the device in "View history"`);
-    
-    //Launch and verify History
-    LaunchViewHistory(Project.Variables.Device);
-    
-    Log.Checkpoint("✅ FDMGR5900 passed: View History launched");
+    // Step 1: Launch and verify history view for the device
+    LaunchViewHistory(DeviceName);
+
+    Log.Checkpoint("✅ ValidateDeviceHistoryRecords passed: View History launched successfully.");
   } catch (error) {
-    Log.Error("❌ FDMGR5900 failed during View History:- ", error);
+    Log.Error("❌ ValidateDeviceHistoryRecords failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("ValidateDeviceHistoryRecords " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 
 
@@ -325,77 +198,6 @@ function ViewAuditTrailForDevice(targetItem, ActionType) {
   Log.PopLogFolder();
 }
 
-
-// =====================================================================
-// Author:        Bharath
-// Function:      auditTrail15687
-// Description:   Configures audit trail settings, opens the audit trail viewer,
-//                and filters action types for complete visibility.
-// Created On:    22-Aug-2025
-// Modified On:   22-Aug-2025
-// =====================================================================
-
-function auditTrailViaMenuTab() {
-  Log.AppendFolder("auditTrailViaMenuTab");
-
-  let status = "Pass";
-
-  try {
-    // Step 1: Open FDM toolbar settings and navigate to Audit Trail tab
-    openFDMToolBarSettings();
-
-    let HCMClient = Aliases.HCMClient;
-    let settingsForm = HCMClient.SettingsForm;
-    let tabControl = settingsForm.tabControl1;
-
-    tabControl.ClickTab("Audit Trail");
-    let groupBox = tabControl.tabPageAuditTrail.gbAuditTrailActions;
-
-    // Step 2: Toggle 'All' checkbox to refresh audit trail view
-    groupBox.checkBoxAll.wState = cbChecked;
-    groupBox.checkBoxAll.wState = cbUnchecked;
-
-    // Step 3: Interact with audit trail grid to activate selection
-    let fpSpread = groupBox.fpAuditTrail;
-    fpSpread.Click(237, 33);
-    fpSpread.Click(237, 33);  // Double-click to ensure selection
-
-    // Step 4: Confirm settings
-    OCR.Recognize(settingsForm.buttonOK).BlockByText("OK").Click();
-
-    // Step 5: Open Audit Trail viewer from main menu
-    let frmHCMClientMain = HCMClient.ClientMainWindow;
-    let smartMenuBar = frmHCMClientMain.mainMenu;
-
-    OCR.Recognize(smartMenuBar).BlockByText("View").Click();
-    let subSmartControl = HCMClient.DropDownForm.SubSmartControl;
-    OCR.Recognize(subSmartControl).BlockByText("Audit Trail").Click();
-
-    // Step 6: Trigger audit trail view for selected device
-    frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView
-      .panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.Keys("[Right][Enter]");
-
-    // Step 7: Filter audit trail by action type
-    let panel = frmHCMClientMain.MdiClient.AuditTrailView.panelBase.panelForDerivedForms.panel4.panel2;
-    groupBox = panel.groupBox1;
-
-    groupBox.ActionTypeListBox.ClickItem("---All---");
-    OCR.Recognize(groupBox.ViewButton).BlockByText("View").Click();
-
-    // Step 8: Final cleanup
-    closeWindowPage();
-
-  } catch (error) {
-    Log.Error("Error in auditTrailViaMenuTab: " + error.message);
-    status = "Fail";
-  }
-
-  WriteResult("auditTrailViaMenuTab " + status, status, "Pass");
-  Log.PopLogFolder();
-}
-
- 
-  
 
 
 // =====================================================================
@@ -483,251 +285,45 @@ function Device_Explicit_Lock(DeviceName) {
 
 
 function Device_Explicit_UnLock(DeviceName) {
-  Log.AppendFolder("Device_Explicit_UnLock");
+  Log.AppendFolder("Device_Explicit_UnLock - Explicit Device Unlock Workflow");
+
+  let status = "Pass";
 
   try {
-    
-    //launchFDMClient(Project.Variables.FDMClientUserName,Project.Variables.FDMClientPassword)
-    ClickOnlineViewTab()
-    
-    // Step 1: Open Network View
-    clickOnNetworkViewTab()
-    
-    
-    //  Unlock and retry configuration
-    let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
-    treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    // Step 1: Navigate to Online View
+    ClickOnlineViewTab();
 
+    // Step 2: Open Network View
+    clickOnNetworkViewTab();
+
+    // Step 3: Access the tree view
+    let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
+    let treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView
+                     .panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+
+    // Step 4: Unlock the device
     treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Unlock");
+
+    // Step 5: Retry configuration with DTM (Online)
     treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
+
+    // Step 6: Handle manual DTM selector if cancel button exists
     let manualDtmSelector = Aliases.HCMClient.ManualDtmSelector;
-    if(manualDtmSelector.panel1.btnCancel.Exists){
-      manualDtmSelector.panel1.btnCancel.Click()
-    }
-    Log.Checkpoint("✅ Device successfully unlocked and configured with DTM.");
-
-  } catch (error) { 
-    Log.Error("❌ Error in Device_Explicit_UnLock: " + error.message);
-  } finally {
-    Log.PopLogFolder();
-  }
-    
-}
-
-// =====================================================================
-// Author:        Bharath
-// Function:      ELCON_History_readall15876
-// Description:   Reads and saves device history using DD and DTM configuration paths.
-// Created On:    06-Aug-2025
-// =====================================================================
-function ELCON_History_readall15876() {
-  Log.AppendFolder("ELCON_History_readall15876");
-
-  try {
-    // 🔐 Launch FDM client
-    // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    Log.Message("FDM Client launched.");
-
-    // 🌐 Navigate to Online and Network View tabs
-    ClickOnlineViewTab();
-    clickOnNetworkViewTab();
-
-    // 🌲 Access device tree
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
-                    .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                    .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-    if (!treeView.Exists) {
-      Log.Error("❌ TreeView not found.");
-      return;
+    if (manualDtmSelector.panel1.btnCancel.Exists) {
+      manualDtmSelector.panel1.btnCancel.Click();
     }
 
-    // 📌 Right-click device and configure with DD/Package
-    let ItemPath = Project.Variables.Device;
-    treeView.ClickItemR(ItemPath);
-    treeView.StripPopupMenu.Click("Configure with|DD/Package");
-    
-    //Wait for Device load
-    waitForStatusBarText("Device loaded successfully")
-  
-    // 💾 Save history using DD path
-    clickSaveHistoryHyperlink();
-    let input = Project.Variables.Device;
-    let parts = input.split("|");
-    let lastValue = parts[parts.length - 1];
-    fillSaveHistoryPopup(lastValue + aqDateTime.Now() / 1000);
-    handleFdmConfigurationPopup();
-    handleSaveHistoryCompletion();
-    CloseWindow();
-    clickOnConfirmFDMButton();
-
-    // 🔁 Repeat for DTM (Online) configuration
-    treeView.ClickItemR(ItemPath);
-    treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
-
-    let HCMClient = Aliases.HCMClient;
-    let panel = HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase
-                  .panelForDerivedForms.DTMTabView.panelConfiguration
-                  .tabControl1.TabPage.panelDtmStartup;
-
-    aqObject.CheckProperty(panel, "Exists", cmpEqual, true);
-    panel.panel1.SaveAsHistoryLink.ClickLink(0);
-
-    fillSaveHistoryPopup(lastValue + aqDateTime.Now() / 1000);
-    handleFdmConfigurationPopup();
-
-    // ❎ Final cleanup
-    CloseWindow();
-    clickOnConfirmFDMButton();
-
-    Log.Message("History saved successfully using both DD and DTM paths.");
-
+    Log.Checkpoint("✅ Device_Explicit_UnLock passed: Device successfully unlocked and configured with DTM.");
   } catch (error) {
-    Log.Error("Error in ELCON_History_readall15876: " + error.message);
+    Log.Error("❌ Device_Explicit_UnLock failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("Device_Explicit_UnLock " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      History_Hart_DTM_DeviceMux15848
-// Description:   Saves device history and verifies its presence in the history viewer.
-// Created On:    12-Aug-2025
-// Modified On:   12-Aug-2025
-// =====================================================================
-
-function History_Hart_DTM_DeviceMux15848() {
-  Log.AppendFolder("History_Hart_DTM_DeviceMux15848");
-
-  try {
-    const filePath = Project.Path + "Stores\\Files\\TestData.json";
-    const testCaseId = "History_Hart_DTM_DeviceMux15848";
-
-    const testData = getTestCaseData(filePath, testCaseId);
-    if (testData) {
-        // === Step 1: Navigate to device view ===
-        ClickOnlineViewTab();
-        clickOnNetworkViewTab();
-        clickOnDevice(testData.Device);
-
-        // === Step 2: Save device history ===
-        clickSaveHistoryHyperlink();
-
-        let input = testData.Device;
-        let parts = input.split("|");
-        let lastValue = parts[parts.length - 1];
-        let SaveName = lastValue + "_" + Math.floor(aqDateTime.Now() / 1000);  // Timestamp for uniqueness
-
-        fillSaveHistoryPopup(SaveName);
-        handleFdmConfigurationPopup();
-        handleSaveHistoryCompletion();
-
-        // === Step 3: Confirm and close dialogs ===
-        CloseWindow();
-        clickOnConfirmFDMButton();
-
-        // === Step 4: Open history viewer for the device ===
-        let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
-        let treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView
-                        .panelOnlineView.panelTabControlOnlineView.tabControlOnlineView
-                        .tabConnected.treeView;
-
-        treeView.ClickItemR(testData.Device);
-        treeView.StripPopupMenu.Click(testData.PopupMenu);
-
-        // === Step 5: Select saved history entry and view ===
-        let panel = frmHCMClientMain.MdiClient.HistoryFrom.panelBase.panelForDerivedForms;
-        let adornerDecorator = panel.panel1.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
-
-        adornerDecorator.cmb_HistoryName.ClickItem(`*${SaveName}*`);
-        adornerDecorator.btn_View.ClickButton();
-
-        // === Step 6: Verify history screen loaded ===
-        let historyScreen = panel.pnlHistoryConfig.MagicTabControlEx.TabPage.CDeviceScreen
-                              .m_pnlDeviceScreen.TabControl.TabPage.ElementHost
-                              .HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
-
-        aqObject.CheckProperty(historyScreen, "Exists", cmpEqual, true);
-
-        // === Step 7: Final cleanup ===
-        CloseWindow();
-    
-    } else {
-      Log.Warning("No test data found for TestCase ID: " + testCaseId);
-    }
-
-  } catch (error) {
-    Log.Error("Error in History_Hart_DTM_DeviceMux15848: " + error.message);
-
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
-// =====================================================================
-// Author:        Bharath
-// Function:      LoadHARTDevice15796
-// Description:   Loads HART device using DD/Package, DTM (Online), and DTM (Offline) configurations.
-// Created On:    12-Aug-2025
-// Modified On:   12-Aug-2025
-// =====================================================================
-
-function LoadHARTDevice15796() {
-  Log.AppendFolder("LoadHARTDevice15796");
-
-  try {
-    // === Step 1: Navigate to Online View and Network View ===
-    ClickOnlineViewTab();
-    clickOnNetworkViewTab();
-
-    let HCMClient = Aliases.HCMClient;
-    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
-                    .tabPageOnlineView.panelOnlineView.panelTabControlOnlineView
-                    .tabControlOnlineView.tabConnected.treeView;
-
-    // === Step 2: Configure with DD/Package ===
-    treeView.ClickItemR(Project.Variables.Device);
-    treeView.StripPopupMenu.Click("Configure with|DD/Package");
-
-    aqObject.CheckProperty(
-      NameMapping.Sys.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel
-        .MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage
-        .ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer,
-      "Enabled", cmpEqual, true
-    );
-
-    CloseWindow();
-    clickOnConfirmFDMButton();
-
-    // === Step 3: Configure with DTM (Online) ===
-    treeView.ClickItemR(Project.Variables.Device);
-    treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
-
-    let manualDtmSelector = HCMClient.ManualDtmSelector;
-    aqObject.CheckProperty(manualDtmSelector, "Enabled", cmpEqual, true);
-
-    let winButton = manualDtmSelector.panel1.btnCancel;
-    OCR.Recognize(winButton).BlockByText("Cancel").Click();
-
-    // === Step 4: Configure with DTM (Offline) ===
-    treeView.ClickItemR(Project.Variables.Device);
-    treeView.StripPopupMenu.Click("Configure with|DTM (Offline)");
-
-    aqObject.CheckProperty(manualDtmSelector, "Enabled", cmpEqual, true);
-    OCR.Recognize(winButton).BlockByText("Cancel").Click();
-
-  } catch (error) {
-    Log.Error("Error in LoadHARTDevice15796: " + error.message);
-
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
 
 // =====================================================================
 // Author:        Bharath
@@ -893,271 +489,27 @@ function muxconfig_pnf15962() {
   }
 }
 
-// =====================================================================
-// Author:        Bharath
-// Function:      muxconfig_stahl15963
-// Description:   Configures MUX device, updates text field, and sends review.
-// Created On:    13-Aug-2025
-// =====================================================================
-function muxconfig_stahl15963() {
-  Log.AppendFolder("muxconfig_stahl15963");
-
-  try {
-    // 🌐 Navigate to Online View and build network
-    ClickOnlineViewTab();
-    clickOnNetworkViewTab();
-    BuildNetwork();
-    clickOnDevice(Project.Variables.Device);
-    Log.Message("Device selected: " + Project.Variables.Device);
-
-    let HCMClient = Aliases.HCMClient;
-    let tabPage = HCMClient.ClientMainWindow.MdiClient.EntryPointTabPage;
-
-    // 🔍 Open FDM Device Properties
-    tabPage.EntryPointsTabPage.HwndSource_AdornerDecorator.AdornerDecorator.HyperlinkFdmDeviceProperties.Click();
-    Log.Message("FDM Device Properties opened.");
-
-    let adornerDecorator = tabPage.FDM_Device_Properties.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
-    let scrollViewer = adornerDecorator.ScrollViewer;
-
-    // 📝 Scroll to top and update text field
-    scrollViewer.VScroll.Pos = 0;
-    let textBox = scrollViewer.TextBox;
-    textBox.Click(121, 16);
-    let timestamp = Math.floor(aqDateTime.Now() / 1000);
-    textBox.SetText(`No Data available ${timestamp}`);
-    Log.Message("Text field updated with timestamp: " + timestamp);
-
-    // 📤 Submit review
-    adornerDecorator.ButtonReviewSend.ClickButton();
-    let previewDialog = HCMClient.HwndSource_PreviewDialog.PreviewDialog;
-    previewDialog.btn_Send.ClickButton();
-    previewDialog.Rectangle.Click(6, 14);
-    Log.Message("Review submitted.");
-
-    // ❎ Close window and confirm
-    CloseWindow();
-    clickOnConfirmFDMButton();
-    Log.Message("Window closed and confirmation clicked.");
-
-  } catch (error) {
-    Log.Error("Error in muxconfig_stahl15963 " + error.message);
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      OfflineConfig_HARTDDdevice_EPKSNW15785
-// Description:   Creates and overwrites HART DD offline configuration template from history.
-// Created On:    14-Aug-2025
-// =====================================================================
-function OfflineConfig_HARTDDdevice_EPKSNW15785() {
-  Log.AppendFolder("OfflineConfig_HARTDDdevice_EPKSNW15785");
-
-  try {
-    
-      ClickOnlineViewTab();
-      clickOnNetworkViewTab();
-
-      let HCMClient = Aliases.HCMClient;
-      let frmHCMClientMain = HCMClient.ClientMainWindow;
-      let treeView = frmHCMClientMain.panelLeftPanMain
-                      .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                      .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-      // 📂 Initiate template creation from history
-      treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1");
-      treeView.StripPopupMenu.Click();
-
-      let historyFileList = HCMClient.HistoryFileList;
-      let listView = historyFileList.listView1;
-      listView.ClickItem("6441754471472", 0);
-      historyFileList.btnOK.ClickButton();
-
-      // 📝 Enter filename and save
-      let hostPanel = frmHCMClientMain.MdiClient.CreateConfigHistForm.panelBase;
-      let adornerDecorator = hostPanel.panelForDerivedForms.panel1.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
-      let textBox = adornerDecorator.txt_fileName;
-
-      let timestamp = aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%Y%m%d%H%M%S");
-      let saveFileName = "Barath_" + timestamp;
-      textBox.SetText(saveFileName);
-      adornerDecorator.ButtonSave.ClickButton();
-
-      // ✅ Confirm success
-      let dlgSuccess = HCMClient.dlgFDMConfiguration;
-      // aqObject.CheckProperty(dlgSuccess.Static, "WndCaption", cmpEqual, "Offline configuration saved successfully");
-      dlgSuccess.btnOK.ClickButton();
-      hostPanel.panelFullTop.panelTitle.buttonClose.Click(10, 7);
-      dlgSuccess.btnYes.ClickButton();
-
-      // 🔁 Attempt overwrite with same name
-      treeView.ClickItemR(Project.Variables.Device);
-      treeView.StripPopupMenu.Click(testData.HistoryTemplate);
-      listView.ClickItem("6441754471472", 0);
-      historyFileList.btnOK.ClickButton();
-
-      textBox.Drag(174, 11, -269, 8); // Optional: clear or reposition
-      textBox.SetText(saveFileName);
-      adornerDecorator.ButtonSave.ClickButton();
-
-      // aqObject.CheckProperty(dlgSuccess.Static, "WndCaption", cmpEqual, `Offline Template Name ${saveFileName} already exists`);
-      dlgSuccess.btnOK.ClickButton();
-      hostPanel.panelFullTop.panelTitle.buttonClose.Click(9, 18);
-      dlgSuccess.btnYes.ClickButton();
-
-      Log.Message("Offline configuration created and overwrite handled for: " + saveFileName);
-    
-  } catch (error) {
-    Log.Error("Error in OfflineConfig_HARTDDdevice_EPKSNW15785: " + error.message);
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      OfflineDownload_HARTDD15849
-// Description:   Downloads offline configuration for HART DD device and validates success.
-// Created On:    19-Aug-2025
-// =====================================================================
-function OfflineDownload_HARTDD15849() {
-  Log.AppendFolder("OfflineDownload_HARTDD15849");
-
-  try {
-    const filePath = Project.Path + "Stores\\Files\\TestData.json";
-    const testCaseId = "OfflineDownload_HARTDD15849";
-
-    const testData = getTestCaseData(filePath, testCaseId);
-    if (testData) {
-        let HCMClient = Aliases.HCMClient;
-        let frmHCMClientMain = HCMClient.ClientMainWindow;
-
-        // 🌲 Right-click device and trigger download
-        let treeView = frmHCMClientMain.panelLeftPanMain
-                        .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
-                        .panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-        treeView.ClickItemR(Project.Variables.Device);
-        treeView.StripPopupMenu.Click("Offline Configuration|Download Offline Configuration");
-        Log.Message("Download Offline Configuration triggered for: " + Project.Variables.Device);
-
-        // 📂 Access download panel
-        let hostPanel = frmHCMClientMain.MdiClient.HCMOfflineConfigForm.panelBase;
-        let panel = hostPanel.panelForDerivedForms.panelOfflineBase;
-
-        aqObject.CheckProperty(panel, "Enabled", cmpEqual, true);
-        Log.Message("Offline configuration panel is enabled.");
-
-        // 📁 Select configuration
-        panel.pnlDownloadConfiguration.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ButtonSelect.ClickButton();
-        Log.Message("Configuration selection initiated.");
-
-        // ⬇️ Download parameters
-        let adornerDecorator = panel.groupBoxConfigView.pnlConfiguration.OfflineDownloadConfig
-                                    .HwndSource_AdornerDecorator.AdornerDecorator;
-
-        adornerDecorator.btn_Download.ClickButton();
-        Log.Message("Download button clicked.");
-
-        // ✅ Wait for success message
-        adornerDecorator.TextblockParametersDownloadedSucc.WaitProperty("Exists", true, 100000);
-        aqObject.CheckProperty(adornerDecorator.TextblockParametersDownloadedSucc, "WPFControlText", cmpContains, "parameters downloaded successfully");
-        Log.Message("Parameters downloaded successfully.");
-
-        // ❎ Close configuration window
-        hostPanel.panelFullTop.panelTitle.buttonClose.Click(19, 11);
-        Log.Message("Offline configuration window closed.");
-    } else {
-      Log.Warning("No test data found for TestCase ID: " + testCaseId);
-    }
-  } catch (error) {
-    Log.Error("Error in OfflineDownload_HARTDD15849: " + error.message);
-  } finally {
-    Log.PopLogFolder();
-  }
-}
-
-// =====================================================================
-// Author:        Bharath
-// Function:      OnlineMuxdevices15797
-// Description:   Renames a MUX device node in the tree view, handles name conflict,
-//                and retries renaming from an alternate node path.
-// Created On:    19-Aug-2025
-// Modified On:   19-Aug-2025
-// =====================================================================
-
-function OnlineMuxdevices15797() {
-  Log.AppendFolder("OnlineMuxdevices15797");
-
-  try {
-    
-    let HCMClient = Aliases.HCMClient;
-    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
-
-    // === Step 1: Attempt to rename device to '644Temperature' ===
-    treeView.ClickItemR(Project.Variables.Device);
-    treeView.StripPopupMenu.Click("Rename");
-
-    let renameNodeDialog = HCMClient.HwndSource_RenameNodeDialog.RenameNodeDialog;
-    let textBox = renameNodeDialog.NewNameTextBox;
-    textBox.Keys("![ReleaseLast]");  // Clear previous name
-    textBox.SetText("644Temperature");
-
-    let button = renameNodeDialog.ButtonConfirm;
-    button.ClickButton();
-
-    // === Step 2: Attempt to rename again to '644FDMdevice' ===
-    treeView.ClickItemR(Project.Variables.Device);
-    treeView.StripPopupMenu.Click("Rename");
-    textBox.SetText("644FDMdevice");
-    button.ClickButton();
-
-    // === Step 3: Handle name conflict warning ===
-    let textBlock = renameNodeDialog.WarningMessageTextBlock;
-    aqObject.CheckProperty(textBlock, "Enabled", cmpEqual, true);
-    aqObject.CheckProperty(textBlock, "WPFControlText", cmpEqual, "⚠ Name Already Exists");
-    renameNodeDialog.ButtonCancel.ClickButton();
-
-    // === Step 4: Retry renaming from alternate node path ===
-    treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF|644Temperature");
-    treeView.StripPopupMenu.Click("Rename");
-    textBox.SetText("644FDMdevice");
-    button.ClickButton();
-
-  } catch (error) {
-    Log.Error("Error in OnlineMuxdevices15797: " + error.message);
-
-  } finally {
-    Log.PopLogFolder();
-  }
-}
 
 // =====================================================================
 // Author:        Bharath
 // Function:      OptionsFunction15817
 // Description:   Opens device options, selects a specific DTM package,
 //                and configures the device with DTM (Online).
-// Created On:    20-Aug-2025
-// Modified On:   20-Aug-2025
+
 // =====================================================================
 
-function OptionsFunction() {
-  Log.AppendFolder("OptionsFunction");
+function OptionsFunction(DeviceName) {    
+  Log.AppendFolder("OptionsFunction - Device Options Workflow");
+
+  let status = "Pass";
 
   try {
-    // === Step 1: Build network before accessing device options ===
-    
-
+    // === Step 1: Access tree view in Online View ===
     let HCMClient = Aliases.HCMClient;
-    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineVie.tabControlOnlineView.tabConnected.treeView;
 
     // === Step 2: Open device options dialog ===
-    treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1");
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Options");
 
     let deviceOptionsDlg = HCMClient.DeviceOptionsDlg;
@@ -1182,22 +534,25 @@ function OptionsFunction() {
     let frmHCMClientMain = HCMClient.ClientMainWindow;
     treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
 
-    treeView.ClickItemR("|FDM Server ( DESKTOP-AJ7O5O5 )|DESKTOP-AJ7O5O5|MUX|SFT_PNF|644Temperature");
+    treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Configure with|DTM (Online)");
 
-    aqObject.CheckProperty(frmHCMClientMain.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelConfiguration.tabControl1.TabPage.panelDtmStartup,"Enabled", cmpEqual, true);
+    aqObject.CheckProperty(frmHCMClientMain.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelConfiguration.tabControl1.TabPage.panelDtmStartup,"Enabled",cmpEqual,true);
 
     // === Step 7: Final cleanup ===
     CloseWindow();
     clickOnConfirmFDMButton();
 
+    Log.Checkpoint("✅ OptionsFunction passed: Device options configured successfully.");
   } catch (error) {
-    Log.Error("Error in OptionsFunction: " + error.message);
-
+    Log.Error("❌ OptionsFunction failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("OptionsFunction " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 //USEUNIT DrFDMPages
 
@@ -1205,8 +560,7 @@ function OptionsFunction() {
 // Author:        Bharath
 // Function:      startDRFDM
 // Description:   Starts DR FDM services, executes workflow, and terminates app.
-// Created On:    30-Jul-2025
-// Modified On:   30-Jul-2025
+
 // =====================================================================
 
 function startServicesDRFDM() {
@@ -1237,8 +591,6 @@ function startServicesDRFDM() {
 // Author:        Bharath
 // Function:      stopDRFDM
 // Description:   stops DR FDM services, executes workflow, and terminates app.
-// Created On:    30-Jul-2025
-// Modified On:   30-Jul-2025
 // =====================================================================
 
 function stopServicesDRFDM() {
@@ -1318,135 +670,6 @@ function ClickOnlineView() {
 }
 
 //USEUNIT LibraryPages
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR4779()
-// Description:   Test case to validate add DD User interfacee
-// Created On:    23-June-2025
-// Modified On:   
-// =====================================================================
-function FDMGR4779() {
-  try {
-    Log.AppendFolder("FDMGR4779 - Test case to validate add DD User interface")
-    // Launch the FDM Client with credentials
-    //launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-
-    // Navigate and perform DD Package addition
-    openManageDDPackagesSection();
-    clickAddDDPackageButton();
-    selectDDFileTypeFromDropdown("*.fm8");
-    uploadDDPackageFile(Project.Path + "Stores\\Files", "0906");
-    clickAddToLibraryButton();
-
-    // Close relevant popups and exit
-    clickAdd_DDPackagePopUpCloseButton();
-    clickManage_DDPackagePopUpCloseButton();
-
-    // Terminate the client gracefully
-  //  TestedApps.HCMClient.Terminate();
-
-    Log.Message("Test 'addDDPackageAndExit' completed successfully.");
-  } catch (error) {
-    Log.Error("Test 'addDDPackageAndExit' failed: " + error.message);
-    // Optional: Consider taking a screenshot here
-  } finally{
-    Log.PopLogFolder()
-  }
-}
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR4798
-// Description:   Testcase to validate generic DD/package functionality
-// Created On:    23-June-2025
-// Modified On:   
-// =====================================================================
-function FDMGR4798() {
-  try {
-    Log.AppendFolder("FDMGR4798 - Testcase to validate generic DD/package functionality")
-   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    openManageDDPackagesSection();
-    selectProtocol("HART")
-    selectManufacturer("Rosemount (26)");
-    selectDeviceType("3051 (2606)");
-    findDDAndClickDeleteRow("3051 (2606)","9","6")
-    clickManage_DDPackagePopUpCloseButton();
-    //TestedApps.HCMClient.Terminate();
-    Log.Message("Test 'deleteSpecificDDPackageAndExit' executed successfully.");
-  } catch (error) {
-    Log.Error("Test 'deleteSpecificDDPackageAndExit' failed: " + error.message);
-  } finally{
-    Log.PopLogFolder()
-  }
-}
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR4723()
-// Description:   Test case to validate add FDIX file User interfacee
-// Created On:    23-June-2025
-// Modified On:   
-// =====================================================================
-function FDMGR4723() {
-  try {
-    Log.AppendFolder("FDMGR4723 - Test case to validate add FDIX file User interfacee")
-    // Launch the FDM Client with credentials
-  //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-
-    // Navigate and perform DD Package addition
-    openManageDDPackagesSection();
-    clickAddDDPackageButton();
-    selectDDFileTypeFromDropdown("*.fdix");
-    uploadDDPackageFile(Project.Path + "Stores\\Files", "abb.tzidc.02.02.00.hart");
-    clickAddToLibraryButton();
-
-    // Close relevant popups and exit
-    clickAdd_DDPackagePopUpCloseButton();
-    clickManage_DDPackagePopUpCloseButton();
-
-    // Terminate the client gracefully
-   // TestedApps.HCMClient.Terminate();
-
-    Log.Message("Test 'addFDIXPackageAndExit' completed successfully.");
-  } catch (error) {
-    Log.Error("Test 'addFDIXPackageAndExit' failed: " + error.message);
-    // Optional: Consider taking a screenshot here
-  } finally{
-    Log.PopLogFolder()
-  }
-}
-
-
-// =====================================================================
-// Author:        Bharath
-// Function:      FDMGR4790
-// Description:   Testcase to validate generic FDI/package functionality
-// Created On:    23-June-2025
-// Modified On:   
-// =====================================================================
-function FDMGR4790() {
-  try {
-    Log.AppendFolder("FDMGR4790 - Testcase to validate generic FDI/package functionality")
-  //  launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-    openManageDDPackagesSection();
-    selectProtocol("HART")
-    selectManufacturer("ABB - Hartmann & Braun (16)");
-    selectDeviceType("TZIDC (1641)");
-    findDDAndClickDeleteRow("TZIDC (1641)","2","1")
-    clickManage_DDPackagePopUpCloseButton();
-   // TestedApps.HCMClient.Terminate();
-    Log.Message("Test 'deleteSpecificFDIPackageAndExit' executed successfully.");
-  } catch (error) {
-    Log.Error("Test 'deleteSpecificFDIPackageAndExit' failed: " + error.message);
-  } finally{
-    Log.PopLogFolder()
-  }
-}
-
-
-
 
 function AddDD(filePath, fileType) {
   Log.AppendFolder("AddDD - Validate DD Package Addition UI");
@@ -1534,7 +757,7 @@ function DeleteDD(Protocol, Manufacturer, DeviceType, targetdeviceRevision, targ
 // Modified On:   31-Jul-2025
 // =====================================================================
 
-function UpdateDTMLibrary() {
+function UpdateDTMLibrary() {   
   let HCMClient = Aliases.HCMClient;
   Log.AppendFolder("UpdateDTMLibrary");
 
@@ -1645,36 +868,57 @@ function DetachApp(packagePath, packageName) {
 
 // =====================================================================
 // Author:        Bharath
-// Function:      AttachDetachSystemDocument
-// Description:   Automates the process of attaching and detaching a system-level
+// Function:      AttachSystemDocument
+// Description:   Automates the process of attaching a system-level
 //                document via menu navigation, file upload, and confirmation steps.
-// Created On:    21-Jul-2025
-// Modified On:   21-Jul-2025
 // =====================================================================
 
-function AttachDetachSystemDocument15805() {
-  Log.AppendFolder("AttachDetachSystemDocument - System-Level Document Flow");
+function AttachSystemDocument(FilName) {        
+  Log.AppendFolder("AttachSystemDocument - System-Level Document Flow");
+
+  let status = "Pass";
 
   try {
     // Step 1: Navigate via menu and select system document
-    clickOnSystemAttachDocument()
+    clickOnSystemAttachDocument();
     Log.Message("Navigated to system document attachment workflow.");
 
     // Step 2: Upload document
-    uploadPackageFile(Project.Path + "Stores\\Files", "0906.fm8");
-    Log.Message("Uploaded system document: 0906.fm8");
+    uploadPackageFile(Project.Path + "Files", FilName);
+    Log.Message("Uploaded system document: " + FilName);
 
     // Step 3: Confirm attachment
     clickOnConfirmFDMButton();
     Log.Message("Confirmed attachment in FDM dialog.");
-    
-    // Step 4: Detach system document
-    DetachSystemDocument();
+
+    Log.Checkpoint("✅ AttachSystemDocument passed: System document attached successfully.");
+  } catch (error) {
+    Log.Error("❌ AttachSystemDocument failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("AttachSystemDocument " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+function DetachSystemDocument() {        
+  Log.AppendFolder("DetachSystemDocument - System-Level Document Flow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Initiate detachment of system document
+    DetachSystemDocumentInTools();
     Log.Message("Initiated detachment of system document.");
 
+    Log.Checkpoint("✅ DetachSystemDocument passed: System document detached successfully.");
   } catch (error) {
-    Log.Error("Exception occurred in AttachDetachSystemDocument: " + error.message);
+    Log.Error("❌ DetachSystemDocument failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("DetachSystemDocument " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
@@ -1682,7 +926,7 @@ function AttachDetachSystemDocument15805() {
 
 // =====================================================================
 // Author:        Bharath
-// Function:      AttachDetachDeviceDocumentation
+// Function:      AttachDeviceDocumentation
 // Description:   Attaches a document to a device via context menu flow,
 //                confirms the action, then initiates detachment and confirms.
 
@@ -1744,34 +988,6 @@ function DetachDeviceDocumentation(DeviceName) {
 }
 
 
-function FDMGR4876(){
-  Log.AppendFolder("FDMGR4876 - Save History")
-  try{
-  ClickOnlineViewTab()
-  clickOnNetworkViewTab()
-  input = Project.Variables.Device
-  clickOnbuildNetwork(input.split("|").slice(0, -2).join("|"));
-  clickOnbuildNetwork(input.split("|").slice(0, -1).join("|"));
-  clickOnDevice(Project.Variables.Device);
-  clickSaveHistoryHyperlink()
-  input = Project.Variables.Device
-  let parts = input.split("|");
-  let lastValue = parts[parts.length - 1];
-  fillSaveHistoryPopup(lastValue + aqDateTime.Now()/1000)
-  handleFdmConfigurationPopup()
-  handleSaveHistoryCompletion()
-  CloseWindow()
-  clickOnConfirmFDMButton()
-  }
-  
-  catch(error){
-    Log.Error("FDMGR4876 :- " + error.message )
-  }
-  finally{
-    Log.PopLogFolder()
-  }
-  
-}
 
 function ActivateDevice(Device) {
   Log.AppendFolder("ActivateDevice");
@@ -1843,7 +1059,7 @@ function DeviceParam(DeviceName) {
     aqObject.CheckProperty(scrollViewer.HyperlinkExport, "WPFControlText", cmpEqual, "Export");
     aqObject.CheckProperty(scrollViewer.HyperlinkPrint, "WPFControlText", cmpEqual, "Print");
     aqObject.CheckProperty(scrollViewer.HyperlinkNotifications, "WPFControlText", cmpEqual, "Notifications");
-
+    
     // Step 3: Close window and confirm
     CloseWindow();
     clickOnConfirmFDMButton();
@@ -1863,17 +1079,15 @@ function DeviceParam(DeviceName) {
 // Author:        Bharath
 // Function:      DeviceStateView
 // Description:   Clicks on specified device, waits for load, and retrieves its state info.
-// Created On:    31-Jul-2025
-// Modified On:   31-Jul-2025
 // =====================================================================
 
-function DeviceStateView() {
+function GetDeviceStateView(DeviceName) {     
   Log.AppendFolder("test - Device Selection and State Capture");
 
   try {
     // Step 1: Select device from variable
-    clickOnDevice(Project.Variables.Device);
-    Log.Message("Clicked on device: " + Project.Variables.Device);
+    clickOnDevice(DeviceName);
+    Log.Message("Clicked on device: " + DeviceName);
 
     // Step 2: Delay to allow device to load
     Delay(1000, "Waiting for device UI to load");
@@ -1974,5 +1188,500 @@ function ReadAndWriteDeviceProperties(DeviceName,ChangeDeviceUsage,ChangeCalibra
 }
 
 
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      Deivce_ICONS_Create_DD_Offlineconfig15865
+// Description:   Launches FDM client, navigates to Offline Configurations, and creates DD config
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function Deivce_ICONS_Create_DD_Offlineconfig15865() {
+
+  // 🌐 Navigates to the Offline View section
+  goToOfflineView();
+
+  // 🗂 Clicks on the Offline tab to access available configurations
+  ClickOfflineTab();
+
+  // ⚙️ Opens the DD Offline Configuration screen
+  OpenDDOfflineConfigurations();
+
+  // 🛠 Creates a DD Offline Configuration using fixed input values
+  createDDOfflineConfiguration("HART", "Rosemount_38", "644 Temperature(9752)", "9", "1");
+  
+  EnterOfflineDeviceConfigurationDetails() 
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DeviceIcons_Create_DisplayFilter
+// Description:   Launches the FDM client, navigates to Offline View, and creates Display Filter configuration.
+
+// =====================================================================
+function DeviceIconsCreateDisplayFilter() {
+  Log.AppendFolder("DeviceIconsCreateDisplayFilter - Create Display Filter Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Confirm FDM Client launch
+    Log.Message("FDM Client launched successfully.");
+
+    // Step 2: Navigate to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+
+    // Step 3: Select Display Filter option via OCR
+    OCR.Recognize(
+      Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+        .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+    ).BlockByText("*Displ*").Click();
+
+    // Step 4: Create Display Filter configuration
+    CreateDisplayFilterConfiguration();
+    Log.Message("Display Filter configuration created.");
+
+    Log.Checkpoint("✅ DeviceIconsCreateDisplayFilter passed: Display Filter created successfully.");
+  } catch (error) {
+    Log.Error("❌ DeviceIconsCreateDisplayFilter failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeviceIconsCreateDisplayFilter " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+                                          
+// =====================================================================
+// Author:        Bharath
+// Function:      DeviceICONS_Create_DTM_OfflineConfig15875
+// Description:   Launches FDM client, navigates to Offline View, and creates a DTM offline config
+// =====================================================================
+function DeviceICONSCreateDTMOfflineConfig() {
+  Log.AppendFolder("DeviceICONSCreateDTMOfflineConfig - Offline DTM Configuration Workflow");
+  let status = "Pass";
+
+  try {
+    
+    // Step 2: Navigate to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View successfully.");
+
+    // Step 3: Open Offline tab
+    ClickOfflineTab();
+    Log.Message("Offline tab clicked.");
+
+    // Step 4: Create Offline DTM Configuration
+    CreateOfflineDTMConfig();
+    Log.Message("Offline DTM configuration created.");
+
+    // Step 5: Clean up the window
+    let HCMClient = Aliases.HCMClient;
+    HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelFullTop.panelTitle.buttonClose.Click(7, 7);
+    Log.Message("Window closed post configuration.");
+
+    // Step 6: Confirm operations twice if required
+    let btnYes = HCMClient.dlgFDMConfiguration.btnYes;
+    if (btnYes.Exists) {
+      btnYes.ClickButton();
+      btnYes.ClickButton();
+      Log.Message("Confirmation buttons clicked.");
+    }
+
+    Log.Checkpoint("✅ DeviceICONSCreateDTMOfflineConfig passed: Offline DTM configuration workflow completed successfully.");
+  } catch (error) {
+    Log.Error("❌ DeviceICONSCreateDTMOfflineConfig failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeviceICONSCreateDTMOfflineConfig " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DeviceIcons_DD_OfflineView15878
+// Description:   Launches FDM client, builds network, navigates to Offline View, and selects DD configuration.
+
+// =====================================================================
+function DeviceIconsDDOfflineView() {
+  Log.AppendFolder("DeviceIconsDDOfflineView - DD Offline Configuration Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+
+    // Step 2: Click on the Offline tab
+    ClickOfflineTab();
+    Log.Message("Offline tab clicked.");
+
+    // Step 3: Open DD Offline Configurations
+    OpenDDOfflineConfigurations();
+    Log.Message("DD Offline Configurations opened.");
+
+    // Step 4: Select the specific DD configuration node
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
+                    .tabControlLeftPanMain.tabPageOfflineView.panelOfflineView
+                    .tabControlOfflineView.tabPageOfflineTemplates.treeView;
+
+    let targetNode = `|DD Offline Configurations|HART|Rosemount(38)|644 Temperature(9752)|9|${Project.Variables.OfflineDDSaveFileName}`;
+    treeView.ClickItem(targetNode);
+    Log.Message("Clicked DD configuration node: " + targetNode);
+
+    Log.Checkpoint("✅ DeviceIconsDDOfflineView passed: DD Offline configuration node accessed successfully.");
+  } catch (error) {
+    Log.Error("❌ DeviceIconsDDOfflineView failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeviceIconsDDOfflineView " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      Device_ICONS_DTM_OfflineConfig15881
+// Description:   Launches FDM client, builds network, navigates to Offline View, and selects DTM configuration.
+// Created On:    06-Aug-2025
+// =====================================================================
+function Device_ICONS_DTM_OfflineConfig15881() {
+  Log.AppendFolder("Device_ICONS_DTM_OfflineConfig15881");
+
+  try {
+
+    // 📂 Navigates to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+
+    // 🗂 Clicks on the Offline tab
+    ClickOfflineTab();
+    Log.Message("Offline tab clicked.");
+
+    // 🎯 Selects the specific DTM configuration node
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
+                    .tabControlLeftPanMain.tabPageOfflineView.panelOfflineView
+                    .tabControlOfflineView.tabPageOfflineTemplates.treeView;
+
+    let targetNode = `|DTM Offline Configurations|ROSEMOUNT|644 V07.01 Ver [1.4.124.3]|${Project.Variables.OfflineDTMSavedFileName}`;
+    treeView.ClickItem(targetNode);
+    Log.Message("Clicked DTM configuration node: " + targetNode);
+
+  } catch (error) {
+    Log.Error("Error in Device_ICONS_DTM_OfflineConfig: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function DeviceIconsLibraryView() {
+  Log.AppendFolder("DeviceIconsLibraryView - Device Library Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+
+    // Step 2: Open Device Library
+    OpenDeviceLibrary();
+    Log.Message("Device Library opened.");
+
+    // Step 3: Validate region check for DD/DTM tab control
+    Regions.tabControlOfflineViewDD_DTM.Check(
+      Regions.CreateRegionInfo(
+        Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+          .tabPageOfflineView.panelOfflineView.tabControlOfflineView,
+        26, 24, 100, 52, false
+      ),
+      false,
+      false,
+      2946,
+      144
+    );
+    Log.Message("Region check completed for DD/DTM tab control.");
+
+    Log.Checkpoint("✅ DeviceIconsLibraryView passed: Device library workflow executed successfully.");
+  } catch (error) {
+    Log.Error("❌ DeviceIconsLibraryView failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeviceIconsLibraryView " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OfflineCreateConfiguration_1_15840
+// Description:   Creates a DD Offline Configuration using fixed input values and validates save.
+
+// =====================================================================
+function OfflineDDCreateConfiguration(Protocol, Manufacturer, DeviceType, DeviceRevision, DDRevision, sensorType, connectionType) {
+  Log.AppendFolder("OfflineDDCreateConfiguration - DD Offline Configuration Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline View and open configuration screen
+    goToOfflineView();
+    ClickOfflineTab();
+    OpenDDOfflineConfigurations();
+    Log.Message("DD Offline Configuration screen opened.");
+
+    // Step 2: Create configuration using provided parameters
+    createDDOfflineConfiguration(Protocol, Manufacturer, DeviceType, DeviceRevision, DDRevision);
+    Log.Message("DD Offline Configuration initiated.");
+
+    // Step 3: Access AdornerDecorator and configure sensor type & connection type
+    let HCMClient = Aliases.HCMClient;
+    let AdornerDecorator = HCMClient.ClientMainWindow.MdiClient.HCMOfflineConfigForm.panelBase
+      .panelForDerivedForms.panelOfflineBase.groupBoxConfigView.pnlConfiguration.Panel
+      .MagicTabControlEx.TabPage.CDeviceScreen.m_pnlDeviceScreen.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
+
+    let UidLayoutView = AdornerDecorator.FindChild("Name", `WPFObject("UidLayoutView", "", 1)`, 100, true);
+
+    let SensorType = UidLayoutView.FindChild("Name", `WPFObject("ParameterView", "", 1)`, 100, true);
+    let SensorTypeComboBox = SensorType.FindChild("Name", `WPFObject("cmb_Enum")`, 100, true);
+    selectComboBoxItemByNameDD(SensorTypeComboBox, sensorType);
+
+    let Connection = UidLayoutView.FindChild("Name", `WPFObject("ParameterView", "", 2)`, 100, true);
+    let ConnectionTypeComboBox = Connection.FindChild("Name", `WPFObject("cmb_Enum")`, 100, true);
+    selectComboBoxItemByNameDD(ConnectionTypeComboBox, connectionType);
+
+    // Step 4: Save configuration preview
+    let ButtonPreviewSave = HCMClient.ClientMainWindow.MdiClient.HCMOfflineConfigForm.panelBase
+      .panelForDerivedForms.panelOfflineBase.groupBoxConfigView.pnlConfiguration.ActionControlView
+      .HwndSource_AdornerDecorator.AdornerDecorator.ButtonPreviewSave;
+
+    if (ButtonPreviewSave.Enabled) {
+      ButtonPreviewSave.Click();
+    } else {
+      status = "Fail";
+      return false;
+    }
+
+    // Step 5: Handle Save dialog
+    AdornerDecorator = HCMClient.ClientMainWindow.MdiClient.HCMOfflineConfigForm.panelBase
+      .panelForDerivedForms.panelOfflineBase.OfflineReviewDialogElementHost.ehReviewDialog
+      .HwndSource_AdornerDecorator.AdornerDecorator;
+
+    let SaveButton = AdornerDecorator.Grid.Rectangle;
+    if (SaveButton.Enabled) {
+      SaveButton.Click();
+    } else {
+      status = "Fail";
+      return false;
+    }
+
+    // Step 6: Verify configuration saved successfully
+    aqObject.CheckProperty(
+      AdornerDecorator.Grid.TextblockConfigurationSavedSuccessfully,
+      "WPFControlText",
+      cmpEqual,
+      "Configuration Saved successfully"
+    );
+
+    // Step 7: Close dialog and cleanup
+    let close = AdornerDecorator.Grid2.Grid.Rectangle;
+    close.Click();
+    CloseWindow();
+
+    Log.Checkpoint("✅ OfflineDDCreateConfiguration passed: DD Offline configuration created and saved successfully.");
+  } catch (error) {
+    Log.Error("❌ OfflineDDCreateConfiguration failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("OfflineDDCreateConfiguration " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OfflineCreateConfiguration_2_15849
+// Description:   Creates a DTM Offline Configuration for ROSEMOUNT 644 device.
+// Created On:    19-Aug-2025
+// =====================================================================
+function OfflineDTMCreateConfiguration_2_15849() {
+  Log.AppendFolder("OfflineCreateConfiguration_2_15849");
+
+  try {
+
+    // 📂 Navigate to Offline View
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+
+    // 🗂 Click Offline tab
+    ClickOfflineTab();
+    Log.Message("Offline tab clicked.");
+
+    // ⚙️ Create DTM Offline Configuration
+    let HCMClient = Aliases.HCMClient;
+    let frmHCMClientMain = HCMClient.ClientMainWindow;
+    let treeView = frmHCMClientMain.panelLeftPanMain
+                    .tabControlLeftPanMain.tabPageOfflineView.panelOfflineView
+                    .tabControlOfflineView.tabPageOfflineTemplates.treeView;
+
+    treeView.ClickItemR("|DTM Offline Configurations");
+    treeView.StripPopupMenu.Click("Create Configuration");
+    Log.Message("Initiated DTM Offline Configuration creation.");
+
+    let hostPanel = frmHCMClientMain.MdiClient.DtmForm.panelBase;
+    let DTMTabView = hostPanel.panelForDerivedForms.DTMTabView;
+    let groupBox = DTMTabView.panelOfflineConfig.groupBoxTemplate;
+
+    groupBox.cboVendor.ClickItem("ROSEMOUNT (38)");
+    groupBox.cboDevType.ClickItem("644 V07.01 Ver [1.4.124.3] ");
+    groupBox.buttonOfflineCreate.ClickButton();
+    Log.Message("Device type selected and configuration triggered.");
+
+    // ✅ Validate configuration panel loaded
+    aqObject.CheckProperty(DTMTabView.panelConfiguration.tabControl1.TabPage.panelDtmStartup, "Enabled", cmpEqual, true);
+    Log.Message("DTM Startup panel verified.");
+
+    // ❎ Close configuration window
+    hostPanel.panelFullTop.panelTitle.buttonClose.Click(6, 5);
+    Log.Message("Configuration window closed.");
+
+    // ✅ Confirm overwrite/save prompts
+    let btnYes = HCMClient.dlgFDMConfiguration.btnYes;
+    btnYes.ClickButton();
+    btnYes.ClickButton();
+    Log.Message("Confirmation dialogs handled.");
+
+    // ❌ Cancel Save File dialog via OCR
+    OCR.Recognize(HCMClient.SaveFileDlg.buttonCancel).BlockByText("Cancel").Click();
+    Log.Message("Save File dialog cancelled via OCR.");
+
+  } catch (error) {
+    Log.Error("Error in OfflineCreateConfiguration_2_15849: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OptionForCreatingDisplayFilter15819
+// Description:   Launches the FDM client, navigates to Offline View, and creates Display Filter configuration.
+// Created On:    05-Aug-2025
+// =====================================================================
+function OptionForCreatingDisplayFilter() {
+  Log.AppendFolder("OptionForCreatingDisplayFilter");
+
+  try {
+    // 🔐 Launches the FDM client using predefined credentials
+   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+    Log.Message("FDM Client launched successfully.");
+    
+    // 🌐 Navigates to the Offline View section
+    goToOfflineView();
+    Log.Message("Navigated to Offline View.");
+    
+    OCR.Recognize(Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView).BlockByText("DisplayF*").Click();
+
+    // 🧩 Creates Display Filter configuration
+    CreateDisplayFilterConfiguration();
+    Log.Message("Display Filter configuration created.");
+
+  } catch (error) {
+    Log.Error("Error in DeviceIcons_Create_DisplayFilter: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      LaunchPAVDashboard
+// Description:   Validate to Launch PAV Dashboard
+   
+// =====================================================================
+function LaunchPAVDashboard() {
+  Log.AppendFolder("LaunchPAVDashboard - Validate Launch of Plant Area View Dashboard");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Launch Plant Area View
+    clickOnPlantAreaView();
+    Log.Message("Plant Area View launched successfully.");
+
+    // Step 2: Close Plant Area View
+    closePlantAreaView();
+    Log.Message("Plant Area View closed successfully.");
+
+    Log.Checkpoint("✅ LaunchPAVDashboard passed: PAV Dashboard launched and closed successfully.");
+  } catch (error) {
+    Log.Error("❌ LaunchPAVDashboard failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("LaunchPAVDashboard " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      LaunchAlertMonitoring
+// Description:   Validate to Launch Alert Monitoring Dashboard
+  
+// =====================================================================
+function LaunchAlertMonitoring() {
+  Log.AppendFolder("LaunchAlertMonitoring - Validate Launch of Alert Monitoring Dashboard");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Launch Alert Monitoring Dashboard
+    clickOnAlertMonitoringDashboard();
+    Log.Message("Alert Monitoring Dashboard launched successfully.");
+
+    // Step 2: Close Alert Monitoring View
+    closeAlertMonitorView();
+    Log.Message("Alert Monitoring Dashboard closed successfully.");
+
+    Log.Checkpoint("✅ LaunchAlertMonitoring passed: Alert Monitoring Dashboard launched and closed successfully.");
+  } catch (error) {
+    Log.Error("❌ LaunchAlertMonitoring failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("LaunchAlertMonitoring " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+function Dashboard(){
+  path = Project.Variables.Device
+  let parts = path.split("|").filter(p => p.trim() !== "");
+  let firstName = parts.length > 0 ? parts[0] : "";
+  openDashboardFromTreeItem(firstName)
+}
+
+function DeleteDisplayfilterlist(){
+  
+}
 
 

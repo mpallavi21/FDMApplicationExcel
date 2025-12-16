@@ -1,0 +1,422 @@
+﻿//USEUNIT ClientLoginModule
+//USEUNIT GenericMethods
+//USEUNIT FDMCommonPage
+
+function Test1()
+{
+  Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.Click(189, 905);
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      goToOfflineView
+// Description:   Clicks the "Offline*" tab using OCR (spRightMost alignment).
+// Created On:    05-Aug-2025
+// Modified On:   
+// =====================================================================
+
+function goToOfflineView() {
+  Log.AppendFolder("GoToOfflineView - Click Offline Tab via OCR");
+
+  try {
+    let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain;
+    let ocrResult = OCR.Recognize(tabControl);
+    let offlineBlock = ocrResult.BlockByText("Offline*", spRightMost);
+
+    if (offlineBlock != null) {
+      offlineBlock.Click();
+      Log.Message("Clicked on 'Offline*' tab.");
+    } else {
+      Log.Warning("OCR could not find 'Offline*' tab.");
+    }
+
+  } catch (error) {
+    Log.Error("Error in ClickOnOfflineView: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      ClickOfflineTab
+// Description:   Uses OCR to click the 'Offline*' tab aligned to the leftmost block.
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function ClickOfflineTab() {
+  Log.AppendFolder("ClickOfflineTab - OCR Block Navigation");
+
+  try {
+    let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView;
+
+    let ocrResult = OCR.Recognize(tabControl);
+    let offlineBlock = ocrResult.BlockByText("Offline*", spLeftMost);
+
+    if (offlineBlock != null) {
+      offlineBlock.Click();
+      Log.Message("Clicked on 'Offline*' tab successfully.");
+    } else {
+      Log.Warning("OCR could not locate 'Offline*' tab with spLeftMost alignment.");
+    }
+
+  } catch (error) {
+    Log.Error("Error in ClickOfflineTab: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OpenDDOfflineConfigurations
+// Description:   Navigates to the 'DD Offline Configurations' tree item.
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function OpenDDOfflineConfigurations() {
+  Log.AppendFolder("OpenOfflineConfigurations - TreeView Navigation");
+
+  try {
+    let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView;
+    let treeView = tabControl.tabPageOfflineTemplates.treeView;
+
+    treeView.ClickItem("|DD Offline Configurations");
+    Log.Message("Clicked on 'DD Offline Configurations' successfully.");
+  } catch (error) {
+    Log.Error("Error in OpenOfflineConfigurations: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OpenDTMOfflineConfigurations
+// Description:   Navigates to the 'DTM Offline Configurations' node in the tree view.
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function OpenDTMOfflineConfigurations() {
+  Log.AppendFolder("OpenDTMOfflineConfigurations - TreeView Navigation");
+
+  try {
+    let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView;
+    let treeView = tabControl.tabPageOfflineTemplates.treeView;
+
+    treeView.ClickItem("|DTM Offline Configurations");
+    Log.Message("Clicked on 'DTM Offline Configurations' successfully.");
+  } catch (error) {
+    Log.Error("Error in OpenDTMOfflineConfigurations: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OpenPackageOfflineConfigurations
+// Description:   Navigates to the 'Package Offline Configurations' node in the tree view.
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function OpenPackageOfflineConfigurations() {
+  Log.AppendFolder("OpenPackageOfflineConfigurations - TreeView Navigation");
+
+  try {
+    let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+                      .tabPageOfflineView.panelOfflineView.tabControlOfflineView;
+    let treeView = tabControl.tabPageOfflineTemplates.treeView;
+
+    treeView.ClickItem("|Package Offline Configurations");
+    Log.Message("Clicked on 'Package Offline Configurations' successfully.");
+  } catch (error) {
+    Log.Error("Error in OpenPackageOfflineConfigurations: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function test(){
+    createDDOfflineConfiguration("HART", "3S_24708", "MP100/MP300 Series", "2", "1");
+}
+
+function createDDOfflineConfiguration(protocol, manufacturer, deviceType, deviceRevision, ddRevision)
+{
+  try {
+    // 🧭 Navigate to the Offline Templates tree
+    let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
+    let treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageOfflineTemplates.treeView;
+    treeView.ClickItemR("|DD Offline Configurations");
+    treeView.StripPopupMenu.Click("Create Configuration");
+
+    // 📋 Access the configuration form panel
+    let hostPanel = frmHCMClientMain.MdiClient.HCMOfflineConfigForm.panelBase;
+    let adornerDecorator = hostPanel.panelForDerivedForms.panelOfflineBase.panel1.groupBoxTemplate.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
+
+    // ✅ Validate form fields and select options
+    aqObject.CheckProperty(adornerDecorator.TextblockProtocol, "WPFControlText", cmpEqual, "Protocol");
+    selectComboBoxItemByName(adornerDecorator.ComboboxProtocol, protocol);
+
+    aqObject.CheckProperty(adornerDecorator.TextblockManufacturer, "WPFControlText", cmpEqual, "Manufacturer");
+    selectComboBoxItemByName(adornerDecorator.ComboboxManufacturer, manufacturer);
+
+    aqObject.CheckProperty(adornerDecorator.TextblockDeviceType, "WPFControlText", cmpEqual, "Device Type");
+    selectComboBoxItemByName(adornerDecorator.ComboboxDeviceType, deviceType);
+
+    aqObject.CheckProperty(adornerDecorator.TextblockDeviceRevision, "WPFControlText", cmpEqual, "Device Revision");
+    selectComboBoxItemByName(adornerDecorator.ComboboxDeviceRevision, deviceRevision);
+
+    aqObject.CheckProperty(adornerDecorator.txt_PkgVer, "WPFControlText", cmpEqual, "DD Revision");
+    selectComboBoxItemByName(adornerDecorator.ComboboxDdRevision, ddRevision);
+
+    // 🚀 Submit the configuration
+    adornerDecorator.ButtonCreate.ClickButton();
+
+    // 📎 Confirm status message
+    aqObject.CheckProperty(hostPanel.statusBarDevice, "Text", cmpEqual, "statusBarDevice");
+
+    // 🪵 Log success
+    Log.Message("DD Offline Configuration created successfully with specified parameters.");
+   
+    
+   
+    Log.Message("DD Offline device configuration saved successfully.");
+
+  } catch (error) {
+    // ❌ Log failure with detailed message
+    Log.Error("Failed to create DD Offline Configuration: " + error.message);
+  }
+
+  
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      EnterOfflineDeviceConfigurationDetails
+// Description:   Populates device screen fields, previews and saves configuration, verifies success.
+// Created On:    05-Aug-2025
+// =====================================================================
+
+function EnterOfflineDeviceConfigurationDetails() {
+  Log.AppendFolder("EnterOfflineDeviceConfigurationDetails");
+
+  try {
+    let frmHCMClientMain = Aliases.HCMClient.ClientMainWindow;
+    let hostPanel = frmHCMClientMain.MdiClient.HCMOfflineConfigForm.panelBase;
+    let panel = hostPanel.panelForDerivedForms.panelOfflineBase;
+    let panel2 = panel.groupBoxConfigView.pnlConfiguration;
+
+    let adornerDecorator = panel2.Panel.MagicTabControlEx.TabPage.CDeviceScreen.m_pnlDeviceScreen.ElementHost
+                           .HwndSource_AdornerDecorator.AdornerDecorator;
+
+    // 📝 Enter values into form fields
+    let customTextBox = adornerDecorator.TextBox;
+    customTextBox.Click(83, 16);
+    customTextBox.Keys("FDM");
+
+    customTextBox = adornerDecorator.TextBox2;
+    customTextBox.Click(74, 6);
+    adornerDecorator.ContentControl.Keys("f");
+
+    frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView
+                     .panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.Keys("ie");
+
+    customTextBox.Click(70, 18);
+    customTextBox.Keys("field");
+    
+    // 💾 Trigger Save Preview
+    panel2.ActionControlView.HwndSource_AdornerDecorator.AdornerDecorator.ButtonPreviewSave.ClickButton();
+    
+    Project.Variable.OfflineDDSaveFileName = panel.OfflineReviewDialogElementHost.ehReviewDialog.HwndSource_AdornerDecorator.AdornerDecorator.txtConfigurationName.wText
+    // ✅ Validate Save Confirmation
+    adornerDecorator = panel.OfflineReviewDialogElementHost.ehReviewDialog.HwndSource_AdornerDecorator.AdornerDecorator;
+    let rectangle = adornerDecorator.Rectangle;
+    aqObject.CheckProperty(rectangle, "Enabled", cmpEqual, true);
+    rectangle.Click(12, 22);
+    aqObject.CheckProperty(adornerDecorator.TextblockConfigurationSavedSuccessfully, "WPFControlText", cmpEqual, "Configuration Saved successfully");
+
+    adornerDecorator.Rectangle2.Click(9, 3);
+
+    // ❎ Close dialog
+    hostPanel.panelFullTop.panelTitle.buttonClose.Click(10, 9);
+
+    Log.Message("Offline device configuration entered and saved successfully.");
+
+  } catch (error) {
+    Log.Error("Error in EnterOfflineDeviceConfigurationDetails: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OfflineView_DisplayFilter
+// Description:   Uses OCR to locate and click the "Display*" label in Offline View
+// Created On:    05-Aug-2025
+// =====================================================================
+function OfflineView_DisplayFilter() {
+  Log.AppendFolder("OfflineView_DisplayFilter");
+
+  try {
+    // 🔍 Uses OCR to locate the "Display*" block and performs a click action
+    OCR.Recognize(Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
+      .tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView)
+      .BlockByText("Display*").Click();
+
+    Log.Message("Successfully clicked 'Display*' block using OCR.");
+  } catch (error) {
+    Log.Error("Error in OfflineView_DisplayFilter " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      CreateDisplayFilterConfiguration
+// Description:   Creates a new Display Filter config by selecting device view, moving nodes, and saving.
+// Created On:    05-Aug-2025
+// =====================================================================
+function CreateDisplayFilterConfiguration() {
+  Log.AppendFolder("CreateDisplayFilterConfiguration");
+
+  try {
+    let HCMClient = Aliases.HCMClient;
+    let frmHCMClientMain = HCMClient.ClientMainWindow;
+    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.treeView;
+    treeView.ClickItemR("| Display Filter");
+    Delay(500)
+    treeView.StripPopupMenu.Select("New")
+    treeView.StripPopupMenu.Click(0);
+
+    // 📋 Access display filter form
+    let hostPanel = frmHCMClientMain.MdiClient.DisplayFilterForm.panelBase;
+    let tabControl = hostPanel.panelForDerivedForms.tabControlDevice;
+
+    // 👁‍🗨 Use OCR to click on "DeviceView"
+    OCR.Recognize(tabControl).BlockByText("DeviceView").Click();
+
+    let deviceViewTabPage = tabControl.DeviceViewTabPage;
+    let groupBox = deviceViewTabPage.groupBoxDevices;
+
+    // 📌 Select device and move to target panel
+    groupBox.panel2.treeViewAvaliableDevice.ClickItem("|FDM Server ( DESKTOP-AJ7O5O5 )");
+    groupBox.panel1.buttonMoveSelectedNode.Click(26, 6);
+
+    // 💾 Save configuration
+    deviceViewTabPage.buttonSave.Click(53, 14);
+    
+    let saveFileDlg = Aliases.HCMClient.SaveFileDlg;
+    let textBoxArea = saveFileDlg.textBoxFileName.TextBoxArea;
+    textBoxArea.Click(67, 7);
+    let formattedDate = aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%d%m%Y%H%M%S");
+    textBoxArea.SetText("Display" + formattedDate);
+    saveFileDlg.buttonOK.Click(20, 10);
+  
+    HCMClient.dlgFDMConfiguration.btnOK.ClickButton();
+
+    // ❎ Close configuration dialog
+    hostPanel.panelFullTop.panelTitle.buttonClose.Click(5, 12);
+
+    Log.Message("Display Filter configuration created successfully.");
+
+  } catch (error) {
+    Log.Error("Error in CreateDisplayFilterConfiguration: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+ 
+  
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      CreateOfflineDTMConfig
+// Description:   Automates the creation of an offline DTM configuration in HCMClient.
+// =====================================================================
+function CreateOfflineDTMConfig() {
+  Log.AppendFolder("CreateOfflineDTMConfig - Offline DTM Configuration Workflow");
+
+  let status = "Pass";
+
+  try {
+    let HCMClient = Aliases.HCMClient;
+    let frmHCMClientMain = HCMClient.ClientMainWindow;
+
+    // Step 1: Navigate to DTM Offline Configurations node
+    let treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
+                     .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+                     .tabPageOfflineTemplates.treeView;
+    treeView.ClickItemR("|DTM Offline Configurations");
+    Delay(500)
+    treeView.StripPopupMenu.Click(0);
+    Log.Message("Initiated creation of new DTM configuration.");
+
+    // Step 2: Configure device type and trigger Create button
+    let hostPanel = frmHCMClientMain.MdiClient.DtmForm.panelBase;
+    let groupBox = hostPanel.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate;
+    groupBox.cboDevType.ClickItem("644 V07.01 Ver [1.4.124.3] ");
+    groupBox.buttonOfflineCreate.ClickButton();
+    Log.Message("Device type selected and Create button clicked.");
+
+    // Step 3: Handle Save As dialog using OCR
+    hostPanel.panelFullTop.panelTitle.buttonSaveAs.Click(13, 8);
+    let saveFileDlg = HCMClient.SaveFileDlg;
+    let DtmName = "DTM" + aqDateTime.Now()/1000;
+    Project.Variables.OfflineDTMSavedFileName = DtmName;
+    saveFileDlg.textBoxFileName.TextBoxArea.SetText(DtmName);
+    OCR.Recognize(saveFileDlg.buttonOK).BlockByText("OK").Click();
+    Log.Message("Configuration saved as '" + DtmName + "' via OCR-assisted click.");
+
+    // Step 4: Confirm creation by navigating to the new node
+    treeView.ClickItem(`|DTM Offline Configurations|ROSEMOUNT|644 V07.01 Ver [1.4.124.3]|${DtmName}`);
+    Log.Message("Navigated to the newly created DTM configuration.");
+
+    Log.Checkpoint("✅ CreateOfflineDTMConfig passed: Offline DTM configuration created successfully.");
+  } catch (error) {
+    Log.Error("❌ CreateOfflineDTMConfig failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("CreateOfflineDTMConfig " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      OpenDeviceLibrary
+// Description:   Uses OCR to locate and click the "Device" label in Offline View.
+// =====================================================================
+function OpenDeviceLibrary() {
+  Log.AppendFolder("OpenDeviceLibrary");
+
+  try {
+    let offlineViewPanel = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain
+                            .tabControlLeftPanMain.tabPageOfflineView.panelOfflineView
+                            .tabControlOfflineView;
+
+    let deviceBlock = OCR.Recognize(offlineViewPanel).BlockByText("Device*");
+
+    if (deviceBlock !== null) {
+      deviceBlock.Click();
+      Log.Message('"Device" label clicked successfully using OCR.');
+    } else {
+      Log.Warning('OCR could not locate the "Device" label.');
+    }
+
+  } catch (error) {
+    Log.Error("Error in OpenDeviceLibrary: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}

@@ -2,6 +2,28 @@
 //USEUNIT FDMCommonPage
 
 
+function clickOnSystemAttachDocument() {
+  Log.AppendFolder("clickOnSystemAttachDocument - System Document Attach Flow");
+
+  try {
+  let HCMClient = Aliases.HCMClient;
+  let frmHCMClientMain = HCMClient.ClientMainWindow;
+  OCR.Recognize(frmHCMClientMain.mainMenu).BlockByText("Tools").Click();
+  OCR.Recognize(HCMClient.DropDownForm.SubSmartControl).BlockByText("*Documents*").Click();
+  frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.Keys("[Right][Enter]");
+  } catch (error) {
+    Log.Error("❌ Error in clickOnSystemAttachDocument: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+  
+ 
+}
+
+
+
+
+
 // =====================================================================
 // Author:        Bharath
 // Function:      clickOnAttachApplication
@@ -333,6 +355,14 @@ function DetachDocumentFromResourceDlg() {
   }
 }
 
+function clickOnSystemDetachDocument()
+{
+  let HCMClient = Aliases.HCMClient;
+  let frmHCMClientMain = HCMClient.ClientMainWindow;
+  OCR.Recognize(frmHCMClientMain.mainMenu).BlockByText("Tools").Click();
+  OCR.Recognize(HCMClient.DropDownForm.SubSmartControl).BlockByText("System Documents").Click();
+  frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView.Keys("[Right][Down][Enter]");
+}
 
 
 
@@ -341,10 +371,8 @@ function DetachDocumentFromResourceDlg() {
 // Function:      DetachDocument
 // Description:   Navigates through the Document menu using OCR to detach
 //                a connected Document node from the tree view.
-// Created On:    27-June-2025
-// Modified On:   [Updated with robust waits and checks]
 // =====================================================================
-function DetachSystemDocument() {
+function DetachSystemDocumentInTools() {
   try {
     Log.AppendFolder("DetachDocument - Navigates through the Document menu using OCR to detach\n a connected Document node from the tree view.")
     let HCMClient = Aliases.HCMClient;

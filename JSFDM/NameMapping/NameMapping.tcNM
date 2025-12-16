@@ -4955,6 +4955,21 @@
 									</Property>
 								</Properties>
 							</Child>
+							<Child Name="ContextMenuStrip" Key="{40EAB150-C4F1-45D7-A27D-503741D850DE}">
+								<Image FileName="203877078" Left="0" Top="0" Right="124" Bottom="33" />
+								<TypeInfo Item0="{75F1BD4D-9582-4C59-BBD0-D63B98BA8766}" />
+								<Properties>
+									<Property Name="ClrFullClassName">
+										<Value Value="System.Windows.Forms.ContextMenuStrip" />
+									</Property>
+									<Property Name="WndCaption">
+										<Value Value="" />
+									</Property>
+									<Property Name="Index">
+										<Value Value="1" Type="0" />
+									</Property>
+								</Properties>
+							</Child>
 						</Children>
 					</Child>
 					<Child Name="Dr_FDCM" Key="{9213AF34-6400-4735-869F-55A36DD3E87F}">
@@ -5817,6 +5832,7 @@
 			<Child Name="ToolTipNativeWindow" Owner="{3649DABE-2067-416C-AC5B-E65731076F86}" />
 			<Child Name="ToolTipNativeWindow2" Owner="{8ED4B06C-F13F-4340-BE86-FE582C17FBB2}" />
 			<Child Name="wndHHParent" Owner="{25B1B033-DFE3-40E9-99C3-2FE14A9BE576}" />
+			<Child Name="ContextMenuStrip" Owner="{40EAB150-C4F1-45D7-A27D-503741D850DE}" />
 		</Child>
 		<Child Name="Dr_FDCM" Owner="{9213AF34-6400-4735-869F-55A36DD3E87F}">
 			<Child Name="Form1" Owner="{B0A0D627-A71D-4964-AF1D-EEDA55FFCC51}" />

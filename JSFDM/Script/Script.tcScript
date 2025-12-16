@@ -22,6 +22,8 @@
 			<child name="AttachDetachPages" key="{21B972D0-CAA7-4CD7-BA66-05F559DFB26D}" path="AttachDetachPages.js" />
 			<child name="EntryPointPage" key="{1F411290-DCD5-41BC-9E90-06E2A079BF44}" path="EntryPointPage.js" />
 			<child name="test" key="{83FC6F4F-6807-4F4A-94B3-CACC8859BDAE}" path="test.js" />
+			<child name="offlineViewPage" key="{B93F9BC8-3758-40A8-981B-B32835BBD4F9}" path="offlineViewPage.js" />
+			<child name="DashboardPages" key="{63EBA8B9-12E2-4367-BD39-9B85C4C9A3A6}" path="DashboardPages.js" />
 		</folder>
 		<child name="SMToolFunctionsLibrary" key="{3C2D696C-829E-4F93-A7F4-505DF8C8615B}" path="SMToolFunctionsLibrary.js" />
 		<child name="FDMFunctionsLibrary" key="{11AB687C-AAE7-4852-ACD3-595884B135C8}" path="FDMFunctionsLibrary.js" />

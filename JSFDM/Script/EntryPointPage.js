@@ -134,10 +134,7 @@ function DeviceStateInformation() {
   Log.AppendFolder("DeviceStateInformation");
 
   try {
-    let scrollViewer = Aliases.HCMClient.ClientMainWindow
-      .MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage
-      .CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost
-      .HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
+    let scrollViewer = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
 
     let statusGrid = scrollViewer.Grid;
     let contentControl = statusGrid.WPFObject("ContentControl", "", "2"); // wildcard match
