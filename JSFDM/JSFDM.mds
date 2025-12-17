@@ -14,11 +14,6 @@
 				<environments activeCloud="SWT" />
 				<children />
 			</testItem>
-			<testItem name="Device_Explicit_Lock" key="{0A6B77EE-A788-4E48-8859-E1C1F219A23B}" group="False" parallel="False" enabled="True" load="False" testMoniker="{11AB687C-AAE7-4852-ACD3-595884B135C8}Device_Explicit_Lock" count="1" timeout="0" stopOnError="3" stopOnException="2" description="" tmsData="" testCase="True" lnID="{00000000-0000-0000-0000-000000000000}">
-				<testParameters />
-				<environments activeCloud="SWT" />
-				<children />
-			</testItem>
 		</children>
 	</testItems>
 	<variables key="{2DC873B7-2CBF-41CE-A885-D2CD18100BF2}">
@@ -28,6 +23,9 @@
 					<DefValue />
 				</Variable>
 				<Variable Name="SignOnToggle" Type="String" Local="True">
+					<DefValue />
+				</Variable>
+				<Variable Name="FilterName" Type="String" Local="True">
 					<DefValue />
 				</Variable>
 			</Items>

@@ -9,6 +9,8 @@
 //USEUNIT EntryPointPage
 //USEUNIT offlineViewPage
 //USEUNIT DashboardPages
+//USEUNIT DiagnosticPage
+
 
 
 function launchFDMClientApplication(ServerName, Username, Password) {
@@ -1221,7 +1223,7 @@ function Deivce_ICONS_Create_DD_Offlineconfig15865() {
 // Description:   Launches the FDM client, navigates to Offline View, and creates Display Filter configuration.
 
 // =====================================================================
-function DeviceIconsCreateDisplayFilter() {
+function DeviceIconsCreateDisplayFilter(filterName) {
   Log.AppendFolder("DeviceIconsCreateDisplayFilter - Create Display Filter Workflow");
 
   let status = "Pass";
@@ -1241,7 +1243,7 @@ function DeviceIconsCreateDisplayFilter() {
     ).BlockByText("*Displ*").Click();
 
     // Step 4: Create Display Filter configuration
-    CreateDisplayFilterConfiguration();
+    CreateDisplayFilterConfiguration(filterName);
     Log.Message("Display Filter configuration created.");
 
     Log.Checkpoint("✅ DeviceIconsCreateDisplayFilter passed: Display Filter created successfully.");
@@ -1254,22 +1256,46 @@ function DeviceIconsCreateDisplayFilter() {
   }
 }
 
-function DeleteDisplayfilterlist()
-{  
-  goToOfflineView();
+function DeleteDisplayFilterItem(filterName ) {  
+  Log.AppendFolder("DeleteDisplayfilterlist - Display Filter Deletion Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline View
+    goToOfflineView();
     Log.Message("Navigated to Offline View.");
 
-    // Step 3: Select Display Filter option via OCR
+    // Step 2: Select Display Filter option via OCR
     OCR.Recognize(
       Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
         .tabPageOfflineView.panelOfflineView.tabControlOfflineView
     ).BlockByText("*Displ*").Click();
-  let HCMClient = Aliases.HCMClient;
-  let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.treeView;
-  treeView.ClickItemR("| Display Filter|64409122025105239");
-  treeView.StripPopupMenu.Click("Delete");
-  HCMClient.dlgFDMConfiguration.btnYes.ClickButton();
+
+    // Step 3: Access tree view and delete target filter
+    let HCMClient = Aliases.HCMClient;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+                     .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+                     .tabPageDisplayFilters.treeView;
+    if (filterName != null && filterName != undefined && filterName != "") {
+        itemName = filterName;
+    } else {
+        itemName = Project.Variables.FilterName
+    }
+    treeView.ClickItemR('| Display Filter|' + itemName);
+    treeView.StripPopupMenu.Click("Delete");
+    HCMClient.dlgFDMConfiguration.btnYes.ClickButton();
+
+    Log.Checkpoint("✅ DeleteDisplayfilterlist passed: Display filter deleted successfully.");
+  } catch (error) {
+    Log.Error("❌ DeleteDisplayfilterlist failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DeleteDisplayfilterlist " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
 }
+
 
 
                                           
@@ -1696,6 +1722,153 @@ function Dashboard(){
   let parts = path.split("|").filter(p => p.trim() !== "");
   let firstName = parts.length > 0 ? parts[0] : "";
   openDashboardFromTreeItem(firstName)
+}
+
+
+  
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      DiagnosticModelTabFDMView
+// Description:   Validate Daignostic model Tab in FDM View
+   
+// =====================================================================
+function DiagnosticModelTabFDMView() {
+  Log.AppendFolder("DiagnosticModelTabFDMView - Validate Diagnostic Model Tab in FDM View");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline Diagnostics
+    navigateToOfflineDiagnostics();
+    Log.Message("Navigated to Offline Diagnostics successfully.");
+
+    Log.Checkpoint("✅ DiagnosticModelTabFDMView passed: Diagnostic Model Tab validated successfully.");
+  } catch (error) {
+    Log.Error("❌ DiagnosticModelTabFDMView failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("DiagnosticModelTabFDMView " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      validateCreateDiagnosticModel()
+// Description:   Validate Create Diagnostic model
+   
+// =====================================================================
+function validateCreateDiagnosticModel(treePath, ManufactureName, DeviceType, DeviceRevision, CheckParam) {
+  Log.AppendFolder("validateCreateDiagnosticModel - Validate Create Diagnostic Model Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline Diagnostics
+    navigateToOfflineDiagnostics();
+    Log.Message("Navigated to Offline Diagnostics successfully.");
+
+    // Step 2: Create Diagnostic Model with provided parameters
+    createDiagnosticModel(treePath, ManufactureName, DeviceType, DeviceRevision, CheckParam);
+    Log.Message("Diagnostic Model created successfully with parameters.");
+
+    // Step 3: Close the configuration window
+    CloseWindow();
+    Log.Message("Configuration window closed successfully.");
+
+    Log.Checkpoint("✅ validateCreateDiagnosticModel passed: Diagnostic Model created and validated successfully.");
+  } catch (error) {
+    Log.Error("❌ validateCreateDiagnosticModel failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("validateCreateDiagnosticModel " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+  function validateDeleteDiagnosticModel() {
+  Log.AppendFolder("validateDeleteDiagnosticModel - Diagnostic Model Deletion Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline Diagnostics
+    navigateToOfflineDiagnostics();
+    Log.Message("Navigated to Offline Diagnostics successfully.");
+
+    // Step 2: Access Fault Model tree and delete target diagnostic model
+    let HCMClient = Aliases.HCMClient;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+                     .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+                     .tabPageFaultModel.treeView;
+
+    treeView.ClickItemR("|HART|ABB(26)|KSX(6657)|5|001A1A010502");
+    Log.Message("Right-clicked target diagnostic model node.");
+
+    treeView.StripPopupMenu.Click(" Delete");
+    Log.Message("Selected 'Delete' from context menu.");
+
+    HCMClient.dlgFDMConfiguration.btnOK.ClickButton();
+    Log.Message("Confirmed deletion in dialog.");
+
+    Log.Checkpoint("✅ validateDeleteDiagnosticModel passed: Diagnostic Model deleted successfully.");
+  } catch (error) {
+    Log.Error("❌ validateDeleteDiagnosticModel failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("validateDeleteDiagnosticModel " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      FDMGR4279
+// Description:   verify that offline configuration can be saved for FF devices
+// Created On:    17-07-2025
+// Modified On:   
+// =====================================================================
+function FDMGR4279() {
+  try {
+    Log.AppendFolder("FDMGR4279 - verify that offline configuration can be saved for FF devices")
+   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
+
+    navigateToOfflineDiagnostics();
+    createDiagnosticModel("|FF");
+    CloseWindow()
+
+   // TestedApps.HCMClient.Terminate();
+    Log.Message("Test 'FDMGR4279' executed successfully.");
+  } catch (error) {
+    Log.Error("Test 'FDMGR4279' encountered an error: " + error.message);
+  }
+}
+
+
+function Test1()
+{
+  let HCMClient = Aliases.HCMClient;
+  let adornerDecorator = HCMClient.ClientMainWindow.MdiClient.RightPanBaseFrame.panelBase.panelForDerivedForms.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
+  let comboBox = adornerDecorator.ComboboxManufacturer;
+  comboBox.Click(195, 16);
+  comboBox.ClickItem("Hart");
+  adornerDecorator.ListBox.CheckBox.ClickButton(cbChecked);
+  let dataGrid = adornerDecorator.ParamBits;
+  dataGrid.ClickCell(0, 0);
+  dataGrid.ClickCell(0, 0);
+  dataGrid.combo1.ClickItem("Maintenance Required");
+  adornerDecorator.ButtonAddToSummary.ClickButton();
+  adornerDecorator.ButtonSave.ClickButton();
+  let dlgDiagnosticModel = HCMClient.dlgFDMConfiguration;
+  dlgDiagnosticModel.btnYes.ClickButton();
+  dlgDiagnosticModel.btnOK.ClickButton();
 }
 
 

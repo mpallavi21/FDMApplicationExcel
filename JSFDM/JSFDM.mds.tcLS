@@ -35,6 +35,12 @@
 						</Node>
 						<Prp name="name" type="S" value="SignOnToggle"/>
 					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="44006900730070006C006100790031003600310032003200300032003500310032003400360032003400"/>
+						</Node>
+						<Prp name="name" type="S" value="FilterName"/>
+					</Node>
 				</Node>
 				<Prp name="version" type="I" value="4"/>
 			</Node>

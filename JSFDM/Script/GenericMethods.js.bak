@@ -1,1 +1,217 @@
 ﻿
+// =====================================================================
+// Author:        Bharath
+// Function:      handleFdmConfigurationPopup
+// Description:   Validates FDM Configuration popup, prints its caption, and clicks OK
+// Created On:    17-July-2025
+// Modified On:   
+// =====================================================================
+function handleFdmConfigurationPopup() {
+  Log.AppendFolder("handleFdmConfigurationPopup");
+
+  try {
+    let popup = Aliases.HCMClient.dlgFDMConfiguration;
+
+    if (!popup.Exists) {
+      Log.Message("⚠️ dlgFDMConfiguration popup not present.");
+      return;
+    }
+
+    // Read and log the window caption
+    let captionObject = popup.Window("Static", "*", 1);
+    if (captionObject.Exists) {
+      let captionText = aqString.Trim(captionObject.WndCaption);
+      Log.Message("📝 Popup Caption: " + captionText);
+    } else {
+      Log.Warning("⚠️ Caption object not found.");
+    }
+
+    // Click the OK button
+    let okButton = popup.btnOK;
+    if (okButton.Exists && okButton.Enabled) {
+      okButton.ClickButton();
+      Log.Checkpoint("✅ OK button clicked on FDM Configuration popup.");
+    }
+
+  } catch (error) {
+    Log.Error("❌ Failed to handle FDM Configuration popup: " + error.message);
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+// =====================================================================
+// Function:      selectComboBoxItemByName
+// Description:   Selects an item in a combo box by name
+// =====================================================================
+function selectComboBoxItemByName(comboBoxObj, itemName) {
+  if (comboBoxObj.Exists) {
+    comboBoxObj.ClickItem(itemName);
+    Log.Message("✅ Selected '" + itemName + "' in combo box.");
+  } else {
+    Log.Error("❌ Combo box not found for selecting: " + itemName);
+  }
+}
+
+
+function selectComboBoxItemByNameDD(comboBox, itemName) {
+  Log.AppendFolder(`selectComboBoxItemByName :- comboBox = ${comboBox}  itemName = ${itemName}`)
+  // Expand the ComboBox
+  comboBox.Click();
+  Log.Message("ComboBox clicked to expand.");
+
+  // Wait and get the popup container
+  var popupRoot = Sys.Process("HCMClient").WPFObject("HwndSource: PopupRoot", "").WPFObject("PopupRoot", "", 1);
+  
+  // Get all ComboBoxItem objects
+  var items = popupRoot.FindAllChildren("ClrClassName", "ComboBoxItem", 10);
+  Log.Message("Found " + items.length + " ComboBox items.");
+
+  var itemFound = false;
+
+  // Iterate and find the matching item
+  for (var i = 0; i < items.length; i++) {
+    var textBlock = items[i].FindChild("ClrClassName", "TextBlock", 100,true);
+    var actualText = textBlock ? textBlock.WPFControlText.trim().replace(/\s+/g, '') : "";
+
+    var expectedText = itemName.trim().replace(/\s+/g, '');
+
+    if (actualText === expectedText) {
+      items[i].Click();
+      Log.Message("The item '" + itemName + "' was successfully selected.");
+      itemFound = true;
+      break;
+    }
+  }
+
+  if (!itemFound) {
+    Log.Error("Item '" + itemName + "' not found in the ComboBox.");
+  }
+  
+  Log.PopLogFolder()
+}
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      uploadPackageFile
+// Description:   Opens the 'Add Package File' dialog, navigates to a specified folder,
+//                and uploads the desired type file.
+// Created On:    23-June-2025
+// Modified On:   
+// =====================================================================
+function uploadPackageFile(folderPath, fileName) {
+  try {
+    Log.AppendFolder("uploadDDPackageFile - Opens the 'Add DD Package File' dialog, navigates to a specified folder,\n and uploads the desired type file.")
+    let HCMClient = Aliases.HCMClient;
+
+    let dlgOpen = HCMClient.dlgOpen;
+    let progress = dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress;
+
+    // Navigate to the folder path
+    progress.BreadcrumbParent.toolbar.ClickItem("All locations");
+    progress.comboBox.SetText(folderPath);
+    
+    // Select the desired file to upload
+    dlgOpen.OpenFile(folderPath + "\\" + fileName);
+
+    Log.Message("File '" + fileName + "' uploaded successfully from: " + folderPath);
+  } catch (error) {
+    Log.Error("Failed to upload DD Package file: " + error.message);
+  } finally{
+    Log.PopLogFolder()
+  }
+}
+
+function normalizeMenuText(text) {
+  return text.replace(/&/g, "").trim().toLowerCase();
+}
+
+function test(){
+  CheckIfFileExists("C:\\ProgramData\\Honeywell\\FDM\\Client\\Export\\Device Tags\\DeviceTags_0.XML")
+}
+
+// =====================================================================
+// Author:        Bharath
+// Function:      CheckIfFileExists
+// Description:   Checks whether a specific file exists in Windows Explorer path.
+// Created On:    01-Aug-2025
+// Modified On:   01-Aug-2025
+// =====================================================================
+
+function CheckIfFileExists(filePath) {
+  Log.AppendFolder("CheckIfFileExists");
+
+  try {
+    // Use TestComplete's built-in aqFileSystem to check file existence
+    if (aqFileSystem.Exists(filePath)) {
+      Log.Checkpoint("File exists: " + filePath);
+      return true;
+    } else {
+      Log.Warning("File not found: " + filePath);
+      return false;
+    }
+
+  } catch (error) {
+    Log.Error("Error in CheckIfFileExists: " + error.message);
+    return false;
+
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+function tes1t(){
+
+waitForStatusBarText("Loading online device data for print is performed successfully...")
+  
+
+        
+}
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      waitForStatusBarText
+// Description:   Waits for a specific status text to appear in the status bar within a timeout.
+// Created On:    20-Aug-2025
+// Modified On:   20-Aug-2025
+// =====================================================================
+
+function waitForStatusBarText(ExpectedText, timeout = 80000) {
+  Log.AppendFolder("waitForStatusBarText - Expecting: " + ExpectedText);
+
+  try {
+    // === Step 1: Locate the status bar control ===
+    let statusBarDevice = Aliases.HCMClient.ClientMainWindow.MdiClient
+                           .FindChild("WinFormsControlName", "statusBarDevice", 100);
+
+    let statusItem = statusBarDevice.Items.Item_2(1);  // Assumes second item holds the status text
+
+    let startTime = new Date().getTime();
+
+    // === Step 2: Poll until expected text appears or timeout occurs ===
+    while (true) {
+      let downloadStatus = aqString.Trim(statusItem.Text);
+
+      if (downloadStatus === ExpectedText) {
+        Log.Message("✅ Status matched: " + downloadStatus);
+        break;
+      }
+
+      Delay(500);  // Polling interval
+
+      if (new Date().getTime() - startTime > timeout) {
+        throw new Error("⏳ Timeout: Expected status '" + ExpectedText + "' not found.");
+      }
+    }
+
+  } catch (error) {
+    Log.Error("Error in waitForStatusBarText: " + error.message);
+
+  } finally {
+    Log.PopLogFolder();
+  }
+}

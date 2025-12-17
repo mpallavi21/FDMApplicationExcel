@@ -242,7 +242,10 @@ function main()
                                               OptionsFunction(Parameters[0])
                                             break;
                                         case "DEVICEICONSCREATEDISPLAYFILTER":
-                                              DeviceIconsCreateDisplayFilter()
+                                              DeviceIconsCreateDisplayFilter(Parameters[0])
+                                            break;
+                                        case "DELETEDISPLAYFILTERITEM":
+                                              DeleteDisplayFilterItem(Parameters[0])
                                             break;
                                         case "DEVICEICONSCREATEDTMOFFLINECONFIG":
                                               DeviceICONSCreateDTMOfflineConfig()
@@ -262,7 +265,15 @@ function main()
                                         case "LAUNCHALERTMONITORING":
                                               LaunchAlertMonitoring()
                                             break;
-                                        
+                                        case "DIAGNOSTICMODELTABFDMVIEW":
+                                              DiagnosticModelTabFDMView()
+                                            break;
+                                        case "VALIDATECREATEDIAGNOSTICMODEL":
+                                              validateCreateDiagnosticModel(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4])
+                                            break;
+                                        case "VALIDATEDELETEDIAGNOSTICMODEL":
+                                              validateDeleteDiagnosticModel()
+                                            break;
                                         default:
                                             Delay(2000);
                                             break;

@@ -672,33 +672,6 @@
 																												<Value Value="System.Windows.Controls.ListBox" />
 																											</Property>
 																										</Properties>
-																										<Children>
-																											<Child Name="ListBoxItem" Key="{FFA0B744-8544-4143-99FB-34650E7884F3}" ExtendedFind="True">
-																												<Properties>
-																													<Property Name="ClrFullClassName">
-																														<Value Value="System.Windows.Controls.ListBoxItem" />
-																													</Property>
-																													<Property Name="WPFControlText">
-																														<Value Value="" />
-																													</Property>
-																													<Property Name="WPFControlOrdinalNo">
-																														<Value Value="1" Type="0" />
-																													</Property>
-																												</Properties>
-																												<Children>
-																													<Child Name="CheckBox" Key="{9A665A20-F5E0-4EBC-8EEB-024A0C97A420}" ExtendedFind="True">
-																														<Properties>
-																															<Property Name="ClrFullClassName">
-																																<Value Value="System.Windows.Controls.CheckBox" />
-																															</Property>
-																															<Property Name="WPFControlText">
-																																<Value Value="" />
-																															</Property>
-																														</Properties>
-																													</Child>
-																												</Children>
-																											</Child>
-																										</Children>
 																									</Child>
 																									<Child Name="ParamBits" Key="{694467B2-3A0C-43F8-9876-0FCFC81BCE7B}" ExtendedFind="True">
 																										<Properties>
@@ -706,15 +679,6 @@
 																												<Value Value="ParamBits" />
 																											</Property>
 																										</Properties>
-																										<Children>
-																											<Child Name="combo1" Key="{A64AD27D-94A7-40F3-B5A5-D9FE4AC8DA7F}" ExtendedFind="True">
-																												<Properties>
-																													<Property Name="WPFControlName">
-																														<Value Value="combo1" />
-																													</Property>
-																												</Properties>
-																											</Child>
-																										</Children>
 																									</Child>
 																									<Child Name="ButtonAddToSummary" Key="{591FB011-9C6C-42BE-871C-A4DDD4D81151}" ExtendedFind="True">
 																										<Properties>
@@ -777,27 +741,6 @@
 																										<Value Value="Parameters" />
 																									</Property>
 																								</Properties>
-																								<Children>
-																									<Child Name="ListBox" Key="{05CF7C11-4AC8-447E-8DC0-8D7B7D70EF77}" ExtendedFind="True">
-																										<Properties>
-																											<Property Name="ClrFullClassName">
-																												<Value Value="System.Windows.Controls.ListBox" />
-																											</Property>
-																										</Properties>
-																										<Children>
-																											<Child Name="CheckBox" Key="{8490703C-1C1D-44FF-87F4-4793B35154A4}" ExtendedFind="True">
-																												<Properties>
-																													<Property Name="ClrFullClassName">
-																														<Value Value="System.Windows.Controls.CheckBox" />
-																													</Property>
-																													<Property Name="WPFControlText">
-																														<Value Value="" />
-																													</Property>
-																												</Properties>
-																											</Child>
-																										</Children>
-																									</Child>
-																								</Children>
 																							</Child>
 																							<Child Name="ParamBits" Key="{48982ADC-DC3F-49C6-BB3A-4EE35C06A4E4}" ExtendedFind="True">
 																								<Properties>
@@ -5095,25 +5038,15 @@
 													<Child Name="StackPanel" Owner="{CBAF175B-F09F-44D6-9E76-B5F186FB31A0}" />
 												</Child>
 												<Child Name="ComboboxManufacturer" Owner="{3B390AF3-31F1-4F92-A82E-5F9DAF3472E2}" />
-												<Child Name="ListBox" Owner="{A09865CE-3CB5-4DC2-B80A-B2F3B472A63D}">
-													<Child Name="ListBoxItem" Owner="{FFA0B744-8544-4143-99FB-34650E7884F3}">
-														<Child Name="CheckBox" Owner="{9A665A20-F5E0-4EBC-8EEB-024A0C97A420}" />
-													</Child>
-												</Child>
-												<Child Name="ParamBits" Owner="{694467B2-3A0C-43F8-9876-0FCFC81BCE7B}">
-													<Child Name="combo1" Owner="{A64AD27D-94A7-40F3-B5A5-D9FE4AC8DA7F}" />
-												</Child>
+												<Child Name="ListBox" Owner="{A09865CE-3CB5-4DC2-B80A-B2F3B472A63D}" />
+												<Child Name="ParamBits" Owner="{694467B2-3A0C-43F8-9876-0FCFC81BCE7B}" />
 												<Child Name="ButtonAddToSummary" Owner="{591FB011-9C6C-42BE-871C-A4DDD4D81151}" />
 											</Child>
 											<Child Name="ButtonSave" Owner="{DDDCC22F-C019-4524-97C0-33248A5D5E04}" />
 											<Child Name="ComboboxManufacturer" Owner="{06D0D91B-BAA8-4941-8404-C78DE9177B5F}" />
 											<Child Name="ComboboxDeviceType" Owner="{1C8F6B90-83A0-4F2C-8ACD-738DF1FE29D0}" />
 											<Child Name="ComboboxDeviceRevision" Owner="{93B400DF-07BA-41CA-A7DB-9AF0262D9194}" />
-											<Child Name="GroupboxParameters" Owner="{F88BD2E5-F1AD-443D-AF3B-74514B617158}">
-												<Child Name="ListBox" Owner="{05CF7C11-4AC8-447E-8DC0-8D7B7D70EF77}">
-													<Child Name="CheckBox" Owner="{8490703C-1C1D-44FF-87F4-4793B35154A4}" />
-												</Child>
-											</Child>
+											<Child Name="GroupboxParameters" Owner="{F88BD2E5-F1AD-443D-AF3B-74514B617158}" />
 											<Child Name="ParamBits" Owner="{48982ADC-DC3F-49C6-BB3A-4EE35C06A4E4}" />
 										</Child>
 									</Child>

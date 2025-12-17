@@ -286,24 +286,24 @@ function OfflineView_DisplayFilter() {
 // Description:   Creates a new Display Filter config by selecting device view, moving nodes, and saving.
 // Created On:    05-Aug-2025
 // =====================================================================
-function CreateDisplayFilterConfiguration() {
+function CreateDisplayFilterConfiguration(filterName) {
   Log.AppendFolder("CreateDisplayFilterConfiguration");
 
   try {
     let HCMClient = Aliases.HCMClient;
     let frmHCMClientMain = HCMClient.ClientMainWindow;
-    let treeView = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.treeView;
+    // 🗂 Access treeView and trigger creation
+    let treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
+                    .tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.treeView;
     treeView.ClickItemR("| Display Filter");
-    Delay(500)
-    treeView.StripPopupMenu.Select("New")
-    treeView.StripPopupMenu.Click(0);
+    treeView.StripPopupMenu.Click("New");
 
     // 📋 Access display filter form
     let hostPanel = frmHCMClientMain.MdiClient.DisplayFilterForm.panelBase;
     let tabControl = hostPanel.panelForDerivedForms.tabControlDevice;
 
     // 👁‍🗨 Use OCR to click on "DeviceView"
-    OCR.Recognize(tabControl).BlockByText("DeviceView").Click();
+    OCR.Recognize(tabControl).BlockByText("*Devic*").Click();
 
     let deviceViewTabPage = tabControl.DeviceViewTabPage;
     let groupBox = deviceViewTabPage.groupBoxDevices;
@@ -319,7 +319,14 @@ function CreateDisplayFilterConfiguration() {
     let textBoxArea = saveFileDlg.textBoxFileName.TextBoxArea;
     textBoxArea.Click(67, 7);
     let formattedDate = aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%d%m%Y%H%M%S");
-    textBoxArea.SetText("Display" + formattedDate);
+    if (filterName != null && filterName != undefined && filterName != "") {
+    itemName = filterName;
+    } else {
+        itemName = "Display" + formattedDate;
+    }
+
+    textBoxArea.SetText(itemName);
+    Project.Variables.FilterName =  itemName
     saveFileDlg.buttonOK.Click(20, 10);
   
     HCMClient.dlgFDMConfiguration.btnOK.ClickButton();

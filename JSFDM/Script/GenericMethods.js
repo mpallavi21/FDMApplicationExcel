@@ -73,11 +73,11 @@ function selectComboBoxItemByNameDD(comboBox, itemName) {
   // Iterate and find the matching item
   for (var i = 0; i < items.length; i++) {
     var textBlock = items[i].FindChild("ClrClassName", "TextBlock", 100,true);
-    var actualText = textBlock ? textBlock.WPFControlText.trim().replace(/\s+/g, '') : "";
+    var actualText = textBlock ? textBlock.WPFControlText : "";
 
-    var expectedText = itemName.trim().replace(/\s+/g, '');
+    var expectedText = itemName;
 
-    if (actualText === expectedText) {
+    if (actualText == expectedText) {
       items[i].Click();
       Log.Message("The item '" + itemName + "' was successfully selected.");
       itemFound = true;
