@@ -83,7 +83,7 @@ function createDiagnosticModel(treePath, ManufactureName, DeviceType, DeviceRevi
       let textBlock = listBox.WPFObject("ListBoxItem", "", i+1)
         .WPFObject("StackPanel", "", 1)
         .WPFObject("TextBlock", "*", 1);
-
+      
       let itemText = textBlock.WPFControlText;
 
       if (itemText == CheckParam) {
@@ -94,6 +94,7 @@ function createDiagnosticModel(treePath, ManufactureName, DeviceType, DeviceRevi
         if (checkBox.wState != 1) {
           checkBox.ClickButton(cbChecked);
           Log.Message("Checked parameter: " + CheckParam);
+          break;
         }
       }
     }

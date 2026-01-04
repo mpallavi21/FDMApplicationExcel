@@ -94,5 +94,24 @@ function CloseWindow() {
   }
 }
 
+function test(){
+      clickToolbarItem(2)
+}
 
+  // One-liner description: Iterate toolbar items by count, match name, and click
+
+function clickToolbarItem(expectedIndex) {
+  var toolbar = Aliases.HCMClient.ClientMainWindow.tbarHCM;
+  
+    var item = toolbar.Items.Item_2(expectedIndex);
+    for(var i=0; i<= expectedIndex;i++){
+      Sys.Desktop.Keys("[Right]")
+    }
+    Sys.Desktop.Keys("[Enter]")
+    
+//    item.OnKeyPress("Enter");
+//    Log.Message("Clicked toolbar item:  at index " + expectedIndex);
+//    
+    
+}
 

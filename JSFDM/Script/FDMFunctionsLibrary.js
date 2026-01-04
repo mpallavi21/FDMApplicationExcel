@@ -10,7 +10,7 @@
 //USEUNIT offlineViewPage
 //USEUNIT DashboardPages
 //USEUNIT DiagnosticPage
-
+//USEUNIT ImportAndExportPages
 
 
 function launchFDMClientApplication(ServerName, Username, Password) {
@@ -1791,7 +1791,7 @@ function validateCreateDiagnosticModel(treePath, ManufactureName, DeviceType, De
   }
 }
 
-  function validateDeleteDiagnosticModel() {
+  function validateDeleteDiagnosticModelHART() {
   Log.AppendFolder("validateDeleteDiagnosticModel - Diagnostic Model Deletion Workflow");
 
   let status = "Pass";
@@ -1826,6 +1826,41 @@ function validateCreateDiagnosticModel(treePath, ManufactureName, DeviceType, De
   }
 }
 
+function validateDeleteDiagnosticModelFF() {
+  Log.AppendFolder("validateDeleteDiagnosticModel - Diagnostic Model Deletion Workflow");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Navigate to Offline Diagnostics
+    navigateToOfflineDiagnostics();
+    Log.Message("Navigated to Offline Diagnostics successfully.");
+
+    // Step 2: Access Fault Model tree and delete target diagnostic model
+    let HCMClient = Aliases.HCMClient;
+    let treeView = HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+                     .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+                     .tabPageFaultModel.treeView;
+
+    treeView.ClickItemR("|FF|Fuji Electric(777)|FFX-T series(3)|1|00030900030102");
+    Log.Message("Right-clicked target diagnostic model node.");
+
+    treeView.StripPopupMenu.Click(" Delete");
+    Log.Message("Selected 'Delete' from context menu.");
+
+    HCMClient.dlgFDMConfiguration.btnOK.ClickButton();
+    Log.Message("Confirmed deletion in dialog.");
+
+    Log.Checkpoint("✅ validateDeleteDiagnosticModel passed: Diagnostic Model deleted successfully.");
+  } catch (error) {
+    Log.Error("❌ validateDeleteDiagnosticModel failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("validateDeleteDiagnosticModel " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+
+}
 
 
 // =====================================================================
@@ -1870,6 +1905,92 @@ function Test1()
   dlgDiagnosticModel.btnYes.ClickButton();
   dlgDiagnosticModel.btnOK.ClickButton();
 }
+
+
+
+// =====================================================================
+// Author:        Bharath
+// Function:      ExportAndImportDeviceTags
+// Description:   Performs export and import of Device Tags using static values.
+// Created On:    01-Aug-2025
+// Modified On:   01-Aug-2025
+// =====================================================================
+
+function ExportAndImportDeviceTags() {
+  Log.AppendFolder("ExportAndImportDeviceTags");
+
+  try {
+    // === Export Section ===
+    ClickItemImportAndExport();
+    ClickExportDataButton();
+    ClickItemInTabList("Device Tags");
+    ClickNextIfEnabled();
+    FilterDeviceTags();
+    ClickNextIfEnabled();
+    SelectAvailableDeviceTag("644Temp");
+    ClickNextIfEnabled();
+    SelectFileFormat("xml");
+
+    let filePath = GetFilePathFromTextbox();
+
+    ClickNextIfEnabled();
+    WaitForCompletion();
+    ClickNextIfEnabled();
+    ClickCancelButton(); // Finish Export
+    CheckIfFileExists(filePath);
+
+    // === Import Section ===
+    ClickItemImportAndExport();
+    ClickImportDataButton();
+    ClickItemInTabList("Device Tags");
+    ClickNextIfEnabled();
+    SetSelectFilePath(filePath);
+    ClickNextIfEnabled();
+    WaitForCompletion();
+    ClickNextIfEnabled();
+    ClickCancelButton(); // Finish Import
+
+  } catch (error) {
+    Log.Error("ExportAndImportDeviceTags failed: " + error.message);
+
+  } finally {
+    Log.PopLogFolder();
+  }
+}
+
+
+
+function ExportAndImportAuditTrail(){
+  ClickItemImportAndExport();
+    ClickExportDataButton();
+    ClickItemInTabList("Audit Trail");
+    ClickNextIfEnabled();
+    FilterDeviceTags();
+    ClickNextIfEnabled();
+    ConfigureAuditTrailExport();
+    ClickNextIfEnabled();
+    SelectFileFormat("xml");
+
+    let filePath = GetFilePathFromTextbox();
+    ClickNextIfEnabled();
+    WaitForCompletion();
+    ClickNextIfEnabled();
+    ClickCancelButton(); // Finish Export
+    CheckIfFileExists(filePath);
+    
+    // === Import Section ===
+    ClickItemImportAndExport();
+    ClickImportDataButton();
+    ClickItemInTabList("Audit Trail");
+    ClickNextIfEnabled();
+    SetSelectFilePath(filePath);
+    ClickNextIfEnabled();
+    WaitForCompletion();
+    ClickNextIfEnabled();
+    ClickCancelButton(); // Finish Import
+}
+
+
 
 
 

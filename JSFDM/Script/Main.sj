@@ -271,8 +271,11 @@ function main()
                                         case "VALIDATECREATEDIAGNOSTICMODEL":
                                               validateCreateDiagnosticModel(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4])
                                             break;
-                                        case "VALIDATEDELETEDIAGNOSTICMODEL":
-                                              validateDeleteDiagnosticModel()
+                                        case "VALIDATEDELETEDIAGNOSTICMODELHART":
+                                              validateDeleteDiagnosticModelHART()
+                                            break;
+                                        case "VALIDATEDELETEDIAGNOSTICMODELFF":
+                                              validateDeleteDiagnosticModelFF()
                                             break;
                                         default:
                                             Delay(2000);
