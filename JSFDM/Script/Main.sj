@@ -277,6 +277,15 @@ function main()
                                         case "VALIDATEDELETEDIAGNOSTICMODELFF":
                                               validateDeleteDiagnosticModelFF()
                                             break;
+                                        case "VERIFYOFFLINECONFIGURATIONSAVEFORFFDEVICES":
+                                              verifyOfflineConfigurationSaveForFFDevices()
+                                            break;
+                                        case "EXPORTANDIMPORTDEVICETAGS":
+                                              ExportAndImportDeviceTags()
+                                            break;
+                                        case "EXPORTANDIMPORTAUDITTRAIL":
+                                              ExportAndImportAuditTrail()
+                                            break;
                                         default:
                                             Delay(2000);
                                             break;

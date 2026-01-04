@@ -42,8 +42,10 @@ function clickOnConfirmFDMButton() {
 
     // Capture dialog caption for traceability
     let WndCaption = Aliases.HCMClient.dlgFDMConfiguration.Static.WndCaption;
-    Log.Message("Confirmation dialog caption: " + WndCaption);
-
+    if(WndCaption.Exists) {
+      Log.Message("Confirmation dialog caption: " + WndCaption);
+    }
+    
     // Handle 'Yes' button
     let yesButton = Aliases.HCMClient.dlgFDMConfiguration.btnYes;
     if (yesButton.Exists) {
@@ -92,5 +94,19 @@ function CloseWindow() {
   }
 }
 
+function test(){
+      clickToolbarItem(2)
+}
 
+  // One-liner description: Iterate toolbar items by count, match name, and click
+
+function clickToolbarItem(expectedIndex) {
+  var toolbar = Aliases.HCMClient.ClientMainWindow.tbarHCM;
+  Log.Message(toolbar.Items.get_Item_2(0))
+//    var item = toolbar.Items.Item_2(expectedIndex);
+//    item.OnKeyPress("Enter");
+//    Log.Message("Clicked toolbar item:  at index " + expectedIndex);
+//    
+    
+}
 

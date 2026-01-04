@@ -1867,22 +1867,33 @@ function validateDeleteDiagnosticModelFF() {
 // Author:        Bharath
 // Function:      FDMGR4279
 // Description:   verify that offline configuration can be saved for FF devices
-// Created On:    17-07-2025
-// Modified On:   
+   
 // =====================================================================
-function FDMGR4279() {
+function verifyOfflineConfigurationSaveForFFDevices() {
+  Log.AppendFolder("verifyOfflineConfigurationSaveForFFDevices - Verify Offline Configuration Save for FF Devices");
+
+  let status = "Pass";
+
   try {
-    Log.AppendFolder("FDMGR4279 - verify that offline configuration can be saved for FF devices")
-   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-
+    // Step 1: Navigate to Offline Diagnostics
     navigateToOfflineDiagnostics();
-    createDiagnosticModel("|FF");
-    CloseWindow()
+    Log.Message("Navigated to Offline Diagnostics successfully.");
 
-   // TestedApps.HCMClient.Terminate();
-    Log.Message("Test 'FDMGR4279' executed successfully.");
+    // Step 2: Create Diagnostic Model for FF devices
+    createDiagnosticModel("|FF");
+    Log.Message("Diagnostic Model created for FF devices.");
+
+    // Step 3: Close configuration window
+    CloseWindow();
+    Log.Message("Configuration window closed successfully.");
+
+    Log.Checkpoint("✅ verifyOfflineConfigurationSaveForFFDevices passed: Offline configuration saved successfully for FF devices.");
   } catch (error) {
-    Log.Error("Test 'FDMGR4279' encountered an error: " + error.message);
+    Log.Error("❌ verifyOfflineConfigurationSaveForFFDevices failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("verifyOfflineConfigurationSaveForFFDevices " + status, status, "Pass");
+    Log.PopLogFolder();
   }
 }
 
@@ -1912,12 +1923,12 @@ function Test1()
 // Author:        Bharath
 // Function:      ExportAndImportDeviceTags
 // Description:   Performs export and import of Device Tags using static values.
-// Created On:    01-Aug-2025
-// Modified On:   01-Aug-2025
 // =====================================================================
 
 function ExportAndImportDeviceTags() {
-  Log.AppendFolder("ExportAndImportDeviceTags");
+  Log.AppendFolder("ExportAndImportDeviceTags - Workflow for Exporting and Importing Device Tags");
+
+  let status = "Pass";
 
   try {
     // === Export Section ===
@@ -1932,12 +1943,14 @@ function ExportAndImportDeviceTags() {
     SelectFileFormat("xml");
 
     let filePath = GetFilePathFromTextbox();
+    Log.Message("Export file path captured: " + filePath);
 
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Export
     CheckIfFileExists(filePath);
+    Log.Message("Export completed and file verified.");
 
     // === Import Section ===
     ClickItemImportAndExport();
@@ -1945,23 +1958,34 @@ function ExportAndImportDeviceTags() {
     ClickItemInTabList("Device Tags");
     ClickNextIfEnabled();
     SetSelectFilePath(filePath);
+    Log.Message("Import file path set: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Import
+    Log.Message("Import completed successfully.");
 
+    Log.Checkpoint("✅ ExportAndImportDeviceTags passed: Device Tags exported and imported successfully.");
   } catch (error) {
-    Log.Error("ExportAndImportDeviceTags failed: " + error.message);
-
+    Log.Error("❌ ExportAndImportDeviceTags failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("ExportAndImportDeviceTags " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
 
 
 
-function ExportAndImportAuditTrail(){
-  ClickItemImportAndExport();
+function ExportAndImportAuditTrail() {
+  Log.AppendFolder("ExportAndImportAuditTrail - Workflow for Exporting and Importing Audit Trail");
+
+  let status = "Pass";
+
+  try {
+    // === Export Section ===
+    ClickItemImportAndExport();
     ClickExportDataButton();
     ClickItemInTabList("Audit Trail");
     ClickNextIfEnabled();
@@ -1972,23 +1996,39 @@ function ExportAndImportAuditTrail(){
     SelectFileFormat("xml");
 
     let filePath = GetFilePathFromTextbox();
+    Log.Message("Export file path captured: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Export
     CheckIfFileExists(filePath);
-    
+    Log.Message("Audit Trail export completed and file verified.");
+
     // === Import Section ===
     ClickItemImportAndExport();
     ClickImportDataButton();
     ClickItemInTabList("Audit Trail");
     ClickNextIfEnabled();
     SetSelectFilePath(filePath);
+    Log.Message("Import file path set: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Import
+    Log.Message("Audit Trail import completed successfully.");
+
+    Log.Checkpoint("✅ ExportAndImportAuditTrail passed: Audit Trail exported and imported successfully.");
+  } catch (error) {
+    Log.Error("❌ ExportAndImportAuditTrail failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("ExportAndImportAuditTrail " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
 }
+
 
 
 
