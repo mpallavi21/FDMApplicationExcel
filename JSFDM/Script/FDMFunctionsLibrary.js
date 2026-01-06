@@ -991,7 +991,7 @@ function DetachDeviceDocumentation(DeviceName) {
 
 
 
-function ActivateDevice(Device) {
+function LoadDevice(Device) {
   Log.AppendFolder("ActivateDevice");
 
   let status = "Pass";
@@ -2029,7 +2029,10 @@ function ExportAndImportAuditTrail() {
   }
 }
 
-
+function auditTrailViaMenuTab()
+{
+  
+}
 
 
 
