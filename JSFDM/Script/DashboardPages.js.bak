@@ -1,5 +1,5 @@
 ﻿//USEUNIT FDMCommonPage
-
+//USEUNIT STDLib
 // =====================================================================
 // Author:        Bharath
 // Function:      clickOnPlantAreaView
@@ -51,9 +51,8 @@ function closePlantAreaView() {
       shellWindow.Activate()
       window = shellWindow
       if (window.Exists && window.VisibleOnScreen) { 
-          window.WindowButtonCommands.set_Close() 
-          window.WindowButtonCommands.Click(139, 35);
-        } else {
+        Aliases.HCMClient.PlantAreaViewWindow.Shell.WindowButtonCommands.Click(140, 40)   
+       } else {
           Log.Error("Window is not ready for interaction.");
         }
 
@@ -64,6 +63,7 @@ function closePlantAreaView() {
   } catch (error) {
     Log.Error("Failed to close 'Plant Area View': " + error.message);
   }
+
 }
 
 

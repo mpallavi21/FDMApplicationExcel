@@ -1,4 +1,5 @@
-﻿
+﻿//USEUNIT STDLib
+
 // =====================================================================
 // Author:        Bharath
 // Function:      closeWindowPage
@@ -88,8 +89,11 @@ function CloseWindow() {
     }
 
   } catch (e) {
+    
     Log.Error("Exception in test(): " + e.message);
-  } finally {
+    
+  } finally {   
+    
     Log.PopLogFolder();
   }
 }

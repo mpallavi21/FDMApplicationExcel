@@ -451,6 +451,218 @@
 																															</Child>
 																														</Children>
 																													</Child>
+																													<Child Name="zAdvanced_Configuration_" Key="{7959350E-61A3-4234-97AB-B0CE0AD37B45}">
+																														<Image FileName="-323936045" Left="300" Top="132" Right="1918" Bottom="842" />
+																														<Properties>
+																															<Property Name="WinFormsControlName">
+																																<Value Value=" Advanced Configuration " />
+																															</Property>
+																														</Properties>
+																														<Children>
+																															<Child Name="ElementHost" Key="{BAFA6304-D0A6-4191-A6D9-DDC66435C50F}">
+																																<Image FileName="-323936045" Left="300" Top="132" Right="1918" Bottom="842" />
+																																<Properties>
+																																	<Property Name="ClrFullClassName">
+																																		<Value Value="System.Windows.Forms.Integration.ElementHost" />
+																																	</Property>
+																																	<Property Name="WndCaption">
+																																		<Value Value="" />
+																																	</Property>
+																																</Properties>
+																																<Children>
+																																	<Child Name="HwndSource_AdornerDecorator" Key="{378388D6-7159-4E36-8B97-313F30716B55}">
+																																		<Image FileName="-323936045" Left="300" Top="132" Right="1918" Bottom="842" />
+																																		<Properties>
+																																			<Property Name="RootVisual.ClrClassName">
+																																				<Value Value="AdornerDecorator" />
+																																			</Property>
+																																			<Property Name="WndCaption">
+																																				<Value Value="" />
+																																			</Property>
+																																		</Properties>
+																																		<Children>
+																																			<Child Name="AdornerDecorator" Key="{D4CF5BF8-445A-4547-8E5A-268ABFEE6062}">
+																																				<Image FileName="-323936045" Left="300" Top="132" Right="1919" Bottom="843" />
+																																				<Properties>
+																																					<Property Name="ClrFullClassName">
+																																						<Value Value="System.Windows.Documents.AdornerDecorator" />
+																																					</Property>
+																																				</Properties>
+																																				<Children>
+																																					<Child Name="Control" Key="{68FDE837-6A26-459D-8071-19B631237C46}" ExtendedFind="True">
+																																						<Image FileName="-323936045" Left="638" Top="177" Right="1899" Bottom="766" />
+																																						<Properties>
+																																							<Property Name="WPFControlName">
+																																								<Value Value="Control" />
+																																							</Property>
+																																						</Properties>
+																																						<Children>
+																																							<Child Name="TableItemView" Key="{7AB2E8B8-DAEA-45C5-AF36-CAE3B0966783}" ExtendedFind="True">
+																																								<Image FileName="-1478350723" Left="640" Top="203" Right="1897" Bottom="231" />
+																																								<Properties>
+																																									<Property Name="ClrFullClassName">
+																																										<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																									</Property>
+																																									<Property Name="WPFControlText">
+																																										<Value Value="" />
+																																									</Property>
+																																								</Properties>
+																																								<Children>
+																																									<Child Name="Expander" Key="{F81E556B-8AF3-4953-841B-ADFFA7FB7AF3}" ExtendedFind="True">
+																																										<Image FileName="1152476656" Left="647" Top="206" Right="668" Bottom="227" />
+																																										<TypeInfo Item0="{67F3C0E8-EF4A-4F14-BAA5-EE0A790327D9}" />
+																																										<Properties>
+																																											<Property Name="WPFControlName">
+																																												<Value Value="Expander" />
+																																											</Property>
+																																										</Properties>
+																																									</Child>
+																																									<Child Name="TableItemView" Key="{E1FFDB58-28A4-4371-999B-939079D71C20}" ExtendedFind="True">
+																																										<Image FileName="-1126991667" Left="640" Top="312" Right="1897" Bottom="340" />
+																																										<Properties>
+																																											<Property Name="ClrFullClassName">
+																																												<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																											</Property>
+																																											<Property Name="WPFControlText">
+																																												<Value Value="" />
+																																											</Property>
+																																											<Property Name="WPFControlOrdinalNo">
+																																												<Value Value="4" Type="0" />
+																																											</Property>
+																																										</Properties>
+																																										<Children>
+																																											<Child Name="CustomTextBox" Key="{49F4F2C2-E960-47A5-BFA2-B5E349E138CF}" ExtendedFind="True">
+																																												<Image FileName="-493395838" Left="1045" Top="312" Right="1271" Bottom="344" />
+																																												<Properties>
+																																													<Property Name="WPFControlAutomationId">
+																																														<Value Value="Value" />
+																																													</Property>
+																																												</Properties>
+																																											</Child>
+																																										</Children>
+																																									</Child>
+																																									<Child Name="TableItemView2" Key="{E6DFCB58-1261-42F9-B03D-E7E69151C84D}" ExtendedFind="True">
+																																										<Image FileName="-1320553911" Left="640" Top="344" Right="1897" Bottom="373" />
+																																										<Properties>
+																																											<Property Name="ClrFullClassName">
+																																												<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																											</Property>
+																																											<Property Name="WPFControlText">
+																																												<Value Value="" />
+																																											</Property>
+																																											<Property Name="WPFControlOrdinalNo">
+																																												<Value Value="5" Type="0" />
+																																											</Property>
+																																										</Properties>
+																																										<Children>
+																																											<Child Name="CustomTextBox" Key="{AF799871-9889-497C-A8B6-1D830D8C1D60}" ExtendedFind="True">
+																																												<Image FileName="1956101723" Left="1045" Top="339" Right="1271" Bottom="371" />
+																																												<Properties>
+																																													<Property Name="WPFControlAutomationId">
+																																														<Value Value="Value" />
+																																													</Property>
+																																												</Properties>
+																																											</Child>
+																																										</Children>
+																																									</Child>
+																																									<Child Name="TableItemView3" Key="{1E8BBE11-8AA3-4058-A7EB-D68A3ABA7F4A}" ExtendedFind="True">
+																																										<Image FileName="400451776" Left="640" Top="230" Right="1897" Bottom="258" />
+																																										<Properties>
+																																											<Property Name="ClrFullClassName">
+																																												<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																											</Property>
+																																											<Property Name="WPFControlText">
+																																												<Value Value="" />
+																																											</Property>
+																																											<Property Name="WPFControlOrdinalNo">
+																																												<Value Value="1" Type="0" />
+																																											</Property>
+																																										</Properties>
+																																										<Children>
+																																											<Child Name="Expander" Key="{3CF20A1E-FF37-4FFA-929F-57D8BB17883A}" ExtendedFind="True">
+																																												<Image FileName="400451776" Left="671" Top="233" Right="692" Bottom="254" />
+																																												<TypeInfo Item0="{67F3C0E8-EF4A-4F14-BAA5-EE0A790327D9}" />
+																																												<Properties>
+																																													<Property Name="WPFControlName">
+																																														<Value Value="Expander" />
+																																													</Property>
+																																												</Properties>
+																																											</Child>
+																																											<Child Name="TableItemView" Key="{A1241E3C-2F44-4361-A414-3AF460310B3F}" ExtendedFind="True">
+																																												<Image FileName="591739477" Left="640" Top="312" Right="1897" Bottom="340" />
+																																												<Properties>
+																																													<Property Name="ClrFullClassName">
+																																														<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																													</Property>
+																																													<Property Name="WPFControlText">
+																																														<Value Value="" />
+																																													</Property>
+																																													<Property Name="WPFControlOrdinalNo">
+																																														<Value Value="3" Type="0" />
+																																													</Property>
+																																												</Properties>
+																																												<Children>
+																																													<Child Name="Expander" Key="{3FFB914E-7459-4604-9C51-E05737B54D7A}" ExtendedFind="True">
+																																														<Image FileName="591739477" Left="695" Top="315" Right="716" Bottom="336" />
+																																														<TypeInfo Item0="{67F3C0E8-EF4A-4F14-BAA5-EE0A790327D9}" />
+																																														<Properties>
+																																															<Property Name="WPFControlName">
+																																																<Value Value="Expander" />
+																																															</Property>
+																																														</Properties>
+																																													</Child>
+																																													<Child Name="TableItemView" Key="{FFAF1628-54F4-48A1-A059-A94F79395167}" ExtendedFind="True">
+																																														<Image FileName="-199702127" Left="640" Top="339" Right="1897" Bottom="367" />
+																																														<Properties>
+																																															<Property Name="ClrFullClassName">
+																																																<Value Value="Fdi.Ui.View.LayoutViews.Table.TableItemView" />
+																																															</Property>
+																																															<Property Name="WPFControlText">
+																																																<Value Value="" />
+																																															</Property>
+																																															<Property Name="WPFControlOrdinalNo">
+																																																<Value Value="1" Type="0" />
+																																															</Property>
+																																														</Properties>
+																																														<Children>
+																																															<Child Name="CustomTextBox" Key="{E0A758C2-7307-478E-A558-5E64435A7A8B}" ExtendedFind="True">
+																																																<Image FileName="-545774789" Left="1045" Top="339" Right="1271" Bottom="371" />
+																																																<Properties>
+																																																	<Property Name="WPFControlAutomationId">
+																																																		<Value Value="Value" />
+																																																	</Property>
+																																																</Properties>
+																																															</Child>
+																																														</Children>
+																																													</Child>
+																																												</Children>
+																																											</Child>
+																																										</Children>
+																																									</Child>
+																																								</Children>
+																																							</Child>
+																																						</Children>
+																																					</Child>
+																																					<Child Name="ButtonReviewSend" Key="{5AD56511-6AE8-4925-908A-34DC09EA31C0}" ExtendedFind="True">
+																																						<Image FileName="-2116230265" Left="1573" Top="790" Right="1761" Bottom="831" />
+																																						<TypeInfo Item0="{0448BA9B-FA0C-41DE-B4E3-283326B81FB0}" />
+																																						<Properties>
+																																							<Property Name="ClrFullClassName">
+																																								<Value Value="System.Windows.Controls.Button" />
+																																							</Property>
+																																							<Property Name="WPFControlText">
+																																								<Value Value="REVIEW &amp; SEND" />
+																																							</Property>
+																																						</Properties>
+																																					</Child>
+																																				</Children>
+																																			</Child>
+																																		</Children>
+																																	</Child>
+																																</Children>
+																															</Child>
+																														</Children>
+																													</Child>
 																												</Children>
 																											</Child>
 																										</Children>
@@ -938,6 +1150,23 @@
 																																								<Value Value="" />
 																																							</Property>
 																																						</Properties>
+																																						<Children>
+																																							<Child Name="ContentControl" Key="{DD9C0A2D-56F7-4C50-A002-3794F27D200A}" ExtendedFind="True">
+																																								<Image FileName="-1694747411" Left="1529" Top="452" Right="1905" Bottom="718" />
+																																								<TypeInfo Item0="{67F3C0E8-EF4A-4F14-BAA5-EE0A790327D9}" />
+																																								<Properties>
+																																									<Property Name="ClrFullClassName">
+																																										<Value Value="System.Windows.Controls.ContentControl" />
+																																									</Property>
+																																									<Property Name="WPFControlText">
+																																										<Value Value="" />
+																																									</Property>
+																																									<Property Name="WPFControlOrdinalNo">
+																																										<Value Value="3" Type="0" />
+																																									</Property>
+																																								</Properties>
+																																							</Child>
+																																						</Children>
 																																					</Child>
 																																				</Children>
 																																			</Child>
@@ -1075,6 +1304,45 @@
 																										<Value Value="datagridAuditTrail" />
 																									</Property>
 																								</Properties>
+																							</Child>
+																						</Children>
+																					</Child>
+																				</Children>
+																			</Child>
+																			<Child Name="panel1" Key="{C719B109-7DBF-4661-871D-9E1E68CEC496}">
+																				<Image FileName="1118712100" Left="301" Top="774" Right="1917" Bottom="841" />
+																				<Properties>
+																					<Property Name="WinFormsControlName">
+																						<Value Value="panel1" />
+																					</Property>
+																				</Properties>
+																				<Children>
+																					<Child Name="panel6" Key="{7FE55F97-4312-47CC-9F8C-D9B190E146D7}">
+																						<Image FileName="1118712100" Left="1679" Top="774" Right="1917" Bottom="841" />
+																						<Properties>
+																							<Property Name="WinFormsControlName">
+																								<Value Value="panel6" />
+																							</Property>
+																						</Properties>
+																						<Children>
+																							<Child Name="panel9" Key="{47300B66-1A24-47AD-9F8E-F0C331877F70}">
+																								<Image FileName="1118712100" Left="1679" Top="787" Right="1917" Bottom="811" />
+																								<Properties>
+																									<Property Name="WinFormsControlName">
+																										<Value Value="panel9" />
+																									</Property>
+																								</Properties>
+																								<Children>
+																									<Child Name="button5" Key="{D733F082-075B-42E2-B045-9A9D1EEBAE9F}">
+																										<Image FileName="1118712100" Left="1839" Top="787" Right="1914" Bottom="811" />
+																										<TypeInfo Item0="{162140E9-B64B-4019-9A2D-BEC7F3880A4C}" />
+																										<Properties>
+																											<Property Name="WinFormsControlName">
+																												<Value Value="button5" />
+																											</Property>
+																										</Properties>
+																									</Child>
+																								</Children>
 																							</Child>
 																						</Children>
 																					</Child>
@@ -3620,6 +3888,18 @@
 															</Child>
 														</Children>
 													</Child>
+													<Child Name="ProgressView" Key="{87ABB659-74D2-40B6-8958-B6BFADF182BD}" ExtendedFind="True">
+														<Image FileName="1970153574" Left="281" Top="281" Right="719" Bottom="469" />
+														<TypeInfo Item0="{67F3C0E8-EF4A-4F14-BAA5-EE0A790327D9}" />
+														<Properties>
+															<Property Name="ClrFullClassName">
+																<Value Value="Fdi.UIEngine.View.ProgressView" />
+															</Property>
+															<Property Name="WPFControlText">
+																<Value Value="" />
+															</Property>
+														</Properties>
+													</Child>
 												</Children>
 											</Child>
 										</Children>
@@ -5000,6 +5280,35 @@
 																</Child>
 															</Child>
 														</Child>
+														<Child Name="zAdvanced_Configuration_" Owner="{7959350E-61A3-4234-97AB-B0CE0AD37B45}">
+															<Child Name="ElementHost" Owner="{BAFA6304-D0A6-4191-A6D9-DDC66435C50F}">
+																<Child Name="HwndSource_AdornerDecorator" Owner="{378388D6-7159-4E36-8B97-313F30716B55}">
+																	<Child Name="AdornerDecorator" Owner="{D4CF5BF8-445A-4547-8E5A-268ABFEE6062}">
+																		<Child Name="Control" Owner="{68FDE837-6A26-459D-8071-19B631237C46}">
+																			<Child Name="TableItemView" Owner="{7AB2E8B8-DAEA-45C5-AF36-CAE3B0966783}">
+																				<Child Name="Expander" Owner="{F81E556B-8AF3-4953-841B-ADFFA7FB7AF3}" />
+																				<Child Name="TableItemView" Owner="{E1FFDB58-28A4-4371-999B-939079D71C20}">
+																					<Child Name="CustomTextBox" Owner="{49F4F2C2-E960-47A5-BFA2-B5E349E138CF}" />
+																				</Child>
+																				<Child Name="TableItemView2" Owner="{E6DFCB58-1261-42F9-B03D-E7E69151C84D}">
+																					<Child Name="CustomTextBox" Owner="{AF799871-9889-497C-A8B6-1D830D8C1D60}" />
+																				</Child>
+																				<Child Name="TableItemView3" Owner="{1E8BBE11-8AA3-4058-A7EB-D68A3ABA7F4A}">
+																					<Child Name="Expander" Owner="{3CF20A1E-FF37-4FFA-929F-57D8BB17883A}" />
+																					<Child Name="TableItemView" Owner="{A1241E3C-2F44-4361-A414-3AF460310B3F}">
+																						<Child Name="Expander" Owner="{3FFB914E-7459-4604-9C51-E05737B54D7A}" />
+																						<Child Name="TableItemView" Owner="{FFAF1628-54F4-48A1-A059-A94F79395167}">
+																							<Child Name="CustomTextBox" Owner="{E0A758C2-7307-478E-A558-5E64435A7A8B}" />
+																						</Child>
+																					</Child>
+																				</Child>
+																			</Child>
+																		</Child>
+																		<Child Name="ButtonReviewSend" Owner="{5AD56511-6AE8-4925-908A-34DC09EA31C0}" />
+																	</Child>
+																</Child>
+															</Child>
+														</Child>
 													</Child>
 												</Child>
 											</Child>
@@ -5077,7 +5386,9 @@
 															<Child Name="ElementHost" Owner="{62F7ADFF-A35B-4ABC-883E-D7A63C23EABD}">
 																<Child Name="HwndSource_AdornerDecorator" Owner="{2898CCDD-29AA-47B9-85D9-DD28BD6022DE}">
 																	<Child Name="AdornerDecorator" Owner="{A0CE5D92-6BA1-4911-A669-67BF58EEEDE8}">
-																		<Child Name="ScrollViewer" Owner="{02F17F99-FDED-433C-AD81-CF4BA88D9FA2}" />
+																		<Child Name="ScrollViewer" Owner="{02F17F99-FDED-433C-AD81-CF4BA88D9FA2}">
+																			<Child Name="ContentControl" Owner="{DD9C0A2D-56F7-4C50-A002-3794F27D200A}" />
+																		</Child>
 																	</Child>
 																</Child>
 															</Child>
@@ -5109,6 +5420,13 @@
 										</Child>
 										<Child Name="panel3" Owner="{035EE11C-9663-414F-8721-3CCA6992407D}">
 											<Child Name="datagridAuditTrail" Owner="{8836F187-DCEC-42A9-A019-36D04F841260}" />
+										</Child>
+									</Child>
+									<Child Name="panel1" Owner="{C719B109-7DBF-4661-871D-9E1E68CEC496}">
+										<Child Name="panel6" Owner="{7FE55F97-4312-47CC-9F8C-D9B190E146D7}">
+											<Child Name="panel9" Owner="{47300B66-1A24-47AD-9F8E-F0C331877F70}">
+												<Child Name="button5" Owner="{D733F082-075B-42E2-B045-9A9D1EEBAE9F}" />
+											</Child>
 										</Child>
 									</Child>
 								</Child>
@@ -5548,6 +5866,7 @@
 								<Child Name="Rectangle" Owner="{00AE21E1-24B2-485B-8111-CE6A4F51CCF1}" />
 							</Child>
 						</Child>
+						<Child Name="ProgressView" Owner="{87ABB659-74D2-40B6-8958-B6BFADF182BD}" />
 					</Child>
 				</Child>
 			</Child>

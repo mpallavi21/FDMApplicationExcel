@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="log data">
+			<Node name="row0">
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="status" type="I" value="2"/>
+				<Prp name="start time" type="D" value="46028.6227355787"/>
+				<Prp name="extended message" type="S" value=""/>
+				<Prp name="testdata item" type="B" value="0"/>
+				<Prp name="end time" type="D" value="46028.6455470486"/>
+				<Prp name="name" type="S" value="main [Script\Main - main]"/>
+				<Prp name="details" type="S" value="{D4194173-2584-4FB5-9AA7-D31B1F7DB523}"/>
+				<Prp name="ownerid" type="I" value="-1"/>
+			</Node>
+			<Node name="row1">
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="status" type="I" value="2"/>
+				<Prp name="start time" type="D" value="46028.6455463542"/>
+				<Prp name="extended message" type="S" value=""/>
+				<Prp name="testdata item" type="B" value="0"/>
+				<Prp name="end time" type="D" value="46028.6455463542"/>
+				<Prp name="name" type="S" value="An exception occurred while the element specified in the 'main' test item was being executed."/>
+				<Prp name="details" type="S" value=""/>
+				<Prp name="ownerid" type="I" value="-1"/>
+			</Node>
+			<Node name="row2">
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="status" type="I" value="2"/>
+				<Prp name="start time" type="D" value="46028.6455467014"/>
+				<Prp name="extended message" type="S" value="&lt;html&gt;&lt;style&gt;&#xA;body {&#xA;  color : black; background-color : white;&#xA;  font-family:  Segoe UI, Tahoma, Arial, Helvetica, sans-serif;&#xA;  font-size: 13px;&#xA;  font-weight: normal;&#xA;  margin: 19px;&#xA;  padding: 0;&#xA;}&#xA;p {&#xA;  margin: 20px 0;&#xA;  padding: 0;&#xA;}&#xA;ul {&#xA;  margin: 1ex 0 1ex 2ex;&#xA;  padding: 0;&#xA;}&#xA;li {&#xA;  margin: 1ex 0 0 3ex;&#xA;  padding: 0 0;&#xA;}&#xA;a {&#xA;  color: #0066CC;&#xA;}&#xA;h3 {&#xA;  font-size: 14px;&#xA;  margin: 20px 0 8px 0;&#xA;  padding: 0;&#xA;}&#xA;table {&#xA;  margin: 0;&#xA;  padding: 0;&#xA;  border: 1px solid #909090;&#xA;  border-collapse: collapse;&#xA;}&#xA;.table-border {&#xA;  display: inline-block;&#xA;  border: 1px solid #909090;&#xA;}&#xA;.table-borderless {&#xA;  border: 0px;&#xA;}&#xA;.full-width {&#xA;  width: 100%;&#xA;}&#xA;.table-border.full-width &gt; table {&#xA;  width: 100%;&#xA;}&#xA;td, th {&#xA;  font-size: 14px;&#xA;  text-align: left;&#xA;  vertical-align: middle;&#xA;  padding: 0px 6px 0px 6px;&#xA;}&#xA;td:first-of-type, th:first-of-type {&#xA;  padding-left: 12px;&#xA;}&#xA;td:last-of-type, th:last-of-type {&#xA;  padding-right: 12px;&#xA;}&#xA;td {&#xA;  height: 26px;&#xA;}&#xA;th {&#xA;  font-size: 12px;&#xA;  font-weight: normal;&#xA;  white-space: nowrap;&#xA;  height: 23px;&#xA;  color: #707070;&#xA;  background-color: #F5F6F8;&#xA;}&#xA;table tr:not(:first-child) td {&#xA;  border-top: 1px solid #EEEEEE;&#xA;}&#xA;table tr:not(:first-child) th {&#xA;  border-top: 1px solid #DCDCDC;&#xA;}&#xA;table.table-vertical th {&#xA;  border-right: 1px solid #DCDCDC;&#xA;}&#xA;#dataIsland {&#xA;  display: none;&#xA;}&#xA;&lt;/style&gt;&lt;body&gt;The test item execution has been stopped, because an exception occurred and the value of the &quot;Stop on exception&quot; test item's property is &lt;i&gt;Test Item&lt;/i&gt;.&lt;p&gt;&lt;a href=&quot;aqa-help://2017&quot;&gt;Learn More About Stopping Test Execution&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+				<Prp name="testdata item" type="B" value="0"/>
+				<Prp name="end time" type="D" value="46028.6455467014"/>
+				<Prp name="name" type="S" value="The test item execution has been stopped."/>
+				<Prp name="details" type="S" value=""/>
+				<Prp name="ownerid" type="I" value="-1"/>
+			</Node>
+		</Node>
+	</Node>
+</Nodes>

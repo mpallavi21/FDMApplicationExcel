@@ -1,4 +1,5 @@
-﻿
+﻿//USEUNIT STDLib
+
 // =====================================================================
 // Author:        Bharath
 // Function:      closeWindowPage
@@ -89,7 +90,9 @@ function CloseWindow() {
 
   } catch (e) {
     Log.Error("Exception in test(): " + e.message);
-  } finally {
+    status = "Fail"
+  } finally {   
+    return status
     Log.PopLogFolder();
   }
 }
@@ -102,8 +105,13 @@ function test(){
 
 function clickToolbarItem(expectedIndex) {
   var toolbar = Aliases.HCMClient.ClientMainWindow.tbarHCM;
-  Log.Message(toolbar.Items.get_Item_2(0))
-//    var item = toolbar.Items.Item_2(expectedIndex);
+  
+    var item = toolbar.Items.Item_2(expectedIndex);
+    for(var i=0; i<= expectedIndex;i++){
+      Sys.Desktop.Keys("[Right]")
+    }
+    Sys.Desktop.Keys("[Enter]")
+    
 //    item.OnKeyPress("Enter");
 //    Log.Message("Clicked toolbar item:  at index " + expectedIndex);
 //    

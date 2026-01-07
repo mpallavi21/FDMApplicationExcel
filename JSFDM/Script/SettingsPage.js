@@ -1,4 +1,6 @@
-﻿let HCMClient = Aliases.HCMClient;
+﻿//USEUNIT STDLib
+
+let HCMClient = Aliases.HCMClient;
 let mainMenu = HCMClient.ClientMainWindow.mainMenu
 
 // =====================================================================

@@ -438,11 +438,18 @@ function WaitForCompletion() {
     let message = String(labelPath.Text);
     Log.Message("Progress label text: " + message);
 
-    if (message.indexOf("Operation completed") !== -1) {
-      Log.Checkpoint("Export operation completed successfully.");
-    } else {
-      Log.Warning("Export may be incomplete: " + message);
-    }
+    var timeout = 20000; // 20 seconds 
+    var interval = 1000; // check every 1 second 
+    var waited = 0; 
+    var success = false; 
+    while (waited < timeout) { 
+    if (message.indexOf("Operation completed") !== -1) { 
+    Log.Checkpoint("Export operation completed successfully."); 
+    success = true; 
+    break; 
+    } Delay(interval); // wait before checking again 
+    waited += interval; 
+    }    
 
   } catch (error) {
     Log.Error("Error in WaitForCompletion: " + error.message);

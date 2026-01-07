@@ -1,5 +1,5 @@
 ﻿ //USEUNIT FDMCommonPage
-
+//USEUNIT STDLib
 
 /* Example of how to pass a node path array to the expandTreeView function
 expandTreeView([
@@ -467,16 +467,11 @@ function LaunchViewHistory(Device) {
     // Right-click on the specific item and select 'View History'
     treeView.ClickItemR(Device);
     treeView.StripPopupMenu.Click("View History");
-
-    // Click the 'View' button in the history form
-    let btnView = frmHCMClientMain.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.panel1.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.btn_View;
-    if (btnView.Exists) {
-      btnView.ClickButton();
-      Log.Message("Clicked 'View' button in history form.");
-    } else {
-      Log.Error("View button not found.");
-    }
-    closeWindowPage()
+    Delay(1000) 
+  let panel = Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms;
+  panel.panel1.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.btn_View.ClickButton();
+  aqObject.CheckProperty(panel.pnlHistoryConfig.MagicTabControlEx.TabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.TabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.ContentControl, "Enabled", cmpEqual, true);
+ 
 
   } catch (e) {
     Log.Error("Exception occurred: " + e.message);

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root signature="{42D2222C-ACA2-405F-8E67-05D5C42EB839}" version="2">
-	<data key="{63EBA8B9-12E2-4367-BD39-9B85C4C9A3A6}">
-		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="53" kind="0" dateTime="46003.2495717593" objectName="Aliases.HCMClient.PlantAreaViewWindow.Shell.WindowButtonCommands" objectLeft="1775" objectTop="-7" objectRight="1914" objectBottom="54" clickPointX="1890" clickPointY="21" imageFileName="tcvi199075443746921.png" storageFileName="" needUpdate="False" rectColor="255" />
-	</data>
+	<data key="{63EBA8B9-12E2-4367-BD39-9B85C4C9A3A6}" />
 </Root>

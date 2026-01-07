@@ -20,7 +20,53 @@
 <Nodes version="1">
 	<Node name="root">
 		<Node name="folders"/>
-		<Node name="logs"/>
+		<Node name="logs">
+			<Node name="log idx=0000">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="46028.6227346644"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{BE1B5C77-ABDD-492F-AC82-F1BE12220999}"/>
+				<Prp name="nameofroot" type="S" value="JSFDM"/>
+				<Prp name="relpath" type="S" value="06-01-2026_14_56_44_275\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0001">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="46028.6665888889"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{08138C8A-693B-491C-9ED9-F94D522C724D}"/>
+				<Prp name="nameofroot" type="S" value="JSFDM"/>
+				<Prp name="relpath" type="S" value="06-01-2026_15_59_53_280\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0002">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="46028.6686279167"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{A87F5263-BA3D-4826-B40A-24B64C4DEAA0}"/>
+				<Prp name="nameofroot" type="S" value="JSFDM"/>
+				<Prp name="relpath" type="S" value="06-01-2026_16_02_49_452\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0003">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="46028.6932286111"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{26ED5F8C-E2DC-4D41-8C9F-547A2F004B18}"/>
+				<Prp name="nameofroot" type="S" value="JSFDM"/>
+				<Prp name="relpath" type="S" value="06-01-2026_16_38_14_952\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+			<Node name="log idx=0004">
+				<Prp name="caption" type="S" value=""/>
+				<Prp name="datetime" type="D" value="46028.7140323958"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="key" type="S" value="{D356BD6A-3C6F-414B-B5C5-E22CA4106A97}"/>
+				<Prp name="nameofroot" type="S" value="JSFDM"/>
+				<Prp name="relpath" type="S" value="06-01-2026_17_08_12_399\Description.tcLog"/>
+				<Prp name="status" type="I" value="2"/>
+			</Node>
+		</Node>
 		<Prp name="signature" type="S" value="{6511DB44-2372-47B8-8349-ADA0DB4D9E14}"/>
 		<Prp name="version" type="S" value="11.0"/>
 	</Node>

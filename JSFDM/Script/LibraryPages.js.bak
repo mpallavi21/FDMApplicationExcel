@@ -440,9 +440,9 @@ function findDDAndClickDeleteRow(targetName, targetdeviceRevision, targetDDpacka
     let btnYes = dlgDeleteDDFile.btnYes;
     aqObject.CheckProperty(btnYes, "WndCaption", cmpContains, "&Yes");
     btnYes.ClickButton();
-
+               
     let hwndSource = HCMClient.InformationWindowPopUp;
-    hwndSource.ButtonOk.ClickButton();
+    hwndSource.InformationWindow.ButtonOk.Click();
 
     Log.Message("DD Package '" + name + "' deleted successfully.");
     Log.PopLogFolder()

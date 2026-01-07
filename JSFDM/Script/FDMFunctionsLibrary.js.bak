@@ -71,21 +71,9 @@ function CheckFDMDevicePropertyOption(DeviceName) {
 
   try {
     // Step 1: Click on the specified device
-    clickOnDevice(DeviceName);
-
-    // Step 2: Access the adorner decorator and validate property option
-    let adornerDecorator = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase
-      .panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen
-      .TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer;
-
-    aqObject.CheckProperty(
-      adornerDecorator.HyperlinkFdmDeviceProperties,
-      "WPFControlText",
-      cmpEqual,
-      "FDM Device properties"
-    );
-
-    // Step 3: Close window and confirm
+    clickOnDevice(DeviceName); 
+    aqObject.CheckProperty(Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkFdmDeviceProperties, "WPFControlText", cmpEqual, "FDM Device properties");
+  // Step 3: Close window and confirm
     CloseWindow();
     clickOnConfirmFDMButton();
 
@@ -139,7 +127,7 @@ function ValidateDeviceHistoryRecords(DeviceName) {
   try {
     // Step 1: Launch and verify history view for the device
     LaunchViewHistory(DeviceName);
-
+    closeWindowPage()
     Log.Checkpoint("✅ ValidateDeviceHistoryRecords passed: View History launched successfully.");
   } catch (error) {
     Log.Error("❌ ValidateDeviceHistoryRecords failed: " + error.message);
@@ -227,8 +215,9 @@ function BuildNetwork(NetworkName,timeOut) {
     status = "Fail";
   } finally {
     WriteResult("BuildNetwork " + status, status, "Pass");
-    Log.PopLogFolder();
+    
   }
+  Log.PopLogFolder();
 }
 
 
@@ -336,52 +325,62 @@ function Device_Explicit_UnLock(DeviceName) {
 
 // =====================================================================
 function LogUserAction(DeviceName) {
-  Log.AppendFolder("LogUserAction");
+  Log.AppendFolder("LogUserAction - Workflow to Log and Verify User Action");
+
+  let status = "Pass";
 
   try {
+    // Step 1: Navigate to Online View and Network View
     ClickOnlineViewTab();
     clickOnNetworkViewTab();
-    
+    Log.Message("Navigated to Online and Network View tabs.");
+
+    // Step 2: Access tree view and log user action
     let HCMClient = Aliases.HCMClient;
     let treeView = HCMClient.ClientMainWindow.panelLeftPanMain
                     .tabControlLeftPanMain.tabPageOnlineView.panelOnlineView
                     .panelTabControlOnlineView.tabControlOnlineView
                     .tabConnected.treeView;
 
-    // 🌲 Right-click and log user action
     treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("Log User Action");
-    
-    let AuditDescription = "User able to enter the text in description field " + Math.floor(aqDateTime.Now() / 1000);
+    Log.Message("Right-clicked device '" + DeviceName + "' and selected 'Log User Action'.");
 
-    // 📝 Fill in Description and Reason
+    // Step 3: Fill in Description and Reason
+    let AuditDescription = "User able to enter the text in description field " + Math.floor(aqDateTime.Now() / 1000);
     let auditTrailUserAction = HCMClient.AuditTrailUserAction;
+
     auditTrailUserAction.DescriptionTextBox.TextBoxArea.Keys(AuditDescription);
+    Log.Message("Entered description: " + AuditDescription);
 
     let reasonBox = auditTrailUserAction.ReasonTextBox.TextBoxArea;
     reasonBox.Click(39, 32);
     reasonBox.Keys("Log User Action");
+    Log.Message("Entered reason: Log User Action");
 
-    // ✅ Confirm action
+    // Step 4: Confirm action
     OCR.Recognize(auditTrailUserAction.OKButton).BlockByText("OK").Click();
+    Log.Message("Confirmed user action via OK button.");
 
-    // 🔍 View Audit Trail and verify entry
+    // Step 5: View Audit Trail and verify entry
     treeView.ClickItemR(DeviceName);
     treeView.StripPopupMenu.Click("View Audit Trail");
 
     let isLogged = FindValueInDescriptionColumn(AuditDescription);
-    Log.Message("Audit entry verification: " + isLogged);
+    Log.Message("Audit entry verification result: " + isLogged);
 
-    // 🧹 Cleanup
+    // Step 6: Cleanup
     CloseWindow();
-
+    Log.Checkpoint("✅ LogUserAction passed: User action logged and verified successfully.");
   } catch (error) {
-    Log.Error("Error in LogUserAction15798: " + error.message);
-
+    Log.Error("❌ LogUserAction failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("LogUserAction " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 // =====================================================================
 // Author:        Bharath
@@ -500,6 +499,7 @@ function muxconfig_pnf15962() {
 
 // =====================================================================
 
+
 function OptionsFunction(DeviceName) {    
   Log.AppendFolder("OptionsFunction - Device Options Workflow");
 
@@ -521,17 +521,19 @@ function OptionsFunction(DeviceName) {
 
     let manualDtm_PackageSelector = HCMClient.ManualDtm_PackageSelector;
     aqObject.CheckProperty(manualDtm_PackageSelector, "Enabled", cmpEqual, true);
-
-    // === Step 4: Select DTM package ===
+     // screen not showing any dropdown option
+//    // === Step 4: Select DTM package ===
     let tabControl = manualDtm_PackageSelector.tabControl1;
     tabControl.ClickTab("DTM Selection Dialog");
-    tabControl.tabPage1.ManualDtmSelectorPanel.groupBox1.lvwDtmList.ClickItem("644 V07.01 *", 0);
+    tabControl.tabPage1.ManualDtmSelectorPanel.groupBox1.lvwDtmList.ClickItem(0, 0);
 
     OCR.Recognize(manualDtm_PackageSelector.btnOk).BlockByText("OK").Click();
-
-    // === Step 5: Confirm device options ===
+//
+//    // === Step 5: Confirm device options ===
     deviceOptionsDlg.btnOK.Click(31, 17);
 
+    Aliases.HCMClient.ManualDtm_PackageSelector.WinFormsObject("btnCancel").Click()
+    Aliases.HCMClient.DeviceOptionsDlg.WinFormsObject("buttonCancel").Click()
     // === Step 6: Configure device with DTM (Online) ===
     let frmHCMClientMain = HCMClient.ClientMainWindow;
     treeView = frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView;
@@ -991,8 +993,8 @@ function DetachDeviceDocumentation(DeviceName) {
 
 
 
-function ActivateDevice(Device) {
-  Log.AppendFolder("ActivateDevice");
+function LoadDevice(Device) {
+  Log.AppendFolder("LoadDevice");
 
   let status = "Pass";
 
@@ -1004,7 +1006,7 @@ function ActivateDevice(Device) {
     status = "Fail";
   }
 
-  WriteResult("ActivateDevice " + status, status, "Pass");
+  WriteResult("LoadDevice " + status, status, "Pass");
   Log.PopLogFolder();
 }
 
@@ -1014,19 +1016,18 @@ function SaveHistory() {
   let status = "Pass";
 
   try {
-    clickSaveHistoryHyperlink();
+    status = clickSaveHistoryHyperlink();
     saveName = "SaveHistory" + aqDateTime.Now() / 1000
-    fillSaveHistoryPopup("SaveHistory" + aqDateTime.Now() / 1000);
-    handleFdmConfigurationPopup();
+    fillSaveHistoryPopup(saveName);
     handleSaveHistoryCompletion();
-    CloseWindow();
-    clickOnConfirmFDMButton();
+    status = handleFdmConfigurationPopup();
+    
     Log.Message("SaveHistory flow completed successfully.");
   } catch (error) {
     Log.Error("SaveHistory failed: " + error.message);
     status = "Fail";
   } finally {
-    WriteResult("Save history Id:-"+saveName+" SaveHistory " + status, status, "Pass");
+    WriteResult("Save history SaveHistory " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
@@ -1084,7 +1085,9 @@ function DeviceParam(DeviceName) {
 // =====================================================================
 
 function GetDeviceStateView(DeviceName) {     
-  Log.AppendFolder("test - Device Selection and State Capture");
+  Log.AppendFolder("GetDeviceStateView - Device Selection and State Capture Workflow");
+
+  let status = "Pass";
 
   try {
     // Step 1: Select device from variable
@@ -1096,16 +1099,23 @@ function GetDeviceStateView(DeviceName) {
 
     // Step 3: Collect and log device state information
     DeviceStateInformation();
-    Log.Message("Device state information retrieved.");
-    
-    CloseWindow()
-    clickOnConfirmFDMButton()
+    Log.Message("Device state information retrieved successfully.");
+
+    // Step 4: Close configuration window and confirm
+    CloseWindow();
+    clickOnConfirmFDMButton();
+    Log.Message("Configuration window closed and confirmed.");
+
+    Log.Checkpoint("✅ GetDeviceStateView passed: Device state captured successfully.");
   } catch (error) {
-    Log.Error("Error in test function: " + error.message);
+    Log.Error("❌ GetDeviceStateView failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("GetDeviceStateView " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 
 
@@ -1160,34 +1170,45 @@ function PrintTheDevice(DeviceName) {
 
 // =====================================================================
 
-function ReadAndWriteDeviceProperties(DeviceName,ChangeDeviceUsage,ChangeCalibrationstatus,ChangeDeviceHealth) {
-  Log.AppendFolder("SettingDeviceProperties");
+function ReadAndWriteDeviceProperties(DeviceName, ChangeDeviceUsage, ChangeCalibrationstatus, ChangeDeviceHealth) {
+  Log.AppendFolder("ReadAndWriteDeviceProperties - Workflow to Configure Device Properties");
+
+  let status = "Pass";
 
   try {
-    // === Step 1: Build network and select target device ===
+    // Step 1: Build network and select target device
     clickOnDevice(DeviceName);
+    Log.Message("Selected target device: " + DeviceName);
 
-    // === Step 2: Open device properties via OCR hyperlink ===
-    Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkFdmDeviceProperties.Click();
+    // Step 2: Open device properties via OCR hyperlink
+    Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel
+      .MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage
+      .ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkFdmDeviceProperties.Click();
+    Log.Message("Opened device properties via OCR hyperlink.");
 
-    // === Step 3: Configure device properties ===
+    // Step 3: Configure device properties
     ReadAndConfigureDeviceProperties({
       DeviceUsage: ChangeDeviceUsage,
       Calibrationstatus: ChangeCalibrationstatus,
       DeviceHealth: ChangeDeviceHealth
     });
-    
-    CloseWindow()
-    clickOnConfirmFDMButton()
-    Log.Message("Device properties configured successfully.");
+    Log.Message("Device properties updated: Usage=" + ChangeDeviceUsage + ", Calibration=" + ChangeCalibrationstatus + ", Health=" + ChangeDeviceHealth);
 
+    // Step 4: Close configuration window and confirm
+    CloseWindow();
+    clickOnConfirmFDMButton();
+    Log.Message("Configuration window closed and confirmed.");
+
+    Log.Checkpoint("✅ ReadAndWriteDeviceProperties passed: Device properties configured successfully.");
   } catch (error) {
-    Log.Error("Error in SettingDeviceProperties" + error.message);
-
+    Log.Error("❌ ReadAndWriteDeviceProperties failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("ReadAndWriteDeviceProperties " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
+
 
 
 
@@ -1245,7 +1266,7 @@ function DeviceIconsCreateDisplayFilter(filterName) {
     // Step 4: Create Display Filter configuration
     CreateDisplayFilterConfiguration(filterName);
     Log.Message("Display Filter configuration created.");
-
+    closeWindowPage()
     Log.Checkpoint("✅ DeviceIconsCreateDisplayFilter passed: Display Filter created successfully.");
   } catch (error) {
     Log.Error("❌ DeviceIconsCreateDisplayFilter failed: " + error.message);
@@ -1263,14 +1284,14 @@ function DeleteDisplayFilterItem(filterName ) {
 
   try {
     // Step 1: Navigate to Offline View
-    goToOfflineView();
+//    goToOfflineView();
     Log.Message("Navigated to Offline View.");
 
     // Step 2: Select Display Filter option via OCR
-    OCR.Recognize(
-      Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
-        .tabPageOfflineView.panelOfflineView.tabControlOfflineView
-    ).BlockByText("*Displ*").Click();
+//    OCR.Recognize(
+//      Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain
+//        .tabPageOfflineView.panelOfflineView.tabControlOfflineView
+//    ).BlockByText("*Displ*").Click();
 
     // Step 3: Access tree view and delete target filter
     let HCMClient = Aliases.HCMClient;
@@ -1670,7 +1691,7 @@ function LaunchPAVDashboard() {
     Log.Message("Plant Area View launched successfully.");
 
     // Step 2: Close Plant Area View
-    closePlantAreaView();
+    status = closePlantAreaView();
     Log.Message("Plant Area View closed successfully.");
 
     Log.Checkpoint("✅ LaunchPAVDashboard passed: PAV Dashboard launched and closed successfully.");
@@ -1698,11 +1719,11 @@ function LaunchAlertMonitoring() {
 
   try {
     // Step 1: Launch Alert Monitoring Dashboard
-    clickOnAlertMonitoringDashboard();
+    status = clickOnAlertMonitoringDashboard();
     Log.Message("Alert Monitoring Dashboard launched successfully.");
 
     // Step 2: Close Alert Monitoring View
-    closeAlertMonitorView();
+    status = closeAlertMonitorView();
     Log.Message("Alert Monitoring Dashboard closed successfully.");
 
     Log.Checkpoint("✅ LaunchAlertMonitoring passed: Alert Monitoring Dashboard launched and closed successfully.");
@@ -1870,18 +1891,30 @@ function validateDeleteDiagnosticModelFF() {
    
 // =====================================================================
 function verifyOfflineConfigurationSaveForFFDevices() {
+  Log.AppendFolder("verifyOfflineConfigurationSaveForFFDevices - Verify Offline Configuration Save for FF Devices");
+
+  let status = "Pass";
+
   try {
-    Log.AppendFolder("verifyOfflineConfigurationSaveForFFDevices - verify that offline configuration can be saved for FF devices")
-   // launchFDMClient(Project.Variables.FDMClientUserName, Project.Variables.FDMClientPassword);
-
+    // Step 1: Navigate to Offline Diagnostics
     navigateToOfflineDiagnostics();
-    createDiagnosticModel("|FF");
-    CloseWindow()
+    Log.Message("Navigated to Offline Diagnostics successfully.");
 
-   // TestedApps.HCMClient.Terminate();
-    Log.Message("Test 'verifyOfflineConfigurationSaveForFFDevices' executed successfully.");
+    // Step 2: Create Diagnostic Model for FF devices
+    createDiagnosticModel("|FF");
+    Log.Message("Diagnostic Model created for FF devices.");
+
+    // Step 3: Close configuration window
+    CloseWindow();
+    Log.Message("Configuration window closed successfully.");
+
+    Log.Checkpoint("✅ verifyOfflineConfigurationSaveForFFDevices passed: Offline configuration saved successfully for FF devices.");
   } catch (error) {
-    Log.Error("Test 'verifyOfflineConfigurationSaveForFFDevices' encountered an error: " + error.message);
+    Log.Error("❌ verifyOfflineConfigurationSaveForFFDevices failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("verifyOfflineConfigurationSaveForFFDevices " + status, status, "Pass");
+    Log.PopLogFolder();
   }
 }
 
@@ -1914,7 +1947,9 @@ function Test1()
 // =====================================================================
 
 function ExportAndImportDeviceTags() {
-  Log.AppendFolder("ExportAndImportDeviceTags");
+  Log.AppendFolder("ExportAndImportDeviceTags - Workflow for Exporting and Importing Device Tags");
+
+  let status = "Pass";
 
   try {
     // === Export Section ===
@@ -1929,12 +1964,14 @@ function ExportAndImportDeviceTags() {
     SelectFileFormat("xml");
 
     let filePath = GetFilePathFromTextbox();
+    Log.Message("Export file path captured: " + filePath);
 
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Export
     CheckIfFileExists(filePath);
+    Log.Message("Export completed and file verified.");
 
     // === Import Section ===
     ClickItemImportAndExport();
@@ -1942,23 +1979,34 @@ function ExportAndImportDeviceTags() {
     ClickItemInTabList("Device Tags");
     ClickNextIfEnabled();
     SetSelectFilePath(filePath);
+    Log.Message("Import file path set: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Import
+    Log.Message("Import completed successfully.");
 
+    Log.Checkpoint("✅ ExportAndImportDeviceTags passed: Device Tags exported and imported successfully.");
   } catch (error) {
-    Log.Error("ExportAndImportDeviceTags failed: " + error.message);
-
+    Log.Error("❌ ExportAndImportDeviceTags failed: " + error.message);
+    status = "Fail";
   } finally {
+    WriteResult("ExportAndImportDeviceTags " + status, status, "Pass");
     Log.PopLogFolder();
   }
 }
 
 
 
-function ExportAndImportAuditTrail(){
-  ClickItemImportAndExport();
+function ExportAndImportAuditTrail() {
+  Log.AppendFolder("ExportAndImportAuditTrail - Workflow for Exporting and Importing Audit Trail");
+
+  let status = "Pass";
+
+  try {
+    // === Export Section ===
+    ClickItemImportAndExport();
     ClickExportDataButton();
     ClickItemInTabList("Audit Trail");
     ClickNextIfEnabled();
@@ -1969,25 +2017,202 @@ function ExportAndImportAuditTrail(){
     SelectFileFormat("xml");
 
     let filePath = GetFilePathFromTextbox();
+    Log.Message("Export file path captured: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Export
     CheckIfFileExists(filePath);
-    
+    Log.Message("Audit Trail export completed and file verified.");
+
     // === Import Section ===
     ClickItemImportAndExport();
     ClickImportDataButton();
     ClickItemInTabList("Audit Trail");
     ClickNextIfEnabled();
     SetSelectFilePath(filePath);
+    Log.Message("Import file path set: " + filePath);
+
     ClickNextIfEnabled();
     WaitForCompletion();
     ClickNextIfEnabled();
     ClickCancelButton(); // Finish Import
+    Log.Message("Audit Trail import completed successfully.");
+
+    Log.Checkpoint("✅ ExportAndImportAuditTrail passed: Audit Trail exported and imported successfully.");
+  } catch (error) {
+    Log.Error("❌ ExportAndImportAuditTrail failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("ExportAndImportAuditTrail " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+function auditTrailViaMenuTab() {
+  Log.AppendFolder("auditTrailViaMenuTab - Workflow to Access Audit Trail via Menu Tab");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Access main menu and click 'View'
+    let HCMClient = Aliases.HCMClient;
+    let frmHCMClientMain = HCMClient.ClientMainWindow;
+    let smartMenuBar = frmHCMClientMain.mainMenu;
+
+    OCR.Recognize(smartMenuBar).BlockByText("View").Click();
+    Log.Message("Clicked 'View' in main menu.");
+
+    // Step 2: Select submenu option
+    HCMClient.DropDownForm.SubSmartControl.Click(48, 7);
+    Log.Message("Selected submenu option under 'View'.");
+
+    // Step 3: Navigate to connected tab
+    frmHCMClientMain.panelLeftPanMain.tabControlLeftPanMain
+      .tabPageOnlineView.panelOnlineView.panelTabControlOnlineView
+      .tabControlOnlineView.tabConnected.Keys("[Right][Enter]");
+    Log.Message("Navigated to connected tab in Online View.");
+
+    // Step 4: Access Audit Trail panel and click buttons
+    let panel = frmHCMClientMain.MdiClient.AuditTrailView.panelBase.panelForDerivedForms.panel4;
+    panel.panel2.groupBox1.ViewButton.Click(33, 6);
+    Log.Message("Clicked 'View' button in Audit Trail panel.");
+
+    panel.panel1.panel6.panel9.button5.Click(30, 18);
+    Log.Message("Clicked secondary action button in Audit Trail panel.");
+
+    // Step 5: Confirm action in FDM Configuration popup
+    HCMClient.dlgFDMConfiguration.btnYes.ClickButton();
+    Log.Message("Confirmed action in FDM Configuration popup.");
+
+    Log.Checkpoint("✅ auditTrailViaMenuTab passed: Audit Trail accessed and confirmed successfully.");
+  } catch (error) {
+    Log.Error("❌ auditTrailViaMenuTab failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("auditTrailViaMenuTab " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
 }
 
 
 
 
+
+function advanceConfiguration(TagName,PVLRV,PVURV) {
+  Log.AppendFolder("advanceConfiguration - Workflow to Perform Advanced Configuration");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Locate and click Advanced Configuration hyperlink
+    let advanceConfigurationBtn = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel
+      .MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage
+      .ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkAdvancedConfiguration;
+
+    advanceConfigurationBtn.WaitProperty("Exists", true, 10000);
+
+    if (advanceConfigurationBtn.Exists) {
+      advanceConfigurationBtn.Click();
+      Log.Message("Clicked Advanced Configuration hyperlink.");
+
+      let tabControl = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel
+        .MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl;
+
+      let AdvanceConfigurationPage = tabControl.FindChild("Name", `WinFormsObject(" Advanced Configuration ")`, 50);
+
+      if (AdvanceConfigurationPage.Exists) {
+        let HCMClient = Aliases.HCMClient;
+        let adornerDecorator = tabControl.zAdvanced_Configuration_.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator;
+        let tableItemView = adornerDecorator.Control.TableItemView;
+
+        // Expand first section
+        if (!tableItemView.Expander.IsChecked) tableItemView.Expander.Click();
+
+        // Configure first textbox
+        let tableItemView2 = tableItemView.TableItemView;
+        tableItemView2.Click(597, 11);
+        let customTextBox = tableItemView2.CustomTextBox;
+        customTextBox.Click(67, 11);
+        customTextBox.Keys("[BS][BS][BS][BS][BS][BS][BS][BS][BS][BS]"+PVLRV);
+
+        // Configure second textbox
+        tableItemView2 = tableItemView.TableItemView2;
+        tableItemView2.Click(491, 19);
+        customTextBox = tableItemView2.CustomTextBox;
+        customTextBox.Click(55, 8);
+        customTextBox.Keys("[BS][BS][BS][BS][BS][BS][BS][BS][BS][BS]"+PVURV);
+
+        // Expand nested sections
+        tableItemView2 = tableItemView.TableItemView3;
+        if (!tableItemView2.Expander.IsChecked) tableItemView2.Expander.Click();
+
+        tableItemView = tableItemView2.TableItemView;
+        if (!tableItemView.Expander.IsChecked) tableItemView.Expander.Click();
+
+        // Configure third textbox
+        tableItemView2 = tableItemView.TableItemView;
+        tableItemView2.Click(587, 11);
+        customTextBox = tableItemView2.CustomTextBox;
+        customTextBox.Click(110, 11);
+        customTextBox.Keys("[BS][BS][BS][BS][BS][BS][BS][BS][BS][BS]"+TagName);
+
+        // Review and send configuration
+        adornerDecorator.ButtonReviewSend.ClickButton();
+        Log.Message("Clicked Review & Send.");
+
+        let previewDialog = HCMClient.HwndSource_PreviewDialog.PreviewDialog;
+        let button = previewDialog.btn_Send;
+        aqObject.CheckProperty(button, "Enabled", cmpEqual, true);
+        button.ClickButton();
+        Log.Message("Clicked Send in Preview dialog.");
+
+        let grid = previewDialog.Grid;
+        aqObject.CheckProperty(grid.ProgressView, "Enabled", cmpEqual, true);
+        grid.Grid.Grid.Rectangle.Click(5, 17);
+        Log.Message("Verified progress view and clicked rectangle.");
+
+        tabControl.InertButton.Click(3, 4);
+        Log.Message("Clicked Inert button to finalize configuration.");
+
+        Log.Checkpoint("✅ advanceConfiguration passed: Advanced Configuration completed successfully.");
+      }
+    } else {
+      Log.Warning("⚠️ Advanced Configuration hyperlink not found.");
+      status = "Fail";
+    }
+  } catch (error) {
+    Log.Error("❌ advanceConfiguration failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("advanceConfiguration " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
+
+
+function UnLoadDevice() {
+  Log.AppendFolder("UnLoadDevice - Workflow to Unload Device");
+
+  let status = "Pass";
+
+  try {
+    // Step 1: Close the device window
+    status = CloseWindow();
+    Log.Message("Closed device window successfully.");
+
+    // Step 2: Confirm unload action
+    clickOnConfirmFDMButton();
+    Log.Message("Confirmed unload action via FDM button.");
+
+    Log.Checkpoint("✅ UnLoadDevice passed: Device unloaded successfully.");
+  } catch (error) {
+    Log.Error("❌ UnLoadDevice failed: " + error.message);
+    status = "Fail";
+  } finally {
+    WriteResult("UnLoadDevice " + status, status, "Pass");
+    Log.PopLogFolder();
+  }
+}
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="projects">
+			<Node name="project0">
+				<Node name="tests">
+					<Node name="test0">
+						<Node name="warnings">
+							<Node name="warning1">
+								<Prp name="msg" type="S" value="3 blocks were found by the text '*Devic*'. The first block was returned."/>
+							</Node>
+							<Node name="warning0">
+								<Prp name="msg" type="S" value="Close button not found or not enabled."/>
+							</Node>
+						</Node>
+						<Node name="errors">
+							<Node name="error6">
+								<Prp name="msg" type="S" value="❌ OptionsFunction failed: Cannot read property 'treeView' of undefined"/>
+							</Node>
+							<Node name="error0">
+								<Prp name="msg" type="S" value="The window is invisible and thus cannot be activated."/>
+							</Node>
+							<Node name="error5">
+								<Prp name="msg" type="S" value="The object &quot;panelTabControlOnlineVie&quot; does not exist."/>
+							</Node>
+							<Node name="error4">
+								<Prp name="msg" type="S" value="Unable to find the object panelTabControlOnlineVie. See Details for additional information."/>
+							</Node>
+							<Node name="error1">
+								<Prp name="msg" type="S" value="Cannot obtain the popup menu for item 'View History'."/>
+							</Node>
+							<Node name="error3">
+								<Prp name="msg" type="S" value="Unable to verify a value with the property checkpoint, because the target object does not exist."/>
+							</Node>
+							<Node name="error2">
+								<Prp name="msg" type="S" value="The object &quot;btn_View&quot; does not exist."/>
+							</Node>
+						</Node>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewA2AEIAQQA5ADAAMAAxADcALQA3ADkAQwBDAC0ANABBADkANQAtADkAQgBDADEALQAzAEMANgBEADkAMQA1ADQANgAzADIAQQB9AC8AewAwADAAMAAwADAAMAAwADAALQAwADAAMAAwAC0AMAAwADAAMAAtADAAMAAwADAALQAwADAAMAAwADAAMAAwADAAMAAwADAAMAB9AC8AZQBtAHAAdAB5AC8AZQBtAHAAdAB5AA=="/>
+						<Prp name="duration" type="I" value="471067"/>
+						<Prp name="status" type="I" value="2"/>
+						<Prp name="name" type="S" value="main"/>
+						<Prp name="starttime" type="D" value="46029.3402033449"/>
+						<Prp name="durationwithoutchildren" type="I" value="471067"/>
+					</Node>
+				</Node>
+				<Prp name="failedtests" type="I" value="1"/>
+				<Prp name="warningtests" type="I" value="0"/>
+				<Prp name="incompletedtests" type="I" value="0"/>
+				<Prp name="duration" type="I" value="471067"/>
+				<Prp name="name" type="S" value="JSFDM"/>
+				<Prp name="loadtests" type="I" value="0"/>
+				<Prp name="starttime" type="D" value="46029.3402033449"/>
+			</Node>
+		</Node>
+		<Prp name="incompletedtests" type="I" value="0"/>
+		<Prp name="name" type="S" value="JSFDM"/>
+		<Prp name="tests" type="I" value="1"/>
+		<Prp name="failedtests" type="I" value="1"/>
+		<Prp name="key" type="S" value="{F7F0B712-0294-47A4-BAFF-A59808AC8B6E}"/>
+		<Prp name="testname" type="S" value="JSFDM"/>
+		<Prp name="warningtestwithretries" type="I" value="0"/>
+		<Prp name="stop" type="D" value="46029.3456586343"/>
+		<Prp name="starttime" type="D" value="46029.3402026968"/>
+		<Prp name="executionstatus" type="I" value="2"/>
+		<Prp name="warningtests" type="I" value="0"/>
+		<Prp name="successtestwithretries" type="I" value="0"/>
+		<Prp name="host" type="S" value="DESKTOP-AJ7O5O5"/>
+		<Prp name="loadtests" type="I" value="0"/>
+		<Prp name="user" type="S" value="Admin"/>
+	</Node>
+</Nodes>

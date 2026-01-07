@@ -51,8 +51,7 @@ function closePlantAreaView() {
       shellWindow.Activate()
       window = shellWindow
       if (window.Exists && window.VisibleOnScreen) { 
-          Aliases.HCMClient.PlantAreaViewWindow.Shell.WindowButtonCommands.Click(115, 28);
-          
+        Aliases.HCMClient.PlantAreaViewWindow.Shell.WindowButtonCommands.Click(140, 40)   
        } else {
           Log.Error("Window is not ready for interaction.");
         }
@@ -61,9 +60,15 @@ function closePlantAreaView() {
     } else {
       Log.Error("'WindowButtonCommands' not enabled within timeout.");
     }
+    status = "Pass"
   } catch (error) {
+    status = "Fail"
     Log.Error("Failed to close 'Plant Area View': " + error.message);
   }
+  finally{
+    return status
+  }
+
 }
 
 
@@ -95,9 +100,13 @@ function clickOnAlertMonitoringDashboard() {
     Log.Message("'Alert Monitor' view loaded successfully.");
 
     
-
-  } catch (error) {
+  status = "Pass"
+  } catch (error) { 
+    status = "Fail"
     Log.Error("Failed to open 'Alert Monitoring Dashboard': " + error.message);
+  }
+  finally{
+    return status
   }
 }
 
@@ -123,9 +132,12 @@ function closeAlertMonitorView() {
     } else {
       Log.Warning("'Alert Monitor' window controls were not enabled in time.");
     }
-  } catch (error) {
+    status = "Pass"
+  } catch (error) {   
+    status = "Fail"
     Log.Error("Failed to close 'Alert Monitor' view: " + error.message);
-  } finally {
+  } finally { 
+    return status
     Log.PopLogFolder()
   }
 }

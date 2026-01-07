@@ -43,7 +43,7 @@ function launchFDMClient(ServerName,Username,Password ) {
   // Select server from dropdown
   Log.Message("Setting server...");
   let server = ClientLogin.FdmServerNameField
-  let ServerDDbox = server.ComboBoxTextBoxArea
+  let ServerDDbox = server.TextFieldArea
   ServerDDbox.SetFocus()
   ServerDDbox.SetText(ServerName);
   Log.Message("Server set to: " + ServerName);

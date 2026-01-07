@@ -1,0 +1,3000 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 9">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="241"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 68">
+			<Prp name="picture" type="S" value="Picture3.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3207321296"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;} th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;Unable to find the following object when executing the &lt;code&gt;ClickButton&lt;/code&gt; command:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;HistoryFrom&lt;/span&gt;&lt;/a&gt;.&amp;#8203;panelBase.&amp;#8203;panelForDerivedForms.&amp;#8203;panel1.&amp;#8203;ElementHost.&amp;#8203;HwndSource_AdornerDecorator.&amp;#8203;AdornerDecorator.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.panel1.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.btn_View&quot; title=&quot;Called object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: #00a5e5; font-weight: bold;&quot;&gt;btn_View&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Reason&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The parent object was not found:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;HistoryFrom&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;On the &lt;a href=&quot;showpicture://pic&quot;&gt;Picture&lt;/a&gt; tab, check if the object existed during the test run.&lt;/li&gt;&lt;li&gt;View the search criteria for the object in the &lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom&quot;&gt;NameMapping editor&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn more&lt;/a&gt; about possible causes of the error.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="message" type="S" value="The object &quot;btn_View&quot; does not exist."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="4"/>
+			<Prp name="id" type="I" value="68"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="471"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 74">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3217115046"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="OptionsFunction - Device Options Workflow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="74"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="502"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 79">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3225874769"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="78"/>
+			<Prp name="message" type="S" value="FDM Client launched successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="79"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1250"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 26">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1339"/>
+			<Prp name="stacktext" type="S" value="DeviceICONSCreateDTMOfflineConfig"/>
+		</Node>
+		<Node name="message 85">
+			<Prp name="picture" type="S" value="Picture7.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3227131481"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="78"/>
+			<Prp name="stack beginning" type="I" value="16"/>
+			<Prp name="message" type="S" value="❌ DeviceIconsCreateDisplayFilter failed: Cannot read property 'BlockByText' of null"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="17"/>
+			<Prp name="id" type="I" value="85"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1268"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 48">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.318823125"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="Final confirmation: The selected documents are detached successfully."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="433"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 89">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3235171759"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="87"/>
+			<Prp name="message" type="S" value="Clicked on 'Offline*' tab."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="89"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3187982755"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="No warning message displayed."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="396"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.318823125"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="35"/>
+			<Prp name="message" type="S" value="Initiated detachment of system document."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="914"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.317825706"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="Confirmed attachment in FDM dialog."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="892"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 76">
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3218332292"/>
+			<Prp name="priority" type="I" value="400"/>
+			<Prp name="remarks" type="S" value="You are trying to call the &quot;tabControlOnlineView&quot; method or property of the &quot;panelTabControlOnlineVie&quot; object that does not exist."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="74"/>
+			<Prp name="stack beginning" type="I" value="10"/>
+			<Prp name="message" type="S" value="The object &quot;panelTabControlOnlineVie&quot; does not exist."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="11"/>
+			<Prp name="id" type="I" value="76"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="509"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 69">
+			<Prp name="picture" type="S" value="Picture4.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3208692593"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&lt;!doctype html&gt; &lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;} th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;style&gt;.wide{width: 100%; margin: 0; padding:0; border:0;} .clsimg{width: 400px; margin: auto; border:0} td.row1{width: *;}  td.row2{width: 250px;}&lt;/style&gt;&lt;body&gt;&lt;div class=&quot;wide&quot;&gt;&lt;table class=&quot;wide&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td class=&quot;row1&quot;&gt;&lt;/td&gt;&lt;td class=&quot;row2&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;vertical-align:top;text-align:left&quot;&gt;&lt;p&gt;Unable to find the following object when executing the &lt;code&gt;aqObject.CheckProperty&lt;/code&gt; command:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;HistoryFrom.&amp;#8203;panelBase.&amp;#8203;panelForDerivedForms.&amp;#8203;pnlHistoryConfig.&amp;#8203;MagicTabControlEx.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.pnlHistoryConfig.MagicTabControlEx.TabPage&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;TabPage&lt;/span&gt;&lt;/a&gt;.&amp;#8203;CDeviceScreen.&amp;#8203;m_pnlDeviceScreen.&amp;#8203;TabControl.&amp;#8203;TabPage.&amp;#8203;ElementHost.&amp;#8203;HwndSource_AdornerDecorator.&amp;#8203;AdornerDecorator.&amp;#8203;ScrollViewer.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.pnlHistoryConfig.MagicTabControlEx.TabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.TabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.ContentControl&quot; title=&quot;Called object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: #00a5e5; font-weight: bold;&quot;&gt;ContentControl&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Reason&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The parent object was not found:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;HistoryFrom.&amp;#8203;panelBase.&amp;#8203;panelForDerivedForms.&amp;#8203;pnlHistoryConfig.&amp;#8203;MagicTabControlEx.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.pnlHistoryConfig.MagicTabControlEx.TabPage&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;TabPage&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;On the &lt;a href=&quot;showpicture://pic&quot;&gt;Picture&lt;/a&gt; tab, check if the object existed during the test run.&lt;/li&gt;&lt;li&gt;View the search criteria for the object in the &lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelForDerivedForms.pnlHistoryConfig.MagicTabControlEx.TabPage&quot;&gt;NameMapping editor&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn more&lt;/a&gt; about possible causes of the error.&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:top;text-align:center&quot;&gt; &lt;a href=&quot;showpicturedialog://%%LogDir%%\{DD9C0A2D-56F7-4C50-A002-3794F27D200A}.png&quot;&gt; &lt;img title=&quot;The expected state of the tested application. The missing object (red frame) and the called test object (blue frame).&quot; class=&quot;clsimg&quot; src=&quot;file:///%%LogDir%%\{DD9C0A2D-56F7-4C50-A002-3794F27D200A}.png&quot;&gt; &lt;/a&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="stack beginning" type="I" value="5"/>
+			<Prp name="message" type="S" value="Unable to verify a value with the property checkpoint, because the target object does not exist."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="7"/>
+			<Prp name="id" type="I" value="69"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="472"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166906597"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="Device state information retrieved successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1098"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 12">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="548"/>
+			<Prp name="stacktext" type="S" value="OptionsFunction"/>
+		</Node>
+		<Node name="message 118">
+			<Prp name="picture" type="S" value="Picture12.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3248130787"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="JavaScript runtime error.&#xA;&#xA;RangeError: Invalid array length&#xA;&#xA;Error location:&#xA;Unit: &quot;JSFDM\JSFDM\Script\Main&quot;&#xA;Line: 99 Column: 54."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="34"/>
+			<Prp name="message" type="S" value="RangeError: Invalid array length"/>
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="34"/>
+			<Prp name="id" type="I" value="118"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="98"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 41">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="300"/>
+					<Prp name="line #" type="I" value="403"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage13.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ResourceSelectionDlg.fpSpread1"/>
+					<Prp name="datetime" type="D" value="46029.0896463889"/>
+					<Prp name="click point x" type="I" value="248"/>
+					<Prp name="click point y" type="I" value="109"/>
+					<Prp name="object top" type="I" value="76"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="19"/>
+					<Prp name="object bottom" type="I" value="220"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3188148495"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (229, 33) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ResourceSelectionDlg.fpSpread1&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;ResourceSelectionDlg&quot;).WinFormsObject(&quot;fpSpread1&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="403"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 7">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="238"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 65">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3206960648"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="message" type="S" value="ViewHistoryForMUXItem - View History Flow"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="65"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="449"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3175143171"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="clickOnSystemAttachDocument - System Document Attach Flow"/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 98">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242603472"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="Navigated to Offline View successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="98"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1332"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 109">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3243160995"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="Device type selected and Create button clicked."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="109"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="376"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 72">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.320875"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="70"/>
+			<Prp name="message" type="S" value="Closed the page successfully."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="72"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 55">
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3197554861"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;} th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;Unable to find the following object when executing the &lt;code&gt;aqObject.CheckProperty&lt;/code&gt; command:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;CDeviceHomePage&lt;/span&gt;&lt;/a&gt;.&amp;#8203;panelBase.&amp;#8203;panelForDerivedForms.&amp;#8203;Panel.&amp;#8203;MagicTabControlEx.&amp;#8203;EntryPointTabPage.&amp;#8203;CDeviceScreen.&amp;#8203;m_pnlDeviceScreen.&amp;#8203;TabControl.&amp;#8203;EntryPointsTabPage.&amp;#8203;ElementHost.&amp;#8203;HwndSource_AdornerDecorator.&amp;#8203;AdornerDecorator.&amp;#8203;ScrollViewer.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkFdmDeviceProperties&quot; title=&quot;Called object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: #00a5e5; font-weight: bold;&quot;&gt;HyperlinkFdmDeviceProperties&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Reason&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The parent object was not found:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;MdiClient.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;CDeviceHomePage&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;On the &lt;a href=&quot;showpicture://pic&quot;&gt;Picture&lt;/a&gt; tab, check if the object existed during the test run.&lt;/li&gt;&lt;li&gt;View the search criteria for the object in the &lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage&quot;&gt;NameMapping editor&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn more&lt;/a&gt; about possible causes of the error.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="owner id" type="I" value="51"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="message" type="S" value="Unable to verify a value with the property checkpoint, because the target object does not exist."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="id" type="I" value="55"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="74"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 71">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="1913"/>
+					<Prp name="line #" type="I" value="17"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage22.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelFullTop.panelTitle.buttonClose"/>
+					<Prp name="datetime" type="D" value="46029.0917043981"/>
+					<Prp name="click point x" type="I" value="1901"/>
+					<Prp name="click point y" type="I" value="90"/>
+					<Prp name="object top" type="I" value="78"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="1889"/>
+					<Prp name="object bottom" type="I" value="102"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3208741898"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (12, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.HistoryFrom.panelBase.panelFullTop.panelTitle.buttonClose&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;HistoryFrom&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonClose&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="70"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="71"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="17"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166907755"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="CloseWindow - Locate and Click Close Button"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="77"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 24">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="250"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166693171"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="Clicked on device: |FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1091"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.3166906597"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="5"/>
+			<Prp name="message" type="S" value="✅ Device Information image saved."/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="146"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 20">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1308"/>
+			<Prp name="stacktext" type="S" value="DeleteDisplayFilterItem"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3188203819"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="Confirmation dialog caption: The selected document(s) will be deleted from the server also. Are you sure you want to continue ?"/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="417"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 23">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1339"/>
+			<Prp name="stacktext" type="S" value="DeviceICONSCreateDTMOfflineConfig"/>
+		</Node>
+		<Node name="message 95">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242383565"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="GoToOfflineView - Click Offline Tab via OCR"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="95"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166922801"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="message" type="S" value="Close button found. Clicking now."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="84"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 102">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242776505"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="Offline tab clicked."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="102"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1336"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 108">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="1002"/>
+					<Prp name="line #" type="I" value="375"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage31.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate.buttonOfflineCreate"/>
+					<Prp name="datetime" type="D" value="46029.0951467708"/>
+					<Prp name="click point x" type="I" value="966"/>
+					<Prp name="click point y" type="I" value="142"/>
+					<Prp name="object top" type="I" value="130"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="930"/>
+					<Prp name="object bottom" type="I" value="154"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3243154051"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate.buttonOfflineCreate&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;DtmForm&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelForDerivedForms&quot;).WinFormsObject(&quot;DTMTabView&quot;).WinFormsObject(&quot;panelOfflineConfig&quot;).WinFormsObject(&quot;groupBoxTemplate&quot;).WinFormsObject(&quot;buttonOfflineCreate&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="108"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="375"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3167024306"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="message" type="S" value="'Yes' button clicked successfully."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="55"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 101">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242776505"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="99"/>
+			<Prp name="message" type="S" value="Clicked on 'Offline*' tab successfully."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="101"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="61"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 30">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="250"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="item 8">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="509"/>
+			<Prp name="stacktext" type="S" value="OptionsFunction"/>
+		</Node>
+		<Node name="message 116">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3246278819"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="Window closed post configuration."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="116"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1345"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.318601331"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="35"/>
+			<Prp name="message" type="S" value="DetachDocument - Navigates through the Document menu using OCR to detach&#xA; a connected Document node from the tree view."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="377"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.3168191319"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="✅ GetDeviceStateView passed: Device state captured successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1105"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 78">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3225874769"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="DeviceIconsCreateDisplayFilter - Create Display Filter Workflow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="78"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1244"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 38">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="149"/>
+					<Prp name="line #" type="I" value="363"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage11.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.DropDownForm.SubSmartControl"/>
+					<Prp name="datetime" type="D" value="46029.089449456"/>
+					<Prp name="click point x" type="I" value="87"/>
+					<Prp name="click point y" type="I" value="218"/>
+					<Prp name="object top" type="I" value="211"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="26"/>
+					<Prp name="object bottom" type="I" value="225"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3186195023"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;System Documents"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="363"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 99">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242603472"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="ClickOfflineTab - OCR Block Navigation"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="99"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="51"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 26">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="594"/>
+					<Prp name="line #" type="I" value="125"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.comboBox"/>
+					<Prp name="datetime" type="D" value="46029.088516713"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="40"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="139"/>
+					<Prp name="object bottom" type="I" value="66"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3176849074"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.comboBox&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1).Window(&quot;WorkerW&quot;, &quot;&quot;, 1).Window(&quot;ReBarWindow32&quot;, &quot;&quot;, 1).Window(&quot;Address Band Root&quot;, &quot;&quot;, 1).Window(&quot;msctls_progress32&quot;, &quot;&quot;, 1).Window(&quot;ComboBoxEx32&quot;, &quot;&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="message" type="S" value="The text 'C:\Users\Admin\Desktop\JSFDM\JSFDM\Files' was entered in the combo box editor."/>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="125"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 113">
+			<Prp name="picture" type="S" value="Picture11.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3245671759"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="stack beginning" type="I" value="31"/>
+			<Prp name="message" type="S" value="❌ CreateOfflineDTMConfig failed: The object does not support this property or method."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="33"/>
+			<Prp name="id" type="I" value="113"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="393"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 14">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1257"/>
+			<Prp name="stacktext" type="S" value="DeviceIconsCreateDisplayFilter"/>
+		</Node>
+		<Node name="item 32">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1339"/>
+			<Prp name="stacktext" type="S" value="DeviceICONSCreateDTMOfflineConfig"/>
+		</Node>
+		<Node name="message 47">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="345"/>
+					<Prp name="line #" type="I" value="432"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage16.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgFDMConfiguration.btnOK"/>
+					<Prp name="datetime" type="D" value="46029.0896546412"/>
+					<Prp name="click point x" type="I" value="295"/>
+					<Prp name="click point y" type="I" value="148"/>
+					<Prp name="object top" type="I" value="132"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="245"/>
+					<Prp name="object bottom" type="I" value="165"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3188224306"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgFDMConfiguration.btnOK&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;FDM Client&quot;, 1).Window(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="432"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3167024306"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="message" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="54"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 6">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="128"/>
+			<Prp name="stacktext" type="S" value="ValidateDeviceHistoryRecords"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="235"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 39">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="364"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage12.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0894530671"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3186809954"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="'[Right][Down][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="364"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 21">
+			<Node name="visualizer">
+				<Node name="diff">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="-1"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage4_Dif.png"/>
+					<Prp name="object name" type="S" value=""/>
+					<Prp name="datetime" type="D" value="0"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-1"/>
+					<Prp name="object bottom" type="I" value="-1"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+				<Node name="original">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="149"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="tcvi164434253172323.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.DropDownForm.SubSmartControl"/>
+					<Prp name="datetime" type="D" value="45999.2401736111"/>
+					<Prp name="click point x" type="I" value="83"/>
+					<Prp name="click point y" type="I" value="215"/>
+					<Prp name="object top" type="I" value="212"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="77"/>
+					<Prp name="object bottom" type="I" value="224"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="149"/>
+					<Prp name="line #" type="I" value="12"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.DropDownForm.SubSmartControl"/>
+					<Prp name="datetime" type="D" value="46029.0883932292"/>
+					<Prp name="click point x" type="I" value="113"/>
+					<Prp name="click point y" type="I" value="218"/>
+					<Prp name="object top" type="I" value="211"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="77"/>
+					<Prp name="object bottom" type="I" value="225"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.317563044"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Documents"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="19"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3196129514"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="51"/>
+			<Prp name="message" type="S" value="verifyFDMDeviceStatus - Verifies OCR status text of an FDM device after opening it via tree path"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="305"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 22">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="13"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected"/>
+					<Prp name="datetime" type="D" value="46029.0883970718"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3176117477"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="'[Right][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="19"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="13"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 111">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3245543866"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelFullTop.panelTitle.buttonSaveAs&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;DtmForm&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonSaveAs&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="Simulating a mouse click over the focused control to close the unexpected window."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="111"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="379"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 104">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="366"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage28.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageOfflineTemplates.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0951123495"/>
+					<Prp name="click point x" type="I" value="137"/>
+					<Prp name="click point y" type="I" value="154"/>
+					<Prp name="object top" type="I" value="117"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3242818866"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageOfflineTemplates.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOfflineView&quot;).WinFormsObject(&quot;panelOfflineView&quot;).WinFormsObject(&quot;tabControlOfflineView&quot;).WinFormsObject(&quot;tabPageOfflineTemplates&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="The tree node 'DTM Offline Configurations' was clicked with the right mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="104"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="366"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 73">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.320875"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="64"/>
+			<Prp name="message" type="S" value="✅ ValidateDeviceHistoryRecords passed: View History launched successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="73"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="130"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3176124421"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="Navigated to system document attachment workflow."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="884"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3165390972"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="message" type="S" value="Double-clicking FDM device node: |FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="313"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 66">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="467"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage20.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0915305093"/>
+					<Prp name="click point x" type="I" value="185"/>
+					<Prp name="click point y" type="I" value="375"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3207009259"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="message" type="S" value="The tree node 'FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1' was clicked with the right mouse button."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="66"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="467"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 106">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3243000926"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="Initiated creation of new DTM configuration."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="106"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="369"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 84">
+			<Prp name="picture" type="S" value="Picture7.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3227115741"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;style&gt;body {font-family : Segoe UI, Tahoma, Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : normal; padding : 14px 8px 8px 14px; margin : 0 0 0 0;} p {margin : 4px 0 4px 0; padding : 0 0 0 0;} h4 {font-size: 10pt; font-weight : bold; margin : 12px 0 0 16px; padding : 0 0 0 0;} table {margin-left : 16px; border-top: 1px solid grey;} td {font-size : 10pt; font-weight : normal; padding-left : 8px;} &lt;/style&gt;&lt;style&gt;p, td, th{font-size: 10pt;} td, th {border-bottom: 1px solid #cdcdcd; padding: 2px 10px 2px 10px;} th {text-align: left; background: #cdcdcd; font-weight : normal;}  p {padding : 0; margin : 4 0 4 0px; line-height: 16pt;} table {border: 0px;}&lt;/style&gt;&lt;body&gt;&lt;p&gt;Unable to find the following object when executing the &lt;code&gt;Recognize&lt;/code&gt; command:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;panelLeftPanMain.&amp;#8203;tabControlLeftPanMain.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;tabPageOfflineView&lt;/span&gt;&lt;/a&gt;.&amp;#8203;panelOfflineView.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView&quot; title=&quot;Called object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: #00a5e5; font-weight: bold;&quot;&gt;tabControlOfflineView&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Reason&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The parent object was not found:&lt;/p&gt;&lt;p style=&quot;margin-left: 10px;&quot;&gt;&lt;code&gt;Aliases.&amp;#8203;HCMClient.&amp;#8203;ClientMainWindow.&amp;#8203;panelLeftPanMain.&amp;#8203;tabControlLeftPanMain.&amp;#8203;&lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView&quot; title=&quot;Missing object. Click to view and change its recognition settings.&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;tabPageOfflineView&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;color: #777;&quot;&gt;Tips&lt;/b&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 10px&quot;&gt;&lt;li&gt;On the &lt;a href=&quot;showpicture://pic&quot;&gt;Picture&lt;/a&gt; tab, check if the object existed during the test run.&lt;/li&gt;&lt;li&gt;View the search criteria for the object in the &lt;a href=&quot;lnamemapping://{A74246CE-1F95-4E9F-A00A-9944B0BFF09D}.Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView&quot;&gt;NameMapping editor&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;aqa-help://2201&quot;&gt;Learn more&lt;/a&gt; about possible causes of the error.&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="owner id" type="I" value="78"/>
+			<Prp name="stack beginning" type="I" value="14"/>
+			<Prp name="message" type="S" value="The object whose text you are trying to recognize does not exist."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="15"/>
+			<Prp name="id" type="I" value="84"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1257"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 42">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3188154282"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="Clicked device selection grid."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="404"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 54">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="314"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage17.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0904475116"/>
+					<Prp name="click point x" type="I" value="185"/>
+					<Prp name="click point y" type="I" value="375"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3196186343"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="52"/>
+			<Prp name="message" type="S" value="The tree node 'FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1' was double-clicked by the left mouse button."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="314"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.318817581"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="Clicked 'OK' on Resource Selection dialog."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="408"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 19">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="247"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 80">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3225875926"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="78"/>
+			<Prp name="message" type="S" value="GoToOfflineView - Click Offline Tab via OCR"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="80"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3175143171"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="AttachSystemDocument - System-Level Document Flow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="877"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3164909606"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="verifyFDMDeviceStatus - Verifies OCR status text of an FDM device after opening it via tree path"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="305"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="74"/>
+			<Prp name="stacktext" type="S" value="CheckFDMDevicePropertyOption"/>
+		</Node>
+		<Node name="message 105">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="368"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage29.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageOfflineTemplates.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0951219907"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="117"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3242993981"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageOfflineTemplates.treeView.StripPopupMenu&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOfflineView&quot;).WinFormsObject(&quot;panelOfflineView&quot;).WinFormsObject(&quot;tabControlOfflineView&quot;).WinFormsObject(&quot;tabPageOfflineTemplates&quot;).WinFormsObject(&quot;treeView&quot;).StripPopupMenu)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="message" type="S" value="The menu item '[0]' was clicked."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="105"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="368"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 21">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="247"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="item 11">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="241"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="471"/>
+			<Prp name="stacktext" type="S" value="LaunchViewHistory"/>
+		</Node>
+		<Node name="item 15">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="244"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 112">
+			<Prp name="picture" type="S" value="Picture11.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3245641204"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelFullTop.panelTitle.buttonSaveAs&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;DtmForm&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonSaveAs&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="stack beginning" type="I" value="28"/>
+			<Prp name="message" type="S" value="The window is disabled. The action cannot be executed."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="30"/>
+			<Prp name="id" type="I" value="112"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="379"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 32">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.317825706"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="message" type="S" value="'OK' button clicked successfully."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="64"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 29">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1339"/>
+			<Prp name="stacktext" type="S" value="DeviceICONSCreateDTMOfflineConfig"/>
+		</Node>
+		<Node name="item 22">
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="line no" type="I" value="374"/>
+			<Prp name="stacktext" type="S" value="CreateOfflineDTMConfig"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="type" type="I" value="4"/>
+			<Prp name="date" type="D" value="46029.3166906597"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="5"/>
+			<Prp name="message" type="S" value="Device State Information"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="145"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 58">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="1913"/>
+					<Prp name="line #" type="I" value="85"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage18.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelFullTop.panelTitle.buttonClose"/>
+					<Prp name="datetime" type="D" value="46029.090590625"/>
+					<Prp name="click point x" type="I" value="1901"/>
+					<Prp name="click point y" type="I" value="90"/>
+					<Prp name="object top" type="I" value="78"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="1889"/>
+					<Prp name="object bottom" type="I" value="102"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3197594676"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (12, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelFullTop.panelTitle.buttonClose&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;CDeviceHomePage&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonClose&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="58"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="85"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 57">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3197558333"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="56"/>
+			<Prp name="message" type="S" value="Close button found. Clicking now."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="57"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="84"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 13">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="413"/>
+					<Prp name="line #" type="I" value="53"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgFDMConfiguration.btnYes"/>
+					<Prp name="datetime" type="D" value="46029.0875340741"/>
+					<Prp name="click point x" type="I" value="363"/>
+					<Prp name="click point y" type="I" value="186"/>
+					<Prp name="object top" type="I" value="170"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="313"/>
+					<Prp name="object bottom" type="I" value="203"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3167017361"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgFDMConfiguration.btnYes&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Configure&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;Yes&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="12"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="53"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 103">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3242776505"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="CreateOfflineDTMConfig - Offline DTM Configuration Workflow"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="103"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="354"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 37">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="124"/>
+					<Prp name="line #" type="I" value="362"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.mainMenu"/>
+					<Prp name="datetime" type="D" value="46029.08943875"/>
+					<Prp name="click point x" type="I" value="106"/>
+					<Prp name="click point y" type="I" value="37"/>
+					<Prp name="object top" type="I" value="31"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="88"/>
+					<Prp name="object bottom" type="I" value="43"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.318610625"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Tools"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="362"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 91">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="116"/>
+					<Prp name="line #" type="I" value="1290"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage25.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView"/>
+					<Prp name="datetime" type="D" value="46029.0943678241"/>
+					<Prp name="click point x" type="I" value="93"/>
+					<Prp name="click point y" type="I" value="105"/>
+					<Prp name="object top" type="I" value="97"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="70"/>
+					<Prp name="object bottom" type="I" value="114"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3235371644"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Display"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="86"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="91"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1290"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 27">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="900"/>
+					<Prp name="line #" type="I" value="128"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen"/>
+					<Prp name="datetime" type="D" value="46029.0885193634"/>
+					<Prp name="click point x" type="I" value="696"/>
+					<Prp name="click point y" type="I" value="564"/>
+					<Prp name="object top" type="I" value="0"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="0"/>
+					<Prp name="object bottom" type="I" value="600"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3177061458"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="The file 'C:\Users\Admin\Desktop\JSFDM\JSFDM\Files\0906.fm8' was opened as a '' file.&#xA;&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.dlgOpen&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="message" type="S" value="The file '0906.fm8' was selected in the Open dialog."/>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="128"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 75">
+			<Prp name="picture" type="S" value="Picture5.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3218314699"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The object with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2202&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView&lt;br /&gt;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="owner id" type="I" value="74"/>
+			<Prp name="stack beginning" type="I" value="8"/>
+			<Prp name="message" type="S" value="Unable to find the object panelTabControlOnlineVie. See Details for additional information."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="9"/>
+			<Prp name="id" type="I" value="75"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="509"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 45">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="415"/>
+					<Prp name="line #" type="I" value="416"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage15.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgFDMConfiguration.btnYes"/>
+					<Prp name="datetime" type="D" value="46029.089651794"/>
+					<Prp name="click point x" type="I" value="365"/>
+					<Prp name="click point y" type="I" value="167"/>
+					<Prp name="object top" type="I" value="151"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="315"/>
+					<Prp name="object bottom" type="I" value="184"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3188197338"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (50, 16) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.dlgFDMConfiguration.btnYes&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;FDM&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;Yes&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="416"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166968866"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="Click on confirm FDM Button"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="41"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 86">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3234966435"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="DeleteDisplayfilterlist - Display Filter Deletion Workflow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="86"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1277"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 96">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="200"/>
+					<Prp name="line #" type="I" value="27"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage26.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain"/>
+					<Prp name="datetime" type="D" value="46029.095090625"/>
+					<Prp name="click point x" type="I" value="177"/>
+					<Prp name="click point y" type="I" value="851"/>
+					<Prp name="object top" type="I" value="846"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="154"/>
+					<Prp name="object bottom" type="I" value="857"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3242602778"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Offline"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="95"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="96"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="27"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 17">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="244"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 25">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="570"/>
+					<Prp name="line #" type="I" value="124"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.BreadcrumbParent.toolbar"/>
+					<Prp name="datetime" type="D" value="46029.0885068866"/>
+					<Prp name="click point x" type="I" value="160"/>
+					<Prp name="click point y" type="I" value="53"/>
+					<Prp name="object top" type="I" value="40"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="139"/>
+					<Prp name="object bottom" type="I" value="68"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3176756019"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (21, 13) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.dlgOpen.WorkerW.ReBarWindow32.AddressBandRoot.progress.BreadcrumbParent.toolbar&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Open&quot;, 1).Window(&quot;WorkerW&quot;, &quot;&quot;, 1).Window(&quot;ReBarWindow32&quot;, &quot;&quot;, 1).Window(&quot;Address Band Root&quot;, &quot;&quot;, 1).Window(&quot;msctls_progress32&quot;, &quot;&quot;, 1).Window(&quot;Breadcrumb Parent&quot;, &quot;&quot;, 1).Window(&quot;ToolbarWindow32&quot;, &quot;Address: C:\\Users\\Admin\\Desktop\\JSFDM\\JSFDM\\Files&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="message" type="S" value="Toolbar button 'All locations' was clicked."/>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="124"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3166812153"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="DeviceStateInformation"/>
+			<Prp name="unit id" type="I" value="2"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="134"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 7" type="S" value="{B93F9BC8-3758-40A8-981B-B32835BBD4F9}"/>
+			<Prp name="unit 3" type="S" value="{9C28C7CC-253E-4E03-AB66-607396B72E02}"/>
+			<Prp name="unit 6" type="S" value="{C344B245-3507-4D36-99F0-78E011A7BBBA}"/>
+			<Prp name="unit 2" type="S" value="{1F411290-DCD5-41BC-9E90-06E2A079BF44}"/>
+			<Prp name="unit 4" type="S" value="{21B972D0-CAA7-4CD7-BA66-05F559DFB26D}"/>
+			<Prp name="unit 5" type="S" value="{7ABB7D6B-0740-41AE-BF94-65BD6413C6B4}"/>
+			<Prp name="unit 0" type="S" value="{11AB687C-AAE7-4852-ACD3-595884B135C8}"/>
+			<Prp name="unit 1" type="S" value="{39FEF46B-834F-4155-8770-ED42F0C32A06}"/>
+		</Node>
+		<Node name="item 28">
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="line no" type="I" value="379"/>
+			<Prp name="stacktext" type="S" value="CreateOfflineDTMConfig"/>
+		</Node>
+		<Node name="message 59">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3197601505"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="51"/>
+			<Prp name="message" type="S" value="Click on confirm FDM Button"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="59"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="41"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 70">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3208692593"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="message" type="S" value="Closes the active page from the panel."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="70"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="11"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 31">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="233"/>
+					<Prp name="line #" type="I" value="63"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgFDMConfiguration.btnOK"/>
+					<Prp name="datetime" type="D" value="46029.0886575926"/>
+					<Prp name="click point x" type="I" value="183"/>
+					<Prp name="click point y" type="I" value="148"/>
+					<Prp name="object top" type="I" value="132"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="133"/>
+					<Prp name="object bottom" type="I" value="165"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3178252431"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgFDMConfiguration.btnOK&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;FDM&quot;, 1).Window(&quot;Button&quot;, &quot;OK&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="30"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 27">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="250"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 110">
+			<Prp name="picture" type="S" value="Picture10.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3244359954"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Offline Configuration&quot;, 1)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="stack beginning" type="I" value="25"/>
+			<Prp name="message" type="S" value="Unexpected window: 'Offline Configuration'"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="stack end" type="I" value="27"/>
+			<Prp name="id" type="I" value="110"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="379"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 43">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="211"/>
+					<Prp name="line #" type="I" value="407"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage14.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ResourceSelectionDlg.OKButton"/>
+					<Prp name="datetime" type="D" value="46029.0896491088"/>
+					<Prp name="click point x" type="I" value="179"/>
+					<Prp name="click point y" type="I" value="244"/>
+					<Prp name="object top" type="I" value="232"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="147"/>
+					<Prp name="object bottom" type="I" value="256"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3188170023"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (32, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ResourceSelectionDlg.OKButton&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;ResourceSelectionDlg&quot;).WinFormsObject(&quot;OKButton&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="36"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="407"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.318823125"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="35"/>
+			<Prp name="message" type="S" value="✅ DetachSystemDocument passed: System document detached successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="916"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 62">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.319762662"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="59"/>
+			<Prp name="message" type="S" value="'Yes' button clicked successfully."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="62"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="55"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 93">
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3235465625"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="86"/>
+			<Prp name="stack beginning" type="I" value="20"/>
+			<Prp name="message" type="S" value="❌ DeleteDisplayfilterlist failed: Cannot read property 'Click' of null"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="21"/>
+			<Prp name="id" type="I" value="93"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1308"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 5">
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="472"/>
+			<Prp name="stacktext" type="S" value="LaunchViewHistory"/>
+		</Node>
+		<Node name="message 67">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="468"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage21.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0915391088"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3207109259"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView.StripPopupMenu&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;).WinFormsObject(&quot;treeView&quot;).StripPopupMenu)"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="65"/>
+			<Prp name="message" type="S" value="The menu item 'View History' was clicked."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="67"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="468"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3177068403"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="Click on confirm FDM Button"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="41"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 114">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3246210069"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="Offline DTM configuration created."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="114"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1340"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 35">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="98"/>
+			<Prp name="stacktext" type="S" value=""/>
+		</Node>
+		<Node name="message 107">
+			<Prp name="picture" type="S" value="Picture9.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3243129745"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Total number of items: 0.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate.cboDevType&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;DtmForm&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelForDerivedForms&quot;).WinFormsObject(&quot;DTMTabView&quot;).WinFormsObject(&quot;panelOfflineConfig&quot;).WinFormsObject(&quot;groupBoxTemplate&quot;).WinFormsObject(&quot;cboDevType&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="103"/>
+			<Prp name="stack beginning" type="I" value="22"/>
+			<Prp name="message" type="S" value="The combo box item '644 V07.01 Ver [1.4.124.3] ' not found."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="24"/>
+			<Prp name="id" type="I" value="107"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="374"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 94">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3242382407"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="DeviceICONSCreateDTMOfflineConfig - Offline DTM Configuration Workflow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="94"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1325"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.317825706"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="✅ AttachSystemDocument passed: System document attached successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="894"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 100">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="58"/>
+					<Prp name="line #" type="I" value="60"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage27.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView"/>
+					<Prp name="datetime" type="D" value="46029.0951080208"/>
+					<Prp name="click point x" type="I" value="33"/>
+					<Prp name="click point y" type="I" value="106"/>
+					<Prp name="object top" type="I" value="98"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="8"/>
+					<Prp name="object bottom" type="I" value="114"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3242776505"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Offline..."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="99"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="100"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="60"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 119">
+			<Prp name="picture" type="S" value="Picture13.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.324816956"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Possible reasons:&#xA; - An error or warning occurred during the test run. See the preceding log entries to locate and identify the error.&#xA; - The test run was stopped manually.&#xA; - The test run was terminated as a result of the Runner.Halt method call."/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="stack beginning" type="I" value="35"/>
+			<Prp name="message" type="S" value="The script execution was interrupted."/>
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="35"/>
+			<Prp name="id" type="I" value="119"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="98"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 77">
+			<Prp name="picture" type="S" value="Picture6.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3218371296"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="74"/>
+			<Prp name="stack beginning" type="I" value="12"/>
+			<Prp name="message" type="S" value="❌ OptionsFunction failed: Cannot read property 'treeView' of undefined"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="13"/>
+			<Prp name="id" type="I" value="77"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="548"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 10">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="509"/>
+			<Prp name="stacktext" type="S" value="OptionsFunction"/>
+		</Node>
+		<Node name="message 87">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3234967593"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="86"/>
+			<Prp name="message" type="S" value="GoToOfflineView - Click Offline Tab via OCR"/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="87"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="19"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 13">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="241"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="item 3">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="128"/>
+			<Prp name="stacktext" type="S" value="ValidateDeviceHistoryRecords"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3176125579"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="uploadDDPackageFile - Opens the 'Add DD Package File' dialog, navigates to a specified folder,&#xA; and uploads the desired type file."/>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="117"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 18">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1302"/>
+			<Prp name="stacktext" type="S" value="DeleteDisplayFilterItem"/>
+		</Node>
+		<Node name="message 83">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3227065046"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="78"/>
+			<Prp name="message" type="S" value="Navigated to Offline View."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="83"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1254"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3186012153"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="DetachSystemDocument - System-Level Document Flow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="907"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 82">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3227065046"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="80"/>
+			<Prp name="message" type="S" value="Clicked on 'Offline*' tab."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="82"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 51">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3196129514"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="CheckFDMDevicePropertyOption - Validate FDM Device Property Option in Entry Point Screen"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="67"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 34">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="98"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 63">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.3198796759"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="51"/>
+			<Prp name="message" type="S" value="✅ CheckFDMDevicePropertyOption passed: Device property option verified successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="63"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="79"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 20">
+			<Node name="visualizer">
+				<Node name="diff">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="-1"/>
+					<Prp name="line #" type="I" value="11"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage3_Dif.png"/>
+					<Prp name="object name" type="S" value=""/>
+					<Prp name="datetime" type="D" value="0"/>
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object top" type="I" value="-1"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-1"/>
+					<Prp name="object bottom" type="I" value="-1"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+				<Node name="original">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="128"/>
+					<Prp name="line #" type="I" value="11"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="tcvi164433946872322.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.mainMenu"/>
+					<Prp name="datetime" type="D" value="45999.2401388889"/>
+					<Prp name="click point x" type="I" value="101"/>
+					<Prp name="click point y" type="I" value="37"/>
+					<Prp name="object top" type="I" value="36"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="92"/>
+					<Prp name="object bottom" type="I" value="48"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="124"/>
+					<Prp name="line #" type="I" value="11"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.mainMenu"/>
+					<Prp name="datetime" type="D" value="46029.0883668403"/>
+					<Prp name="click point x" type="I" value="106"/>
+					<Prp name="click point y" type="I" value="37"/>
+					<Prp name="object top" type="I" value="31"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="88"/>
+					<Prp name="object bottom" type="I" value="43"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3175395139"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Tools"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="19"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="4"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="11"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 88">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="200"/>
+					<Prp name="line #" type="I" value="27"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage24.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain"/>
+					<Prp name="datetime" type="D" value="46029.0943479282"/>
+					<Prp name="click point x" type="I" value="177"/>
+					<Prp name="click point y" type="I" value="851"/>
+					<Prp name="object top" type="I" value="846"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="154"/>
+					<Prp name="object bottom" type="I" value="857"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3235170602"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Offline"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="87"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="88"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="27"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3177068403"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="18"/>
+			<Prp name="message" type="S" value="Uploaded system document: 0906.fm8"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="888"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 61">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.319762662"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="59"/>
+			<Prp name="message" type="S" value=""/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="61"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="54"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 33">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="250"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 90">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3235171759"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="86"/>
+			<Prp name="message" type="S" value="Navigated to Offline View."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="90"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1284"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 81">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="197"/>
+					<Prp name="line #" type="I" value="27"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage23.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain"/>
+					<Prp name="datetime" type="D" value="46029.0934394329"/>
+					<Prp name="click point x" type="I" value="177"/>
+					<Prp name="click point y" type="I" value="852"/>
+					<Prp name="object top" type="I" value="846"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="157"/>
+					<Prp name="object bottom" type="I" value="858"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3227063889"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed within the area containing the following text:&#xA;Offline"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="80"/>
+			<Prp name="message" type="S" value="The text area was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="81"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="27"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 115">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="1913"/>
+					<Prp name="line #" type="I" value="1344"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage32.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelFullTop.panelTitle.buttonClose"/>
+					<Prp name="datetime" type="D" value="46029.0954559144"/>
+					<Prp name="click point x" type="I" value="1896"/>
+					<Prp name="click point y" type="I" value="85"/>
+					<Prp name="object top" type="I" value="78"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="1889"/>
+					<Prp name="object bottom" type="I" value="98"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3246252662"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (7, 7) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.DtmForm.panelBase.panelFullTop.panelTitle.buttonClose&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;DtmForm&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonClose&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="115"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1344"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 25">
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="line no" type="I" value="379"/>
+			<Prp name="stacktext" type="S" value="CreateOfflineDTMConfig"/>
+		</Node>
+		<Node name="message 92">
+			<Prp name="picture" type="S" value="Picture8.png"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3235451042"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOfflineView.panelOfflineView.tabControlOfflineView.tabPageDisplayFilters.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOfflineView&quot;).WinFormsObject(&quot;panelOfflineView&quot;).WinFormsObject(&quot;tabControlOfflineView&quot;).WinFormsObject(&quot;tabPageDisplayFilters&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="86"/>
+			<Prp name="stack beginning" type="I" value="18"/>
+			<Prp name="message" type="S" value="The TreeView node 'Display05012026230804' not found."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="stack end" type="I" value="19"/>
+			<Prp name="id" type="I" value="92"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1302"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 64">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="date" type="D" value="46029.3206960648"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="ValidateDeviceHistoryRecords - Verify Device History Records"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="64"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="122"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 31">
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="line no" type="I" value="393"/>
+			<Prp name="stacktext" type="S" value="CreateOfflineDTMConfig"/>
+		</Node>
+		<Node name="message 97">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3242602778"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="95"/>
+			<Prp name="message" type="S" value="Clicked on 'Offline*' tab."/>
+			<Prp name="unit id" type="I" value="7"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="97"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="28"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 60">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="413"/>
+					<Prp name="line #" type="I" value="53"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage19.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.dlgFDMConfiguration.btnYes"/>
+					<Prp name="datetime" type="D" value="46029.090594375"/>
+					<Prp name="click point x" type="I" value="363"/>
+					<Prp name="click point y" type="I" value="186"/>
+					<Prp name="object top" type="I" value="170"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="313"/>
+					<Prp name="object bottom" type="I" value="203"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3197620833"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.HCMClient.dlgFDMConfiguration.btnYes&#xA;(Sys.Process(&quot;HCMClient&quot;).Window(&quot;#32770&quot;, &quot;Configure&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;Yes&quot;, 1))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="59"/>
+			<Prp name="message" type="S" value="The button was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="60"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="53"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3168191319"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="message" type="S" value="Configuration window closed and confirmed."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1103"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 4">
+			<Prp name="unit id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="238"/>
+			<Prp name="stacktext" type="S" value="main"/>
+		</Node>
+		<Node name="message 3">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="265"/>
+					<Prp name="line #" type="I" value="314"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView"/>
+					<Prp name="datetime" type="D" value="46029.0873749306"/>
+					<Prp name="click point x" type="I" value="185"/>
+					<Prp name="click point y" type="I" value="375"/>
+					<Prp name="object top" type="I" value="218"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="-5"/>
+					<Prp name="object bottom" type="I" value="837"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3165470139"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain.tabPageOnlineView.panelOnlineView.panelTabControlOnlineView.tabControlOnlineView.tabConnected.treeView&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;panelLeftPanMain&quot;).WinFormsObject(&quot;tabControlLeftPanMain&quot;).WinFormsObject(&quot;tabPageOnlineView&quot;).WinFormsObject(&quot;panelOnlineView&quot;).WinFormsObject(&quot;panelTabControlOnlineView&quot;).WinFormsObject(&quot;tabControlOnlineView&quot;).WinFormsObject(&quot;tabConnected&quot;).WinFormsObject(&quot;treeView&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="message" type="S" value="The tree node 'FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1' was double-clicked by the left mouse button."/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="314"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object right" type="I" value="1913"/>
+					<Prp name="line #" type="I" value="85"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object name" type="S" value="Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelFullTop.panelTitle.buttonClose"/>
+					<Prp name="datetime" type="D" value="46029.0875272222"/>
+					<Prp name="click point x" type="I" value="1901"/>
+					<Prp name="click point y" type="I" value="90"/>
+					<Prp name="object top" type="I" value="78"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="object left" type="I" value="1889"/>
+					<Prp name="object bottom" type="I" value="102"/>
+					<Prp name="rect color" type="I" value="255"/>
+				</Node>
+			</Node>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="date" type="D" value="46029.3166961921"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value="A click at point (12, 12) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelFullTop.panelTitle.buttonClose&#xA;(Sys.Process(&quot;HCMClient&quot;).WinFormsObject(&quot;frmHCMClientMain&quot;).WinFormsObject(&quot;MdiClient&quot;, &quot;&quot;).WinFormsObject(&quot;CDeviceHomePage&quot;).WinFormsObject(&quot;panelBase&quot;).WinFormsObject(&quot;panelFullTop&quot;).WinFormsObject(&quot;panelTitle&quot;).WinFormsObject(&quot;buttonClose&quot;))"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="9"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="85"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 117">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="date" type="D" value="46029.324744456"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="94"/>
+			<Prp name="message" type="S" value="✅ DeviceICONSCreateDTMOfflineConfig passed: Offline DTM configuration workflow completed successfully."/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="117"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1355"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3177068403"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="24"/>
+			<Prp name="message" type="S" value="File '0906.fm8' uploaded successfully from: C:\Users\Admin\Desktop\JSFDM\JSFDM\Files"/>
+			<Prp name="unit id" type="I" value="5"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="130"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 53">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3196130671"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="52"/>
+			<Prp name="message" type="S" value="Double-clicking FDM device node: |FDM Server ( DESKTOP-AJ7O5O5 )|ESHART|ESHART|C300_69|AI-HART_39|AICHANNEL_01_1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="313"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 56">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3197554861"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="51"/>
+			<Prp name="message" type="S" value="CloseWindow - Locate and Click Close Button"/>
+			<Prp name="unit id" type="I" value="3"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="56"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="77"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="date" type="D" value="46029.3164908449"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="message" type="S" value="GetDeviceStateView - Device Selection and State Capture Workflow"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="linkmessage" type="S" value=""/>
+			<Prp name="line no" type="I" value="1084"/>
+			<Prp name="child index" type="I" value="-1"/>
+		</Node>
+		<Node name="item 16">
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="1268"/>
+			<Prp name="stacktext" type="S" value="DeviceIconsCreateDisplayFilter"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

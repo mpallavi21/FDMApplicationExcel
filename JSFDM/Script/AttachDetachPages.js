@@ -1,5 +1,6 @@
 ﻿ //USEUNIT GenericMethods
 //USEUNIT FDMCommonPage
+//USEUNIT STDLib
 
 
 function clickOnSystemAttachDocument() {

@@ -181,8 +181,8 @@ function main()
                                         case "DELETEDD":
                                               DeleteDD(Parameters[0],Parameters[1],Parameters[2],Parameters[3],Parameters[4]);
                                             break;
-                                        case "ACTIVATEDEVICE":
-                                              ActivateDevice(Parameters[0]);
+                                        case "LOADDEVICE":
+                                              LoadDevice(Parameters[0]);
                                             break;
                                         case "SAVEHISTORY":
                                               SaveHistory()
@@ -286,6 +286,11 @@ function main()
                                         case "EXPORTANDIMPORTAUDITTRAIL":
                                               ExportAndImportAuditTrail()
                                             break;
+                                        case "ADVANCECONFIGURATION":
+                                              advanceConfiguration(Parameters[0],Parameters[1],Parameters[2])
+                                            break;
+                                        case "UNLOADDEVICE":
+                                              UnLoadDevice()
                                         default:
                                             Delay(2000);
                                             break;

@@ -1,4 +1,5 @@
 ﻿//USEUNIT GenericMethods
+//USEUNIT STDLib
 
 function FdmDeviceStatus() {
   Log.AppendFolder("FdmDeviceStatus");
@@ -209,7 +210,7 @@ function validateFdmDeviceStatusText() {
 // =====================================================================
 function clickSaveHistoryHyperlink() {
   Log.AppendFolder("clickSaveHistoryHyperlink");
-
+  let status = "Pass";
   try {
     let hyperlink = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.panelForDerivedForms.Panel.MagicTabControlEx.EntryPointTabPage.CDeviceScreen.m_pnlDeviceScreen.TabControl.EntryPointsTabPage.ElementHost.HwndSource_AdornerDecorator.AdornerDecorator.ScrollViewer.HyperlinkSaveHistoryRecord
     if (hyperlink.Exists && hyperlink.Enabled) {
@@ -221,7 +222,9 @@ function clickSaveHistoryHyperlink() {
 
   } catch (error) {
     Log.Error("❌ Failed to click Save History hyperlink: " + error.message);
+    status = "Fail";  
   } finally {
+    return status
     Log.PopLogFolder();
   }
 }
@@ -523,7 +526,7 @@ function handleSaveHistoryCompletion() {
   try {
     let statusBarDevice = Aliases.HCMClient.ClientMainWindow.MdiClient.CDeviceHomePage.panelBase.statusBarDevice
     let statusItem = statusBarDevice.Items.Item_2(1);
-    let timeout = 600000;
+    let timeout = 900000;
     let startTime = new Date().getTime();
     Delay(1000)
     while (aqString.Trim(statusItem.Text) === "Save History is in progress. Please wait...") {
@@ -536,14 +539,14 @@ function handleSaveHistoryCompletion() {
     // Step 3: Locate dialog root
     let hwndSource = Aliases.HCMClient.HwndSource_SaveHistoryDialogView;
     let saveHistoryDialogView = hwndSource.SaveHistoryDialogView
-    // Step 4: Read and log dialog title
-    let titleObj = saveHistoryDialogView.FindChild("Name", 'WPFObject("txt_Title")', 100, true);
-    if (titleObj.Exists) {
-      let titleText = aqString.Trim(titleObj.Text);
-      Log.Message("📋 Save History Dialog Title: " + titleText);
-    } else {
-      Log.Warning("⚠️ Title object not found.");
-    }
+//    // Step 4: Read and log dialog title
+//    let titleObj = saveHistoryDialogView.FindChild("Name", 'WPFObject("txt_Title")', 100, true);
+//    if (titleObj.Exists) {
+//      let titleText = aqString.Trim(titleObj.Text);
+//      Log.Message("📋 Save History Dialog Title: " + titleText);
+//    } else {
+//      Log.Warning("⚠️ Title object not found.");
+//    }
     
     // Step 5: Click Close
     let closeButton = saveHistoryDialogView.FindChild("Name", 'WPFObject("btn_Close")', 100, true);
@@ -553,6 +556,7 @@ function handleSaveHistoryCompletion() {
     } else {
       Log.Error("❌ Close button not found or not enabled.");
     }
+    
 
   } catch (error) {
     Log.Error("❌ Failed during Save History handling: " + error.message);

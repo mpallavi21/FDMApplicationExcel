@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="projects">
+			<Node name="project0">
+				<Node name="tests">
+					<Node name="test0">
+						<Node name="warnings">
+							<Node name="warning2">
+								<Prp name="msg" type="S" value="3 blocks were found by the text '*Displ*'. The first block was returned."/>
+							</Node>
+							<Node name="warning1">
+								<Prp name="msg" type="S" value="3 blocks were found by the text '*Devic*'. The first block was returned."/>
+							</Node>
+							<Node name="warning0">
+								<Prp name="msg" type="S" value="Close button not found or not enabled."/>
+							</Node>
+						</Node>
+						<Node name="errors">
+							<Node name="error6">
+								<Prp name="msg" type="S" value="❌ OptionsFunction failed: Cannot read property 'treeView' of undefined"/>
+							</Node>
+							<Node name="error3">
+								<Prp name="msg" type="S" value="Unable to verify a value with the property checkpoint, because the target object does not exist."/>
+							</Node>
+							<Node name="error9">
+								<Prp name="msg" type="S" value="The window is disabled. The action cannot be executed."/>
+							</Node>
+							<Node name="error5">
+								<Prp name="msg" type="S" value="The object &quot;panelTabControlOnlineVie&quot; does not exist."/>
+							</Node>
+							<Node name="error11">
+								<Prp name="msg" type="S" value="RangeError: Invalid array length"/>
+							</Node>
+							<Node name="error8">
+								<Prp name="msg" type="S" value="Unexpected window: 'Offline Configuration'"/>
+							</Node>
+							<Node name="error13">
+								<Prp name="msg" type="S" value="An exception occurred while the element specified in the 'main' test item was being executed."/>
+							</Node>
+							<Node name="error12">
+								<Prp name="msg" type="S" value="The script execution was interrupted."/>
+							</Node>
+							<Node name="error1">
+								<Prp name="msg" type="S" value="Cannot obtain the popup menu for item 'View History'."/>
+							</Node>
+							<Node name="error10">
+								<Prp name="msg" type="S" value="❌ CreateOfflineDTMConfig failed: The object does not support this property or method."/>
+							</Node>
+							<Node name="error4">
+								<Prp name="msg" type="S" value="Unable to find the object panelTabControlOnlineVie. See Details for additional information."/>
+							</Node>
+							<Node name="error14">
+								<Prp name="msg" type="S" value="The test item execution has been stopped."/>
+							</Node>
+							<Node name="error0">
+								<Prp name="msg" type="S" value="The window is invisible and thus cannot be activated."/>
+							</Node>
+							<Node name="error2">
+								<Prp name="msg" type="S" value="The object &quot;btn_View&quot; does not exist."/>
+							</Node>
+							<Node name="error7">
+								<Prp name="msg" type="S" value="The combo box item '644 V07.01 Ver [1.4.124.3] ' not found."/>
+							</Node>
+						</Node>
+						<Prp name="status" type="I" value="2"/>
+						<Prp name="durationwithoutchildren" type="I" value="625622"/>
+						<Prp name="duration" type="I" value="625622"/>
+						<Prp name="starttime" type="D" value="46029.3313952546"/>
+						<Prp name="name" type="S" value="main"/>
+						<Prp name="executionpoint" type="S" value="executionpoint://ewA2ADYANgAwADIAQwA4AEQALQAyAEEAQwAyAC0ANABGAEUAQwAtADgAOAA0ADAALQAyADYAMwAzADcARgBDAEUARQBFAEYANwB9AC8AewAwADAAMAAwADAAMAAwADAALQAwADAAMAAwAC0AMAAwADAAMAAtADAAMAAwADAALQAwADAAMAAwADAAMAAwADAAMAAwADAAMAB9AC8AZQBtAHAAdAB5AC8AZQBtAHAAdAB5AA=="/>
+					</Node>
+				</Node>
+				<Prp name="failedtests" type="I" value="1"/>
+				<Prp name="warningtests" type="I" value="0"/>
+				<Prp name="loadtests" type="I" value="0"/>
+				<Prp name="duration" type="I" value="625622"/>
+				<Prp name="starttime" type="D" value="46029.3313952546"/>
+				<Prp name="incompletedtests" type="I" value="0"/>
+				<Prp name="name" type="S" value="JSFDM"/>
+			</Node>
+		</Node>
+		<Prp name="executionstatus" type="I" value="2"/>
+		<Prp name="loadtests" type="I" value="0"/>
+		<Prp name="incompletedtests" type="I" value="0"/>
+		<Prp name="testname" type="S" value="JSFDM"/>
+		<Prp name="tests" type="I" value="1"/>
+		<Prp name="successtestwithretries" type="I" value="0"/>
+		<Prp name="stop" type="D" value="46029.3386394213"/>
+		<Prp name="warningtests" type="I" value="0"/>
+		<Prp name="key" type="S" value="{74E8D195-60F7-4A3A-BD6A-31C196A1AADC}"/>
+		<Prp name="failedtests" type="I" value="1"/>
+		<Prp name="starttime" type="D" value="46029.3313944676"/>
+		<Prp name="user" type="S" value="Admin"/>
+		<Prp name="name" type="S" value="JSFDM"/>
+		<Prp name="warningtestwithretries" type="I" value="0"/>
+		<Prp name="host" type="S" value="DESKTOP-AJ7O5O5"/>
+	</Node>
+</Nodes>

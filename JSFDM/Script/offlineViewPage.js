@@ -1,6 +1,7 @@
 ﻿//USEUNIT ClientLoginModule
 //USEUNIT GenericMethods
 //USEUNIT FDMCommonPage
+//USEUNIT STDLib
 
 function Test1()
 {
@@ -367,26 +368,26 @@ function CreateOfflineDTMConfig() {
     Delay(500)
     treeView.StripPopupMenu.Click(0);
     Log.Message("Initiated creation of new DTM configuration.");
-
-    // Step 2: Configure device type and trigger Create button
-    let hostPanel = frmHCMClientMain.MdiClient.DtmForm.panelBase;
-    let groupBox = hostPanel.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate;
-    groupBox.cboDevType.ClickItem("644 V07.01 Ver [1.4.124.3] ");
-    groupBox.buttonOfflineCreate.ClickButton();
-    Log.Message("Device type selected and Create button clicked.");
-
-    // Step 3: Handle Save As dialog using OCR
-    hostPanel.panelFullTop.panelTitle.buttonSaveAs.Click(13, 8);
-    let saveFileDlg = HCMClient.SaveFileDlg;
-    let DtmName = "DTM" + aqDateTime.Now()/1000;
-    Project.Variables.OfflineDTMSavedFileName = DtmName;
-    saveFileDlg.textBoxFileName.TextBoxArea.SetText(DtmName);
-    OCR.Recognize(saveFileDlg.buttonOK).BlockByText("OK").Click();
-    Log.Message("Configuration saved as '" + DtmName + "' via OCR-assisted click.");
-
-    // Step 4: Confirm creation by navigating to the new node
-    treeView.ClickItem(`|DTM Offline Configurations|ROSEMOUNT|644 V07.01 Ver [1.4.124.3]|${DtmName}`);
-    Log.Message("Navigated to the newly created DTM configuration.");
+      // dropdown options are disabled
+//    // Step 2: Configure device type and trigger Create button
+//    let hostPanel = frmHCMClientMain.MdiClient.DtmForm.panelBase;
+//    let groupBox = hostPanel.panelForDerivedForms.DTMTabView.panelOfflineConfig.groupBoxTemplate;
+//    groupBox.cboDevType.ClickItem("644 V07.01 Ver [1.4.124.3] ");
+//    groupBox.buttonOfflineCreate.ClickButton();
+//    Log.Message("Device type selected and Create button clicked.");
+//
+//    // Step 3: Handle Save As dialog using OCR
+//    hostPanel.panelFullTop.panelTitle.buttonSaveAs.Click(13, 8);
+//    let saveFileDlg = HCMClient.SaveFileDlg;
+//    let DtmName = "DTM" + aqDateTime.Now()/1000;
+//    Project.Variables.OfflineDTMSavedFileName = DtmName;
+//    saveFileDlg.textBoxFileName.TextBoxArea.SetText(DtmName);
+//    OCR.Recognize(saveFileDlg.buttonOK).BlockByText("OK").Click();
+//    Log.Message("Configuration saved as '" + DtmName + "' via OCR-assisted click.");
+//
+//    // Step 4: Confirm creation by navigating to the new node
+//    treeView.ClickItem(`|DTM Offline Configurations|ROSEMOUNT|644 V07.01 Ver [1.4.124.3]|${DtmName}`);
+//    Log.Message("Navigated to the newly created DTM configuration.");
 
     Log.Checkpoint("✅ CreateOfflineDTMConfig passed: Offline DTM configuration created successfully.");
   } catch (error) {

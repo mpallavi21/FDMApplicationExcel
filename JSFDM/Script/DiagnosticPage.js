@@ -15,9 +15,7 @@ function navigateToOfflineDiagnostics() {
     let tabControl = Aliases.HCMClient.ClientMainWindow.panelLeftPanMain.tabControlLeftPanMain;
 
     OCR.Recognize(tabControl).BlockByText("Offline", spNearestToCenter).Click();
-    OCR.Recognize(tabControl.tabPageOfflineView.panelOfflineView.tabControlOfflineView)
-      .BlockByText("*Diag*")
-      .Click();
+    OCR.Recognize(tabControl.tabPageOfflineView.panelOfflineView.tabControlOfflineView).BlockByText("*Diag*").Click();
 
     Log.Message("Navigated to Offline Diagnostics tab successfully.");
   } catch (error) {
@@ -80,16 +78,12 @@ function createDiagnosticModel(treePath, ManufactureName, DeviceType, DeviceRevi
     let rowCount = listBox.wItemCount;
 
     for (let i = 0; i < rowCount; i++) {
-      let textBlock = listBox.WPFObject("ListBoxItem", "", i+1)
-        .WPFObject("StackPanel", "", 1)
-        .WPFObject("TextBlock", "*", 1);
+      let textBlock = listBox.WPFObject("ListBoxItem", "", i+1).WPFObject("StackPanel", "", 1).WPFObject("TextBlock", "*", 1);
       
       let itemText = textBlock.WPFControlText;
 
       if (itemText == CheckParam) {
-        let checkBox = listBox.WPFObject("ListBoxItem", "", i+1)
-          .WPFObject("StackPanel", "", 1)
-          .WPFObject("CheckBox", "", 1);
+        let checkBox = listBox.WPFObject("ListBoxItem", "", i+1).WPFObject("StackPanel", "", 1).WPFObject("CheckBox", "", 1);
 
         if (checkBox.wState != 1) {
           checkBox.ClickButton(cbChecked);

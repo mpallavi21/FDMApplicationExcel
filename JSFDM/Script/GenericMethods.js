@@ -1,4 +1,5 @@
-﻿
+﻿//USEUNIT STDLib
+
 // =====================================================================
 // Author:        Bharath
 // Function:      handleFdmConfigurationPopup
@@ -7,38 +8,48 @@
 // Modified On:   
 // =====================================================================
 function handleFdmConfigurationPopup() {
-  Log.AppendFolder("handleFdmConfigurationPopup");
+  Log.AppendFolder("handleFdmConfigurationPopup - Handle FDM Configuration Popup Workflow");
+
+  
 
   try {
+    // Step 1: Check if popup exists
     let popup = Aliases.HCMClient.dlgFDMConfiguration;
-
     if (!popup.Exists) {
       Log.Message("⚠️ dlgFDMConfiguration popup not present.");
+      
       return;
     }
 
-    // Read and log the window caption
+    // Step 2: Read and log the window caption
     let captionObject = popup.Window("Static", "*", 1);
-    if (captionObject.Exists) {
+    if (captionObject.Exists && !captionObject.WndCaption.includes("failed")) {
       let captionText = aqString.Trim(captionObject.WndCaption);
       Log.Message("📝 Popup Caption: " + captionText);
-    } else {
+    } else { 
+      status = "Fail"
       Log.Warning("⚠️ Caption object not found.");
     }
 
-    // Click the OK button
+    // Step 3: Click the OK button if available
     let okButton = popup.btnOK;
     if (okButton.Exists && okButton.Enabled) {
       okButton.ClickButton();
       Log.Checkpoint("✅ OK button clicked on FDM Configuration popup.");
+    } else {
+      Log.Warning("⚠️ OK button not available or disabled.");
+      status = "Fail";
     }
-
-  } catch (error) {
-    Log.Error("❌ Failed to handle FDM Configuration popup: " + error.message);
+  } catch (error) {  
+    status = "Fail"
+    Log.Error("❌ handleFdmConfigurationPopup failed: " + error.message);
+    
   } finally {
+    return status
     Log.PopLogFolder();
   }
 }
+
 
 
 // =====================================================================
